@@ -1137,21 +1137,21 @@ scripts = [
       (call_script, "script_give_center_to_lord", "p_town_48", "trp_knight_3_8", 0), # Cremona -
       (call_script, "script_give_center_to_lord", "p_town_49", "trp_knight_3_9", 0), # Verona -	
 
-      (call_script, "script_give_center_to_lord", "p_town_50", "trp_kingdom_2_lord", 0),# Athenai - 	 
-      (call_script, "script_give_center_to_lord", "p_town_51", "trp_knight_2_2", 0),# Thebai -  	
-      (call_script, "script_give_center_to_lord", "p_town_52", "trp_knight_2_3", 0),# Argos -  	
-      (call_script, "script_give_center_to_lord", "p_town_53", "trp_knight_2_1", 0),# Lakedaemon -  
-      (call_script, "script_give_center_to_lord", "p_town_54", "trp_knight_2_1", 0), # Gytheion -
-      (call_script, "script_give_center_to_lord", "p_town_55", "trp_knight_2_4", 0), # Messene -
-      (call_script, "script_give_center_to_lord", "p_town_56", "trp_knight_2_5", 0), # Ierápytna -
-      (call_script, "script_give_center_to_lord", "p_town_57", "trp_knight_2_5", 0), # Knosós -
-      (call_script, "script_give_center_to_lord", "p_town_58", "trp_knight_2_5", 0), # Rhódos -
-      (call_script, "script_give_center_to_lord", "p_town_59", "trp_knight_2_6", 0), # Delphoí -
-      (call_script, "script_give_center_to_lord", "p_town_60", "trp_knight_2_7", 0), # Kórinthos -	
-      (call_script, "script_give_center_to_lord", "p_town_61", "trp_knight_2_8", 0), # Mégara -
-      (call_script, "script_give_center_to_lord", "p_town_62", "trp_knight_2_9", 0), # Elis -
-      (call_script, "script_give_center_to_lord", "p_town_63", "trp_knight_2_10", 0), # Megalópolis -
-      (call_script, "script_give_center_to_lord", "p_town_64", "trp_knight_2_10", 0), # Tegéa -	
+      (call_script, "script_give_center_to_lord", "p_town_50", "trp_knight_2_2", 0),# Athenai - Eponymos Archon Hegemachos	 
+      (call_script, "script_give_center_to_lord", "p_town_51", "trp_knight_2_6", 0),# Thebai - Archon Antigonos Gonatas 	
+      (call_script, "script_give_center_to_lord", "p_town_52", "trp_knight_2_3", 0),# Argos - Archon Apollonides 	
+      (call_script, "script_give_center_to_lord", "p_town_53", "trp_knight_2_1", 0),# Lakedaemon - Basileus Áreus I 
+      (call_script, "script_give_center_to_lord", "p_town_54", "trp_knight_2_1", 0), # Gytheion - Basileus Áreus I
+      (call_script, "script_give_center_to_lord", "p_town_55", "trp_knight_2_7", 0), # Messene - Archon Periklès
+      (call_script, "script_give_center_to_lord", "p_town_56", "trp_knight_2_8", 0), # Ierápytna - Archon Themistoclès
+      (call_script, "script_give_center_to_lord", "p_town_57", "trp_knight_2_9", 0), # Knosós - Archon Pamphilos
+      (call_script, "script_give_center_to_lord", "p_town_58", "trp_knight_2_10", 0), # Rhódos - Archon Diogenes
+      (call_script, "script_give_center_to_lord", "p_town_59", "trp_knight_2_4", 0), # Delphoí - Archon Aischriondas
+      (call_script, "script_give_center_to_lord", "p_town_60", "trp_kingdom_2_lord", 0), # Kórinthos - Strategos Autokrator Demetrios Poliorketes	
+      (call_script, "script_give_center_to_lord", "p_town_61", "trp_knight_2_5", 0), # Mégara - Archon Herodorus
+      (call_script, "script_give_center_to_lord", "p_town_62", "trp_knight_2_11", 0), # Elis - Archon Eirenaios
+      (call_script, "script_give_center_to_lord", "p_town_63", "trp_knight_2_12", 0), # Megalópolis - Archon Kephalos
+      (call_script, "script_give_center_to_lord", "p_town_64", "trp_knight_2_13", 0), # Tegéa -	Archon Lysandros
 
       (call_script, "script_give_center_to_lord", "p_town_65", "trp_kingdom_4_lord", 0),# Pella - 	 
       (call_script, "script_give_center_to_lord", "p_town_66", "trp_kingdom_4_lord", 0),# Thessaloníke -  	
@@ -33815,7 +33815,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_kingdom_2_lord"),
+        (eq, ":party_leader", "trp_knight_2_2"), # Eponymos Archon Hegemachos
         (assign, ":party_template_a", "pt_athenai_army"), 
         (assign, ":party_template_b", "pt_athenai_army"), 
         (assign, ":party_template_c", "pt_athenai_army"), 		
@@ -33827,7 +33827,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_2_2"), # Lykourgos
+        (eq, ":party_leader", "trp_knight_2_6"), # Archon Antigonos Gonatas
         (assign, ":party_template_a", "pt_thebes_reinforcements_a"), 	
         (assign, ":party_template_b", "pt_thebes_reinforcements_b"), 
         (assign, ":party_template_c", "pt_thebes_reinforcements_c"), 			
@@ -33844,15 +33844,15 @@ scripts = [
         (assign, ":party_template_c", "pt_generic_greek_army_a"), 				
       (try_end),		  
 
-      # (try_begin),
-        # (store_faction_of_party, ":party_faction", ":party_no"),
-        # (eq, ":party_faction", "fac_kingdom_2"),		
-        # (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        # (eq, ":party_leader", "trp_knight_2_4"), # Damokles of Argos	
-        # (assign, ":party_template_a", "pt_argoi_army"), 	
-        # (assign, ":party_template_b", "pt_argoi_army"), 			
-        # (assign, ":party_template_c", "pt_argoi_army"), 			
-      # (try_end),	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_2"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_2_4"), # Damokles of Argos	
+        (assign, ":party_template_a", "pt_generic_greek_army_a"), 	
+        (assign, ":party_template_b", "pt_generic_greek_army_a"), 			
+        (assign, ":party_template_c", "pt_generic_greek_army_a"), 			
+      (try_end),	  
 	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
@@ -33879,7 +33879,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_2_8"), # Themistocles of Corinth			
+        (eq, ":party_leader", "trp_kingdom_2_lord"), # Strategos Autokrator Demetrios Poliorketes		
         (assign, ":party_template_a", "pt_korinthioi_army"), 
         (assign, ":party_template_b", "pt_korinthioi_army"), 
         (assign, ":party_template_c", "pt_korinthioi_army"), 		
