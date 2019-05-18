@@ -1,0 +1,15 @@
+# RaW Scripts shortcuts 
+# RaW Hero Armies -> Custom armies
+# RaW Notes on items -> Custom text for items
+# RaW New scenes -> Multiplayer scenes
+# RaW Troop Limits -> Script that handles the MP troop limits
+# RaW Recruit Costs -> Edits to the way the game handles the recruitment costs
+# Raw Fix incorrect village assignment  -> Forced assignment of villages when the automatic script gets the wrong village
+# RaW Equipment -> Gives items on spawn to certain troops
+# RaW Guarantee weapons script -> Does what it says
+# RaW AoR -> Script that handles the mod's AoR
+# RaW unit upgrades for barracks -> handles the paths for the barrack upgrades
+# RaW recruitment system -> Village troops are assigned here
+# set territorial disputes/outstanding border issues
+
+for /l %A in (45,1,224) do copy "Desktop\Scenes\Greek Village\scn_greek_village.sco" "Desktop\Scenes\Greek Village\scn_village_%A.sco"
