@@ -1,6 +1,10 @@
-Mount&Blade Module System
+Mount&Blade Module System for the Rome at War mod.
 
-For getting documentation and the latest version of the module system check out:
+License type: NPOSL-3.0
+https://opensource.org/licenses/NPOSL-3.0
 
-www.taleworlds.com/mb_module_system.html
+Homepage:
+https://forums.taleworlds.com/index.php/board,307.0.html
+
+
 
