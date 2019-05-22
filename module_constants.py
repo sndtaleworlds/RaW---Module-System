@@ -49,6 +49,12 @@ slot_item_enterprise_building_cost      = 58 #enterprise building cost
 slot_item_multiplayer_item_class   = 60 #temporary, can be moved to higher values
 slot_item_multiplayer_availability_linked_list_begin = 61 #temporary, can be moved to higher values
 
+slot_item_javelin_ammo_1 	=  80
+slot_item_javelin_ammo_2 	=  81
+slot_item_javelin_ammo_3 	=  82
+slot_item_javelin_ammo_4 	=  83
+slot_item_javelin_ammo_5 	=  84
+
 
 ########################################################
 ##  AGENT SLOTS            #############################
