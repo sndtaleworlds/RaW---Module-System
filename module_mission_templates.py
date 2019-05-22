@@ -677,7 +677,9 @@ raw_skirmisher_javelin_2 = (ti_on_item_wielded, 0, 0, [
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
-    (store_trigger_param_2, ":item"),
+	(store_trigger_param_2, ":item"),
+	
+	(call_script, "script_cf_troop_speed_system", ":agent_no"),		
 
 	# (try_for_agents, ":agent_no"),	
     (agent_is_active, ":agent_no"), # Prevents errors		
@@ -718,7 +720,9 @@ raw_skirmisher_javelin_3 = (ti_on_item_unwielded, 0, 0, [
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
-    (store_trigger_param_2, ":item"),
+	(store_trigger_param_2, ":item"),
+	
+	(call_script, "script_cf_troop_speed_system", ":agent_no"),	
 
 	# (try_for_agents, ":agent_no"),	
     (agent_is_active, ":agent_no"), # Prevents errors		
@@ -802,13 +806,13 @@ raw_skirmisher_javelin_5 = (ti_on_item_dropped, 0, 0, [
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
-    (store_trigger_param_2, ":item"),
+	(store_trigger_param_2, ":item"),
 
+	# (call_script, "script_cf_troop_speed_system", ":agent_no"),		
+	
     (agent_is_active, ":agent_no"), # Prevents errors		
     (agent_is_alive, ":agent_no"),	# Prevents errors
-    (agent_is_human, ":agent_no"),	# Doesn't trigger for other agents	
-	
-	(call_script, "script_cf_troop_speed_system", ":agent_no"),		  
+    (agent_is_human, ":agent_no"),	# Doesn't trigger for other agents		  
 
      (try_begin),		
 		(this_or_next|eq, ":item", "itm_w_light_pila"),
@@ -2020,7 +2024,7 @@ raw_spear_drop =  (ti_on_item_unwielded, 0, 0, [
         (position_set_z_to_ground_level, pos1),	# Set Z axis to ground, to prevent floating objects
         (set_spawn_position, pos1), # Spawn stuff on player's position		
         (spawn_item, ":item", 0, 45),	# Stuff that will be spawned, disappear after 45 secs		
-	(call_script, "script_cf_troop_speed_system", ":agent"),							
+	# (call_script, "script_cf_troop_speed_system", ":agent"),							
       (try_end),		
    ])	   
  
@@ -2089,7 +2093,7 @@ raw_triggers = [
     raw_warcry,
     raw_light_instruments,
     raw_testudo,
-    raw_speed_mod,
+    # raw_speed_mod,
     raw_guarantee_legs,	
 	raw_phalanx,
 	raw_charge,
