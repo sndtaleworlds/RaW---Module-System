@@ -1081,17 +1081,18 @@ scripts = [
 
 	  #Now give towns to great lords
 	  ## Include notes of settlement and owner
-      (call_script, "script_give_center_to_lord", "p_town_1",  "trp_kingdom_1_lord", 0),# Rome -
-      (call_script, "script_give_center_to_lord", "p_town_2",  "trp_knight_1_1", 0),# Tibur -  
-      (call_script, "script_give_center_to_lord", "p_town_3",  "trp_knight_1_2", 0),# Tusculum -  
-      (call_script, "script_give_center_to_lord", "p_town_4",  "trp_knight_1_3", 0),# Antium - Agathocles
-      (call_script, "script_give_center_to_lord", "p_town_5",  "trp_knight_1_4", 0),# Capua - Ántandros 
-      (call_script, "script_give_center_to_lord", "p_town_6",  "trp_knight_1_5", 0),# Nola -  Areus I
-      (call_script, "script_give_center_to_lord", "p_town_7",  "trp_knight_1_6", 0),# Neapolis -  
-      (call_script, "script_give_center_to_lord", "p_town_8",  "trp_knight_1_7", 0),# Cumae - Basileus Hegemachus
-      (call_script, "script_give_center_to_lord", "p_town_9",  "trp_knight_1_8", 0),# Pompeii - Cleonymus
+      (call_script, "script_give_center_to_lord", "p_town_1",  "trp_kingdom_1_lord", 0),# Rome - Consul Prior Marcus Valerius Corvus
+      (call_script, "script_give_center_to_lord", "p_town_2",  "trp_knight_1_1", 0),# Tibur - Consul Posterior Quintus Appuleius Pansa
+      (call_script, "script_give_center_to_lord", "p_town_3",  "trp_knight_1_2", 0),# Tusculum - Tribunus Militum Quintus Fabius Maximus Rullianus
+      (call_script, "script_give_center_to_lord", "p_town_4",  "trp_knight_1_3", 0),# Antium - Tribunus Militum Publius Decius Mus
+ 
+      (call_script, "script_give_center_to_lord", "p_town_5",  "trp_knight_1_8", 0),# Capua - Socii Soies Maraies 
+      (call_script, "script_give_center_to_lord", "p_town_6",  "trp_knight_1_9", 0),# Nola -  Socii Rufus Pompeia 
+      (call_script, "script_give_center_to_lord", "p_town_7",  "trp_knight_1_10", 0),# Neapolis - Socii Marullus Memmia
+      (call_script, "script_give_center_to_lord", "p_town_8",  "trp_knight_1_11", 0),# Cumae - Socii Kaílis Húsidiis
+      (call_script, "script_give_center_to_lord", "p_town_9",  "trp_knight_1_12", 0),# Pompeii - Socii Banttieìs Betíitis
 	  
-	  (call_script, "script_give_center_to_lord", "p_town_10", "trp_kingdom_5_lord", 0),# Maloenton - Nikephoros 
+      (call_script, "script_give_center_to_lord", "p_town_10", "trp_kingdom_5_lord", 0),# Maloenton - Nikephoros 
       (call_script, "script_give_center_to_lord", "p_town_11", "trp_knight_5_1", 0),# Ladinod - Perikles
       (call_script, "script_give_center_to_lord", "p_town_12", "trp_knight_5_2", 0),# Buvaianud -
       (call_script, "script_give_center_to_lord", "p_town_13", "trp_knight_5_3", 0),# Venusia - 
@@ -1173,8 +1174,10 @@ scripts = [
 	  ##diplomacy end+
 
       # Give family castles to certain nobles.
-      # (call_script, "script_give_center_to_lord", "p_castle_17", "trp_knight_1_13", 0), #Pompei
-      # (call_script, "script_give_center_to_lord", "p_castle_35", "trp_knight_1_3", 0), #Haringoth_Castle
+      (call_script, "script_give_center_to_lord", "p_castle_1", "trp_knight_1_4", 0), # Ostia_Castra - Tribunus Militum Titus Manlius Torquatus
+      (call_script, "script_give_center_to_lord", "p_castle_2", "trp_knight_1_5", 0), # Norba_Castra - Tribunus Militum Lucius Volumnius Flamma
+      (call_script, "script_give_center_to_lord", "p_castle_3", "trp_knight_1_6", 0), # Interamna_Lirenas_Castra - Tribunus Militum Julius Decimus
+      (call_script, "script_give_center_to_lord", "p_castle_4", "trp_knight_1_13", 0), # Sutrium_Castra - Socii Teitu Cuclna
       ##diplomacy start+
       # (call_script, "script_give_center_to_lord", "p_castle_33", "trp_knight_5_11", 0), #Etrosq Castle -- why wasn't this being done already?
 	  #Add home centers for claimants
@@ -1680,6 +1683,27 @@ scripts = [
 	#  unless there is no version number set.  The rest of the slot is the version number.
     (troop_set_slot, "trp_dplmc_chamberlain", dplmc_slot_troop_affiliated, (DPLMC_CURRENT_VERSION_CODE * 128) + DPLMC_VERSION_LOW_7_BITS),#Version number 1
 	##diplomacy end+
+	
+### RaW: Setting up the javelin gloves
+      (item_set_slot, "itm_javelin", slot_item_javelin_ammo_1, "itm_w_javelin_glove_1"),     	  
+      (item_set_slot, "itm_javelin", slot_item_javelin_ammo_2, "itm_w_javelin_glove_2"),     	  
+      (item_set_slot, "itm_javelin", slot_item_javelin_ammo_3, "itm_w_javelin_glove_3"),     	  
+      (item_set_slot, "itm_javelin", slot_item_javelin_ammo_4, "itm_w_javelin_glove_4"),     	    
+
+      (item_set_slot, "itm_w_heavy_pila", slot_item_javelin_ammo_1, "itm_w_heavy_pila_glove"),     	  
+      (item_set_slot, "itm_w_heavy_pila", slot_item_javelin_ammo_2, "itm_w_heavy_pila_glove_2"),     	  
+	  
+      (item_set_slot, "itm_w_light_pila", slot_item_javelin_ammo_1, "itm_w_light_pila_glove"),     	  
+      (item_set_slot, "itm_w_light_pila", slot_item_javelin_ammo_2, "itm_w_light_pila_glove_2"),     	
+
+      (item_set_slot, "itm_roman_w_verutum_7pack", slot_item_javelin_ammo_1, "itm_w_verutum_glove_1"),     	  
+      (item_set_slot, "itm_roman_w_verutum_7pack", slot_item_javelin_ammo_2, "itm_w_verutum_glove_2"),     	  
+      (item_set_slot, "itm_roman_w_verutum_7pack", slot_item_javelin_ammo_3, "itm_w_verutum_glove_3"),     	  
+      (item_set_slot, "itm_roman_w_verutum_7pack", slot_item_javelin_ammo_4, "itm_w_verutum_glove_4"),     	      	  
+      (item_set_slot, "itm_roman_w_verutum_7pack", slot_item_javelin_ammo_5, "itm_w_verutum_glove_5"),     	      	
+
+      (item_set_slot, "itm_roman_w_verutum_2pack", slot_item_javelin_ammo_1, "itm_w_verutum_glove_1"),     	  
+      (item_set_slot, "itm_roman_w_verutum_2pack", slot_item_javelin_ammo_2, "itm_w_verutum_glove_2"),     		
     ]),
 
   #script_game_get_use_string
@@ -33691,7 +33715,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_kingdom_1_lord"), # Consvl Marcus Valerius Corvus
+        (eq, ":party_leader", "trp_kingdom_1_lord"), # Consul Prior Marcus Valerius Corvus
         (assign, ":party_template_a", "pt_kingdom_1_lord_reinforcements"), # Elite Campanian Mercs, Principes and velites	
         (assign, ":party_template_b", "pt_kingdom_1_lord_reinforcements"), # Elite Campanian Mercs, Principes and velites	
         (assign, ":party_template_c", "pt_kingdom_1_lord_reinforcements"), # Elite Campanian Mercs, Principes and velites			
@@ -33701,11 +33725,11 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_1_1"), # Tribunus Militum Gnaeus Fulvius Maximus Centumalus
-        (assign, ":party_template_a", "pt_legio_1_army_a"), # Hastati and cavalry
-        (assign, ":party_template_b", "pt_legio_1_army_a"), # Hastati and cavalry	
-        (assign, ":party_template_c", "pt_legio_1_army_a"), # Hastati and cavalry	
-        (assign, ":officer_template", "pt_legio_1_officers_template"),			
+        (eq, ":party_leader", "trp_knight_1_1"), # Consul Posterior Quintus Appuleius Pansa
+        (assign, ":party_template_a", "pt_legio_2_army_b"), # Hastati and cavalry
+        (assign, ":party_template_b", "pt_legio_2_army_b"), # Hastati and cavalry	
+        (assign, ":party_template_c", "pt_legio_2_army_b"), # Hastati and cavalry	
+        (assign, ":officer_template", "pt_legio_2_officers_template"),			
       (try_end),	  
 	  
       (try_begin),
@@ -33713,10 +33737,10 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (eq, ":party_leader", "trp_knight_1_2"), # Tribunus Militum Quintus Fabius Maximus Rullianus
-        (assign, ":party_template_a", "pt_legio_1_army_b"), # Princeps and veles
-        (assign, ":party_template_b", "pt_legio_1_army_b"), # Princeps and veles	
-        (assign, ":party_template_c", "pt_legio_1_army_b"), # Princeps and veles	
-        (assign, ":officer_template", "pt_legio_1_officers_template"),			
+        (assign, ":party_template_a", "pt_legio_3_army_b"), # Princeps and veles
+        (assign, ":party_template_b", "pt_legio_3_army_b"), # Princeps and veles	
+        (assign, ":party_template_c", "pt_legio_3_army_b"), # Princeps and veles	
+        (assign, ":officer_template", "pt_legio_3_officers_template"),			
       (try_end),	
 
       (try_begin),
@@ -33724,10 +33748,10 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (eq, ":party_leader", "trp_knight_1_3"), # Tribunus Militum Publius Decius Mus
-        (assign, ":party_template_a", "pt_legio_1_army_c"), # Triarii and sagittari
-        (assign, ":party_template_b", "pt_legio_1_army_c"), # Triarii and sagittari
-        (assign, ":party_template_c", "pt_legio_1_army_c"), # Triarii and sagittari
-        (assign, ":officer_template", "pt_legio_1_officers_template"),			
+        (assign, ":party_template_a", "pt_legio_4_army_c"), # Triarii and sagittari
+        (assign, ":party_template_b", "pt_legio_4_army_c"), # Triarii and sagittari
+        (assign, ":party_template_c", "pt_legio_4_army_c"), # Triarii and sagittari
+        (assign, ":officer_template", "pt_legio_4_officers_template"),			
       (try_end),	  
 	  
       (try_begin),
@@ -33735,10 +33759,10 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (eq, ":party_leader", "trp_knight_1_4"), # Tribunus Militum Titus Manlius Torquatus
-        (assign, ":party_template_a", "pt_legio_2_army_a"), # Hastati and cavalry
-        (assign, ":party_template_b", "pt_legio_2_army_a"), # Hastati and cavalry	
-        (assign, ":party_template_c", "pt_legio_2_army_a"), # Hastati and cavalry	
-        (assign, ":officer_template", "pt_legio_2_officers_template"),			
+        (assign, ":party_template_a", "pt_legio_1_army_b"), # Hastati and cavalry
+        (assign, ":party_template_b", "pt_legio_1_army_b"), # Hastati and cavalry	
+        (assign, ":party_template_c", "pt_legio_1_army_b"), # Hastati and cavalry	
+        (assign, ":officer_template", "pt_legio_1_officers_template"),			
       (try_end),		  
 	  
       (try_begin),
@@ -33746,9 +33770,9 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (eq, ":party_leader", "trp_knight_1_5"), # Tribunus Militum Lucius Volumnius Flamma
-        (assign, ":party_template_a", "pt_legio_2_army_b"), # Princeps and veles
-        (assign, ":party_template_b", "pt_legio_2_army_b"), # Princeps and veles	
-        (assign, ":party_template_c", "pt_legio_2_army_b"), # Princeps and veles	
+        (assign, ":party_template_a", "pt_legio_2_army_a"), # Princeps and veles
+        (assign, ":party_template_b", "pt_legio_2_army_a"), # Princeps and veles	
+        (assign, ":party_template_c", "pt_legio_2_army_a"), # Princeps and veles	
         (assign, ":officer_template", "pt_legio_2_officers_template"),			
       (try_end),		  
 	  
@@ -33757,10 +33781,10 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (eq, ":party_leader", "trp_knight_1_6"), # Tribunus Militum Julius Decimus
-        (assign, ":party_template_a", "pt_legio_2_army_c"), # Triarii and sagittari
-        (assign, ":party_template_b", "pt_legio_2_army_c"), # Triarii and sagittari
-        (assign, ":party_template_c", "pt_legio_2_army_c"), # Triarii and sagittari	
-        (assign, ":officer_template", "pt_legio_2_officers_template"),			
+        (assign, ":party_template_a", "pt_legio_3_army_c"), # Triarii and sagittari
+        (assign, ":party_template_b", "pt_legio_3_army_c"), # Triarii and sagittari
+        (assign, ":party_template_c", "pt_legio_3_army_c"), # Triarii and sagittari	
+        (assign, ":officer_template", "pt_legio_3_officers_template"),			
       (try_end),		  
 	  
       (try_begin),
@@ -33768,68 +33792,62 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (eq, ":party_leader", "trp_knight_1_7"), # Appius Claudius
-        (assign, ":party_template_a", "pt_legio_3_army_a"), # Hastati and cavalry
-        (assign, ":party_template_b", "pt_legio_3_army_a"), # Hastati and cavalry	
-        (assign, ":party_template_c", "pt_legio_3_army_a"), # Hastati and cavalry	
-        (assign, ":officer_template", "pt_legio_3_officers_template"),			
+        (assign, ":party_template_a", "pt_legio_4_army_a"), # Hastati and cavalry
+        (assign, ":party_template_b", "pt_legio_4_army_a"), # Hastati and cavalry	
+        (assign, ":party_template_c", "pt_legio_4_army_a"), # Hastati and cavalry	
+        (assign, ":officer_template", "pt_legio_4_officers_template"),			
       (try_end),	
 	  
+	  
+### Socii Armies	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_1_8"), # Publius Cornelius Arvina
-        (assign, ":party_template_a", "pt_legio_3_army_b"), # Princeps and veles
-        (assign, ":party_template_b", "pt_legio_3_army_b"), # Princeps and veles	
-        (assign, ":party_template_c", "pt_legio_3_army_b"), # Princeps and veles	
-        (assign, ":officer_template", "pt_legio_3_officers_template"),			
+        (this_or_next|eq, ":party_leader", "trp_knight_1_8"), # Socii Soies Maraies
+        (this_or_next|eq, ":party_leader", "trp_knight_1_9"), # Socii Rufus Pompeia
+        (eq, ":party_leader", "trp_knight_1_10"), # Socii Marullus Memmia
+        (assign, ":party_template_a", "pt_campanian_army_a"), # Campanians
+        (assign, ":party_template_b", "pt_campanian_army_a"), # Campanians
+        (assign, ":party_template_c", "pt_campanian_army_a"), # Campanians	
+        (assign, ":officer_template", "pt_campanian_officers_template"),			
       (try_end),		
 
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_1_9"), # Cyprianus Agrippa
-        (assign, ":party_template_a", "pt_legio_3_army_c"), # Triarii and sagittari
-        (assign, ":party_template_b", "pt_legio_3_army_c"), # Triarii and sagittari
-        (assign, ":party_template_c", "pt_legio_3_army_c"), # Triarii and sagittari	
-        (assign, ":officer_template", "pt_legio_3_officers_template"),			
-      (try_end),
-
-      (try_begin),
-        (store_faction_of_party, ":party_faction", ":party_no"),
-        (eq, ":party_faction", "fac_kingdom_1"),		
-        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_1_10"), # Augustus Avitus
-        (assign, ":party_template_a", "pt_legio_4_army_a"), # Hastati and cavalry
-        (assign, ":party_template_b", "pt_legio_4_army_a"), # Hastati and cavalry	
-        (assign, ":party_template_c", "pt_legio_4_army_a"), # Hastati and cavalry	
-        (assign, ":officer_template", "pt_legio_4_officers_template"),			
-      (try_end),	
-
-      (try_begin),
-        (store_faction_of_party, ":party_faction", ":party_no"),
-        (eq, ":party_faction", "fac_kingdom_1"),		
-        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_1_11"), # Socii Lars
-        (assign, ":party_template_a", "pt_campanian_army_a"), # Hastati and cavalry and ensiferi
-        (assign, ":party_template_b", "pt_campanian_army_a"), # Hastati and cavalry and ensiferi	
-        (assign, ":party_template_c", "pt_campanian_army_a"), # Hastati and cavalry and ensiferi	
+        (this_or_next|eq, ":party_leader", "trp_knight_1_11"), # Socii Kaílis Húsidiis
+        (eq, ":party_leader", "trp_knight_1_12"), # Socii Banttieìs Betíitis
+        (assign, ":party_template_a", "pt_campanian_army_b"), # Campanians
+        (assign, ":party_template_b", "pt_campanian_army_b"), # Campanians
+        (assign, ":party_template_c", "pt_campanian_army_b"), # Campanians	
         (assign, ":officer_template", "pt_campanian_officers_template"),			
-      (try_end),	
-
+      (try_end),		
+	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_1"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_1_12"), # Socii Caius
-        (eq, ":party_leader", "trp_knight_1_13"), # Socii Pavlvs
-        (assign, ":party_template_a", "pt_campanian_army_b"), # Pedites and sagittari
-        (assign, ":party_template_b", "pt_campanian_army_b"), # Pedites and sagittari
-        (assign, ":party_template_c", "pt_campanian_army_b"), # Pedites and sagittari	
-        (assign, ":officer_template", "pt_campanian_officers_template"),		
+        (eq, ":party_leader", "trp_knight_1_13"), # Socii Teitu Cuclna
+        (assign, ":party_template_a", "pt_legio_4_army_c"), # Legio 4
+        (assign, ":party_template_b", "pt_legio_4_army_c"), # Legio 4
+        (assign, ":party_template_c", "pt_legio_4_army_c"), # Legio 4	
+        (assign, ":officer_template", "pt_legio_4_officers_template"),			
       (try_end),		  
 	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_1"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_1_14"), # Socii Larce Hathisna	
+        (assign, ":party_template_a", "pt_legio_4_army_a"), # Legio 4
+        (assign, ":party_template_b", "pt_legio_4_army_a"), # Legio 4
+        (assign, ":party_template_c", "pt_legio_4_army_a"), # Legio 4	
+        (assign, ":officer_template", "pt_legio_4_officers_template"),			
+      (try_end),		  
+	  
+  
 	  
 ################################################## Greeks
       (try_begin),
@@ -34316,7 +34334,8 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_1"),				
-        (eq, ":party_no", "p_town_1"), # 		
+        (this_or_next|eq, ":party_no", "p_town_1"), # Roma	
+        (eq, ":party_no", "p_castle_1"), # Ostia			
         (assign, ":party_template_a", "pt_legio_1_reinforcements_a"), 
         (assign, ":party_template_b", "pt_legio_1_reinforcements_b"), 
         (assign, ":party_template_c", "pt_legio_1_reinforcements_c"),  
@@ -34326,7 +34345,8 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_1"),			
-        (eq, ":party_no", "p_town_2"), # 		
+        (this_or_next|eq, ":party_no", "p_town_2"), # Tibur	
+        (eq, ":party_no", "p_castle_2"), # Norba	
         (assign, ":party_template_a", "pt_legio_2_reinforcements_a"), 
         (assign, ":party_template_b", "pt_legio_2_reinforcements_b"), 
         (assign, ":party_template_c", "pt_legio_2_reinforcements_c"),  
@@ -34336,7 +34356,8 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_1"),			
-        (eq, ":party_no", "p_town_3"), # 		
+        (this_or_next|eq, ":party_no", "p_town_3"), # Tusculum	
+        (eq, ":party_no", "p_castle_3"), # Interamna	
         (assign, ":party_template_a", "pt_legio_3_reinforcements_a"), 
         (assign, ":party_template_b", "pt_legio_3_reinforcements_b"), 
         (assign, ":party_template_c", "pt_legio_3_reinforcements_c"),  
@@ -34346,7 +34367,8 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_1"),			
-        (eq, ":party_no", "p_town_4"), # 		
+        (this_or_next|eq, ":party_no", "p_town_4"), # Antium	
+        (eq, ":party_no", "p_castle_4"), # Sutrium		
         (assign, ":party_template_a", "pt_legio_4_reinforcements_a"), 
         (assign, ":party_template_b", "pt_legio_4_reinforcements_b"), 
         (assign, ":party_template_c", "pt_legio_4_reinforcements_c"),  
@@ -34366,8 +34388,47 @@ scripts = [
         (assign, ":officer_template", "pt_campanian_officers_template"), 			
       (try_end),		  
 	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),			
+        (eq, ":party_faction", "fac_kingdom_1"),
+	(is_between, ":party_no", "p_town_10", "p_town_17"),
+        (assign, ":party_template_a", "pt_legio_1_reinforcements_a"), 
+        (assign, ":party_template_b", "pt_legio_1_reinforcements_b"), 	
+        (assign, ":party_template_c", "pt_legio_1_reinforcements_c"), 
+        (assign, ":officer_template", "pt_legio_1_officers_template"), 		
+      (try_end),		
+
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),			
+        (eq, ":party_faction", "fac_kingdom_1"),
+	(is_between, ":party_no", "p_town_30", "p_town_39"),
+        (assign, ":party_template_a", "pt_legio_2_reinforcements_a"), 
+        (assign, ":party_template_b", "pt_legio_2_reinforcements_b"), 	
+        (assign, ":party_template_c", "pt_legio_2_reinforcements_c"), 
+        (assign, ":officer_template", "pt_legio_2_officers_template"), 		
+      (try_end),	
+
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),			
+        (eq, ":party_faction", "fac_kingdom_1"),
+	(is_between, ":party_no", "p_town_17", "p_town_30"),
+        (assign, ":party_template_a", "pt_legio_3_reinforcements_a"), 
+        (assign, ":party_template_b", "pt_legio_3_reinforcements_b"), 	
+        (assign, ":party_template_c", "pt_legio_3_reinforcements_c"), 
+        (assign, ":officer_template", "pt_legio_3_officers_template"), 		
+      (try_end),	  
 	  
-# Greeks	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),			
+        (eq, ":party_faction", "fac_kingdom_1"),
+	(is_between, ":party_no", "p_town_39", "p_town_50"),
+        (assign, ":party_template_a", "pt_legio_4_reinforcements_a"), 
+        (assign, ":party_template_b", "pt_legio_4_reinforcements_b"), 	
+        (assign, ":party_template_c", "pt_legio_4_reinforcements_c"), 
+        (assign, ":officer_template", "pt_legio_4_officers_template"), 		
+      (try_end),	  	  
+	  
+### Greeks	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),			
         (eq, ":party_faction", "fac_kingdom_2"),			
@@ -35230,6 +35291,7 @@ scripts = [
       (try_begin),
         (eq, ":culture", "fac_culture_1"),	
         (this_or_next|eq, ":village_no", "p_village_1"),				
+        (this_or_next|eq, ":village_no", "p_village_2"),				
         (this_or_next|eq, ":village_no", "p_village_4"),			
         (this_or_next|eq, ":village_no", "p_village_8"),	
         (eq, ":village_no", "p_village_26"),	
@@ -35243,6 +35305,7 @@ scripts = [
         (eq, ":culture", "fac_culture_1"),	
         (this_or_next|eq, ":village_no", "p_village_5"),				
         (this_or_next|eq, ":village_no", "p_village_6"),				
+        (this_or_next|eq, ":village_no", "p_village_25"),				
         (eq, ":village_no", "p_village_27"),	
         (assign, ":party_template_a", "pt_legio_2_reinforcements_a"), 
         (assign, ":party_template_b", "pt_legio_2_reinforcements_b"), 	
@@ -35253,7 +35316,8 @@ scripts = [
       (try_begin),
         (eq, ":culture", "fac_culture_1"),	
         (this_or_next|eq, ":village_no", "p_village_3"),								
-        (eq, ":village_no", "p_village_7"),	
+        (this_or_next|eq, ":village_no", "p_village_7"),								
+        (eq, ":village_no", "p_village_11"),	
         (assign, ":party_template_a", "pt_legio_3_reinforcements_a"), 
         (assign, ":party_template_b", "pt_legio_3_reinforcements_b"), 	
         (assign, ":party_template_c", "pt_legio_3_reinforcements_c"), 
@@ -35263,7 +35327,9 @@ scripts = [
       (try_begin),
         (eq, ":culture", "fac_culture_1"),	
         (this_or_next|eq, ":village_no", "p_village_9"),								
-        (eq, ":village_no", "p_village_10"),	
+        (this_or_next|eq, ":village_no", "p_village_10"),								
+        (this_or_next|eq, ":village_no", "p_village_22"),								
+        (eq, ":village_no", "p_village_90"),	
         (assign, ":party_template_a", "pt_legio_4_reinforcements_a"), 
         (assign, ":party_template_b", "pt_legio_4_reinforcements_b"), 	
         (assign, ":party_template_c", "pt_legio_4_reinforcements_c"), 
@@ -79732,11 +79798,11 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 		(try_end),
 		
 		(try_begin),		
-		(eq, ":agent_no", ":player_agent"),		
-		(assign, reg1, ":javelin_ammo"),
-		(display_message, "@You have {reg1} javelins"),   	
-		(assign, reg2, ":value"),
-		(display_message, "@Value is {reg2}"),   		
+			(eq, ":agent_no", ":player_agent"),		
+			(assign, reg1, ":javelin_ammo"),
+			(display_message, "@You have {reg1} javelins"),   	
+			(assign, reg2, ":value"),
+			(display_message, "@Value is {reg2}"),   		
 		(try_end),
 		
 		(try_begin),

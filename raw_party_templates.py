@@ -28,12 +28,12 @@ party_templates = [
 ("legio_3_reinforcements_a", "{!}kingdom_1_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_legio_3_hastatus,5,10),(trp_sp_legio_3_hastatus_2,5,10),(trp_sp_roman_veles,2,8)]),
 ("legio_3_reinforcements_b", "{!}kingdom_1_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_legio_3_princeps,5,10),(trp_sp_legio_3_princeps_2,5,10),(trp_sp_roman_sagittarius,2,8)]),
 ("legio_3_reinforcements_c", "{!}kingdom_1_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_roman_eques,2,8),(trp_sp_roman_eques_2,2,8),(trp_sp_legio_3_triarius,2,8)]),
-("legio_3_officers_template", "{!}legio_1_officers_template", 0, 0, fac_commoners, 0, [(trp_sp_roman_centurio,1,2),(trp_sp_roman_vexillarius_legio_1,1,2)]),
+("legio_3_officers_template", "{!}legio_1_officers_template", 0, 0, fac_commoners, 0, [(trp_sp_roman_centurio,1,2),(trp_sp_roman_vexillarius_legio_3,1,2)]),
 
 ("legio_4_reinforcements_a", "{!}kingdom_1_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_legio_4_hastatus,5,10),(trp_sp_legio_4_hastatus_2,5,10),(trp_sp_roman_veles,2,8)]),
 ("legio_4_reinforcements_b", "{!}kingdom_1_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_legio_4_princeps,5,10),(trp_sp_legio_4_princeps_2,5,10),(trp_sp_roman_sagittarius,2,8)]),
 ("legio_4_reinforcements_c", "{!}kingdom_1_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_roman_eques,2,8),(trp_sp_roman_eques_2,2,8),(trp_sp_legio_4_triarius,2,8)]),
-("legio_4_officers_template", "{!}legio_1_officers_template", 0, 0, fac_commoners, 0, [(trp_sp_roman_centurio,1,2),(trp_sp_roman_vexillarius_legio_1,1,2)]),
+("legio_4_officers_template", "{!}legio_1_officers_template", 0, 0, fac_commoners, 0, [(trp_sp_roman_centurio,1,2),(trp_sp_roman_vexillarius_legio_4,1,2)]),
 
 ### Greek Army Reinforcements
 # Athenians
