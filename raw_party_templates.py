@@ -79,6 +79,9 @@ party_templates = [
 ("corinth_reinforcements_b", "{!}kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_corinthian_hoplite,10,15),(trp_sp_greek_toxotes,2,8)]),
 ("corinth_reinforcements_c", "{!}kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_corinthian_hoplite_elite,5,10),(trp_sp_greek_hippeus,2,8),(trp_sp_greek_sphendonetes,2,8)]),
 
+# Sykels
+("sykel_reinforcements_b", "{!}kingdom_7_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_sykeloi_hoplites,5,10),(trp_sp_syracusan_toxotes,2,8)]),
+
 ### Thessalian Reiforcements
 ("thessalian_reinforcements_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_thessalian_hoplite_levy,5,10),(trp_sp_thessalian_akontistes,2,8),(trp_sp_thessalian_hippeis,2,8)]),
 ("thessalian_reinforcements_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_thessalian_hoplite,5,10),(trp_sp_thessalian_hippeis,2,8),(trp_sp_thessalian_toxotes,2,8)]),
@@ -134,6 +137,8 @@ party_templates = [
 ("syracusan_army_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_syracusan_hoplite_elite,2,8),(trp_sp_syracusan_toxotes,2,8),(trp_sp_syracusan_hoplite,5,10),(trp_sp_syracusan_hoplite_levy,5,10)]),
 
 ("sykel_army_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_sykeloi_hoplites,10,20),(trp_sp_syracusan_hippakontistes,2,8),(trp_sp_syracusan_peltast,2,8)]),
+
+("etruscan_mercenary_army", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_etruscan_hoplites,10,20),(trp_sp_etruscan_cutlis,2,8),(trp_sp_etruscan_uphale_vipa,2,8)]),
 
 ############ Etruscans
 ("etruscan_king_army", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_etruscan_huzrna,5,10),(trp_sp_etruscan_athumic,2,8),(trp_sp_etruscan_ultna_athumic,1,4),(trp_sp_etruscan_satna,2,8),(trp_sp_etruscan_uphale_vipa,2,8),(trp_sp_etruscan_eprial_luvcatru,1,4)]),
