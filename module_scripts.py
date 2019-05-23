@@ -1092,13 +1092,13 @@ scripts = [
       (call_script, "script_give_center_to_lord", "p_town_8",  "trp_knight_1_11", 0),# Cumae - Socii Kaílis Húsidiis
       (call_script, "script_give_center_to_lord", "p_town_9",  "trp_knight_1_12", 0),# Pompeii - Socii Banttieìs Betíitis
 	  
-      (call_script, "script_give_center_to_lord", "p_town_10", "trp_kingdom_5_lord", 0),# Maloenton - Nikephoros 
-      (call_script, "script_give_center_to_lord", "p_town_11", "trp_knight_5_1", 0),# Ladinod - Perikles
-      (call_script, "script_give_center_to_lord", "p_town_12", "trp_knight_5_2", 0),# Buvaianud -
-      (call_script, "script_give_center_to_lord", "p_town_13", "trp_knight_5_3", 0),# Venusia - 
-      (call_script, "script_give_center_to_lord", "p_town_14", "trp_knight_5_4", 0),# Istònion -
-      (call_script, "script_give_center_to_lord", "p_town_15", "trp_knight_5_5", 0),# Aisernio -
-      (call_script, "script_give_center_to_lord", "p_town_16", "trp_knight_5_6", 0),# Tullisiom - 
+      (call_script, "script_give_center_to_lord", "p_town_10", "trp_kingdom_5_lord", 0),# Maloenton - Meddíss Túvtíks Gelleíís Egnatíís
+      (call_script, "script_give_center_to_lord", "p_town_11", "trp_knight_5_2", 0),# Ladinod - Meddíss Maììeìs Maraiieìs
+      (call_script, "script_give_center_to_lord", "p_town_12", "trp_knight_5_1", 0),# Buvaianud - Meddíss Nuvís Vessulia
+      (call_script, "script_give_center_to_lord", "p_town_13", "trp_knight_5_3", 0),# Venusia - Meddíss Lúvkis Appuliis Mamerekeìs
+      (call_script, "script_give_center_to_lord", "p_town_14", "trp_knight_5_4", 0),# Istònion - Meddíss Staíís Stafidins
+      (call_script, "script_give_center_to_lord", "p_town_15", "trp_knight_5_5", 0),# Aisernio - Meddíss Lùukiis Marahieis
+      (call_script, "script_give_center_to_lord", "p_town_16", "trp_knight_5_6", 0),# Tullisiom - Meddíss Maras Banttieìs
 	  
       (call_script, "script_give_center_to_lord", "p_town_17", "trp_kingdom_6_lord", 0),# Taras - 
       (call_script, "script_give_center_to_lord", "p_town_18", "trp_knight_6_1", 0),# Thurioi - 
@@ -34090,7 +34090,8 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_5"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (this_or_next|eq, ":party_leader", "trp_knight_5_4"), 		
-        (eq, ":party_leader", "trp_knight_5_5"), 		
+        (this_or_next|eq, ":party_leader", "trp_knight_5_5"), 		
+        (eq, ":party_leader", "trp_knight_5_6"), 		
         (assign, ":party_template_a", "pt_generic_samnite_army_b"), 	
         (assign, ":party_template_b", "pt_generic_samnite_army_b"), 	
         (assign, ":party_template_c", "pt_generic_samnite_army_b"), 				
@@ -34100,8 +34101,9 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_5"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_5_6"), 		
-        (eq, ":party_leader", "trp_knight_5_7"), 		
+        (this_or_next|eq, ":party_leader", "trp_knight_5_7"), 		 		
+        (this_or_next|eq, ":party_leader", "trp_knight_5_8"), 		
+        (eq, ":party_leader", "trp_knight_5_9"), 		
         (assign, ":party_template_a", "pt_generic_samnite_army_a"), 	
         (assign, ":party_template_b", "pt_generic_samnite_army_a"), 	
         (assign, ":party_template_c", "pt_generic_samnite_army_a"), 				
@@ -34376,12 +34378,13 @@ scripts = [
       (try_end),			  
 	  
       (try_begin),
-        (store_faction_of_party, ":party_faction", ":party_no"),			
-        (eq, ":party_faction", "fac_kingdom_1"),
-        (this_or_next|eq, ":party_no", "p_town_5"),	
-        (this_or_next|eq, ":party_no", "p_town_6"),		
-        (this_or_next|eq, ":party_no", "p_town_8"),			
-        (eq, ":party_no", "p_town_9"), 
+        (store_faction_of_party, ":party_faction", ":party_no"),
+		
+        (this_or_next|eq, ":party_faction", "fac_kingdom_1"),
+        (eq, ":party_faction", "fac_kingdom_5"),
+		
+        (is_between, ":party_no", "p_town_5", "p_town_10"),
+		
         (assign, ":party_template_a", "pt_campanian_reinforcements_a"),
         (assign, ":party_template_b", "pt_campanian_reinforcements_b"),
         (assign, ":party_template_c", "pt_campanian_reinforcements_c"),		
@@ -35338,7 +35341,8 @@ scripts = [
 
       (try_begin),
         # (store_faction_of_party, ":party_faction", ":village_no"),	
-        (eq, ":culture", "fac_culture_1"),	
+        (this_or_next|eq, ":culture", "fac_culture_1"),	
+        (eq, ":culture", "fac_culture_5"),	
         (this_or_next|eq, ":village_no", "p_village_12"), 		  
         (this_or_next|eq, ":village_no", "p_village_13"),				
         (this_or_next|eq, ":village_no", "p_village_14"),			
