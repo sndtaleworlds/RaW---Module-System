@@ -33971,7 +33971,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (is_between, ":party_leader", "trp_knight_2_12", "trp_knight_4_15"),	
+        (is_between, ":party_leader", "trp_knight_2_12", "trp_knight_2_14"),	
         (assign, ":party_template_a", "pt_generic_greek_army_a"), 	
         (assign, ":party_template_b", "pt_generic_greek_army_a"), 
         (assign, ":party_template_c", "pt_generic_greek_army_a"), 				

@@ -43,7 +43,7 @@ party_templates = [
 
 # Boeotians
 ("thebes_reinforcements_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_boeotian_citizen_hoplite,10,20),(trp_sp_boeotian_skirmisher,2,8)]),
-("thebes_reinforcements_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_boeotian_hoplite,5,10),(trp_sp_greek_toxotes,2,8)]),
+("thebes_reinforcements_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_boeotian_hoplite,5,10),(trp_sp_boeotian_skirmisher,2,8)]),
 ("thebes_reinforcements_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_boeotian_horseman,5,10),(trp_sp_boeotian_elite_hoplite,2,8)]),
 ("thebes_officers", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_boeotian_officer,1,2)]),
 
