@@ -838,6 +838,7 @@ scripts = [
       (troop_set_slot, "trp_knight_1_11", slot_troop_banner_scene_prop, "spr_banner_b"),	
       (troop_set_slot, "trp_knight_1_12", slot_troop_banner_scene_prop, "spr_banner_b"),	
       (troop_set_slot, "trp_knight_1_13", slot_troop_banner_scene_prop, "spr_banner_b"),		  
+      (troop_set_slot, "trp_knight_1_14", slot_troop_banner_scene_prop, "spr_banner_b"),		  
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_2"), #Koinon Hellenon
       (troop_set_slot, "trp_knight_2_1", slot_troop_banner_scene_prop, "spr_banner_f15"), # Areus of Sparta, Laconian banner
@@ -845,11 +846,16 @@ scripts = [
       (troop_set_slot, "trp_knight_2_3", slot_troop_banner_scene_prop, "spr_banner_f17"),	
       (troop_set_slot, "trp_knight_2_4", slot_troop_banner_scene_prop, "spr_banner_f16"), # Damokles of Argos, Gorgon
       (troop_set_slot, "trp_knight_2_5", slot_troop_banner_scene_prop, "spr_banner_f09"),
-      (troop_set_slot, "trp_knight_2_6", slot_troop_banner_scene_prop, "spr_banner_f14"), # Nikephoros of Thebes
+      (troop_set_slot, "trp_knight_2_6", slot_troop_banner_scene_prop, "spr_banner_f14"), # Archon Antigonos Gonatas 	
       (troop_set_slot, "trp_knight_2_7", slot_troop_banner_scene_prop, "spr_banner_f12"), # Perikles of Crete
       (troop_set_slot, "trp_knight_2_8", slot_troop_banner_scene_prop, "spr_banner_f17"), # Themistocles of Corinth		
       (troop_set_slot, "trp_knight_2_9", slot_troop_banner_scene_prop, "spr_banner_f18"),	
       (troop_set_slot, "trp_knight_2_10", slot_troop_banner_scene_prop, "spr_banner_g02"),	
+      (troop_set_slot, "trp_knight_2_11", slot_troop_banner_scene_prop, "spr_banner_g02"),	
+      (troop_set_slot, "trp_knight_2_12", slot_troop_banner_scene_prop, "spr_banner_g02"),	
+      (troop_set_slot, "trp_knight_2_13", slot_troop_banner_scene_prop, "spr_banner_g02"),	
+      (troop_set_slot, "trp_knight_2_14", slot_troop_banner_scene_prop, "spr_banner_f15"),	# Spartan banner
+      (troop_set_slot, "trp_knight_2_15", slot_troop_banner_scene_prop, "spr_banner_f15"),	# Spartan banner
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_3"), #Gallia
       (troop_set_slot, "trp_knight_3_1", slot_troop_banner_scene_prop, "spr_banner_r"),
@@ -862,6 +868,11 @@ scripts = [
       (troop_set_slot, "trp_knight_3_8", slot_troop_banner_scene_prop, "spr_banner_t"),		
       (troop_set_slot, "trp_knight_3_9", slot_troop_banner_scene_prop, "spr_banner_r"),		
       (troop_set_slot, "trp_knight_3_10", slot_troop_banner_scene_prop, "spr_banner_s"),			  
+      (troop_set_slot, "trp_knight_3_11", slot_troop_banner_scene_prop, "spr_banner_s"),			  
+      (troop_set_slot, "trp_knight_3_12", slot_troop_banner_scene_prop, "spr_banner_s"),			  
+      (troop_set_slot, "trp_knight_3_13", slot_troop_banner_scene_prop, "spr_banner_s"),			  
+      (troop_set_slot, "trp_knight_3_14", slot_troop_banner_scene_prop, "spr_banner_s"),			  
+      (troop_set_slot, "trp_knight_3_15", slot_troop_banner_scene_prop, "spr_banner_s"),			  
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_4"), #Makedonia
       (troop_set_slot, "trp_knight_4_1", slot_troop_banner_scene_prop, "spr_banner_f20"),
@@ -874,6 +885,11 @@ scripts = [
       (troop_set_slot, "trp_knight_4_8", slot_troop_banner_scene_prop, "spr_banner_f16"),	
       (troop_set_slot, "trp_knight_4_9", slot_troop_banner_scene_prop, "spr_banner_f16"),		
       (troop_set_slot, "trp_knight_4_10", slot_troop_banner_scene_prop, "spr_banner_f16"),	
+      (troop_set_slot, "trp_knight_4_11", slot_troop_banner_scene_prop, "spr_banner_f16"),	
+      (troop_set_slot, "trp_knight_4_12", slot_troop_banner_scene_prop, "spr_banner_f16"),	
+      (troop_set_slot, "trp_knight_4_13", slot_troop_banner_scene_prop, "spr_banner_f16"),	
+      (troop_set_slot, "trp_knight_4_14", slot_troop_banner_scene_prop, "spr_banner_f16"),	
+      (troop_set_slot, "trp_knight_4_15", slot_troop_banner_scene_prop, "spr_banner_f16"),	
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_5"), #Samnium  
       (troop_set_slot, "trp_knight_5_1", slot_troop_banner_scene_prop, "spr_banner_f04"),
@@ -891,6 +907,10 @@ scripts = [
       (troop_set_slot, "trp_knight_6_2", slot_troop_banner_scene_prop, "spr_banner_f19"), # 
       (troop_set_slot, "trp_knight_6_3", slot_troop_banner_scene_prop, "spr_banner_f19"), # 
       (troop_set_slot, "trp_knight_6_4", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
+      (troop_set_slot, "trp_knight_6_5", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
+      (troop_set_slot, "trp_knight_6_6", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
+      (troop_set_slot, "trp_knight_6_7", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
+      (troop_set_slot, "trp_knight_6_8", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_7"), #Basileion Syracosion  	  
       (troop_set_slot, "trp_knight_7_1", slot_troop_banner_scene_prop, "spr_banner_f13"), # 
@@ -898,6 +918,9 @@ scripts = [
       (troop_set_slot, "trp_knight_7_3", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	  
       (troop_set_slot, "trp_knight_7_4", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	  
       (troop_set_slot, "trp_knight_7_5", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
+      (troop_set_slot, "trp_knight_7_6", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
+      (troop_set_slot, "trp_knight_7_7", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
+      (troop_set_slot, "trp_knight_7_8", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_8"), #Epeiros  	  
       (troop_set_slot, "trp_knight_8_1", slot_troop_banner_scene_prop, "spr_banner_di"), # 
@@ -905,6 +928,9 @@ scripts = [
       (troop_set_slot, "trp_knight_8_3", slot_troop_banner_scene_prop, "spr_banner_dk"),
       (troop_set_slot, "trp_knight_8_4", slot_troop_banner_scene_prop, "spr_banner_dl"),
       (troop_set_slot, "trp_knight_8_5", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
+      (troop_set_slot, "trp_knight_8_6", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
+      (troop_set_slot, "trp_knight_8_7", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
+      (troop_set_slot, "trp_knight_8_8", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_9"), #Etruscans 	  
       (troop_set_slot, "trp_knight_9_1", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
@@ -915,6 +941,8 @@ scripts = [
       (troop_set_slot, "trp_knight_9_6", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
       (troop_set_slot, "trp_knight_9_7", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
       (troop_set_slot, "trp_knight_9_8", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
+      (troop_set_slot, "trp_knight_9_9", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
+      (troop_set_slot, "trp_knight_9_10", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
         (else_try),
           (assign, ":hero_offset", ":num_other_lords_assigned"),
           # (try_begin),
@@ -33869,7 +33897,8 @@ scripts = [
         (eq, ":party_leader", "trp_knight_2_9"), # Gytheion - Archon Demosthenes		
         (assign, ":party_template_a", "pt_spartan_army_b"), 	
         (assign, ":party_template_b", "pt_spartan_army_b"), 		
-        (assign, ":party_template_c", "pt_spartan_army_b"), 	
+        (assign, ":party_template_c", "pt_spartan_army_b"), 
+        (assign, ":officer_template", "pt_sparta_officers"), 				
       (try_end),	    
 	  
       (try_begin),
@@ -33880,6 +33909,7 @@ scripts = [
         (assign, ":party_template_a", "pt_spartan_army_a"), 	
         (assign, ":party_template_b", "pt_spartan_army_a"), 		
         (assign, ":party_template_c", "pt_spartan_army_a"), 	
+        (assign, ":officer_template", "pt_sparta_officers"), 				
       (try_end),	 
    	  
       (try_begin),
@@ -33890,6 +33920,7 @@ scripts = [
         (assign, ":party_template_a", "pt_spartan_army_a"), 	
         (assign, ":party_template_b", "pt_spartan_army_a"), 		
         (assign, ":party_template_c", "pt_spartan_army_a"), 	
+        (assign, ":officer_template", "pt_sparta_officers"), 				
       (try_end),	    	  
 	  	  
       (try_begin),
