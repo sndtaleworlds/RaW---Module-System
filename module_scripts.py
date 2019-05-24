@@ -1126,23 +1126,23 @@ scripts = [
       (call_script, "script_give_center_to_lord", "p_town_37", "trp_knight_9_7", 0), # Pisna - Zilath Anxe Afuna
       (call_script, "script_give_center_to_lord", "p_town_38", "trp_knight_9_8", 0), # Falerii - Zilath Cnaive Marcena	
 
-      (call_script, "script_give_center_to_lord", "p_town_39", "trp_knight_3_10", 0),# Sena - 	 
-      (call_script, "script_give_center_to_lord", "p_town_40", "trp_knight_3_1", 0),# Pisaurum -  	
-      (call_script, "script_give_center_to_lord", "p_town_41", "trp_knight_3_2", 0),# Ravenna -  	
-      (call_script, "script_give_center_to_lord", "p_town_42", "trp_knight_3_3", 0),# Genua -  
-      (call_script, "script_give_center_to_lord", "p_town_43", "trp_knight_3_4", 0), # Dertona -
-      (call_script, "script_give_center_to_lord", "p_town_44", "trp_knight_3_5", 0), # Taurasia -
-      (call_script, "script_give_center_to_lord", "p_town_45", "trp_kingdom_3_lord", 0), # Mediolanon -
-      (call_script, "script_give_center_to_lord", "p_town_46", "trp_knight_3_6", 0), # Bona -
-      (call_script, "script_give_center_to_lord", "p_town_47", "trp_knight_3_7", 0), # Brixia -
-      (call_script, "script_give_center_to_lord", "p_town_48", "trp_knight_3_8", 0), # Cremona -
-      (call_script, "script_give_center_to_lord", "p_town_49", "trp_knight_3_9", 0), # Verona -	
+      (call_script, "script_give_center_to_lord", "p_town_39", "trp_knight_3_10", 0),# Sena - Valos Cinge	 
+      (call_script, "script_give_center_to_lord", "p_town_40", "trp_knight_3_1", 0),# Pisaurum - Valos Arios 	
+      (call_script, "script_give_center_to_lord", "p_town_41", "trp_knight_3_2", 0),# Ravenna - Valos Bathanattos 	
+      (call_script, "script_give_center_to_lord", "p_town_42", "trp_knight_3_3", 0),# Genua - Valos Cerethrios 
+      (call_script, "script_give_center_to_lord", "p_town_43", "trp_knight_3_4", 0), # Dertona - Valos Gesatorix
+      (call_script, "script_give_center_to_lord", "p_town_44", "trp_knight_3_5", 0), # Taurasia - Valos Iverix
+      (call_script, "script_give_center_to_lord", "p_town_45", "trp_kingdom_3_lord", 0), # Mediolanon - Rix Brennos
+      (call_script, "script_give_center_to_lord", "p_town_46", "trp_knight_3_6", 0), # Bona - Valos Lugurix
+      (call_script, "script_give_center_to_lord", "p_town_47", "trp_knight_3_7", 0), # Brixia - Valos Molistomos
+      (call_script, "script_give_center_to_lord", "p_town_48", "trp_knight_3_8", 0), # Cremona - Valos Atis
+      (call_script, "script_give_center_to_lord", "p_town_49", "trp_knight_3_9", 0), # Verona -	Valos Atis
 
       (call_script, "script_give_center_to_lord", "p_town_50", "trp_knight_2_2", 0),# Athenai - Eponymos Archon Hegemachos	 
       (call_script, "script_give_center_to_lord", "p_town_51", "trp_knight_2_6", 0),# Thebai - Archon Antigonos Gonatas 	
       (call_script, "script_give_center_to_lord", "p_town_52", "trp_knight_2_3", 0),# Argos - Archon Apollonides 	
       (call_script, "script_give_center_to_lord", "p_town_53", "trp_knight_2_1", 0),# Lakedaemon - Basileus Áreus I 
-      (call_script, "script_give_center_to_lord", "p_town_54", "trp_knight_2_1", 0), # Gytheion - Basileus Áreus I
+      (call_script, "script_give_center_to_lord", "p_town_54", "trp_knight_2_14", 0), # Gytheion - Archon Demosthenes
       (call_script, "script_give_center_to_lord", "p_town_55", "trp_knight_2_7", 0), # Messene - Archon Periklès
       (call_script, "script_give_center_to_lord", "p_town_56", "trp_knight_2_8", 0), # Ierápytna - Archon Themistoclès
       (call_script, "script_give_center_to_lord", "p_town_57", "trp_knight_2_9", 0), # Knosós - Archon Pamphilos
@@ -1154,23 +1154,23 @@ scripts = [
       (call_script, "script_give_center_to_lord", "p_town_63", "trp_knight_2_12", 0), # Megalópolis - Archon Kephalos
       (call_script, "script_give_center_to_lord", "p_town_64", "trp_knight_2_13", 0), # Tegéa -	Archon Lysandros
 
-      (call_script, "script_give_center_to_lord", "p_town_65", "trp_kingdom_4_lord", 0),# Pella - 	 
-      (call_script, "script_give_center_to_lord", "p_town_66", "trp_kingdom_4_lord", 0),# Thessaloníke -  	
-      (call_script, "script_give_center_to_lord", "p_town_67", "trp_knight_4_1", 0),# Édessa -  	
-      (call_script, "script_give_center_to_lord", "p_town_68", "trp_knight_4_2", 0),# Díon -  
-      (call_script, "script_give_center_to_lord", "p_town_69", "trp_knight_4_3", 0), # Amphípolis -
-      (call_script, "script_give_center_to_lord", "p_town_70", "trp_knight_4_4", 0), # Philippoi -
-      (call_script, "script_give_center_to_lord", "p_town_71", "trp_knight_4_5", 0), # Herakleia L - 
-      (call_script, "script_give_center_to_lord", "p_town_72", "trp_knight_4_6", 0), # Chalkis -
-      (call_script, "script_give_center_to_lord", "p_town_73", "trp_knight_4_7", 0), # Larissa K -
-      (call_script, "script_give_center_to_lord", "p_town_74", "trp_knight_4_8", 0), # Phársalos -
-      (call_script, "script_give_center_to_lord", "p_town_75", "trp_knight_4_9", 0), # Larissa -
+      (call_script, "script_give_center_to_lord", "p_town_65", "trp_kingdom_4_lord", 0),# Pella - Basileus Kassander
+      (call_script, "script_give_center_to_lord", "p_town_66", "trp_knight_4_10", 0),# Thessaloníke - Archon Archesilaos 	
+      (call_script, "script_give_center_to_lord", "p_town_67", "trp_knight_4_1", 0),# Édessa - Archon Anthropos 	
+      (call_script, "script_give_center_to_lord", "p_town_68", "trp_knight_4_2", 0),# Díon - Archon Ion
+      (call_script, "script_give_center_to_lord", "p_town_69", "trp_knight_4_3", 0), # Amphípolis - Archon Perdikkas
+      (call_script, "script_give_center_to_lord", "p_town_70", "trp_knight_4_4", 0), # Philippoi - Archon Menelaos - Thracians
+      (call_script, "script_give_center_to_lord", "p_town_71", "trp_knight_4_5", 0), # Herakleia L - Archon Attalos - Agrianes
+      (call_script, "script_give_center_to_lord", "p_town_72", "trp_knight_4_6", 0), # Chalkis - Archon Deinokratis
+      (call_script, "script_give_center_to_lord", "p_town_73", "trp_knight_4_7", 0), # Larissa K - Archon Timandros - Thessalians
+      (call_script, "script_give_center_to_lord", "p_town_74", "trp_knight_4_8", 0), # Phársalos - Archon Agakles - Thessalians
+      (call_script, "script_give_center_to_lord", "p_town_75", "trp_knight_4_9", 0), # Larissa - Archon Agippos - Thessalians
 	  
-      (call_script, "script_give_center_to_lord", "p_town_76", "trp_kingdom_8_lord", 0), # Ambrakia -
-      (call_script, "script_give_center_to_lord", "p_town_77", "trp_knight_8_1", 0), # Kérkyra -
-      (call_script, "script_give_center_to_lord", "p_town_78", "trp_knight_8_2", 0), # Phoinike -
-      (call_script, "script_give_center_to_lord", "p_town_79", "trp_knight_8_3", 0), # Dodona -	  
-      (call_script, "script_give_center_to_lord", "p_town_80", "trp_knight_8_4", 0), # Apollonia -	  
+      (call_script, "script_give_center_to_lord", "p_town_76", "trp_kingdom_8_lord", 0), # Ambrakia - Basileus Pyrrhos
+      (call_script, "script_give_center_to_lord", "p_town_77", "trp_knight_8_1", 0), # Kérkyra - Archon Neoptolemos
+      (call_script, "script_give_center_to_lord", "p_town_78", "trp_knight_8_2", 0), # Phoinike - Archon Alcetas
+      (call_script, "script_give_center_to_lord", "p_town_79", "trp_knight_8_3", 0), # Dodona -	Archon Memnos  
+      (call_script, "script_give_center_to_lord", "p_town_80", "trp_knight_8_4", 0), # Apollonia - Archon Arymbas	  
 	  ##diplomacy end+
 
       # Give family castles to certain nobles.
@@ -1187,6 +1187,9 @@ scripts = [
       (call_script, "script_give_center_to_lord", "p_castle_8", "trp_knight_9_9", 0), # Caisra - Zilath Nerie Atna
       (call_script, "script_give_center_to_lord", "p_castle_9", "trp_knight_9_10", 0), # Vatluna - Zilath Tite Lemausna
 
+      (call_script, "script_give_center_to_lord", "p_castle_10", "trp_knight_2_2", 0), # Peiraieús - Eponymos Archon Hegemachos	
+      (call_script, "script_give_center_to_lord", "p_castle_11", "trp_knight_2_15", 0), # Trinasos - Archon Theophilos
+	  
       ##diplomacy start+
       # (call_script, "script_give_center_to_lord", "p_castle_33", "trp_knight_5_11", 0), #Etrosq Castle -- why wasn't this being done already?
 	  #Add home centers for claimants
@@ -33860,6 +33863,36 @@ scripts = [
 	  
 ################################################## Greeks
       (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_2"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_2_9"), # Gytheion - Archon Demosthenes		
+        (assign, ":party_template_a", "pt_spartan_army_b"), 	
+        (assign, ":party_template_b", "pt_spartan_army_b"), 		
+        (assign, ":party_template_c", "pt_spartan_army_b"), 	
+      (try_end),	    
+	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_2"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_2_15"), # Trinasos - Archon Theophilos			
+        (assign, ":party_template_a", "pt_spartan_army_a"), 	
+        (assign, ":party_template_b", "pt_spartan_army_a"), 		
+        (assign, ":party_template_c", "pt_spartan_army_a"), 	
+      (try_end),	 
+   	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_2"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_2_1"), # Lakedaemon - Basileus Áreus I 			
+        (assign, ":party_template_a", "pt_spartan_army_a"), 	
+        (assign, ":party_template_b", "pt_spartan_army_a"), 		
+        (assign, ":party_template_c", "pt_spartan_army_a"), 	
+      (try_end),	    	  
+	  	  
+      (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
@@ -33869,8 +33902,6 @@ scripts = [
         (assign, ":party_template_c", "pt_athenai_army"), 		
       (try_end),	  	
 	  
-
-
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
@@ -33886,38 +33917,42 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_2_3"), # Alexios
-        (assign, ":party_template_a", "pt_generic_greek_army_a"), 	
-        (assign, ":party_template_b", "pt_generic_greek_army_a"), 
-        (assign, ":party_template_c", "pt_generic_greek_army_a"), 				
+        (eq, ":party_leader", "trp_knight_2_3"), # Argos - Archon Apollonides 	
+        (eq, ":party_leader", "trp_knight_2_4"), # Delphoí - Archon Aischriondas
+        (assign, ":party_template_a", "pt_generic_greek_army_c"), 	
+        (assign, ":party_template_b", "pt_generic_greek_army_c"), 
+        (assign, ":party_template_c", "pt_generic_greek_army_c"), 				
       (try_end),		  
-
+	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_2_4"), # Damokles of Argos	
-        (assign, ":party_template_a", "pt_generic_greek_army_a"), 	
-        (assign, ":party_template_b", "pt_generic_greek_army_a"), 			
-        (assign, ":party_template_c", "pt_generic_greek_army_a"), 			
+        (this_or_next|eq, ":party_leader", "trp_knight_2_10"), # Rhódos - Archon Diogenes
+        (this_or_next|eq, ":party_leader", "trp_knight_2_11"), # Elis - Archon Eirenaios
+        (eq, ":party_leader", "trp_knight_2_5"), # Mégara - Archon Herodorus
+        (assign, ":party_template_a", "pt_generic_greek_army_b"), 	
+        (assign, ":party_template_b", "pt_generic_greek_army_b"), 
+        (assign, ":party_template_c", "pt_generic_greek_army_b"), 				
       (try_end),	  
 	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_2_5"), # Kleitos
-        (assign, ":party_template_a", "pt_generic_greek_army_b"), 	
-        (assign, ":party_template_b", "pt_generic_greek_army_b"), 
-        (assign, ":party_template_c", "pt_generic_greek_army_b"), 				
-      (try_end),	  
+        (is_between, ":party_leader", "trp_knight_2_12", "trp_knight_4_15"),	
+        (assign, ":party_template_a", "pt_generic_greek_army_a"), 	
+        (assign, ":party_template_b", "pt_generic_greek_army_a"), 
+        (assign, ":party_template_c", "pt_generic_greek_army_a"), 				
+      (try_end),	  	  
 	   
 	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_2"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_2_7"), # Perikles of Crete		
+        (this_or_next|eq, ":party_leader", "trp_knight_2_8"), # Ierápytna - Archon Themistoclès		
+        (eq, ":party_leader", "trp_knight_2_9"), # Knosós - Archon Pamphilos		
         (assign, ":party_template_a", "pt_kretai_army"), 	
         (assign, ":party_template_b", "pt_kretai_army"), 		
         (assign, ":party_template_c", "pt_kretai_army"), 	
@@ -33933,16 +33968,6 @@ scripts = [
         (assign, ":party_template_c", "pt_korinthioi_army"), 		
       (try_end),	     	 
 
-      (try_begin),
-        (store_faction_of_party, ":party_faction", ":party_no"),
-        (eq, ":party_faction", "fac_kingdom_2"),		
-        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_2_9"), # Pamphilos
-        (eq, ":party_leader", "trp_knight_2_10"), # Diogenes		
-        (assign, ":party_template_a", "pt_generic_greek_army_c"), 	
-        (assign, ":party_template_b", "pt_generic_greek_army_c"), 
-        (assign, ":party_template_c", "pt_generic_greek_army_c"), 				
-      (try_end),	  
 	  
 ################################################## Celts
       (try_begin),
@@ -33959,10 +33984,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_3"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_3_1"),
-        (this_or_next|eq, ":party_leader", "trp_knight_3_2"), 
-        (this_or_next|eq, ":party_leader", "trp_knight_3_3"), 		
-        (eq, ":party_leader", "trp_knight_3_4"), 		
+        (is_between, ":party_leader", "trp_knight_3_1", "trp_knight_3_6"),	
         (assign, ":party_template_a", "pt_generic_celt_army_a"), 	
         (assign, ":party_template_b", "pt_generic_celt_army_a"), 
         (assign, ":party_template_c", "pt_generic_celt_army_a"), 				
@@ -33972,10 +33994,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_3"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_3_4"),
-        (this_or_next|eq, ":party_leader", "trp_knight_3_5"), 
-        (this_or_next|eq, ":party_leader", "trp_knight_3_6"), 		
-        (eq, ":party_leader", "trp_knight_3_7"), 		
+        (is_between, ":party_leader", "trp_knight_3_6", "trp_knight_3_11"),		
         (assign, ":party_template_a", "pt_generic_celt_army_b"), 	
         (assign, ":party_template_b", "pt_generic_celt_army_b"), 
         (assign, ":party_template_c", "pt_generic_celt_army_b"), 				
@@ -33985,9 +34004,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_3"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_3_8"),
-        (this_or_next|eq, ":party_leader", "trp_knight_3_9"),  		
-        (eq, ":party_leader", "trp_knight_3_10"), 		
+        (is_between, ":party_leader", "trp_knight_3_11", "trp_knight_4_1"),
         (assign, ":party_template_a", "pt_generic_celt_army_c"), 	
         (assign, ":party_template_b", "pt_generic_celt_army_c"), 
         (assign, ":party_template_c", "pt_generic_celt_army_c"), 				
@@ -34003,24 +34020,14 @@ scripts = [
         (assign, ":party_template_a", "pt_mak_king_army"), 
         (assign, ":party_template_b", "pt_mak_king_army"), 
         (assign, ":party_template_c", "pt_mak_king_army"), 		
-      (try_end),	
-
-      (try_begin),
-        (store_faction_of_party, ":party_faction", ":party_no"),
-        (eq, ":party_faction", "fac_kingdom_4"),		
-        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_4_2"), # Pausanias		
-        (assign, ":party_template_a", "pt_generic_thraikan_army_a"), 	
-        (assign, ":party_template_b", "pt_generic_thraikan_army_a"), 	
-        (assign, ":party_template_c", "pt_generic_thraikan_army_a"), 				
       (try_end),		  
 	  
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_4"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_4_1"), # Anthropos
-        (eq, ":party_leader", "trp_knight_4_3"), # Perdikkas		
+        (this_or_next|eq, ":party_leader", "trp_knight_4_3"), # Anthropos
+        (eq, ":party_leader", "trp_knight_4_6"), # Perdikkas		
         (assign, ":party_template_a", "pt_generic_mak_army_a"), 	
         (assign, ":party_template_b", "pt_generic_mak_army_a"), 	
         (assign, ":party_template_c", "pt_generic_mak_army_a"), 				
@@ -34030,8 +34037,8 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_4"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_4_4"), 
-        (eq, ":party_leader", "trp_knight_4_5"), 		
+        (this_or_next|eq, ":party_leader", "trp_knight_4_1"), 
+        (eq, ":party_leader", "trp_knight_4_2"), 		
         (assign, ":party_template_a", "pt_generic_mak_army_b"), 	
         (assign, ":party_template_b", "pt_generic_mak_army_b"), 	
         (assign, ":party_template_c", "pt_generic_mak_army_b"), 				
@@ -34040,36 +34047,65 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_4"),		
-        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_4_6"), 
-        (this_or_next|eq, ":party_leader", "trp_knight_4_7"), 		
-        (eq, ":party_leader", "trp_knight_4_8"), 		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),	
+        (eq, ":party_leader", "trp_knight_4_10"), 		
         (assign, ":party_template_a", "pt_generic_mak_army_c"), 	
         (assign, ":party_template_b", "pt_generic_mak_army_c"), 	
         (assign, ":party_template_c", "pt_generic_mak_army_c"), 				
       (try_end),		  
 	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_4"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_4_4"), # Archon Menelaos		
+        (assign, ":party_template_a", "pt_generic_thraikan_army_a"), 	
+        (assign, ":party_template_b", "pt_generic_thraikan_army_a"), 	
+        (assign, ":party_template_c", "pt_generic_thraikan_army_a"), 				
+      (try_end),		  
 	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_4"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_4_5"), # Archon Attalos		
+        (assign, ":party_template_a", "pt_generic_agrianian_army_a"), 	
+        (assign, ":party_template_b", "pt_generic_agrianian_army_a"), 	
+        (assign, ":party_template_c", "pt_generic_agrianian_army_a"), 				
+      (try_end),		  
 
-      # (try_begin),
-        # (store_faction_of_party, ":party_faction", ":party_no"),
-        # (eq, ":party_faction", "fac_kingdom_4"),		
-        # (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        # (eq, ":party_leader", "trp_knight_4_9"), # Agippos		
-        # (assign, ":party_template_a", "pt_generic_thessaloi_army_a"), 	
-        # (assign, ":party_template_b", "pt_generic_thessaloi_army_a"), 	
-        # (assign, ":party_template_c", "pt_generic_thessaloi_army_a"), 				
-      # (try_end),	
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_4"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_4_7"), # Archon Timandros		
+        (assign, ":party_template_a", "pt_generic_thessalian_army_a"), 	
+        (assign, ":party_template_b", "pt_generic_thessalian_army_a"), 	
+        (assign, ":party_template_c", "pt_generic_thessalian_army_a"), 			
+        (assign, ":officer_template", "pt_thessalian_officers"),			
+      (try_end),	
 
-      # (try_begin),
-        # (store_faction_of_party, ":party_faction", ":party_no"),
-        # (eq, ":party_faction", "fac_kingdom_4"),		
-        # (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        # (eq, ":party_leader", "trp_knight_4_10"), # Archesilaos		
-        # (assign, ":party_template_a", "pt_generic_thessaloi_army_b"), 	
-        # (assign, ":party_template_b", "pt_generic_thessaloi_army_b"), 	
-        # (assign, ":party_template_c", "pt_generic_thessaloi_army_b"), 				
-      # (try_end),		  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_4"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_4_8"), # Archon Agakles			
+        (assign, ":party_template_a", "pt_generic_thessalian_army_b"), 	
+        (assign, ":party_template_b", "pt_generic_thessalian_army_b"), 	
+        (assign, ":party_template_c", "pt_generic_thessalian_army_b"), 		
+        (assign, ":officer_template", "pt_thessalian_officers"),			
+      (try_end),
+
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),
+        (eq, ":party_faction", "fac_kingdom_4"),		
+        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
+        (eq, ":party_leader", "trp_knight_4_9"), # Archon Agippos		
+        (assign, ":party_template_a", "pt_generic_thessalian_army_c"), 	
+        (assign, ":party_template_b", "pt_generic_thessalian_army_c"), 	
+        (assign, ":party_template_c", "pt_generic_thessalian_army_c"), 	
+        (assign, ":officer_template", "pt_thessalian_officers"),			
+      (try_end),	  
 	  
 # Samnites
       (try_begin),
@@ -34273,7 +34309,8 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_8"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_8_1"),	
+        (this_or_next|eq, ":party_leader", "trp_knight_8_1"),	
+        (eq, ":party_leader", "trp_knight_8_2"),	
         (assign, ":party_template_a", "pt_epirote_army_c"), 
         (assign, ":party_template_b", "pt_epirote_army_c"), 
         (assign, ":party_template_c", "pt_epirote_army_c"), 		
@@ -34283,7 +34320,8 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_8"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_8_2"),	
+        (this_or_next|eq, ":party_leader", "trp_knight_8_3"),	
+        (eq, ":party_leader", "trp_knight_8_5"),	
         (assign, ":party_template_a", "pt_epirote_army_b"), 
         (assign, ":party_template_b", "pt_epirote_army_b"), 
         (assign, ":party_template_c", "pt_epirote_army_b"), 		
@@ -34293,7 +34331,9 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),	
         (eq, ":party_faction", "fac_kingdom_8"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_8_3"),	
+        (this_or_next|eq, ":party_leader", "trp_knight_8_6"),	
+        (this_or_next|eq, ":party_leader", "trp_knight_8_7"),	
+        (eq, ":party_leader", "trp_knight_8_8"),		
         (assign, ":party_template_a", "pt_epirote_army_a"), 
         (assign, ":party_template_b", "pt_epirote_army_a"), 
         (assign, ":party_template_c", "pt_epirote_army_a"), 		
@@ -34307,17 +34347,7 @@ scripts = [
         (assign, ":party_template_a", "pt_illyrian_auxiliary_a"), 
         (assign, ":party_template_b", "pt_illyrian_auxiliary_a"), 
         (assign, ":party_template_c", "pt_illyrian_auxiliary_a"), 		
-      (try_end),	
-
-      (try_begin),
-        (store_faction_of_party, ":party_faction", ":party_no"),	
-        (eq, ":party_faction", "fac_kingdom_8"),		
-        (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (eq, ":party_leader", "trp_knight_8_5"),	
-        (assign, ":party_template_a", "pt_illyrian_auxiliary_b"), 
-        (assign, ":party_template_b", "pt_illyrian_auxiliary_b"), 
-        (assign, ":party_template_c", "pt_illyrian_auxiliary_b"), 		
-      (try_end),	
+      (try_end),		
 
 # Etruscans
       (try_begin),
@@ -34491,7 +34521,9 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),			
         (eq, ":party_faction", "fac_kingdom_2"),			
-        (eq, ":party_no", "p_town_53"), # Lakedaimon gets spartan troops and allies
+        (this_or_next|eq, ":party_no", "p_town_53"), # Lakedaimon 
+        (eq, ":party_no", "p_town_54"), # Gytheion
+        (eq, ":party_no", "p_castle_11"), # Trinasos
 	(party_get_slot, ":town_lord", ":party_no", slot_town_lord),	
 		 (try_begin),
 			(eq, ":town_lord", "trp_player"),		 
@@ -34532,9 +34564,23 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),			
         (eq, ":party_faction", "fac_kingdom_4"),			
+        (eq, ":party_no", "p_town_70"), # Philippoi	
+        (assign, ":party_template_b", "pt_thracian_reinforcements_b"),						
+      (try_end),	
+
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),			
+        (eq, ":party_faction", "fac_kingdom_4"),			
+        (eq, ":party_no", "p_town_71"), # Herakleia L	
+        (assign, ":party_template_b", "pt_agrianian_reinforcements_b"),						
+      (try_end),		  
+	  
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),			
+        (eq, ":party_faction", "fac_kingdom_4"),			
         (this_or_next|eq, ":party_no", "p_town_73"), # Larissa Kremaste
-         (this_or_next|eq, ":party_no", "p_town_74"), # Pharsalos
-	(eq, ":party_no", "p_town_75"), # Larissa
+        (this_or_next|eq, ":party_no", "p_town_74"), # Pharsalos
+        (eq, ":party_no", "p_town_75"), # Larissa
         (assign, ":party_template_a", "pt_thessalian_reinforcements_a"),		
         (assign, ":party_template_b", "pt_thessalian_reinforcements_b"),
         (assign, ":party_template_c", "pt_thessalian_reinforcements_c"),		
@@ -34547,7 +34593,17 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_7"),			
         (eq, ":party_no", "p_town_28"), # Morgantina gets Sykel hoplites
         (assign, ":party_template_b", "pt_sykel_reinforcements_b"),					
-      (try_end),			  
+      (try_end),
+
+# Epirotes
+      (try_begin),
+        (store_faction_of_party, ":party_faction", ":party_no"),			
+        (eq, ":party_faction", "fac_kingdom_8"),			
+        (eq, ":party_no", "p_town_80"), # Apollonia gets Illyrian troops
+        (assign, ":party_template_a", "pt_illyrian_reinforcements_a"),		
+        (assign, ":party_template_b", "pt_illyrian_reinforcements_b"),
+        (assign, ":party_template_c", "pt_illyrian_reinforcements_c"),				
+      (try_end),		  
 # RaW End	  
 	  
       (assign, ":party_template", 0),
@@ -35555,28 +35611,48 @@ scripts = [
         (assign, ":party_template_a", "pt_corinth_reinforcements_a"), 
         (assign, ":party_template_b", "pt_corinth_reinforcements_b"), 	
         (assign, ":party_template_c", "pt_corinth_reinforcements_c"), 
-        (assign, ":officer_template", "pt_kingdom_2_officers_template"), 		
+        # (assign, ":officer_template", "pt_kingdom_2_officers_template"), 		
       (try_end),			
 
 ### Macedon
       (try_begin),
-        # (store_faction_of_party, ":party_faction", ":village_no"),	
         (this_or_next|eq, ":culture", "fac_culture_4"),	
         (this_or_next|eq, ":culture", "fac_culture_2"),	
         (this_or_next|eq, ":culture", "fac_culture_6"),	
         (this_or_next|eq, ":culture", "fac_culture_7"),	
-         (eq, ":culture", "fac_culture_8"),	
-    # (this_or_next|eq, ":village_no", "p_village_197"),			
-        # (this_or_next|eq, ":village_no", "p_village_145"),	
-        # (this_or_next|eq, ":village_no", "p_village_146"),	
-        # (this_or_next|eq, ":village_no", "p_village_147"),				
-        # (eq, ":village_no", "p_village_204"),	
-	(is_between, ":village_no", "p_village_197", "p_village_205"),	  
+        (eq, ":culture", "fac_culture_8"),	
+        (is_between, ":village_no", "p_village_197", "p_village_205"),	  
         (assign, ":party_template_a", "pt_thessalian_reinforcements_a"), 
         (assign, ":party_template_b", "pt_thessalian_reinforcements_b"), 	
         (assign, ":party_template_c", "pt_thessalian_reinforcements_c"), 
         (assign, ":officer_template", "pt_thessalian_officers"), 		
-      (try_end),			
+      (try_end),
+
+      (try_begin),
+        (this_or_next|eq, ":culture", "fac_culture_4"),	
+        (this_or_next|eq, ":culture", "fac_culture_2"),	
+        (this_or_next|eq, ":culture", "fac_culture_6"),	
+        (this_or_next|eq, ":culture", "fac_culture_7"),	
+        (eq, ":culture", "fac_culture_8"),	
+        (this_or_next|eq, ":village_no", "p_village_193"),				
+        (eq, ":village_no", "p_village_194"),	  
+        # (assign, ":party_template_a", "pt_thessalian_reinforcements_a"), 
+        (assign, ":party_template_b", "pt_thracian_reinforcements_b"), 	
+        # (assign, ":party_template_c", "pt_thessalian_reinforcements_c"), 		
+      (try_end),
+
+      (try_begin),
+        (this_or_next|eq, ":culture", "fac_culture_4"),	
+        (this_or_next|eq, ":culture", "fac_culture_2"),	
+        (this_or_next|eq, ":culture", "fac_culture_6"),	
+        (this_or_next|eq, ":culture", "fac_culture_7"),	
+        (eq, ":culture", "fac_culture_8"),	
+        (this_or_next|eq, ":village_no", "p_village_195"),				
+        (eq, ":village_no", "p_village_196"),	  
+        # (assign, ":party_template_a", "pt_thessalian_reinforcements_a"), 
+        (assign, ":party_template_b", "pt_agrianian_reinforcements_b"), 	
+        # (assign, ":party_template_c", "pt_thessalian_reinforcements_c"), 		
+      (try_end),	  
 	  
 ### Syracuse
       (try_begin),
@@ -35585,6 +35661,17 @@ scripts = [
         (eq, ":village_no", "p_village_71"),	
         (assign, ":party_template_b", "pt_sykel_reinforcements_b"), 		
       (try_end),		  
+	  
+### Epeiros	  
+      (try_begin),	
+        (eq, ":culture", "fac_culture_8"),	
+        (this_or_next|eq, ":village_no", "p_village_222"),				
+        (this_or_next|eq, ":village_no", "p_village_223"),				
+        (eq, ":village_no", "p_village_224"),	  
+        (assign, ":party_template_a", "pt_illyrian_reinforcements_a"), 
+        (assign, ":party_template_b", "pt_illyrian_reinforcements_b"), 	
+        (assign, ":party_template_c", "pt_illyrian_reinforcements_c"), 		
+      (try_end),	  	  
 ############################################## RaW AoR end	  
       (party_get_slot, ":prosperity", ":village_no", slot_town_prosperity),	  
 	  (val_div, ":prosperity", 2),

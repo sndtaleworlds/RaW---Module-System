@@ -82,11 +82,23 @@ party_templates = [
 # Sykels
 ("sykel_reinforcements_b", "{!}kingdom_7_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_sykeloi_hoplites,5,10),(trp_sp_syracusan_toxotes,2,8)]),
 
-### Thessalian Reiforcements
+### Thessalian Reinforcements
 ("thessalian_reinforcements_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_thessalian_hoplite_levy,5,10),(trp_sp_thessalian_akontistes,2,8),(trp_sp_thessalian_hippeis,2,8)]),
 ("thessalian_reinforcements_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_thessalian_hoplite,5,10),(trp_sp_thessalian_hippeis,2,8),(trp_sp_thessalian_toxotes,2,8)]),
 ("thessalian_reinforcements_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_thessalian_xystophoros,2,8),(trp_sp_thessalian_hoplite_elite,2,8)]),
 ("thessalian_officers", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_thessalian_lochagos,1,2),(trp_sp_thessalian_semaphoros,1,2)]),
+
+# ("thracian_reinforcements_a", "{!}kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_sarissaphoros,5,10),(trp_sp_makedonian_deuteros,5,10),(trp_sp_makedonian_pezhetairos,5,10),(trp_sp_makedonian_toxotes,2,8)]),
+("thracian_reinforcements_b", "{!}kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_hypaspist,5,10),(trp_sp_makedonian_agema_hypaspist,2,8),(trp_sp_makedonian_basilikos_agema_hypaspist,1,5),(trp_sp_thraikos_peltastes,2,8),(trp_sp_makedonian_hippeis,2,8)]),
+# ("thracian_reinforcements_c", "{!}kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_argyraspides,5,10),(trp_sp_makedonian_hetairoi,2,8)]),
+
+("agrianian_reinforcements_b", "{!}kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_hypaspist,5,10),(trp_sp_makedonian_agema_hypaspist,2,8),(trp_sp_makedonian_basilikos_agema_hypaspist,1,5),(trp_sp_thraikos_peltastes,2,8),(trp_sp_makedonian_hippeis,2,8)]),
+
+### Illyrian Reinforcements
+("illyrian_reinforcements_a", "{!}kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_paraktios,10,20),(trp_sp_epeiros_akontistes,2,8)]),
+("illyrian_reinforcements_b", "{!}kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_hoplite,10,15),(trp_sp_epeiros_toxotes,2,8)]),
+("illyrian_reinforcements_c", "{!}kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_hoplite,5,10),(trp_sp_epeiros_xystophoros,2,8)]),
+
 
 ##################################################################################################################################################################################################################################################################################################################
 ###################################################################################################### RAW CUSTOM ARMIES ################################################################################################################################################################################################
@@ -160,8 +172,12 @@ party_templates = [
 ("korinthioi_army", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_corinthian_hoplite,10,20),(trp_sp_greek_peltast,2,8),(trp_sp_greek_hippakontistes,2,8)]),
 
 ("generic_greek_army_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_greek_hippeus,2,8),(trp_sp_greek_ekdromos,5,10),(trp_sp_greek_hoplites,5,10),(trp_sp_greek_sphendonetes,2,8)]),
- ("generic_greek_army_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_greek_hoplitai_haploi,5,10),(trp_sp_greek_peltast,5,10),(trp_sp_greek_hoplites_epilektoi,2,8),(trp_sp_greek_hippakontistes,2,8)] ),
- ("generic_greek_army_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_greek_hoplitai_haploi,5,10),(trp_sp_greek_hoplites,5,10),(trp_sp_greek_toxotes,2,8),(trp_sp_greek_hippeus,2,8)] ),
+("generic_greek_army_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_greek_hoplitai_haploi,5,10),(trp_sp_greek_peltast,5,10),(trp_sp_greek_hoplites_epilektoi,2,8),(trp_sp_greek_hippakontistes,2,8)] ),
+("generic_greek_army_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_greek_hoplitai_haploi,5,10),(trp_sp_greek_hoplites,5,10),(trp_sp_greek_toxotes,2,8),(trp_sp_greek_hippeus,2,8)] ),
+
+("spartan_army_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_perioikos_horseman,2,8),(trp_sp_spartan_ekdromos,5,10),(trp_sp_spartan_hoplite,5,10),(trp_sp_perioikos_skirmisher,2,8)]),
+("spartan_army_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_spartan_ekdromos,5,10),(trp_sp_spartan_hoplite,5,10),(trp_sp_spartan_elite_hoplite,2,8),(trp_sp_perioikos_horseman,2,8)] ),
+("spartan_army_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_spartan_ekdromos,5,10),(trp_sp_spartan_elite_hoplite,5,10),(trp_sp_perioikos_skirmisher,2,8),(trp_sp_perioikos_horseman,2,8)] ),
 
 ########## Macedon
 ("mak_king_army", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_basilikos_agema_hypaspist,2,8),(trp_sp_makedonian_hypaspist,5,10),(trp_sp_makedonian_agema_hypaspist,2,8),(trp_sp_agrianos_pelekephoros,2,8),(trp_sp_makedonian_hetairoi,5,10)]),
@@ -171,6 +187,7 @@ party_templates = [
  ("generic_thessalian_army_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_thessalian_hoplite_levy,2,8),(trp_sp_thessalian_akontistes,2,8),(trp_sp_thessalian_hoplite,5,10),(trp_sp_thessalian_hoplite_elite,2,8)] ),
 
 ("generic_thraikan_army_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_symmachos_hoplites,5,10),(trp_sp_thraikos_peltastes,2,8),(trp_sp_makedonian_hippeis,2,8)]),
+("generic_agrianian_army_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_symmachos_hoplites,5,10),(trp_sp_agrianos_pelekephoros,2,8),(trp_sp_makedonian_hippeis,2,8)]),
 
  ("generic_mak_army_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_sarissaphoros,5,10),(trp_sp_makedonian_akontistes,2,8),(trp_sp_makedonian_hetairoi,2,8),(trp_sp_makedonian_deuteros,5,10),(trp_sp_makedonian_pezhetairos,2,8)] ),
  ("generic_mak_army_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_hypaspist,5,10),(trp_sp_makedonian_toxotes,2,8),(trp_sp_makedonian_agema_hypaspist,5,10),(trp_sp_makedonian_basilikos_agema_hypaspist,1,4)] ),
@@ -183,8 +200,8 @@ party_templates = [
 ("epirote_army_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_epeiros_pheraspides,5,10),(trp_sp_epeiros_politai_hoplitai,5,10),(trp_sp_epeiros_toxotes,2,8),(trp_sp_epeiros_xystophoros,2,8),]),
 ("epirote_army_c", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_epeiros_chalkaspides,2,8),(trp_sp_epeiros_deuteros,5,10),(trp_sp_epeiros_pezhetairos,2,8),(trp_sp_epeiros_akontistes,2,8)]),
 
-("illyrian_auxiliary_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_hoplite,10,20),(trp_sp_epeiros_hippeus,2,8),(trp_sp_epeiros_akontistes,2,8)]),
-("illyrian_auxiliary_b", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_paraktios,5,10),(trp_sp_illyrian_hoplite,5,10),(trp_sp_epeiros_hippeus,2,8)]),
+("illyrian_auxiliary_a", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_paraktios,28,10),(trp_sp_illyrian_hoplite,5,15),(trp_sp_epeiros_hippeus,2,8),(trp_sp_epeiros_akontistes,2,8)]),
+
 
 
 ]
