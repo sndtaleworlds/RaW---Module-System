@@ -1116,15 +1116,15 @@ scripts = [
       (call_script, "script_give_center_to_lord", "p_town_29", "trp_knight_7_2", 0),# Géla - Archon Dinokratis 	
 	  
 	 
-      (call_script, "script_give_center_to_lord", "p_town_30", "trp_kingdom_9_lord", 0),# Tarchuna - 	 
-      (call_script, "script_give_center_to_lord", "p_town_31", "trp_knight_9_1", 0),# Fufluna -  	
-      (call_script, "script_give_center_to_lord", "p_town_32", "trp_knight_9_2", 0),# Aritim -  	
-      (call_script, "script_give_center_to_lord", "p_town_33", "trp_knight_9_3", 0),# Alalia -  
-      (call_script, "script_give_center_to_lord", "p_town_34", "trp_knight_9_4", 0), # Velzna -
-      (call_script, "script_give_center_to_lord", "p_town_35", "trp_knight_9_5", 0), # Velathri -
-      (call_script, "script_give_center_to_lord", "p_town_36", "trp_knight_9_6", 0), # Perusia -
-      (call_script, "script_give_center_to_lord", "p_town_37", "trp_knight_9_7", 0), # Pisna -
-      (call_script, "script_give_center_to_lord", "p_town_38", "trp_knight_9_8", 0), # Falerii -	
+      (call_script, "script_give_center_to_lord", "p_town_30", "trp_kingdom_9_lord", 0),# Tarchuna - Zilath Mechl Rasnal Arath Calisna	 
+      (call_script, "script_give_center_to_lord", "p_town_31", "trp_knight_9_1", 0),# Fufluna - Zilath-amce Cuinte Falerii 	
+      (call_script, "script_give_center_to_lord", "p_town_32", "trp_knight_9_2", 0),# Aritim - Zilath Hapre Matulnai 	
+      (call_script, "script_give_center_to_lord", "p_town_33", "trp_knight_9_3", 0),# Alalia - Zilath Alfnis Ceicna 
+      (call_script, "script_give_center_to_lord", "p_town_34", "trp_knight_9_4", 0), # Velzna - Zilath Kae Hirsunaie
+      (call_script, "script_give_center_to_lord", "p_town_35", "trp_knight_9_5", 0), # Velathri - Zilath Numesie Afuna
+      (call_script, "script_give_center_to_lord", "p_town_36", "trp_knight_9_6", 0), # Perusia - Zilath Laris Alethnas
+      (call_script, "script_give_center_to_lord", "p_town_37", "trp_knight_9_7", 0), # Pisna - Zilath Anxe Afuna
+      (call_script, "script_give_center_to_lord", "p_town_38", "trp_knight_9_8", 0), # Falerii - Zilath Cnaive Marcena	
 
       (call_script, "script_give_center_to_lord", "p_town_39", "trp_knight_3_10", 0),# Sena - 	 
       (call_script, "script_give_center_to_lord", "p_town_40", "trp_knight_3_1", 0),# Pisaurum -  	
@@ -1178,6 +1178,15 @@ scripts = [
       (call_script, "script_give_center_to_lord", "p_castle_2", "trp_knight_1_5", 0), # Norba_Castra - Tribunus Militum Lucius Volumnius Flamma
       (call_script, "script_give_center_to_lord", "p_castle_3", "trp_knight_1_6", 0), # Interamna_Lirenas_Castra - Tribunus Militum Julius Decimus
       (call_script, "script_give_center_to_lord", "p_castle_4", "trp_knight_1_13", 0), # Sutrium_Castra - Socii Teitu Cuclna
+
+     (call_script, "script_give_center_to_lord", "p_castle_5", "trp_knight_6_6", 0), # Skylla - Archon Athanasios
+
+     (call_script, "script_give_center_to_lord", "p_castle_6", "trp_kingdom_7_lord", 0), # Euryelos - Basileus Agathoclès
+	  
+      (call_script, "script_give_center_to_lord", "p_castle_7", "trp_kingdom_9_lord", 0), # Clevsin - Zilath Mechl Rasnal Arath Calisna
+      (call_script, "script_give_center_to_lord", "p_castle_8", "trp_knight_9_9", 0), # Caisra - Zilath Nerie Atna
+      (call_script, "script_give_center_to_lord", "p_castle_9", "trp_knight_9_10", 0), # Vatluna - Zilath Tite Lemausna
+
       ##diplomacy start+
       # (call_script, "script_give_center_to_lord", "p_castle_33", "trp_knight_5_11", 0), #Etrosq Castle -- why wasn't this being done already?
 	  #Add home centers for claimants
@@ -34326,7 +34335,8 @@ scripts = [
         (eq, ":party_faction", "fac_kingdom_9"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
         (this_or_next|eq, ":party_leader", "trp_knight_9_1"), 		
-        (eq, ":party_leader", "trp_knight_9_2"), 		
+        (this_or_next|eq, ":party_leader", "trp_knight_9_2"), 		
+        (eq, ":party_leader", "trp_knight_9_3"), 		
         (assign, ":party_template_a", "pt_etruscan_army_c"), 	
         (assign, ":party_template_b", "pt_etruscan_army_c"), 	
         (assign, ":party_template_c", "pt_etruscan_army_c"), 				
@@ -34336,8 +34346,9 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_9"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_9_3"), 		
-        (eq, ":party_leader", "trp_knight_9_4"), 		
+        (this_or_next|eq, ":party_leader", "trp_knight_9_4"), 		
+        (this_or_next|eq, ":party_leader", "trp_knight_9_5"), 		
+        (eq, ":party_leader", "trp_knight_9_6"), 		
         (assign, ":party_template_a", "pt_etruscan_army_b"), 	
         (assign, ":party_template_b", "pt_etruscan_army_b"), 	
         (assign, ":party_template_c", "pt_etruscan_army_b"), 				
@@ -34347,10 +34358,10 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),
         (eq, ":party_faction", "fac_kingdom_9"),		
         (party_stack_get_troop_id, ":party_leader", ":party_no", 0),
-        (this_or_next|eq, ":party_leader", "trp_knight_9_5"), 
-        (this_or_next|eq, ":party_leader", "trp_knight_9_6"), 
-        (this_or_next|eq, ":party_leader", "trp_knight_9_7"), 		
-        (eq, ":party_leader", "trp_knight_9_8"), 		
+        (this_or_next|eq, ":party_leader", "trp_knight_9_7"), 
+        (this_or_next|eq, ":party_leader", "trp_knight_9_8"), 
+        (this_or_next|eq, ":party_leader", "trp_knight_9_9"), 		
+        (eq, ":party_leader", "trp_knight_9_10"), 		
         (assign, ":party_template_a", "pt_etruscan_army_a"), 	
         (assign, ":party_template_b", "pt_etruscan_army_a"), 	
         (assign, ":party_template_c", "pt_etruscan_army_a"), 				
