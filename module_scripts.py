@@ -34532,7 +34532,8 @@ scripts = [
       (try_begin),
         (store_faction_of_party, ":party_faction", ":party_no"),			
         (eq, ":party_faction", "fac_kingdom_2"),			
-        (eq, ":party_no", "p_town_50"), # Athens, gets athenian AoR troops
+        (this_or_next|eq, ":party_no", "p_town_50"), # Athens, gets athenian AoR troops
+        (eq, ":party_no", "p_castle_10"), # Peiraieús, gets athenian AoR troops
         (assign, ":party_template_a", "pt_athens_reinforcements_a"), 
         (assign, ":party_template_b", "pt_athens_reinforcements_b"), 	
         (assign, ":party_template_c", "pt_athens_reinforcements_c"), 
@@ -34553,7 +34554,7 @@ scripts = [
         (store_faction_of_party, ":party_faction", ":party_no"),			
         (eq, ":party_faction", "fac_kingdom_2"),			
         (this_or_next|eq, ":party_no", "p_town_53"), # Lakedaimon 
-        (eq, ":party_no", "p_town_54"), # Gytheion
+        (this_or_next|eq, ":party_no", "p_town_54"), # Gytheion
         (eq, ":party_no", "p_castle_11"), # Trinasos
 	(party_get_slot, ":town_lord", ":party_no", slot_town_lord),	
 		 (try_begin),
@@ -35529,6 +35530,7 @@ scripts = [
       (try_begin),
         # (store_faction_of_party, ":party_faction", ":village_no"),	
         (eq, ":culture", "fac_culture_2"),	
+        (this_or_next|eq, ":village_no", "p_village_129"),			
         (this_or_next|eq, ":village_no", "p_village_130"),			
         (this_or_next|eq, ":village_no", "p_village_131"),	
         (this_or_next|eq, ":village_no", "p_village_132"),		
