@@ -95,10 +95,10 @@ party_templates = [
 ("agrianian_reinforcements_b", "{!}kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_hypaspist,5,10),(trp_sp_makedonian_agema_hypaspist,2,8),(trp_sp_makedonian_basilikos_agema_hypaspist,1,5),(trp_sp_thraikos_peltastes,2,8),(trp_sp_makedonian_hippeis,2,8)]),
 
 ### Illyrian Reinforcements
-("illyrian_reinforcements_a", "{!}kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_paraktios,10,20),(trp_sp_epeiros_akontistes,2,8)]),
-("illyrian_reinforcements_b", "{!}kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_hoplite,10,15),(trp_sp_epeiros_toxotes,2,8)]),
-("illyrian_reinforcements_c", "{!}kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_hoplite,5,10),(trp_sp_epeiros_xystophoros,2,8)]),
-
+("illyrian_reinforcements_a", "{!}kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_paraktios,10,20),(trp_sp_illyrian_peltast,2,8)]),
+("illyrian_reinforcements_b", "{!}kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_doryphoros,10,15),(trp_sp_illyrian_toxotes,2,8)]),
+("illyrian_reinforcements_c", "{!}kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_hoplite,5,10),(trp_sp_illyrian_hippakontistes,2,8)]),
+("illyrian_officers", "{!}special_reinforcements", 0, 0, fac_commoners, 0, [(trp_sp_illyrian_lochagos,1,2)]),
 
 ##################################################################################################################################################################################################################################################################################################################
 ###################################################################################################### RAW CUSTOM ARMIES ################################################################################################################################################################################################

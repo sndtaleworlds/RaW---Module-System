@@ -304,7 +304,7 @@ parties = [
   ("village_87", "Saina",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-54.9, 230.71),[], 128),   
   ("village_88", "Arrantia",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-69.06, 231.55),[], 179),       
   ("village_89", "Kersounon",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-121.17, 212.9),[], 198),       
-  ("village_90", "Nepa",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-22.03, 184.14),[], 237),       
+  ("village_90", "Nepet",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-22.03, 184.14),[], 237),       
   ("village_91", "Hurta",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-23.41, 195.37),[], 164),       
   ("village_92", "Statna",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-26.35, 198.91),[], 114),       
   ("village_93", "Arna",  icon_greek_village|pf_village, no_menu, pt_none, fac_neutral,0,ai_bhvr_hold,0,(-16.91, 227.47),[], 172),       

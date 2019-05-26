@@ -34634,7 +34634,8 @@ scripts = [
         (eq, ":party_no", "p_town_80"), # Apollonia gets Illyrian troops
         (assign, ":party_template_a", "pt_illyrian_reinforcements_a"),		
         (assign, ":party_template_b", "pt_illyrian_reinforcements_b"),
-        (assign, ":party_template_c", "pt_illyrian_reinforcements_c"),				
+        (assign, ":party_template_c", "pt_illyrian_reinforcements_c"),	
+        (assign, ":officer_template", "pt_illyrian_officers"),			
       (try_end),		  
 # RaW End	  
 	  

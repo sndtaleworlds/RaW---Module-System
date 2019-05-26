@@ -961,7 +961,7 @@ items = [
 # Armors
 ["a_maximus", "Pectorale", [("a_maximus",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 2400, weight(16)|abundance(60)|head_armor(0)|body_armor(60)|leg_armor(20)|difficulty(16), imodbits_armor, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_1] ],
 ["a_tribune", "Tribvnus Pectorale", [("a_tribune",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 2400, weight(16)|abundance(60)|head_armor(0)|body_armor(60)|leg_armor(20)|difficulty(16), imodbits_armor, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_1] ],
-["a_roman_subarmalis", "Subarmalis", [("a_roman_subarmalis",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 400, weight(4)|abundance(100)|head_armor(0)|body_armor(20)|leg_armor(20)|difficulty(0), imodbits_armor, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_1] ],
+["a_roman_subarmalis", "Subarmalis", [("a_roman_subarmalis",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 400, weight(4)|abundance(100)|head_armor(0)|body_armor(20)|leg_armor(20)|difficulty(0), imodbits_armor, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_hands", 0, 0),])], [fac_kingdom_1] ],
 
 
 ["a_roman_padded_subarmalis", "Subarmalis", [("a_roman_padded_subarmalis",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 375, weight(4)|abundance(100)|head_armor(0)|body_armor(25)|leg_armor(15)|difficulty(0), imodbits_armor, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_1] ],
