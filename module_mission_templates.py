@@ -2000,32 +2000,23 @@ raw_spear_drop =  (ti_on_item_unwielded, 0, 0, [
    (neg|game_in_multiplayer_mode),       
    ], #ti_on_item_unwielded should make this code trigger when sheating the weapon
    [
-  
-   
 	(store_trigger_param_1, ":agent"), 
-    (store_trigger_param_2, ":item"),
+	(store_trigger_param_2, ":item"),
 	
-    (agent_is_active, ":agent"), # Prevents errors		
-    (agent_is_alive, ":agent"),	# Prevents errors
-    (agent_is_human, ":agent"),	# Doesn't trigger for other agents
-	(neg|agent_is_non_player, ":agent"), # Don't trigger for botsies ?
+	(agent_is_active, ":agent"), # Prevents errors		
+	(agent_is_alive, ":agent"),	# Prevents errors
+	(agent_is_human, ":agent"),	# Doesn't trigger for other agents
+	(neg|agent_is_non_player, ":agent"), # Don't trigger for bots
 	 
-    (neg|is_between, ":item", shields_begin, shields_end), # Don't do it if sheating your shield
-		   
-       (try_for_range, ":item_slot", ek_item_0, ek_head), # Cycles through the slots
-           (agent_get_item_slot,  ":item", ":agent", ":item_slot"), # Get the items in the inventory
-
-           (gt, ":item", itm_no_item), # Has the item		   
-           (item_get_type, reg0, ":item"), # Get type of the item
-           (eq,itp_type_polearm,reg0), # It's a polearm
-			
-		(agent_unequip_item, ":agent", ":item"), # Remove item
-        (agent_get_position, pos1, ":agent"), # Get player position	
-        (position_set_z_to_ground_level, pos1),	# Set Z axis to ground, to prevent floating objects
-        (set_spawn_position, pos1), # Spawn stuff on player's position		
-        (spawn_item, ":item", 0, 45),	# Stuff that will be spawned, disappear after 45 secs		
-	# (call_script, "script_cf_troop_speed_system", ":agent"),							
-      (try_end),		
+	(neg|is_between, ":item", shields_begin, shields_end), # Don't do it if sheating your shield
+	(gt, ":item", itm_no_item), # Has the item		   
+	(item_get_type, ":item_type", ":item"), # Get type of the item
+	(eq,":item_type",itp_type_polearm), # It's a polearm	
+	(agent_unequip_item, ":agent", ":item"), # Remove item
+	(agent_get_position, pos1, ":agent"), # Get player position	
+	(position_set_z_to_ground_level, pos1),	# Set Z axis to ground, to prevent floating objects
+	(set_spawn_position, pos1), # Spawn stuff on player's position		
+	(spawn_item, ":item", 0, 45),	# Stuff that will be spawned, disappear after 45 secs			
    ])	   
  
 common_drowning = (
