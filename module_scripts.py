@@ -79958,6 +79958,8 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	(try_begin),
 		(agent_get_slot, ":value", ":agent_no", slot_agent_javelin_ammo),
 		(agent_get_ammo, ":javelin_ammo", ":agent_no", 1),
+		(item_get_type, ":type", ":item"), # Get type of the item
+		(eq, ":type", itp_type_thrown), # It's a jav			
 	
 		(try_begin),			
 			(eq, ":value", 1),
@@ -79995,18 +79997,12 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 		(else_try),		 
 			(eq,":javelin_ammo", 2),	 
 			(item_get_slot, ":glove", ":item",  slot_item_javelin_ammo_1),	
+		(else_try),		
+			(assign, ":glove", "itm_invisible_glove"),	
 		(try_end),		 
-		
-		(try_begin),		
-			(gt, ":glove", -1),
-			(ge, ":javelin_ammo", 2),
-			(agent_equip_item, ":agent_no", ":glove"),		
-		(else_try),	
-			(agent_equip_item, ":agent_no", "itm_invisible_glove"),		
-		(try_end),	
-		
-	(try_end),
-	
+
+	(gt, ":glove", itm_no_item),
+	(agent_equip_item, ":agent_no", ":glove"),		
 	(agent_set_slot, ":agent_no", slot_agent_javelin_ammo, -1),	
 ]),
 ]
