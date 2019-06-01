@@ -626,48 +626,28 @@ raw_skirmisher_javelin = (ti_on_agent_spawn, 0.1, 0, [
         [
 	(store_trigger_param_1, ":agent_no"),	
 	
-	
-	(agent_get_wielded_item, ":item", ":agent_no", 0),	
-	
-    (try_begin),		
-		(eq, ":item", "itm_w_light_pila"),
-	     (agent_equip_item, ":agent_no", "itm_w_light_pila_glove"),		
-     (else_try),		
-		(eq, ":item", "itm_w_heavy_pila"),	
-	     (agent_equip_item, ":agent_no", "itm_w_heavy_pila_glove"),		
-     (else_try),		
-		(eq, ":item", "itm_w_celtic_javelin"),
-	     (agent_equip_item, ":agent_no", "itm_w_celtic_javelin_glove_1"),		
-     (else_try),		
-		(eq, ":item", "itm_roman_w_verutum_2pack"),	
-	     (agent_equip_item, ":agent_no", "itm_w_verutum_glove_1"),
-     (else_try),		
-	
-     (try_begin),		
-		 (agent_has_item_equipped,":agent_no","itm_w_light_pila"),	  	 
-	     (agent_equip_item, ":agent_no", "itm_w_light_pila_glove_2"),				 		 
-       (else_try),	
-		 (agent_has_item_equipped,":agent_no","itm_w_heavy_pila"),	  	 
-	     (agent_equip_item, ":agent_no", "itm_w_heavy_pila_glove_2"),				 		 
-       (else_try),	
-		 (agent_has_item_equipped,":agent_no","itm_roman_w_verutum_7pack"),	  	 
-	     (agent_equip_item, ":agent_no", "itm_w_verutum_glove_5"),				 		 
-       (else_try),		
-		 (agent_has_item_equipped,":agent_no","itm_w_celtic_javelin_7pack"),	  	 
-	     (agent_equip_item, ":agent_no", "itm_w_celtic_javelin_glove_4"),				 		 
-       (else_try),		
-		 (agent_has_item_equipped,":agent_no","itm_w_celtic_javelin"),	  	 
-	     (agent_equip_item, ":agent_no", "itm_w_celtic_javelin_glove_2"),				 		 
-       (else_try),		
-		 (agent_has_item_equipped,":agent_no","itm_roman_w_verutum_2pack"),	  	 
-	     (agent_equip_item, ":agent_no", "itm_w_verutum_glove_2"),
-       (else_try),		
-		 (agent_has_item_equipped,":agent_no","itm_javelin"),	  	 
-	     (agent_equip_item, ":agent_no", "itm_w_javelin_glove_4"),			 
-     
-	  (try_end),	
-    (try_end),	
-	  		 	  		 
+	(try_begin),		
+		(agent_has_item_equipped,":agent_no","itm_w_light_pila"),	  	 
+		(agent_equip_item, ":agent_no", "itm_w_light_pila_glove_2"),				 		 
+	(else_try),	
+		(agent_has_item_equipped,":agent_no","itm_w_heavy_pila"),	  	 
+		(agent_equip_item, ":agent_no", "itm_w_heavy_pila_glove_2"),				 		 
+	(else_try),	
+		(agent_has_item_equipped,":agent_no","itm_roman_w_verutum_7pack"),	  	 
+		(agent_equip_item, ":agent_no", "itm_w_verutum_glove_5"),				 		 
+	(else_try),		
+		(agent_has_item_equipped,":agent_no","itm_w_celtic_javelin_7pack"),	  	 
+		(agent_equip_item, ":agent_no", "itm_w_celtic_javelin_glove_4"),				 		 
+	(else_try),		
+		(agent_has_item_equipped,":agent_no","itm_w_celtic_javelin"),	  	 
+		(agent_equip_item, ":agent_no", "itm_w_celtic_javelin_glove_2"),				 		 
+	(else_try),		
+		(agent_has_item_equipped,":agent_no","itm_roman_w_verutum_2pack"),	  	 
+		(agent_equip_item, ":agent_no", "itm_w_verutum_glove_2"),
+	(else_try),		
+		(agent_has_item_equipped,":agent_no","itm_javelin"),	  	 
+		(agent_equip_item, ":agent_no", "itm_w_javelin_glove_4"),			 
+	(try_end),	
         ])  
 
 raw_skirmisher_javelin_2 = (ti_on_item_wielded, 0, 0, [
@@ -681,23 +661,14 @@ raw_skirmisher_javelin_2 = (ti_on_item_wielded, 0, 0, [
 	
 	(call_script, "script_cf_troop_speed_system", ":agent_no"),		
 
-	# (try_for_agents, ":agent_no"),	
-    (agent_is_active, ":agent_no"), # Prevents errors		
-    (agent_is_alive, ":agent_no"),	# Prevents errors
-    (agent_is_human, ":agent_no"),	# Doesn't trigger for other agents		  		
+	(agent_is_active, ":agent_no"), # Prevents errors		
+	(agent_is_alive, ":agent_no"),	# Prevents errors
+	(agent_is_human, ":agent_no"),	# Doesn't trigger for other agents		  		
 	
-    (neg|is_between, ":item", shields_begin, shields_end), # Don't do it if sheating your shield	
-
+	(neg|is_between, ":item", shields_begin, shields_end), # Don't do it if sheating your shield	
 	(agent_get_wielded_item, ":item", ":agent_no", 0),	
-
-     # (try_begin),
-		# (get_player_agent_no, ":player_agent"),	 
-        # (eq, ":agent_no", ":player_agent"),	
-		# (assign, reg2, ":item"),
-		# (display_message, "@You equipped {reg2}"),  
-     # (try_end),	 	
-
-     (try_begin),		
+	
+	(try_begin),		
 		(this_or_next|eq, ":item", "itm_w_light_pila"),
 		(this_or_next|eq, ":item", "itm_w_heavy_pila"),		
 		(this_or_next|eq, ":item", "itm_w_celtic_javelin_7pack"),
@@ -707,10 +678,9 @@ raw_skirmisher_javelin_2 = (ti_on_item_wielded, 0, 0, [
 		(eq, ":item", "itm_roman_w_verutum_7pack"),
 		(agent_set_slot, ":agent_no", slot_agent_javelin_ammo, 1),
 		(call_script, "script_game_missile_launch", ":agent_no", ":item"),
-     (else_try),			
+	(else_try),			
 		(agent_set_slot, ":agent_no", slot_agent_javelin_ammo, -1),					
-     (try_end),	     
-	   
+	(try_end),	     
         ])  		
 		
 raw_skirmisher_javelin_3 = (ti_on_item_unwielded, 0, 0, [
@@ -723,27 +693,17 @@ raw_skirmisher_javelin_3 = (ti_on_item_unwielded, 0, 0, [
 	(store_trigger_param_2, ":item"),
 	
 	(call_script, "script_cf_troop_speed_system", ":agent_no"),	
-
-	# (try_for_agents, ":agent_no"),	
-    (agent_is_active, ":agent_no"), # Prevents errors		
-    (agent_is_alive, ":agent_no"),	# Prevents errors
-    (agent_is_human, ":agent_no"),	# Doesn't trigger for other agents	 		
-			
-    (neg|is_between, ":item", shields_begin, shields_end), # Don't do it if sheating your shield
-			
-	(agent_get_wielded_item, ":item", ":agent_no", 0),	
 	
-     # (try_begin),
-		# (get_player_agent_no, ":player_agent"),	 
-        # (eq, ":agent_no", ":player_agent"),	
-		# (assign, reg3, ":item"),
-		# (display_message, "@You unequipped {reg3}"),  
-     # (try_end),	 		
-		
+	(agent_is_active, ":agent_no"), # Prevents errors		
+	(agent_is_alive, ":agent_no"),	# Prevents errors
+	(agent_is_human, ":agent_no"),	# Doesn't trigger for other agents	 		
+			
+	(neg|is_between, ":item", shields_begin, shields_end), # Don't do it if sheating your shield	
+	(agent_get_wielded_item, ":item", ":agent_no", 0),			
 	(agent_get_ammo, ":javelin_ammo", ":agent_no", 1),		
 	(ge, ":javelin_ammo", 1),
 		
-     (try_begin),		
+	(try_begin),		
 		(this_or_next|eq, ":item", "itm_w_light_pila"),
 		(this_or_next|eq, ":item", "itm_w_heavy_pila"),		
 		(this_or_next|eq, ":item", "itm_w_celtic_javelin_7pack"),
@@ -753,10 +713,9 @@ raw_skirmisher_javelin_3 = (ti_on_item_unwielded, 0, 0, [
 		(eq, ":item", "itm_roman_w_verutum_7pack"),
 		(agent_set_slot, ":agent_no", slot_agent_javelin_ammo, 2),
 		(call_script, "script_game_missile_launch", ":agent_no", ":item"),	
-     (else_try),			
+	(else_try),			
 		(agent_set_slot, ":agent_no", slot_agent_javelin_ammo, -1),				
-     (try_end),	   
-	   
+	(try_end),	   
         ])  		
 			 
 raw_skirmisher_javelin_4 = (ti_on_item_picked_up, 0, 0, [
@@ -766,15 +725,15 @@ raw_skirmisher_javelin_4 = (ti_on_item_picked_up, 0, 0, [
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
-    (store_trigger_param_2, ":item"),
+	(store_trigger_param_2, ":item"),
 
-    (agent_is_active, ":agent_no"), # Prevents errors		
-    (agent_is_alive, ":agent_no"),	# Prevents errors
-    (agent_is_human, ":agent_no"),	# Doesn't trigger for other agents	
+	(agent_is_active, ":agent_no"), # Prevents errors		
+	(agent_is_alive, ":agent_no"),	# Prevents errors
+	(agent_is_human, ":agent_no"),	# Doesn't trigger for other agents	
 			
 	(call_script, "script_cf_troop_speed_system", ":agent_no"),		 		
 		
-     (try_begin),		
+	(try_begin),		
 		(this_or_next|eq, ":item", "itm_w_light_pila"),
 		(this_or_next|eq, ":item", "itm_w_heavy_pila"),		
 		(this_or_next|eq, ":item", "itm_w_celtic_javelin_7pack"),
@@ -784,19 +743,7 @@ raw_skirmisher_javelin_4 = (ti_on_item_picked_up, 0, 0, [
 		(eq, ":item", "itm_roman_w_verutum_7pack"),
 		(agent_set_slot, ":agent_no", slot_agent_javelin_ammo, 1),
 		(call_script, "script_game_missile_launch", ":agent_no", ":item"),			
-     (try_end),	   
-	   
-     # (try_begin),		 
-		 # (this_or_next|eq, agent_has_item_equipped,":agent_no","itm_w_light_pila"),	 
-		 # (this_or_next|eq, agent_has_item_equipped,":agent_no","itm_w_heavy_pila"),	  	
-		 # (this_or_next|eq, agent_has_item_equipped,":agent_no","itm_roman_w_verutum_7pack"),	  	 
-		 # (this_or_next|eq, agent_has_item_equipped,":agent_no","itm_w_celtic_javelin_7pack"),	  	 
-		 # (this_or_next|eq, agent_has_item_equipped,":agent_no","itm_w_celtic_javelin"),	  	 
-		 # (this_or_next|eq, agent_has_item_equipped,":agent_no","itm_roman_w_verutum_2pack"),	  	 
-		 # (eq, agent_has_item_equipped,":agent_no","itm_javelin"),	  	
-		# (agent_set_slot, ":agent_no", slot_agent_javelin_ammo, 1),	
-		# (call_script, "script_game_missile_launch", ":agent_no", ":item"),			 
-     # (try_end),		 	   
+	(try_end),	   	 	   
         ])  
 
 raw_skirmisher_javelin_5 = (ti_on_item_dropped, 0, 0, [
@@ -808,13 +755,11 @@ raw_skirmisher_javelin_5 = (ti_on_item_dropped, 0, 0, [
 	(store_trigger_param_1, ":agent_no"), 
 	(store_trigger_param_2, ":item"),
 
-	# (call_script, "script_cf_troop_speed_system", ":agent_no"),		
-	
-    (agent_is_active, ":agent_no"), # Prevents errors		
-    (agent_is_alive, ":agent_no"),	# Prevents errors
-    (agent_is_human, ":agent_no"),	# Doesn't trigger for other agents		  
+	(agent_is_active, ":agent_no"), # Prevents errors		
+	(agent_is_alive, ":agent_no"),	# Prevents errors
+	(agent_is_human, ":agent_no"),	# Doesn't trigger for other agents		  
 
-     (try_begin),		
+	(try_begin),		
 		(this_or_next|eq, ":item", "itm_w_light_pila"),
 		(this_or_next|eq, ":item", "itm_w_heavy_pila"),		
 		(this_or_next|eq, ":item", "itm_w_celtic_javelin_7pack"),
@@ -824,8 +769,7 @@ raw_skirmisher_javelin_5 = (ti_on_item_dropped, 0, 0, [
 		(eq, ":item", "itm_roman_w_verutum_7pack"),
 		(agent_set_slot, ":agent_no", slot_agent_javelin_ammo, 0),	
 		(call_script, "script_game_missile_launch", ":agent_no", ":item"),			
-     (try_end),	
-     	   
+	(try_end),	
         ])  		
 
  
@@ -1697,18 +1641,20 @@ raw_charge = (0, 0, 2, [(key_clicked, key_b)],
 	 (multiplayer_send_int_to_server,multiplayer_event_animation_at_player, "anim_cover_shield_end"),  
    (try_end),
       (try_end),
-   (agent_set_slot, ":agent_no", slot_agent_cover, ":cover"), ]) 
-				
+   (agent_set_slot, ":agent_no", slot_agent_cover, ":cover"), 
+   ]) 
+   
+
 raw_speed_mod = (ti_on_agent_spawn, 0, 0, [
    (this_or_next|multiplayer_is_dedicated_server),      
    (this_or_next|multiplayer_is_server),
    (neg|game_in_multiplayer_mode),   
 ],             
         [
-     # (eq, "$g_multiplayer_extra_encumbrance", 1),		
+	# (eq, "$g_multiplayer_extra_encumbrance", 1),		
 	(store_trigger_param_1, ":agent_no"),
-		  (agent_is_active, ":agent_no"),		  
-          (agent_is_alive, ":agent_no"),		
+	(agent_is_active, ":agent_no"),		  
+	(agent_is_alive, ":agent_no"),		
 	(call_script, "script_cf_troop_speed_system", ":agent_no"),		  
         ])		
  
@@ -1719,20 +1665,24 @@ raw_guarantee_legs = (ti_on_agent_spawn, 0, 0, [
 ],             
         [
 	(store_trigger_param_1, ":agent_no"),
-		  (agent_is_active, ":agent_no"),		  
-          (agent_is_alive, ":agent_no"),			
-  (try_begin),
-   (agent_get_item_slot,":greave_item",":agent_no",6),	
-   (eq, ":greave_item", -1), 
-   (agent_get_item_slot,":armor_item",":agent_no",5),	
-   (gt, ":armor_item", 0),     
-    (try_begin),		     
-       (eq,":armor_item","itm_a_celtic_woad"),	
-   (agent_equip_item, ":agent_no", "itm_b_celtic_legs"), 	   
-    (else_try),	   
-   (agent_equip_item, ":agent_no", "itm_legs"),     
-  (try_end),   	
-   (try_end),   	  
+	
+	(agent_is_active, ":agent_no"),		  
+	(agent_is_alive, ":agent_no"),		
+	
+	(try_begin),
+		(agent_get_item_slot,":greave_item",":agent_no",6),	
+		(eq, ":greave_item", -1), 
+		(agent_get_item_slot,":armor_item",":agent_no",5),	
+		(gt, ":armor_item", 0),     
+		
+		(try_begin),		     
+			(eq,":armor_item","itm_a_celtic_woad"),	
+			(agent_equip_item, ":agent_no", "itm_b_celtic_legs"), 	   
+		(else_try),	   
+			(agent_equip_item, ":agent_no", "itm_legs"),     
+		(try_end),   	
+		
+	(try_end),   	  
         ]) 
  
  
