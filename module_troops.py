@@ -986,7 +986,7 @@ troops = [
 
 ["npc2","Stenis Salauatur","Stenis Salauatur", tf_hero|tf_unmoveable_in_party_window, 0,reserved, fac_commoners,[itm_samnite_gladiator_spongia,itm_legs,itm_w_kopis_infantry],str_7|agi_7|int_11|cha_6|level(1),wp(40),knows_warrior_npc|knows_weapon_master_4|knows_ironflesh_4|knows_athletics_4|knows_first_aid_1|knows_leadership_1,0x000000019b00600520db6e4b0d7134d400000000001cbb130000000000000000],
 
-["npc3","Ymira","Ymira",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_female_peasant_dress_white_3,itm_b_iphicratids,itm_dagger],str_6|agi_9|int_11|cha_6|level(1),wp(20),knows_merchant_npc|knows_wound_treatment_1|knows_trade_1|knows_first_aid_3|knows_surgery_1|knows_athletics_1|knows_riding_1,0x0000000083040001583b6db8dec5925b00000000001d80980000000000000000],
+["npc3","Deimos","Deimos",tf_hero|tf_unmoveable_in_party_window, 0, reserved, fac_commoners,[itm_greek_pylos_complete,itm_a_spartan_linothorax_red,itm_b_iphicratids,itm_sp_w_greek_doru_3,itm_s_aspis_sparta_1,itm_w_machaira],str_12|agi_10|int_8|cha_8|level(8),wp(120),knows_warrior_npc|knows_wound_treatment_1|knows_trade_1|knows_first_aid_3|knows_surgery_1|knows_athletics_1|knows_riding_1,0x00000004a40052ca20a544e6b16a5d7600000000001d2ae80000000000000000],
 
 ["npc4","Abrupolis","Abrupolis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_exomis_worn,itm_b_iphicratids,itm_gallic_short_weapon_2],str_10|agi_9|int_13|cha_10|level(10),wp(110),knows_warrior_npc|knows_weapon_master_2|knows_power_strike_2|knows_riding_2|knows_athletics_2|knows_power_throw_2|knows_first_aid_1|knows_surgery_1|knows_tactics_2|knows_leadership_2,0x000000019c00034820196db8db4db6db00000000001ea8580000000000000000],
 
