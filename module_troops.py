@@ -990,7 +990,7 @@ troops = [
 
 ["npc4","Abrupolis","Abrupolis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_exomis_worn,itm_b_iphicratids,itm_gallic_short_weapon_2],str_10|agi_9|int_13|cha_10|level(10),wp(110),knows_warrior_npc|knows_weapon_master_2|knows_power_strike_2|knows_riding_2|knows_athletics_2|knows_power_throw_2|knows_first_aid_1|knows_surgery_1|knows_tactics_2|knows_leadership_2,0x000000019c00034820196db8db4db6db00000000001ea8580000000000000000],
 
-["npc5","Baheshtur","Baheshtur",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_linothorax_black,itm_b_iphicratids, itm_samnite_falcata_bird],str_9|agi_9|int_12|cha_7|level(5),wp(90),knows_warrior_npc|knows_riding_2|knows_horse_archery_3|knows_power_draw_3|knows_leadership_2|knows_weapon_master_1,0x000000088910318b5c6f972328324a6200000000001cd3310000000000000000],
+["npc5","Erasmus","Erasmus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton_cape_red,itm_b_iphicratids,itm_dagger],str_9|agi_9|int_12|cha_7|level(5),wp(90),knows_warrior_npc|knows_riding_2|knows_horse_archery_3|knows_power_draw_3|knows_leadership_2|knows_weapon_master_1,0x000000088910318b5c6f972328324a6200000000001cd3310000000000000000],
 
 ["npc6","Firentis","Firentis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_exomis,itm_b_iphicratids, itm_w_kopis_infantry],str_10|agi_12|int_10|cha_5|level(6),wp(105),knows_warrior_npc|knows_riding_2|knows_weapon_master_2|knows_power_strike_2|knows_athletics_3|knows_trainer_1|knows_leadership_1,0x00000002050052036a1895d0748f3ca30000000000000f0b0000000000000000],
 
