@@ -453,8 +453,9 @@ itc_cut_two_handed = itcf_force_64_bits | (itcf_slashright_twohanded | itcf_slas
 itc_greatsword = itc_cut_two_handed |  itcf_thrust_twohanded | itc_parry_two_handed |itcf_thrust_onehanded_lance
 itc_nodachi    = itc_cut_two_handed | itc_parry_two_handed
 
-itc_bastardsword = itc_cut_two_handed | itc_parry_two_handed
+itc_bastardsword = itc_cut_two_handed |  itcf_thrust_twohanded | itc_parry_two_handed |itc_dagger
 itc_morningstar = itc_cut_two_handed |  itc_parry_two_handed |itc_cleaver
+it_rhomphaia =  itc_cleaver | itc_nodachi
 
 itc_parry_polearm = itcf_parry_forward_polearm | itcf_parry_up_polearm | itcf_parry_right_polearm | itcf_parry_left_polearm
 itc_poleaxe    = itcf_overswing_polearm |itcf_thrust_polearm|itcf_slashright_polearm|itcf_slashleft_polearm
