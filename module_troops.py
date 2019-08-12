@@ -999,7 +999,7 @@ troops = [
 
 ["npc6","Perkens Metiis","Perkens Metiis",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_etruscan_cloth_red_3,itm_b_samnite_sandals, itm_dagger],str_10|agi_12|int_10|cha_5|level(6),wp(105),knows_warrior_npc|knows_riding_2|knows_weapon_master_2|knows_power_strike_2|knows_athletics_3|knows_trainer_1|knows_leadership_1,0x000000048f000389171c65e76d721b2d00000000001d3ae10000000000000000],
 
-["npc7","Deshavi","Deshavi",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_white_3,itm_b_iphicratids, itm_raw_hunting_bow, itm_arrows, itm_quarter_staff],str_8|agi_9|int_10|cha_6|level(2),wp(80),knows_tracker_npc|knows_tracking_2|knows_athletics_2|knows_spotting_1|knows_pathfinding_1|knows_power_draw_2,0x00000001fc08400533a15297634d44f400000000001e02db0000000000000000],
+["npc7","Theron","Theron",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton_dark_blue_cape_white,itm_b_iphicratids, itm_cretan_bow, itm_arrows,itm_s_cretan_parma_1, itm_w_machaira],str_8|agi_9|int_10|cha_6|level(2),wp(80),knows_tracker_npc|knows_tracking_2|knows_athletics_2|knows_spotting_1|knows_pathfinding_1|knows_power_draw_2,0x00000004b90821461ae5d2691b266b3200000000001d581e0000000000000000],
 
 ["npc8","Matheld","Matheld",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_white_3,itm_b_iphicratids, itm_w_light_kopis_infantry],str_9|agi_10|int_9|cha_10|level(7),wp(90),knows_warrior_npc|knows_weapon_master_3|knows_power_strike_2|knows_athletics_2|knows_leadership_3|knows_tactics_1,0x00000005800c000637db8314e331e76e00000000001c46db0000000000000000],
 
