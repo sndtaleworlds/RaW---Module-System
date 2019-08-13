@@ -1001,13 +1001,13 @@ troops = [
 
 ["npc7","Theron","Theron",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton_dark_blue_cape_white,itm_b_iphicratids, itm_cretan_bow, itm_arrows,itm_s_cretan_parma_1, itm_w_machaira],str_8|agi_9|int_10|cha_6|level(2),wp(80),knows_tracker_npc|knows_tracking_2|knows_athletics_2|knows_spotting_1|knows_pathfinding_1|knows_power_draw_2,0x00000004b90821461ae5d2691b266b3200000000001d581e0000000000000000],
 
-["npc8","Matheld","Matheld",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_white_3,itm_b_iphicratids, itm_w_light_kopis_infantry],str_9|agi_10|int_9|cha_10|level(7),wp(90),knows_warrior_npc|knows_weapon_master_3|knows_power_strike_2|knows_athletics_2|knows_leadership_3|knows_tactics_1,0x00000005800c000637db8314e331e76e00000000001c46db0000000000000000],
+["npc8","Leonides","Leonides",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_straw_hat,itm_a_roman_padded_subarmalis_2,itm_b_iphicratids, itm_w_machaira,itm_w_slinge1,itm_w_sling_lead],str_9|agi_10|int_9|cha_10|level(7),wp(90),knows_warrior_npc|knows_weapon_master_3|knows_power_strike_2|knows_athletics_2|knows_leadership_3|knows_tactics_1,0x00000001f40411d20aa47668a5adc91e00000000001d36a30000000000000000],
 
 ["npc9","Alayen","Alayen",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_samnite_musculata_small_3,itm_samnite_single_greave, itm_samnite_attic_c_crest_black,itm_samnite_xiphos],str_11|agi_8|int_7|cha_8|level(2),wp(100),knows_warrior_npc|knows_weapon_master_1|knows_riding_1|knows_athletics_1|knows_leadership_1|knows_tactics_1|knows_power_strike_1,0x000000030100300f499d5b391b6db8d300000000001dc2e10000000000000000],
 
 ["npc10","Bunduk","Bunduk",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_linothorax,itm_b_iphicratids, itm_cretan_bow, itm_arrows_2, itm_w_machaira],str_12|agi_8|int_9|cha_11|level(9),wp(125),knows_warrior_npc|knows_weapon_master_3|knows_tactics_1|knows_leadership_1|knows_ironflesh_3|knows_trainer_2|knows_first_aid_2|knows_power_draw_4,0x0000000a3f081006572c91c71c8d46cb00000000001e468a0000000000000000],
 
-["npc11","Katrin","Katrin",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_white_3, itm_dagger, itm_b_iphicratids],str_8|agi_11|int_10|cha_10|level(8),wp(70),knows_merchant_npc|knows_weapon_master_1|knows_first_aid_1|knows_wound_treatment_2|knows_ironflesh_3|knows_inventory_management_5,0x0000000d7f0400035915aa226b4d975200000000001ea49e0000000000000000],
+["npc11","Katrin","Katrin",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_white_3, itm_dagger, itm_b_iphicratids],str_8|agi_11|int_10|cha_10|level(8),wp(70),knows_merchant_npc|knows_weapon_master_1|knows_first_aid_1|knows_wound_treatment_2|knows_ironflesh_3|knows_inventory_management_5,0x0000000d7f0400035915aa226b4d975200000000001ea49e0000000000000000],
 
 ["npc12","Jeremus","Jeremus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_roman_tunic_black,itm_b_roman_caligae, itm_w_pugio],str_8|agi_7|int_13|cha_7|level(4),wp(30),knows_merchant_npc|knows_ironflesh_1|knows_power_strike_1|knows_surgery_4|knows_wound_treatment_3|knows_first_aid_3,0x000000078000500e4f8ba62a9cd5d36d00000000001e36250000000000000000],
 
@@ -1017,7 +1017,7 @@ troops = [
 
 ["npc15","Timaeus","Timaeus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton,itm_b_roman_caligae, itm_w_pugio],str_9|agi_9|int_12|cha_8|level(7),wp(80),knows_merchant_npc|knows_tactics_1|knows_engineer_2|knows_trade_3|knows_persuasion_3|knows_first_aid_1|knows_wound_treatment_1,0x0000000f2e1021862b4b9123594eab5300000000001d55360000000000000000],
 
-["npc16","Klethi","Klethi",tf_female|tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_green,itm_b_iphicratids, itm_dagger],str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|knows_power_throw_3|knows_athletics_2|knows_power_strike_1,0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
+["npc16","Klethi","Klethi",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_green,itm_b_iphicratids, itm_dagger],str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|knows_power_throw_3|knows_athletics_2|knows_power_strike_1,0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
 #NPC system changes end
 
 
