@@ -12,4 +12,4 @@
 # RaW recruitment system -> Village troops are assigned here
 # set territorial disputes/outstanding border issues
 
-for /l %A in (45,1,224) do copy "Desktop\Scenes\Greek Village\scn_greek_village.sco" "Desktop\Scenes\Greek Village\scn_village_%A.sco"
+for /l %A in (45,1,224) do copy "Desktop\Scenes\scn_custom_scene.sco" "Desktop\Scenes\scn_village_%A.sco"

@@ -49251,7 +49251,7 @@ scripts = [
 
      (try_begin),
        (store_num_parties_of_template, ":num_parties", "pt_mountain_bandits"),
-       (lt,":num_parties",16), #was 14 at mount&blade, 18 in warband, 16 last decision
+       (lt,":num_parties",14), #was 14 at mount&blade, 18 in warband, 16 last decision
        (store_random,":spawn_point",num_mountain_bandit_spawn_points),
        (val_add,":spawn_point","p_mountain_bandit_spawn_point"),
        (set_spawn_radius, 25),
