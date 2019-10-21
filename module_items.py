@@ -508,7 +508,7 @@ items = [
 ["w_javelin_glove_3","Javelin Carry",[("w_javelin_glove_3_L",0)],	itp_type_hand_armor,0,0,weight(1),0],
 ["w_javelin_glove_4","Javelin Carry",[("w_javelin_glove_4_L",0)],	itp_type_hand_armor,0,0,weight(1),0],
 
-["invisible_glove","Invisible Glove",[("invisible_glove_L",0)],	itp_type_hand_armor,0,0,weight(1),0],
+["invisible_glove","Invisible Glove",[("invisible_glove_L",0)],	itp_type_hand_armor|itp_civilian,0,0,weight(1),0],
 ##new##
 # ["linen_tunic", "Linen Tunic", [("shirt_a",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 60, weight(1)|abundance(100)|head_armor(0)|body_armor(12)|leg_armor(8)|difficulty(0), imodbits_cloth, [], [fac_kingdom_3] ],
 

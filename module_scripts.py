@@ -14447,7 +14447,7 @@ scripts = [
 
 
 				(call_script, "script_init_troop_age", ":cur_lady", 49),
-				(call_script, "script_add_lady_items", ":cur_lady"),
+				# (call_script, "script_add_lady_items", ":cur_lady"),
 
 				(val_add, ":cur_lady", 1),
 			##diplomacy start+
@@ -14511,7 +14511,7 @@ scripts = [
 					(try_end),
 				(try_end),
 
-				(call_script, "script_add_lady_items", ":cur_lady"),
+				# (call_script, "script_add_lady_items", ":cur_lady"),
 				(val_add, ":cur_lady", 1),
 			##diplomacy start+
 			(try_end),
@@ -14560,7 +14560,7 @@ scripts = [
 			##diplomacy end+
 
 			(call_script, "script_init_troop_age", ":cur_lady", 21),
-			(call_script, "script_add_lady_items", ":cur_lady"),
+			# (call_script, "script_add_lady_items", ":cur_lady"),
 
 			(val_add, ":cur_lady", 1),
 
