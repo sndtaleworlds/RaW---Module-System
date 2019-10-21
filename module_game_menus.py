@@ -8253,6 +8253,8 @@ game_menus = [
 		      ##diplomacy begin
           (try_end),
           ##diplomacy end
+		  
+
         ],
     [
 #        ("talk_to_castle_commander",[

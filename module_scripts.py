@@ -14323,15 +14323,20 @@ scripts = [
 	  #King ages
 	  (try_for_range, ":cur_troop", kings_begin, kings_end),
 		(troop_set_slot, ":cur_troop", slot_troop_occupation, slto_kingdom_hero),
-		(store_random_in_range, ":age", 50, 60),
-		(troop_set_slot, ":cur_troop", slot_troop_age, ":age"),
-		##diplomacy start+
-		#(eq, ":cur_troop", "trp_kingdom_5_lord"),#<-- There was no reason for this to be in the loop, so moved it out.
-		#(troop_set_slot, ":cur_troop", slot_troop_age, 47),
+		# (store_random_in_range, ":age", 50, 60),
+		# (troop_set_slot, ":cur_troop", slot_troop_age, ":age"),
 	  (try_end),
-	  # (troop_set_slot, "trp_kingdom_5_lord", slot_troop_age, 47),#<-- Moved from above
-	  ##diplomacy end+
-
+	  
+	  (troop_set_slot, "trp_kingdom_1_lord", slot_troop_age, 70), # Marcus Valerius Corvus
+	  (troop_set_slot, "trp_kingdom_2_lord", slot_troop_age, 37), # Demétrios ho Poliorketés
+	  (troop_set_slot, "trp_kingdom_3_lord", slot_troop_age, 42), # Brennos
+	  (troop_set_slot, "trp_kingdom_4_lord", slot_troop_age, 50), # Kássandros	
+	  (troop_set_slot, "trp_kingdom_5_lord", slot_troop_age, 38), # Gelleíís Egnatíís
+	  (troop_set_slot, "trp_kingdom_6_lord", slot_troop_age, 29), # Kleonymos
+	  (troop_set_slot, "trp_kingdom_7_lord", slot_troop_age, 61), # Agathoclès
+	  (troop_set_slot, "trp_kingdom_8_lord", slot_troop_age, 18), # Pýrrhos
+	  (troop_set_slot, "trp_kingdom_9_lord", slot_troop_age, 40), # Arath Calisna
+	  
 	  #The first thing - family structure
 	  #lords 1 to 8 are patriarchs with one live-at-home son and one daughter. They come from one of six possible ancestors, thus making it likely that there will be two sets of siblings
 	  #lords 9 to 12 are unmarried landowners with sisters
@@ -44218,7 +44223,8 @@ scripts = [
         (party_get_slot, ":walker_troop_id", "$current_town", ":troop_slot"),
         (gt, ":walker_troop_id", 0),
         (store_add, ":entry_no", town_walker_entries_start, ":walker_no"),
-        (set_visitors, ":entry_no", ":walker_troop_id", 10),
+        (store_random_in_range, ":total_walkers", 4, 11), # RaW: Changed from the original 1 per spawn to a range from 4 to 10
+        (set_visitors, ":entry_no", ":walker_troop_id", ":total_walkers"),
       (try_end),
     (try_end),
   ]),
@@ -47285,7 +47291,7 @@ scripts = [
 							(try_end),
 						(else_try),						
 							(eq, ":center_culture", "fac_culture_3"),	
-							(store_random_in_range, ":random_merc", 0, 7),	
+							(store_random_in_range, ":random_merc", 0, 8),	
 							(try_begin),
 								(eq, ":random_merc", 0),
 							(assign, ":troop_no", "trp_sp_celtic_togiatos"),
@@ -47306,9 +47312,12 @@ scripts = [
 								(assign, ":troop_no", "trp_sp_celtic_gaisatos"),	
 						(else_try),
 								(eq, ":random_merc", 6),						
-								(assign, ":troop_no", "trp_sp_celtic_saitoros"),									
-							(try_end),
+								(assign, ":troop_no", "trp_sp_celtic_saitoros"),	
 						(else_try),
+								(eq, ":random_merc", 7),						
+								(assign, ":troop_no", "trp_sp_iberian_caetratus"),									
+							(try_end),
+						(else_try), 
 							(eq, ":center_culture", "fac_culture_4"),						
 							(store_random_in_range, ":random_merc", 0, 13),							
 							(try_begin),
@@ -47378,7 +47387,7 @@ scripts = [
 							(try_end),	
 						(else_try),
 							(eq, ":center_culture", "fac_culture_7"),						
-							(store_random_in_range, ":random_merc", 0, 7),							
+							(store_random_in_range, ":random_merc", 0, 8),							
 							(try_begin),
 								(eq, ":random_merc", 0),
 								(assign, ":troop_no", "trp_sp_cretan_toxotes_syracuse"),
@@ -47399,7 +47408,10 @@ scripts = [
 								(assign, ":troop_no", "trp_sp_sykeloi_hoplites"),								
 						(else_try),
 								(eq, ":random_merc", 6),						
-								(assign, ":troop_no", "trp_sp_celtic_kladioviros"),								
+								(assign, ":troop_no", "trp_sp_celtic_kladioviros"),		
+						(else_try),
+								(eq, ":random_merc", 7),						
+								(assign, ":troop_no", "trp_sp_iberian_caetratus"),								
 							(try_end),								
 						(else_try),
 							(eq, ":center_culture", "fac_culture_8"),						
@@ -79736,6 +79748,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 		(this_or_next|eq, ":id", "trp_sp_celtic_kingetos"),			
 		(this_or_next|eq, ":id", "trp_sp_celtic_batoros"),			
 		(this_or_next|eq, ":id", "trp_sp_celtic_kladioviros"),			
+		(this_or_next|eq, ":id", "trp_sp_iberian_caetratus"),			
 		(this_or_next|eq, ":id", "trp_sp_celtic_solduros"),					
 		(eq, ":id", "trp_sp_celtic_togiatos"),			
 		(agent_equip_item, ":agent_no", "itm_w_celtic_javelin"),

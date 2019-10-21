@@ -2233,6 +2233,15 @@ items = [
 
 ["a_carthage_scale_thorax_bronze", "Linothorax", [("a_carthage_scale_thorax_bronze",0)], itp_type_body_armor|itp_covers_legs|itp_civilian, 0, 1200, weight(16)|abundance(100)|head_armor(0)|body_armor(54)|leg_armor(12)|difficulty(7), imodbits_armor, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_2,fac_kingdom_7, fac_kingdom_4,fac_kingdom_6,fac_kingdom_8] ],
 
+
+["h_iberian_cap", "Iberian Cap", [("h_iberian_cap",0)], itp_type_head_armor|itp_attach_armature|itp_civilian, 0, 16, weight(1)|abundance(100)|head_armor(8)|body_armor(0)|leg_armor(0)|difficulty(6), imodbits_cloth ],
+["h_iberian_cap_white", "Iberian Cap", [("h_iberian_cap_white",0)], itp_type_head_armor|itp_attach_armature|itp_civilian, 0, 16, weight(1)|abundance(100)|head_armor(8)|body_armor(0)|leg_armor(0)|difficulty(6), imodbits_cloth ],
+["a_iberian_tunic", "Shirt", [("a_iberian_tunic",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 54, weight(1)|abundance(100)|head_armor(0)|body_armor(10)|leg_armor(8)|difficulty(0), imodbits_cloth, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_7,fac_kingdom_9] ],
+["a_iberian_tunic_brown", "Shirt", [("a_iberian_tunic_brown",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 54, weight(1)|abundance(100)|head_armor(0)|body_armor(10)|leg_armor(8)|difficulty(0), imodbits_cloth, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_7,fac_kingdom_9] ],
+["a_iberian_tunic_yellow", "Shirt", [("a_iberian_tunic_yellow",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 54, weight(1)|abundance(100)|head_armor(0)|body_armor(10)|leg_armor(8)|difficulty(0), imodbits_cloth, [(ti_on_init_item,[(cur_item_add_mesh, "@b_arms_long", 0, 0),])], [fac_kingdom_7,fac_kingdom_9] ],
+
+["w_iberian_falcata", "Falcata", [("w_iberian_falcata",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip, 413, weight(1.4)|difficulty(0)|spd_rtng(92)|weapon_length(70)|swing_damage(37,cut)|thrust_damage(26,pierce), imodbits_sword_high, [], [fac_kingdom_7,fac_kingdom_9] ],
+
 ################################################ Horses
 ["saddle_horse", "Horse", [("generic_saddle_horse",0)], itp_type_horse|itp_merchandise, 0, 300, abundance(90)|hit_points(80)|body_armor(2)|difficulty(1)|horse_speed(38)|horse_maneuver(42)|horse_charge(15)|horse_scale(105), imodbits_horse_basic, [], [fac_kingdom_1,fac_kingdom_2,fac_kingdom_4,fac_kingdom_5,fac_kingdom_6,fac_kingdom_7,fac_kingdom_8,fac_kingdom_9] ],
 ["saddle_horse_white", "Horse", [("generic_saddle_horse_white",0)], itp_type_horse|itp_merchandise, 0, 350, abundance(90)|hit_points(90)|body_armor(2)|difficulty(1)|horse_speed(40)|horse_maneuver(42)|horse_charge(15)|horse_scale(105), imodbits_horse_basic, [], [fac_kingdom_1,fac_kingdom_2,fac_kingdom_4,fac_kingdom_5,fac_kingdom_6,fac_kingdom_7,fac_kingdom_8,fac_kingdom_9] ],
