@@ -14370,20 +14370,35 @@ scripts = [
 			(store_sub, ":npc_seed", ":cur_troop", "trp_knight_3_1"),
 			(assign, ":ancestor_seed", 13),
 
-		# (else_try),
-			# (is_between, ":cur_troop", "trp_knight_4_1", "trp_knight_5_1"),
-			# (store_sub, ":npc_seed", ":cur_troop", "trp_knight_4_1"),
-			# (assign, ":ancestor_seed", 19),
+		(else_try),
+			(is_between, ":cur_troop", "trp_knight_4_1", "trp_knight_5_1"),
+			(store_sub, ":npc_seed", ":cur_troop", "trp_knight_4_1"),
+			(assign, ":ancestor_seed", 19),
 
-		# (else_try),
-			# (is_between, ":cur_troop", "trp_knight_5_1", "trp_knight_6_1"),
-			# (store_sub, ":npc_seed", ":cur_troop", "trp_knight_5_1"),
-			# (assign, ":ancestor_seed", 25),
+		(else_try),
+			(is_between, ":cur_troop", "trp_knight_5_1", "trp_knight_6_1"),
+			(store_sub, ":npc_seed", ":cur_troop", "trp_knight_5_1"),
+			(assign, ":ancestor_seed", 25),
 
-		# (else_try),
-			# (is_between, ":cur_troop", "trp_knight_6_1", "trp_kingdom_1_pretender"),
-			# (store_sub, ":npc_seed", ":cur_troop", "trp_knight_6_1"),
-			# (assign, ":ancestor_seed", 31),
+		(else_try),
+			(is_between, ":cur_troop", "trp_knight_6_1", "trp_knight_7_1"),
+			(store_sub, ":npc_seed", ":cur_troop", "trp_knight_6_1"),
+			(assign, ":ancestor_seed", 31),
+			
+		(else_try),
+			(is_between, ":cur_troop", "trp_knight_7_1", "trp_knight_8_1"),
+			(store_sub, ":npc_seed", ":cur_troop", "trp_knight_7_1"),
+			(assign, ":ancestor_seed", 37),	
+
+		(else_try),
+			(is_between, ":cur_troop", "trp_knight_8_1", "trp_knight_9_1"),
+			(store_sub, ":npc_seed", ":cur_troop", "trp_knight_8_1"),
+			(assign, ":ancestor_seed", 43),	
+
+		(else_try),
+			(is_between, ":cur_troop", "trp_knight_9_1", "trp_kingdom_1_pretender"),
+			(store_sub, ":npc_seed", ":cur_troop", "trp_knight_9_1"),
+			(assign, ":ancestor_seed", 49),				
 
 		(try_end),
 
