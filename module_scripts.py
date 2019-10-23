@@ -50002,152 +50002,152 @@ scripts = [
 
 # set strings
 
-        (troop_set_slot, "trp_npc1", slot_troop_morality_type, tmt_egalitarian),  #borcha
-        (troop_set_slot, "trp_npc1", slot_troop_morality_value, 4),  #borcha
-        (troop_set_slot, "trp_npc1", slot_troop_2ary_morality_type, tmt_aristocratic),  #borcha
+        (troop_set_slot, "trp_npc1", slot_troop_morality_type, tmt_egalitarian),  #Amyntas ton Makedon
+        (troop_set_slot, "trp_npc1", slot_troop_morality_value, 4),  #Amyntas ton Makedon
+        (troop_set_slot, "trp_npc1", slot_troop_2ary_morality_type, tmt_aristocratic),  #Amyntas ton Makedon
         (troop_set_slot, "trp_npc1", slot_troop_2ary_morality_value, -1),
-        (troop_set_slot, "trp_npc1", slot_troop_personalityclash_object, "trp_npc7"),  #borcha - deshavi
-        (troop_set_slot, "trp_npc1", slot_troop_personalityclash2_object, "trp_npc16"),  #borcha - klethi
-        (troop_set_slot, "trp_npc1", slot_troop_personalitymatch_object, "trp_npc2"),  #borcha - marnid
-        (troop_set_slot, "trp_npc1", slot_troop_home, "p_village_25"), #Dashbiga
+        (troop_set_slot, "trp_npc1", slot_troop_personalityclash_object, "trp_npc4"),  #Amyntas ton Makedon - Abrupolis
+        (troop_set_slot, "trp_npc1", slot_troop_personalityclash2_object, "trp_npc14"),  #Amyntas ton Makedon - Dictator
+        (troop_set_slot, "trp_npc1", slot_troop_personalitymatch_object, "trp_npc15"),  #Amyntas ton Makedon - Timaeus
+        (troop_set_slot, "trp_npc1", slot_troop_home, "p_town_68"), # Dion
         (troop_set_slot, "trp_npc1", slot_troop_payment_request, 300),
 		(troop_set_slot, "trp_npc1", slot_troop_kingsupport_argument, argument_ruler),
-		(troop_set_slot, "trp_npc1", slot_troop_kingsupport_opponent, "trp_npc14"), #lezalit
-		(troop_set_slot, "trp_npc1", slot_troop_town_with_contacts, "p_town_17"), #ichamur
-		(troop_set_slot, "trp_npc1", slot_troop_original_faction, 0), #ichamur
-		(troop_set_slot, "trp_npc1", slot_lord_reputation_type, lrep_roguish), #
+		(troop_set_slot, "trp_npc1", slot_troop_kingsupport_opponent, "trp_npc4"), # Abrupolis
+		(troop_set_slot, "trp_npc1", slot_troop_town_with_contacts, "p_town_68"), # Dion
+		(troop_set_slot, "trp_npc1", slot_troop_original_faction, "fac_kingdom_4"), 
+		(troop_set_slot, "trp_npc1", slot_lord_reputation_type, lrep_benefactor), #
 
 
 
-        (troop_set_slot, "trp_npc2", slot_troop_morality_type, tmt_humanitarian), #marnid
+        (troop_set_slot, "trp_npc2", slot_troop_morality_type, tmt_humanitarian), #Stenis Salauatur
         (troop_set_slot, "trp_npc2", slot_troop_morality_value, 2),
         (troop_set_slot, "trp_npc2", slot_troop_2ary_morality_type, tmt_honest),
         (troop_set_slot, "trp_npc2", slot_troop_2ary_morality_value, 1),
-        (troop_set_slot, "trp_npc2", slot_troop_personalityclash_object, "trp_npc5"), #marnid - beheshtur
-        (troop_set_slot, "trp_npc2", slot_troop_personalityclash2_object, "trp_npc9"), #marnid - alayen
-        (troop_set_slot, "trp_npc2", slot_troop_personalitymatch_object, "trp_npc1"),  #marnid - borcha
-        (troop_set_slot, "trp_npc2", slot_troop_home, "p_town_1"), #Sargoth
+        (troop_set_slot, "trp_npc2", slot_troop_personalityclash_object, "trp_npc9"), #Stenis Salauatur - Camillus Licinius Varus
+        (troop_set_slot, "trp_npc2", slot_troop_personalityclash2_object, "trp_npc5"), #Stenis Salauatur - Erasmus
+        (troop_set_slot, "trp_npc2", slot_troop_personalitymatch_object, "trp_npc3"),  #Stenis Salauatur - Deimos
+        (troop_set_slot, "trp_npc2", slot_troop_home, "p_town_5"), #Capua
         (troop_set_slot, "trp_npc2", slot_troop_payment_request, 0),
 		(troop_set_slot, "trp_npc2", slot_troop_kingsupport_argument, argument_victory),
-		(troop_set_slot, "trp_npc2", slot_troop_kingsupport_opponent, "trp_npc16"), #klethi
-		(troop_set_slot, "trp_npc2", slot_troop_town_with_contacts, "p_town_1"), #Rome
-		(troop_set_slot, "trp_npc2", slot_troop_original_faction, 0), #ichamur
-		(troop_set_slot, "trp_npc2", slot_lord_reputation_type, lrep_custodian), #
+		(troop_set_slot, "trp_npc2", slot_troop_kingsupport_opponent, "trp_npc9"), #Camillus
+		(troop_set_slot, "trp_npc2", slot_troop_town_with_contacts, "p_town_5"), #Capua
+		(troop_set_slot, "trp_npc2", slot_troop_original_faction, "fac_kingdom_1"), 
+		(troop_set_slot, "trp_npc2", slot_lord_reputation_type, lrep_roguish), #
 
 #
-        (troop_set_slot, "trp_npc3", slot_troop_morality_type, tmt_humanitarian), #Ymira
+        (troop_set_slot, "trp_npc3", slot_troop_morality_type, tmt_humanitarian), #Deimos
         (troop_set_slot, "trp_npc3", slot_troop_morality_value, 4),
         (troop_set_slot, "trp_npc3", slot_troop_2ary_morality_type, tmt_aristocratic),
         (troop_set_slot, "trp_npc3", slot_troop_2ary_morality_value, -1),
-        (troop_set_slot, "trp_npc3", slot_troop_personalityclash_object, "trp_npc14"), #Ymira - artimenner
-        (troop_set_slot, "trp_npc3", slot_troop_personalityclash2_object, "trp_npc8"), #Ymira - matheld
-        (troop_set_slot, "trp_npc3", slot_troop_personalitymatch_object, "trp_npc9"), #Ymira - alayen
-        (troop_set_slot, "trp_npc3", slot_troop_home, "p_town_3"), #Veluca
+        (troop_set_slot, "trp_npc3", slot_troop_personalityclash_object, "trp_npc6"), #Deimos - Perkens
+        (troop_set_slot, "trp_npc3", slot_troop_personalityclash2_object, "trp_npc5"), #Deimos - Erasmus
+        (troop_set_slot, "trp_npc3", slot_troop_personalitymatch_object, "trp_npc4"), #Deimos - Abrupolis
+        (troop_set_slot, "trp_npc3", slot_troop_home, "p_town_53"), #Lakedaimon
         (troop_set_slot, "trp_npc3", slot_troop_payment_request, 0),
 		(troop_set_slot, "trp_npc3", slot_troop_kingsupport_argument, argument_lords),
-		(troop_set_slot, "trp_npc3", slot_troop_kingsupport_opponent, "trp_npc5"), #klethi
-		(troop_set_slot, "trp_npc3", slot_troop_town_with_contacts, "p_town_15"), #yalen
-		(troop_set_slot, "trp_npc3", slot_troop_original_faction, 0), #ichamur
-		(troop_set_slot, "trp_npc3", slot_lord_reputation_type, lrep_benefactor), #
+		(troop_set_slot, "trp_npc3", slot_troop_kingsupport_opponent, "trp_npc6"), #Perkens
+		(troop_set_slot, "trp_npc3", slot_troop_town_with_contacts, "p_town_53"), #Lakedaimon
+		(troop_set_slot, "trp_npc3", slot_troop_original_faction, "fac_kingdom_2"), #Lakedaimon
+		(troop_set_slot, "trp_npc3", slot_lord_reputation_type, lrep_martial), #
 
 
 
-        (troop_set_slot, "trp_npc4", slot_troop_morality_type, tmt_aristocratic), #Rolf
+        (troop_set_slot, "trp_npc4", slot_troop_morality_type, tmt_aristocratic), #Abrupolis
         (troop_set_slot, "trp_npc4", slot_troop_morality_value, 4),
         (troop_set_slot, "trp_npc4", slot_troop_2ary_morality_type, tmt_honest),
         (troop_set_slot, "trp_npc4", slot_troop_2ary_morality_value, -1),
-        (troop_set_slot, "trp_npc4", slot_troop_personalityclash_object, "trp_npc10"), #Rolf - bunduk
-        (troop_set_slot, "trp_npc4", slot_troop_personalityclash2_object, "trp_npc7"), #Rolf - deshavi
-        (troop_set_slot, "trp_npc4", slot_troop_personalitymatch_object, "trp_npc5"), #Rolf - beheshtur
-        # (troop_set_slot, "trp_npc4", slot_troop_home, "p_village_34"), #Ehlerdah
+        (troop_set_slot, "trp_npc4", slot_troop_personalityclash_object, "trp_npc1"), #Abrupolis - Amyntas
+        (troop_set_slot, "trp_npc4", slot_troop_personalityclash2_object, "trp_npc7"), #Abrupolis - Erasmus
+        (troop_set_slot, "trp_npc4", slot_troop_personalitymatch_object, "trp_npc16"), #Abrupolis - Bolgios
+        (troop_set_slot, "trp_npc4", slot_troop_home, "p_town_70"), #Philippoi
         (troop_set_slot, "trp_npc4", slot_troop_payment_request, 300),
 		(troop_set_slot, "trp_npc4", slot_troop_kingsupport_argument, argument_claim),
-		(troop_set_slot, "trp_npc4", slot_troop_kingsupport_opponent, "trp_npc6"), #firentis
-		(troop_set_slot, "trp_npc4", slot_troop_town_with_contacts, "p_town_3"), #veluca
-		(troop_set_slot, "trp_npc4", slot_troop_original_faction, 0), #ichamur
+		(troop_set_slot, "trp_npc4", slot_troop_kingsupport_opponent, "trp_npc1"), #Amyntas
+		(troop_set_slot, "trp_npc4", slot_troop_town_with_contacts, "p_town_70"), #Philippoi
+		(troop_set_slot, "trp_npc4", slot_troop_original_faction, "fac_kingdom_4"), #ichamur
 		(troop_set_slot, "trp_npc4", slot_lord_reputation_type, lrep_cunning), #
 
 
-        (troop_set_slot, "trp_npc5", slot_troop_morality_type, tmt_egalitarian),  #beheshtur
-        (troop_set_slot, "trp_npc5", slot_troop_morality_value, 3),  #beheshtur
+        (troop_set_slot, "trp_npc5", slot_troop_morality_type, tmt_egalitarian),  #Erasmus
+        (troop_set_slot, "trp_npc5", slot_troop_morality_value, 3),  #Erasmus
         (troop_set_slot, "trp_npc5", slot_troop_2ary_morality_type, -1),
         (troop_set_slot, "trp_npc5", slot_troop_2ary_morality_value, 0),
-        (troop_set_slot, "trp_npc5", slot_troop_personalityclash_object, "trp_npc2"),  #beheshtur - marnid
-        (troop_set_slot, "trp_npc5", slot_troop_personalityclash2_object, "trp_npc11"),  #beheshtur- katrin
-        (troop_set_slot, "trp_npc5", slot_troop_personalitymatch_object, "trp_npc4"),  #beheshtur - rolf
-        (troop_set_slot, "trp_npc5", slot_troop_home, "p_town_14"), #Halmar
-        (troop_set_slot, "trp_npc5", slot_troop_payment_request, 400),
+        (troop_set_slot, "trp_npc5", slot_troop_personalityclash_object, "trp_npc3"),  #Erasmus - Deimos
+        (troop_set_slot, "trp_npc5", slot_troop_personalityclash2_object, "trp_npc7"),  #Erasmus- Theron
+        (troop_set_slot, "trp_npc5", slot_troop_personalitymatch_object, "trp_npc6"),  #Erasmus - Perkens
+        (troop_set_slot, "trp_npc5", slot_troop_home, "p_town_17"), #Taras
+        (troop_set_slot, "trp_npc5", slot_troop_payment_request, 200),
 		(troop_set_slot, "trp_npc5", slot_troop_kingsupport_argument, argument_ruler),
-		(troop_set_slot, "trp_npc5", slot_troop_kingsupport_opponent, "trp_npc9"), #firentis
-		(troop_set_slot, "trp_npc5", slot_troop_town_with_contacts, "p_town_10"), #tulga
-		(troop_set_slot, "trp_npc5", slot_troop_original_faction, "fac_kingdom_3"), #khergit
+		(troop_set_slot, "trp_npc5", slot_troop_kingsupport_opponent, "trp_npc3"), #Deimos
+		(troop_set_slot, "trp_npc5", slot_troop_town_with_contacts, "p_town_17"), #Taras
+		(troop_set_slot, "trp_npc5", slot_troop_original_faction, "fac_kingdom_6"), #M. H.
 		(troop_set_slot, "trp_npc5", slot_lord_reputation_type, lrep_cunning), #
 
 
 
-        (troop_set_slot, "trp_npc6", slot_troop_morality_type, tmt_humanitarian), #firenz
-        (troop_set_slot, "trp_npc6", slot_troop_morality_value, 2),  #beheshtur
+        (troop_set_slot, "trp_npc6", slot_troop_morality_type, tmt_humanitarian), #Perkens
+        (troop_set_slot, "trp_npc6", slot_troop_morality_value, 2),  #Perkens
         (troop_set_slot, "trp_npc6", slot_troop_2ary_morality_type, tmt_honest),
         (troop_set_slot, "trp_npc6", slot_troop_2ary_morality_value, 1),
-        (troop_set_slot, "trp_npc6", slot_troop_personalityclash_object, "trp_npc11"), #firenz
-        (troop_set_slot, "trp_npc6", slot_troop_personalityclash2_object, "trp_npc13"), #firenz - nizar
-        (troop_set_slot, "trp_npc6", slot_troop_personalitymatch_object, "trp_npc12"),  #firenz - jeremus
-        (troop_set_slot, "trp_npc6", slot_troop_home, "p_town_4"), #Suno
+        (troop_set_slot, "trp_npc6", slot_troop_personalityclash_object, "trp_npc7"), #Perkens - Theron
+        (troop_set_slot, "trp_npc6", slot_troop_personalityclash2_object, "trp_npc3"), #Perkens - Deimos
+        (troop_set_slot, "trp_npc6", slot_troop_personalitymatch_object, "trp_npc12"),  #Perkens - Hostage
+        (troop_set_slot, "trp_npc6", slot_troop_home, "p_town_30"), #Tarchuna
         (troop_set_slot, "trp_npc6", slot_troop_payment_request, 0),
 		(troop_set_slot, "trp_npc6", slot_troop_kingsupport_argument, argument_victory),
-		(troop_set_slot, "trp_npc6", slot_troop_kingsupport_opponent, "trp_npc8"), #firentis
-		(troop_set_slot, "trp_npc6", slot_troop_town_with_contacts, "p_town_7"), #uxkhal
-		(troop_set_slot, "trp_npc6", slot_troop_original_faction, "fac_kingdom_1"), #swadia
+		(troop_set_slot, "trp_npc6", slot_troop_kingsupport_opponent, "trp_npc7"), #Theron
+		(troop_set_slot, "trp_npc6", slot_troop_town_with_contacts, "p_town_30"), #Tarchuna
+		(troop_set_slot, "trp_npc6", slot_troop_original_faction, "fac_kingdom_9"), #Etruscans
 		(troop_set_slot, "trp_npc6", slot_lord_reputation_type, lrep_upstanding), #
 
 
 
-        (troop_set_slot, "trp_npc7", slot_troop_morality_type, tmt_egalitarian),  #deshavi
-        (troop_set_slot, "trp_npc7", slot_troop_morality_value, 3),  #beheshtur
+        (troop_set_slot, "trp_npc7", slot_troop_morality_type, tmt_egalitarian),  #Theron
+        (troop_set_slot, "trp_npc7", slot_troop_morality_value, 3),  #Theron
         (troop_set_slot, "trp_npc7", slot_troop_2ary_morality_type, -1),
         (troop_set_slot, "trp_npc7", slot_troop_2ary_morality_value, 0),
-        (troop_set_slot, "trp_npc7", slot_troop_personalityclash_object, "trp_npc1"),  #deshavi
-        (troop_set_slot, "trp_npc7", slot_troop_personalityclash2_object, "trp_npc4"),  #deshavi - rolf
-        (troop_set_slot, "trp_npc7", slot_troop_personalitymatch_object, "trp_npc16"),  #deshavi - klethi
-        (troop_set_slot, "trp_npc7", slot_troop_home, "p_village_5"), #Kulum
+        (troop_set_slot, "trp_npc7", slot_troop_personalityclash_object, "trp_npc6"),  #Theron - Perkens
+        (troop_set_slot, "trp_npc7", slot_troop_personalityclash2_object, "trp_npc10"),  #Theron - Thessalian
+        (troop_set_slot, "trp_npc7", slot_troop_personalitymatch_object, "trp_npc4"),  #Theron - Abrupolis
+        (troop_set_slot, "trp_npc7", slot_troop_home, "p_town_57"), #Knosós
 #        (troop_set_slot, "trp_npc7", slot_troop_payment_request, 300),
 		(troop_set_slot, "trp_npc7", slot_troop_kingsupport_argument, argument_victory),
-		(troop_set_slot, "trp_npc7", slot_troop_kingsupport_opponent, "trp_npc3"), #ymira
-		(troop_set_slot, "trp_npc7", slot_troop_town_with_contacts, "p_town_2"), #tihr
-		(troop_set_slot, "trp_npc7", slot_troop_original_faction, 0), #swadia
+		(troop_set_slot, "trp_npc7", slot_troop_kingsupport_opponent, "trp_npc6"), #Perkens
+		(troop_set_slot, "trp_npc7", slot_troop_town_with_contacts, "p_town_57"), #Knosós
+		(troop_set_slot, "trp_npc7", slot_troop_original_faction, "fac_kingdom_2"), #swadia
 		(troop_set_slot, "trp_npc7", slot_lord_reputation_type, lrep_custodian), #
 
 
 
-        (troop_set_slot, "trp_npc8", slot_troop_morality_type, tmt_aristocratic), #matheld
-        (troop_set_slot, "trp_npc8", slot_troop_morality_value, 3),  #beheshtur
+        (troop_set_slot, "trp_npc8", slot_troop_morality_type, tmt_aristocratic), #Leonides
+        (troop_set_slot, "trp_npc8", slot_troop_morality_value, 3),  #Leonides
         (troop_set_slot, "trp_npc8", slot_troop_2ary_morality_type, -1),
         (troop_set_slot, "trp_npc8", slot_troop_2ary_morality_value, 0),
-        (troop_set_slot, "trp_npc8", slot_troop_personalityclash_object, "trp_npc12"), #matheld
-        (troop_set_slot, "trp_npc8", slot_troop_personalityclash2_object, "trp_npc3"), #matheld - ymira
-        (troop_set_slot, "trp_npc8", slot_troop_personalitymatch_object, "trp_npc13"),  #matheld - nizar
-        (troop_set_slot, "trp_npc8", slot_troop_home, "p_sea_raider_spawn_point_2"), #Gundig's Point
+        (troop_set_slot, "trp_npc8", slot_troop_personalityclash_object, "trp_npc12"), #Leonides - Shepherd
+        (troop_set_slot, "trp_npc8", slot_troop_personalityclash2_object, "trp_npc9"), #Leonides - Camillus
+        (troop_set_slot, "trp_npc8", slot_troop_personalitymatch_object, "trp_npc7"),  #Leonides - Theron
+        (troop_set_slot, "trp_npc8", slot_troop_home, "p_town_58"), #Rhodes
         (troop_set_slot, "trp_npc8", slot_troop_payment_request, 500),
 		(troop_set_slot, "trp_npc8", slot_troop_kingsupport_argument, argument_lords),
-		(troop_set_slot, "trp_npc8", slot_troop_kingsupport_opponent, "trp_npc2"), #marnid
-		(troop_set_slot, "trp_npc8", slot_troop_town_with_contacts, "p_town_12"), #wercheg
-		(troop_set_slot, "trp_npc8", slot_troop_original_faction, "fac_kingdom_4"), #nords
+		(troop_set_slot, "trp_npc8", slot_troop_kingsupport_opponent, "trp_npc12"), #marnid
+		(troop_set_slot, "trp_npc8", slot_troop_town_with_contacts, "p_town_58"), #wercheg
+		(troop_set_slot, "trp_npc8", slot_troop_original_faction, "fac_kingdom_2"), #nords
 		(troop_set_slot, "trp_npc8", slot_lord_reputation_type, lrep_martial), #
 
 
-        (troop_set_slot, "trp_npc9", slot_troop_morality_type, tmt_aristocratic), #alayen
-        (troop_set_slot, "trp_npc9", slot_troop_morality_value, 2),  #beheshtur
+        (troop_set_slot, "trp_npc9", slot_troop_morality_type, tmt_aristocratic), #Camillus
+        (troop_set_slot, "trp_npc9", slot_troop_morality_value, 2),  #Camillus
         (troop_set_slot, "trp_npc9", slot_troop_2ary_morality_type, tmt_honest),
         (troop_set_slot, "trp_npc9", slot_troop_2ary_morality_value, 1),
-        (troop_set_slot, "trp_npc9", slot_troop_personalityclash_object, "trp_npc13"), #alayen vs nizar
-        (troop_set_slot, "trp_npc9", slot_troop_personalityclash2_object, "trp_npc2"), #alayen vs marnid
-        (troop_set_slot, "trp_npc9", slot_troop_personalitymatch_object, "trp_npc3"),  #alayen - ymira
-        (troop_set_slot, "trp_npc9", slot_troop_home, "p_town_13"), #Rivacheg
+        (troop_set_slot, "trp_npc9", slot_troop_personalityclash_object, "trp_npc10"), #Camillus - Thessalian
+        (troop_set_slot, "trp_npc9", slot_troop_personalityclash2_object, "trp_npc2"), #Camillus - Stenis
+        (troop_set_slot, "trp_npc9", slot_troop_personalitymatch_object, "trp_npc11"),  #Camillus - Hostage
+        (troop_set_slot, "trp_npc9", slot_troop_home, "p_town_2"), #Tibur
         (troop_set_slot, "trp_npc9", slot_troop_payment_request, 300),
 		(troop_set_slot, "trp_npc9", slot_troop_kingsupport_argument, argument_lords),
-		(troop_set_slot, "trp_npc9", slot_troop_kingsupport_opponent, "trp_npc1"), #borcha
-		(troop_set_slot, "trp_npc9", slot_troop_town_with_contacts, "p_town_8"), #reyvadin
-		(troop_set_slot, "trp_npc9", slot_troop_original_faction, "fac_kingdom_2"), #vaegirs
+		(troop_set_slot, "trp_npc9", slot_troop_kingsupport_opponent, "trp_npc10"), #borcha
+		(troop_set_slot, "trp_npc9", slot_troop_town_with_contacts, "p_town_2"), #Tibur
+		(troop_set_slot, "trp_npc9", slot_troop_original_faction, "fac_kingdom_1"), #vaegirs
 		(troop_set_slot, "trp_npc9", slot_lord_reputation_type, lrep_martial), #
 
 
@@ -50163,7 +50163,7 @@ scripts = [
 		(troop_set_slot, "trp_npc10", slot_troop_kingsupport_argument, argument_ruler),
 		(troop_set_slot, "trp_npc10", slot_troop_kingsupport_opponent, "trp_npc7"), #nizar
 		(troop_set_slot, "trp_npc10", slot_troop_town_with_contacts, "p_town_5"), #jelkala
-		# (troop_set_slot, "trp_npc10", slot_troop_original_faction, "fac_kingdom_5"), #rhodoks
+		(troop_set_slot, "trp_npc10", slot_troop_original_faction, "fac_kingdom_5"), #rhodoks
 		(troop_set_slot, "trp_npc10", slot_lord_reputation_type, lrep_benefactor), #
 
 
@@ -50241,7 +50241,7 @@ scripts = [
         (troop_set_slot, "trp_npc15", slot_troop_personalityclash_object, "trp_npc16"), #artimenner - klethi
         (troop_set_slot, "trp_npc15", slot_troop_personalityclash2_object, "trp_npc12"), #artimenner - jeremus
         (troop_set_slot, "trp_npc15", slot_troop_personalitymatch_object, "trp_npc14"), #lazalit - artimenner
-        # (troop_set_slot, "trp_npc15", slot_troop_home, "p_castle_1"), #Culmarr Castle
+        (troop_set_slot, "trp_npc15", slot_troop_home, "p_castle_1"), #Culmarr Castle
         (troop_set_slot, "trp_npc15", slot_troop_payment_request, 300),
 		(troop_set_slot, "trp_npc15", slot_troop_kingsupport_argument, argument_ruler),
 		(troop_set_slot, "trp_npc15", slot_troop_kingsupport_opponent, "trp_npc4"), #nizar
@@ -79959,13 +79959,13 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	(agent_set_speed_modifier, ":agent_no", ":total_speed"), 
   
 # Debug      
-	(get_player_agent_no, ":player_agent"),		
-	(eq, ":agent_no", ":player_agent"),	
+	# (get_player_agent_no, ":player_agent"),		
+	# (eq, ":agent_no", ":player_agent"),	
   
-	(assign, reg1, ":total_weight"),
-	(display_message, "@Weight Penalty is {reg1}"),   
-	(assign, reg2, ":total_speed"),
-	(display_message, "@Speed is {reg2}"),      
+	# (assign, reg1, ":total_weight"),
+	# (display_message, "@Weight Penalty is {reg1}"),   
+	# (assign, reg2, ":total_speed"),
+	# (display_message, "@Speed is {reg2}"),      
 	  
 # Server Sync
 	(get_max_players, ":max_players"),
@@ -79984,7 +79984,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	(store_script_param, ":agent_no", 1),
 	(store_script_param, ":item", 2),
 
-	(get_player_agent_no, ":player_agent"),		
+	# (get_player_agent_no, ":player_agent"), # For Debugging		
 	(agent_get_wielded_item, ":item", ":agent_no", 0),	
 		
 	(try_begin),
@@ -80005,15 +80005,16 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 		(else_try),		
 			(val_sub, ":javelin_ammo", 1),
 		(try_end),
-		
-		(try_begin),		
-			(eq, ":agent_no", ":player_agent"),		
-			(assign, reg1, ":javelin_ammo"),
-			(display_message, "@You have {reg1} javelins"),   	
-			(assign, reg2, ":value"),
-			(display_message, "@Value is {reg2}"),   		
-		(try_end),
-		
+
+# Debug		
+		# (try_begin),		
+			# (eq, ":agent_no", ":player_agent"),		
+			# (assign, reg1, ":javelin_ammo"),
+			# (display_message, "@You have {reg1} javelins"),   	
+			# (assign, reg2, ":value"),
+			# (display_message, "@Value is {reg2}"),   		
+		# (try_end),
+           (eq, "$g_javelin_script", 1),			
 		(try_begin),
 			(ge,":javelin_ammo", 6),	 
 			(item_get_slot, ":glove", ":item",  slot_item_javelin_ammo_5),		

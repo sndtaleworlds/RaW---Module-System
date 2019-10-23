@@ -919,7 +919,7 @@ game_menus = [
   ),
 
   ("start_game_1",menu_text_color(0xFF000000)|mnf_disable_all_keys,
-    "Select your character's gender.",
+    "Select your character's gender. ^Female disabled for now as there are no proper models for them.",
     "none",
 ##diplomacy start+ Reset prejudice preferences
     [
@@ -931,7 +931,7 @@ game_menus = [
        [
          (troop_set_type,"trp_player", 0),
          (assign,"$character_gender",tf_male),
-         (jump_to_menu,"mnu_start_character_1"),
+         (jump_to_menu,"mnu_start_game_2"),
         ]
        ),
       # ("start_female",[],"Female",
@@ -947,6 +947,33 @@ game_menus = [
        ]),
     ]
   ),
+  
+  ("start_game_2",menu_text_color(0xFF000000)|mnf_disable_all_keys,
+    "You may chose here to enable or disable a script that makes characters carry their javelins in their left hand. ^This feature is experimental and not fully implemented, there might be the occasional bug associated to it and clipping with shields. ^You can turn it on/off any time in the Mod/Diplomacy Preferences Tab in the Camp Menu.",
+    "none",
+##diplomacy start+ Reset prejudice preferences
+    [
+    ],
+##diplomacy end+
+    [
+      ("enable_javelin_script",[],"Enable the script.",
+       [
+         (assign,"$g_javelin_script",1),
+         (jump_to_menu,"mnu_start_character_1"),
+        ]
+       ),
+      ("disable_javelin_script",[],"Disable the script.",
+       [
+         (assign,"$g_javelin_script",0),
+         (jump_to_menu,"mnu_start_character_1"),
+        ]
+       ),
+	  ("go_back",[],"Go back",
+       [
+	     (jump_to_menu,"mnu_start_game_0"),
+       ]),
+    ]
+  ),  
 
   (
     "start_character_1",mnf_disable_all_keys,
@@ -5421,7 +5448,6 @@ game_menus = [
    [
      ],
     [
-
 
       ("camp_recruit_prisoners",
        [(troops_can_join, 1),
@@ -20041,7 +20067,7 @@ goods, and books will never be sold. ^^You can change some settings here freely.
   (
     "dplmc_preferences",0,
 	##diplomacy start+ alter for PBOD
-    "Diplomacy "+DPLMC_DIPLOMACY_VERSION_STRING+" Preferences{s0}",##"Diplomacy preferences",
+    "Mod|Diplomacy "+DPLMC_DIPLOMACY_VERSION_STRING+" Preferences{s0}",##"Diplomacy preferences",
 	##diplomacy end+
     "none",
     [
@@ -20074,6 +20100,28 @@ goods, and books will never be sold. ^^You can change some settings here freely.
            (assign, "$g_dplmc_horse_speed", 0),
            (jump_to_menu, "mnu_dplmc_preferences"),
         ]),
+		
+      ("dplmc_disable_javelin_script",[(eq, "$g_javelin_script", 0),],"Disable Javelin Script.",
+       [
+           (assign, "$g_javelin_script", 1),
+           (jump_to_menu, "mnu_dplmc_preferences"),
+        ]),
+      ("dplmc_enable_javelin_script",[(eq, "$g_javelin_script", 1),],"Enable Javelin Script.",
+       [
+           (assign, "$g_javelin_script", 0),
+           (jump_to_menu, "mnu_dplmc_preferences"),
+        ]),		
+# Body sliding		
+      ("raw_enable_bodysliding",[ (eq, "$enable_bodysliding", 0),],"Enable bodysliding.",
+       [
+           (assign, "$enable_bodysliding", BODYSLIDING_ALL_TROOPS),
+           (jump_to_menu, "mnu_dplmc_preferences"),
+        ]),
+      ("raw_disable_bodysliding",[ (eq, "$enable_bodysliding", BODYSLIDING_ALL_TROOPS),],"Disable bodysliding.",
+       [
+           (assign, "$enable_bodysliding", 0),
+           (jump_to_menu, "mnu_dplmc_preferences"),
+        ]),			
       ("dplmc_disable_battle_continuation",[ (eq, "$g_dplmc_battle_continuation", 0),],"Disable Diplomacy battle continuation.",
        [
            (assign, "$g_dplmc_battle_continuation", 1),
@@ -20084,17 +20132,6 @@ goods, and books will never be sold. ^^You can change some settings here freely.
            (assign, "$g_dplmc_battle_continuation", 0),
            (jump_to_menu, "mnu_dplmc_preferences"),
         ]),
-# Body sliding		
-      ("raw_disable_bodysliding",[ (eq, "$g_enable_bodysliding", 0),],"Disable bodysliding.",
-       [
-           (assign, "$g_enable_bodysliding", BODYSLIDING_ALL_TROOPS),
-           (jump_to_menu, "mnu_dplmc_preferences"),
-        ]),
-      ("raw_enable_bodysliding",[ (eq, "$g_enable_bodysliding", BODYSLIDING_ALL_TROOPS),],"Enable bodysliding.",
-       [
-           (assign, "$g_enable_bodysliding", 0),
-           (jump_to_menu, "mnu_dplmc_preferences"),
-        ]),	
 ##diplomacy start+
 	#toggle terrain advantage
       ("dplmc_disable_terrain_advantage",[(eq, "$g_dplmc_terrain_advantage", DPLMC_TERRAIN_ADVANTAGE_ENABLE),],"Disable terrain advantage in Autocalc battles (currently this feature is Enabled).",

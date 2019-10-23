@@ -622,6 +622,7 @@ raw_skirmisher_javelin = (ti_on_agent_spawn, 0.1, 0, [
    (this_or_next|multiplayer_is_dedicated_server),      
    (this_or_next|multiplayer_is_server),
    (neg|game_in_multiplayer_mode),   
+   (eq, "$g_javelin_script", 1),	   
 ],             
         [
 	(store_trigger_param_1, ":agent_no"),	
@@ -654,6 +655,7 @@ raw_skirmisher_javelin_2 = (ti_on_item_wielded, 0, 0, [
    (this_or_next|multiplayer_is_dedicated_server),      
    (this_or_next|multiplayer_is_server),
    (neg|game_in_multiplayer_mode),   
+   (eq, "$g_javelin_script", 1),	   
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
@@ -687,6 +689,7 @@ raw_skirmisher_javelin_3 = (ti_on_item_unwielded, 0, 0, [
    (this_or_next|multiplayer_is_dedicated_server),      
    (this_or_next|multiplayer_is_server),
    (neg|game_in_multiplayer_mode),   
+   (eq, "$g_javelin_script", 1),	
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
@@ -722,6 +725,7 @@ raw_skirmisher_javelin_4 = (ti_on_item_picked_up, 0, 0, [
    (this_or_next|multiplayer_is_dedicated_server),      
    (this_or_next|multiplayer_is_server),
    (neg|game_in_multiplayer_mode),   
+   (eq, "$g_javelin_script", 1),	   
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
@@ -750,6 +754,7 @@ raw_skirmisher_javelin_5 = (ti_on_item_dropped, 0, 0, [
    (this_or_next|multiplayer_is_dedicated_server),      
    (this_or_next|multiplayer_is_server),
    (neg|game_in_multiplayer_mode),   
+   (eq, "$g_javelin_script", 1),	   
 ],             
         [
 	(store_trigger_param_1, ":agent_no"), 
