@@ -106,7 +106,7 @@ party_templates = [
 
 ("kingdom_3_reinforcements_a", "{!}kingdom_3_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_celtic_atectos,5,10),(trp_sp_celtic_batoros,5,10),(trp_sp_celtic_gaisatos,5,10)]),
 ("kingdom_3_reinforcements_b", "{!}kingdom_3_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sp_celtic_kladioviros,2,8),(trp_sp_celtic_kingetos,2,8),(trp_sp_celtic_saitoros,2,8),(trp_sp_celtic_togiatos,2,8),(trp_sp_celtic_eporedos,2,8)]),
-("kingdom_3_reinforcements_c", "{!}kingdom_3_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_celtic_rigeporedos,2,8),(trp_sp_celtic_solduros,5,10),(trp_sp_celtic_argos,2,8),(trp_sp_celtic_talmori,2,8)]),
+("kingdom_3_reinforcements_c", "{!}kingdom_3_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sp_celtic_rigeporedos,2,8),(trp_sp_celtic_solduros,5,10),(trp_sp_celtic_ambaktos,5,10),(trp_sp_celtic_argos,2,8),(trp_sp_celtic_talmori,2,8)]),
 ("kingdom_3_officers_template", "{!}kingdom_3_officers_template", 0, 0, fac_commoners, 0, [(trp_sp_celtic_arios,1,2)]),
 
 ("kingdom_4_reinforcements_a", "{!}kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sp_makedonian_sarissaphoros,5,10),(trp_sp_makedonian_deuteros,5,10),(trp_sp_makedonian_pezhetairos,5,10),(trp_sp_makedonian_toxotes,2,8)]),

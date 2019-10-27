@@ -442,7 +442,7 @@ presentations = [
         (assign, ":cur_troop", "trp_sp_epeiros_xystophoros"),
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_9"),
-        (assign, ":cur_troop", "trp_sp_epeiros_xystophoros"),		
+        (assign, ":cur_troop", "trp_sp_etruscan_athumic"),		
       (else_try),
         (assign, ":cur_troop", "trp_taiga_bandit"),
       (try_end),
