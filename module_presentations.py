@@ -16955,6 +16955,10 @@ presentations = [
         (try_begin), #limit stack range to updated stacks
           (val_clamp, "$g_cur_stack", -1, ":num_stacks"),
           (party_stack_get_troop_id, ":troop_no", "p_main_party", "$g_cur_stack"),
+# RaW		  
+            (troop_get_slot, ":upgrade_troop", ":troop_no", slot_troop_barrack_upgrade),	
+            (this_or_next|le, ":upgrade_troop", 0),		  
+# RaW 			
           (this_or_next|le, ":troop_no", 0),
           (troop_is_hero, ":troop_no"),
           (assign, "$g_cur_stack", -1),
@@ -16964,6 +16968,10 @@ presentations = [
         (val_max, ":pos_y", 560),
         (try_for_range, ":slot_no", 0, ":num_stacks"),
           (party_stack_get_troop_id, ":troop_no", "p_main_party", ":slot_no"),
+# RaW		  
+            (troop_get_slot, ":upgrade_troop", ":troop_no", slot_troop_barrack_upgrade),	
+            (this_or_next|le, ":upgrade_troop", 0),		  
+# RaW 				  
           (troop_is_hero, ":troop_no"), #discard results from displaying
           (troop_set_slot, "trp_temp_array_a", ":slot_no", -1),
         (else_try),
@@ -16993,7 +17001,7 @@ presentations = [
           (troop_get_slot, ":dest_obj", "trp_temp_array_a", "$g_cur_stack"),
           (gt, ":dest_obj", 0),
           (overlay_set_alpha, ":dest_obj", 0x80),
-          (party_stack_get_troop_id, "$g_talk_troop", "p_main_party", "$g_cur_stack"),
+          (party_stack_get_troop_id, "$g_talk_troop", "p_main_party", "$g_cur_stack"),		  
           (neg|troop_is_hero, "$g_talk_troop"),
           (party_stack_get_size, "$g_talk_troop_met", "p_main_party", "$g_cur_stack"),
           (party_stack_get_num_wounded, ":num_wounded", "p_main_party", "$g_cur_stack"),
@@ -17012,11 +17020,14 @@ presentations = [
 
         #availability description
         (party_get_slot, "$g_talk_troop_relation", "$current_town", slot_center_barrack_troops),
-        (assign, reg1, "$g_talk_troop_relation"),
+        (assign, reg12, "$g_talk_troop_relation"),
         (faction_get_color, ":color", "$g_encountered_party_faction"),
         (position_set_x, pos1, 275),
         (position_set_y, pos1, 210),
-        (create_text_overlay, reg1, "@There are {reg1} upgrade available", tf_with_outline|tf_center_justify),
+# RaW		  
+	# (val_sub, reg1, 1),
+# RaW 		
+        (create_text_overlay, reg1, "@There are {reg12} upgrade available", tf_with_outline|tf_center_justify),
         (overlay_set_position, reg1, pos1),
         (overlay_set_color, reg1, ":color"),
 

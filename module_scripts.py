@@ -353,47 +353,102 @@ scripts = [
       (troop_set_slot, "trp_sp_legio_3_princeps", slot_troop_barrack_upgrade, "trp_sp_legio_3_princeps_2"),		  
       (troop_set_slot, "trp_sp_legio_4_hastatus", slot_troop_barrack_upgrade, "trp_sp_legio_4_hastatus_2"),	
       (troop_set_slot, "trp_sp_legio_4_princeps", slot_troop_barrack_upgrade, "trp_sp_legio_4_princeps_2"),	
+	  
       (troop_set_slot, "trp_sp_roman_hastatus", slot_troop_barrack_upgrade, "trp_sp_roman_hastatus_2"),	
       (troop_set_slot, "trp_sp_roman_princeps", slot_troop_barrack_upgrade, "trp_sp_roman_princeps_2"),		  
       (troop_set_slot, "trp_sp_roman_eques", slot_troop_barrack_upgrade, "trp_sp_roman_eques_2"),	
+	  
 # Greece	  
       (troop_set_slot, "trp_sp_greek_hoplitai_haploi", slot_troop_barrack_upgrade, "trp_sp_greek_ekdromos"),	
       (troop_set_slot, "trp_sp_greek_ekdromos", slot_troop_barrack_upgrade, "trp_sp_greek_hoplites"),	
       (troop_set_slot, "trp_sp_greek_hoplites", slot_troop_barrack_upgrade, "trp_sp_greek_hoplites_epilektoi"),	
       (troop_set_slot, "trp_sp_greek_hippakontistes", slot_troop_barrack_upgrade, "trp_sp_greek_hippeus"),	  
-      (troop_set_slot, "trp_sp_athenian_hoplite_levy", slot_troop_barrack_upgrade, "trp_sp_athenian_hoplite"),		  	   
+	  
+      (troop_set_slot, "trp_sp_athenian_hoplite_levy", slot_troop_barrack_upgrade, "trp_sp_athenian_hoplite"),		  
+      (troop_set_slot, "trp_sp_athenian_hoplite", slot_troop_barrack_upgrade, "trp_sp_athenian_hoplite_elite"),		  
+	  
       (troop_set_slot, "trp_sp_boeotian_citizen_hoplite", slot_troop_barrack_upgrade, "trp_sp_boeotian_hoplite"),	  
+      (troop_set_slot, "trp_sp_boeotian_hoplite", slot_troop_barrack_upgrade, "trp_sp_boeotian_elite_hoplite"),	
+
+      (troop_set_slot, "trp_sp_spartan_ekdromos", slot_troop_barrack_upgrade, "trp_sp_spartan_hoplite"),	
+      (troop_set_slot, "trp_sp_spartan_hoplite", slot_troop_barrack_upgrade, "trp_sp_spartan_elite_hoplite"),	
+	  
+      (troop_set_slot, "trp_sp_corinthian_levy_hoplite", slot_troop_barrack_upgrade, "trp_sp_corinthian_hoplite"),	
+      (troop_set_slot, "trp_sp_corinthian_hoplite", slot_troop_barrack_upgrade, "trp_sp_corinthian_hoplite_elite"),	
+	  
+      (troop_set_slot, "trp_sp_cretan_levy_hoplite", slot_troop_barrack_upgrade, "trp_sp_cretan_hoplite"),	
+      (troop_set_slot, "trp_sp_cretan_hoplite", slot_troop_barrack_upgrade, "trp_sp_cretan_hoplite_elite"),	
+	  
 # Gallia
-      # (troop_set_slot, "trp_sp_celtic_lugoae", slot_troop_barrack_upgrade, "trp_sp_celtic_gaelaiche"),	
-      # (troop_set_slot, "trp_sp_celtic_botroas", slot_troop_barrack_upgrade, "trp_sp_celtic_bataroas"),	
-      # (troop_set_slot, "trp_sp_celtic_neitos", slot_troop_barrack_upgrade, "trp_sp_celtic_solduros"),	
+      (troop_set_slot, "trp_sp_celtic_atectos", slot_troop_barrack_upgrade, "trp_sp_celtic_kingetos"),	
+      (troop_set_slot, "trp_sp_celtic_kingetos", slot_troop_barrack_upgrade, "trp_sp_celtic_ambaktos"),	
+	  
+      (troop_set_slot, "trp_sp_celtic_batoros", slot_troop_barrack_upgrade, "trp_sp_celtic_kladioviros"),	
+      (troop_set_slot, "trp_sp_celtic_kladioviros", slot_troop_barrack_upgrade, "trp_sp_celtic_solduros"),	
+
+      (troop_set_slot, "trp_sp_celtic_gaisaredos", slot_troop_barrack_upgrade, "trp_sp_celtic_eporedos"),	
+      (troop_set_slot, "trp_sp_celtic_eporedos", slot_troop_barrack_upgrade, "trp_sp_celtic_rigeporedos"),	
+	  
 # Makedonia	  
       (troop_set_slot, "trp_sp_makedonian_sarissaphoros", slot_troop_barrack_upgrade, "trp_sp_makedonian_deuteros"),		  
-      (troop_set_slot, "trp_sp_makedonian_deuteros", slot_troop_barrack_upgrade, "trp_sp_makedonian_pezhetairos"),		  
-      (troop_set_slot, "trp_sp_makedonian_argyraspides", slot_troop_barrack_upgrade, "trp_sp_makedonian_agema_argyraspides"),		  
+      (troop_set_slot, "trp_sp_makedonian_deuteros", slot_troop_barrack_upgrade, "trp_sp_makedonian_pezhetairos"),	
+	  
+      (troop_set_slot, "trp_sp_makedonian_argyraspides", slot_troop_barrack_upgrade, "trp_sp_makedonian_agema_argyraspides"),	
+	  
       (troop_set_slot, "trp_sp_makedonian_hypaspist", slot_troop_barrack_upgrade, "trp_sp_makedonian_agema_hypaspist"),		  
       (troop_set_slot, "trp_sp_makedonian_agema_hypaspist", slot_troop_barrack_upgrade, "trp_sp_makedonian_basilikos_agema_hypaspist"),	
+	  
+      (troop_set_slot, "trp_sp_makedonian_hippeis", slot_troop_barrack_upgrade, "trp_sp_makedonian_hetairoi"),	
+
+      (troop_set_slot, "trp_sp_thracian_falxman", slot_troop_barrack_upgrade, "trp_sp_thracian_noble_falxman"),	
+	  
+      (troop_set_slot, "trp_sp_thessalian_hoplite_levy", slot_troop_barrack_upgrade, "trp_sp_thessalian_hoplite"),	
+      (troop_set_slot, "trp_sp_thessalian_hoplite", slot_troop_barrack_upgrade, "trp_sp_thessalian_hoplite_elite"),	
+
+      (troop_set_slot, "trp_sp_thessalian_hippeis", slot_troop_barrack_upgrade, "trp_sp_thessalian_xystophoros"),	
+
 # Samnium	  
       (troop_set_slot, "trp_sp_samnite_hastatus", slot_troop_barrack_upgrade, "trp_sp_samnite_hastatus_2"),		  
-      (troop_set_slot, "trp_sp_samnite_hastatus_2", slot_troop_barrack_upgrade, "trp_sp_samnite_hastatus_3"),		  
+      (troop_set_slot, "trp_sp_samnite_hastatus_2", slot_troop_barrack_upgrade, "trp_sp_samnite_hastatus_3"),	
+	  
       (troop_set_slot, "trp_sp_samnite_pedites", slot_troop_barrack_upgrade, "trp_sp_samnite_pedites_2"),		  
+	  
       (troop_set_slot, "trp_sp_samnite_eques", slot_troop_barrack_upgrade, "trp_sp_samnite_eques_2"),		  
-      (troop_set_slot, "trp_sp_samnite_verehia_minor", slot_troop_barrack_upgrade, "trp_sp_samnite_verehia_maior"),	
+	  
+      (troop_set_slot, "trp_sp_samnite_verehia_minor", slot_troop_barrack_upgrade, "trp_sp_samnite_verehia_maior"),
+	  
 # Megale Hellas	  
       (troop_set_slot, "trp_sp_tarentine_levy_hoplite", slot_troop_barrack_upgrade, "trp_sp_tarentine_hoplite"),	
       (troop_set_slot, "trp_sp_tarentine_hoplite", slot_troop_barrack_upgrade, "trp_sp_tarentine_elite_hoplite"),	  
+
+      (troop_set_slot, "trp_sp_tarentine_hippakontistes", slot_troop_barrack_upgrade, "trp_sp_tarentine_horseman"),	  
+	  
 # Basileion Syrakosion
       (troop_set_slot, "trp_sp_syracusan_hoplite_levy", slot_troop_barrack_upgrade, "trp_sp_syracusan_hoplite"),
+      (troop_set_slot, "trp_sp_syracusan_hoplite", slot_troop_barrack_upgrade, "trp_sp_syracusan_hoplite_elite"),
+
+      (troop_set_slot, "trp_sp_syracusan_hippakontistes", slot_troop_barrack_upgrade, "trp_sp_syracusan_horseman"),
+	  
 # Epeiros
       (troop_set_slot, "trp_sp_epeiros_sarissaphoros", slot_troop_barrack_upgrade, "trp_sp_epeiros_deuteros"),
       (troop_set_slot, "trp_sp_epeiros_deuteros", slot_troop_barrack_upgrade, "trp_sp_epeiros_pezhetairos"),
       (troop_set_slot, "trp_sp_epeiros_hippeus", slot_troop_barrack_upgrade, "trp_sp_epeiros_xystophoros"),
+
+      (troop_set_slot, "trp_sp_illyrian_paraktios", slot_troop_barrack_upgrade, "trp_sp_illyrian_doryphoros"),
+      (troop_set_slot, "trp_sp_illyrian_doryphoros", slot_troop_barrack_upgrade, "trp_sp_illyrian_hoplite"),
+	  
 # Rasna	  
       (troop_set_slot, "trp_sp_etruscan_veiane", slot_troop_barrack_upgrade, "trp_sp_etruscan_venzile"),
       (troop_set_slot, "trp_sp_etruscan_venzile", slot_troop_barrack_upgrade, "trp_sp_etruscan_etera"),
+	  
       (troop_set_slot, "trp_sp_etruscan_axunana", slot_troop_barrack_upgrade, "trp_sp_etruscan_huzrna"),
+	  
       (troop_set_slot, "trp_sp_etruscan_luvcatru", slot_troop_barrack_upgrade, "trp_sp_etruscan_eprial_luvcatru"),
-      (troop_set_slot, "trp_sp_etruscan_athumic", slot_troop_barrack_upgrade, "trp_sp_etruscan_ultna_athumic"),	  
+	  
+      (troop_set_slot, "trp_sp_etruscan_athumic", slot_troop_barrack_upgrade, "trp_sp_etruscan_ultna_athumic"),	
+	 
+      (troop_set_slot, "trp_sp_etruscan_cutlis", slot_troop_barrack_upgrade, "trp_sp_etruscan_satna"),	
+	  
 ##########################################################   RaW unit upgrades for barracks /end	  
 # Towns:
       (try_for_range, ":item_no", trade_goods_begin, trade_goods_end),
@@ -35682,81 +35737,142 @@ scripts = [
         (assign, ":officer_template", "pt_thessalian_officers"), 		
       (try_end),
 
-      (try_begin),
-        (this_or_next|eq, ":culture", "fac_culture_4"),	
-        (this_or_next|eq, ":culture", "fac_culture_2"),	
-        (this_or_next|eq, ":culture", "fac_culture_6"),	
-        (this_or_next|eq, ":culture", "fac_culture_7"),	
-        (eq, ":culture", "fac_culture_8"),	
-        (this_or_next|eq, ":village_no", "p_village_193"),				
-        (eq, ":village_no", "p_village_194"),	  
-        # (assign, ":party_template_a", "pt_thessalian_reinforcements_a"), 
-        (assign, ":party_template_b", "pt_thracian_reinforcements_b"), 	
-        # (assign, ":party_template_c", "pt_thessalian_reinforcements_c"), 		
-      (try_end),
+	(try_begin),
+		(this_or_next|eq, ":culture", "fac_culture_4"),	
+		(this_or_next|eq, ":culture", "fac_culture_2"),	
+		(this_or_next|eq, ":culture", "fac_culture_6"),	
+		(this_or_next|eq, ":culture", "fac_culture_7"),	
+		(eq, ":culture", "fac_culture_8"),	
+		(this_or_next|eq, ":village_no", "p_village_193"),				
+		(eq, ":village_no", "p_village_194"),	  
+		# (assign, ":party_template_a", "pt_thessalian_reinforcements_a"), 
+		(assign, ":party_template_b", "pt_thracian_reinforcements_b"), 	
+		# (assign, ":party_template_c", "pt_thessalian_reinforcements_c"), 		
+	(try_end),
 
-      (try_begin),
-        (this_or_next|eq, ":culture", "fac_culture_4"),	
-        (this_or_next|eq, ":culture", "fac_culture_2"),	
-        (this_or_next|eq, ":culture", "fac_culture_6"),	
-        (this_or_next|eq, ":culture", "fac_culture_7"),	
-        (eq, ":culture", "fac_culture_8"),	
-        (this_or_next|eq, ":village_no", "p_village_195"),				
-        (eq, ":village_no", "p_village_196"),	  
-        # (assign, ":party_template_a", "pt_thessalian_reinforcements_a"), 
-        (assign, ":party_template_b", "pt_agrianian_reinforcements_b"), 	
-        # (assign, ":party_template_c", "pt_thessalian_reinforcements_c"), 		
-      (try_end),	  
+	(try_begin),
+		(this_or_next|eq, ":culture", "fac_culture_4"),	
+		(this_or_next|eq, ":culture", "fac_culture_2"),	
+		(this_or_next|eq, ":culture", "fac_culture_6"),	
+		(this_or_next|eq, ":culture", "fac_culture_7"),	
+		(eq, ":culture", "fac_culture_8"),	
+		(this_or_next|eq, ":village_no", "p_village_195"),				
+		(eq, ":village_no", "p_village_196"),	  
+		# (assign, ":party_template_a", "pt_thessalian_reinforcements_a"), 
+		(assign, ":party_template_b", "pt_agrianian_reinforcements_b"), 	
+		# (assign, ":party_template_c", "pt_thessalian_reinforcements_c"), 		
+	(try_end),	  
 	  
 ### Syracuse
-      (try_begin),
-        (eq, ":culture", "fac_culture_7"),	
-        (this_or_next|eq, ":village_no", "p_village_70"),				
-        (eq, ":village_no", "p_village_71"),	
-        (assign, ":party_template_b", "pt_sykel_reinforcements_b"), 		
-      (try_end),		  
+	(try_begin),
+		(eq, ":culture", "fac_culture_7"),	
+		(this_or_next|eq, ":village_no", "p_village_70"),				
+		(eq, ":village_no", "p_village_71"),	
+		(assign, ":party_template_b", "pt_sykel_reinforcements_b"), 		
+	(try_end),		  
 	  
 ### Epeiros	  
-      (try_begin),	
-        (eq, ":culture", "fac_culture_8"),	
-        (this_or_next|eq, ":village_no", "p_village_222"),				
-        (this_or_next|eq, ":village_no", "p_village_223"),				
-        (eq, ":village_no", "p_village_224"),	  
-        (assign, ":party_template_a", "pt_illyrian_reinforcements_a"), 
-        (assign, ":party_template_b", "pt_illyrian_reinforcements_b"), 	
-        (assign, ":party_template_c", "pt_illyrian_reinforcements_c"), 		
-      (try_end),	  	  
+	(try_begin),	
+		(eq, ":culture", "fac_culture_8"),	
+		(this_or_next|eq, ":village_no", "p_village_222"),				
+		(this_or_next|eq, ":village_no", "p_village_223"),				
+		(eq, ":village_no", "p_village_224"),	  
+		(assign, ":party_template_a", "pt_illyrian_reinforcements_a"), 
+		(assign, ":party_template_b", "pt_illyrian_reinforcements_b"), 	
+		(assign, ":party_template_c", "pt_illyrian_reinforcements_c"), 		
+	(try_end),			  	  
 ############################################## RaW AoR end	  
-      (party_get_slot, ":prosperity", ":village_no", slot_town_prosperity),	  
-	  (val_div, ":prosperity", 2),
-      # (assign, ":ideal_size", 50),
-      (store_random_in_range, ":rand", 0, 100),
+
+	(party_get_slot, ":prosperity", ":village_no", slot_town_prosperity),	  
+	(val_div, ":prosperity", 2),
+	  # (assign, ":ideal_size", 50),
 	  
+	(store_random_in_range, ":rand", 0, 100),
 
+	(try_begin),
+		(lt, ":rand", 45),
+		(assign, ":party_template", ":party_template_a"),
+	(else_try),
+		(lt, ":rand", 75),
+		(assign, ":party_template", ":party_template_b"),
+	(else_try),
+		(assign, ":party_template", ":party_template_c"),
+	(try_end),
 
-        (try_begin),
-          (lt, ":rand", 45),
-          (assign, ":party_template", ":party_template_a"),
-        (else_try),
-          (lt, ":rand", 75),
-          (assign, ":party_template", ":party_template_b"),
-        (else_try),
-          (assign, ":party_template", ":party_template_c"),
-        (try_end),
-
-      (try_begin),
-        (party_get_num_companions, ":party_size", ":village_no"),
-        (lt, ":party_size", ":prosperity"),
-      (try_begin),
-        (eq, ":party_template", ":party_template_b"),	  
-        (party_add_template, ":village_no", ":party_template_b"),
-        (party_add_template, ":village_no", ":officer_template"),	
-      (else_try),  
-        (party_add_template, ":village_no", ":party_template"),	  
-      (try_end), 
-	      (try_end),   
+	(party_get_num_companions, ":party_size", ":village_no"),	
+	(try_begin),
+		(gt, ":party_size", ":prosperity"),
+		(call_script, "script_cf_village_reinforce_center", ":village_no"),	
+# DEBUG
+	# (str_store_party_name, s4, ":village_no"),	
+	# (display_message, "@{s4} checking reinforcements", 0xCE2424),		
+	(try_end), 			
+	(try_begin),
+		(eq, ":party_template", ":party_template_b"),	  
+		(party_add_template, ":village_no", ":party_template_b"),
+		(party_add_template, ":village_no", ":officer_template"),	
+	(else_try),  
+		(party_add_template, ":village_no", ":party_template"),	  
+	(try_end), 
 	  
   ]),
+  
+# script_village_reinforce_center
+# Based on Zaitenko's script
+# Input: arg1 = village_no
+  ("cf_village_reinforce_center",
+    [  
+  
+	(store_script_param_1, ":village_no"),
+	(assign, ":party_template", 0),
+	
+	(party_get_slot, ":center", ":village_no", slot_village_bound_center),	# Get the center associated to the village	
+	(store_faction_of_party, ":faction", ":center"),							# Get the faction that owns the center
+	(party_get_num_companions, ":garrison", ":center"),						# Get the garrison size
+	
+	(try_begin),
+		(party_slot_eq, ":center", slot_party_type, spt_town), # Towns
+		(assign, ":limit", 1000),			 
+	(else_try),
+		(assign, ":limit", 500),	# Castles						 				 
+	(try_end),		
+	
+	# Increase limit as game progresses
+	(store_character_level, ":level", "trp_player"), 
+	(store_add, ":level_factor", 80, ":level"),
+	(val_mul, ":limit", ":level_factor"),
+	(val_div, ":limit", 80),
+	(assign, reg0, ":limit"),				
+	(lt, ":garrison", ":limit"),            ## Under this number of troops will the center get reinforcements
+	(assign, ":party_template", "pt_reinforcements"),							 
+	
+	(try_begin),
+		(party_slot_eq, ":village_no", slot_village_state, svs_normal), ## Not if the village is being raided or is looted
+		(party_get_num_companions, ":total_troops", ":village_no"),									 
+		(gt, ":total_troops", 0),
+		(spawn_around_party, ":village_no", ":party_template"),
+		(set_spawn_radius, 1),									 
+		(assign, ":reinforcements", reg0),						 
+		(call_script, "script_party_add_party", ":reinforcements", ":village_no"),	
+		(party_clear, ":village_no"),	
+		(party_set_faction, ":reinforcements", ":faction"),
+		(party_set_slot, ":reinforcements", slot_party_type, spt_reinforcement_party),
+		(party_set_slot, ":reinforcements", slot_party_ai_object, ":center"),
+		(str_store_party_name, s14, ":village_no"),
+		(party_set_name, ":reinforcements", "@Reinforcements from {s14}"),
+		(party_set_ai_behavior,":reinforcements",ai_bhvr_travel_to_party),
+		(party_set_ai_object,":reinforcements", ":center"),
+		(party_set_flags, ":reinforcements", pf_default_behavior, 1),
+# DEBUG
+		# (str_store_party_name, s4, ":village_no"),	
+		# (display_message, "@{s4} sending reinforcements", 0xCE2424),			
+	(else_try),
+		(party_clear, ":village_no"),		
+# DEBUG
+		# (str_store_party_name, s4, ":village_no"),	
+		# (display_message, "@{s4} clearing reinforcements", 0xCE2424),	
+	(try_end),		
+  ]),			 
 
   # script_village_set_state
   # Input: arg1 = center_no arg2:new_state
@@ -40655,8 +40771,31 @@ scripts = [
         (eq, ":terrain_type", rt_bridge),
         (assign, ":scene_to_use", "scn_random_scene_plain"),
       (try_end),
+	  
+	(try_begin),
+		(neq,"$relocated",1),
+		(assign,"$relocated",1),						# don't store current location if already relocated
+		(party_relocate_near_party,"p_pointer_player","p_main_party",0), #remember original player location 
+	(try_end),	  
+		(store_random_in_range, ":radius", 1, 5), # radius around base terrain Z=0 position for seed generation
+		(store_add, reg10, "p_pointer_z_0_begin", ":terrain_type"),
+		(party_relocate_near_party,"p_main_party",reg10,":radius"), # teleport to requested region	
+		
+# Debug		
+		# (assign, reg10,":scene_to_use"), (display_message,"@debug: using scene ID N. {reg10}"),		
+		# (assign, reg11,":terrain_type"), (display_message,"@debug: using terrain ID N. {reg11}"),		
+		
       (jump_to_scene,":scene_to_use"),
   ]),
+  
+# script_maybe_relocate_player_from_z0 (GA and mtarini)
+("maybe_relocate_player_from_z0",[
+	 (try_begin), #if "walk around place" used
+	    (eq, "$relocated", 1),
+	    (assign, "$relocated", 0),
+        (party_relocate_near_party, "p_main_party", "p_pointer_player", 0),
+	(try_end),
+]),  
 
   # script_enter_dungeon
   # Input: arg1 = center_no, arg2 = mission_template_no
@@ -47617,66 +47756,11 @@ scripts = [
           ("update_troops_in_barracks",
             [
               (store_script_param, ":center_no", 1),		  
-              (party_get_slot, ":player_relation", ":center_no", slot_center_player_relation),
-              # (party_get_slot, ":center_culture", ":center_no", slot_center_culture),
-	  
-              (assign, ":upper_limit", 30),
-              (try_begin),
-                (ge, ":player_relation", 5),
-                (val_add, ":upper_limit", 10),
-              (else_try),
-                (lt, ":player_relation", 0),
-                (assign, ":upper_limit", 0),
-              (try_end),
-
-
-##diplomacy begin
-      (assign, ":percent", 100),
-      (try_begin), #-30% if not owner
-        (neg|party_slot_eq, ":center_no", slot_town_lord, "trp_player"),
-        (val_sub, ":percent", 30),
-      (try_end),
-      (try_begin), #1%/10 renown
-        (troop_get_slot, ":player_renown", "trp_player", slot_troop_renown),
-        (val_div, ":player_renown", 10),
-        (val_add, ":percent", ":player_renown"),
-      (try_end),
-      (try_begin), #1%/3 honour
-        (assign, ":player_honour", "$player_honor"),
-        (val_div, ":player_honour", 3),
-        (val_add, ":percent", ":player_honour"),
-      (try_end),
-      (try_begin), #+10% if king
-        (faction_get_slot, ":faction_leader", "fac_player_supporters_faction", slot_faction_leader),
-        (eq, ":faction_leader", "trp_player"),
-        (val_add, ":percent", 10),
-
-        (try_begin), #-5% for each point of serfdom
-          (faction_get_slot, ":serfdom", "fac_player_supporters_faction", dplmc_slot_faction_serfdom),
-          (neq, ":serfdom", 0),
-          (val_mul, ":serfdom", 5),
-          (val_sub, ":percent", ":serfdom"),
-        (try_end),
-
-        (try_begin),  #+10% if king of center
-          (store_faction_of_party, ":faction", ":center_no"),
-          (eq, ":faction", "fac_player_supporters_faction"),
-          (val_add, ":percent", 10),
-        (try_end),
-      (try_end),
-
-      (try_begin),
-        (gt, ":upper_limit", 0),
-        (val_clamp, ":percent", 0, 201),
-        (val_mul, ":upper_limit", ":percent"),
-        (val_div, ":upper_limit", 100),
-      (try_end),
-
-##diplomacy end
-
-
-              (store_random_in_range, ":amount", 0, ":upper_limit"),
-              (party_set_slot, ":center_no", slot_center_barrack_troops, ":amount"),
+ 	(party_get_slot, ":prosperity", ":center_no", slot_town_prosperity),	  
+	(val_div, ":prosperity", 2),
+	(val_clamp, ":prosperity", 3, 50),
+	(store_random_party_in_range, ":available_troops", 1, ":prosperity"),
+              (party_set_slot, ":center_no", slot_center_barrack_troops, ":available_troops"),
      ]),	 
 
   #script_update_npc_volunteer_troops_in_village

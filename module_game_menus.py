@@ -6556,6 +6556,8 @@ game_menus = [
     "{s11}^^Your Casualties:{s8}{s10}^^Enemy Casualties:{s9}",
     "none",
     [
+		# TLD:
+		(call_script, "script_maybe_relocate_player_from_z0"),	
 		## WINDYPLAINS+ ## - 1257 AD player swapping (disabled)
 		# copy backup to main party
 		(try_begin),

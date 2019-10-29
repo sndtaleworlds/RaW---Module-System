@@ -1769,123 +1769,133 @@ simple_triggers = [
     ]),
 
   # Refresh merchant inventories
-   (168,
-   [
-      (try_for_range, ":village_no", villages_begin, villages_end),
-        (call_script, "script_refresh_village_merchant_inventory", ":village_no"),
-      (try_end),
-    ]),
+   # (168,
+   # [
+      # (try_for_range, ":village_no", villages_begin, villages_end),
+        # (call_script, "script_refresh_village_merchant_inventory", ":village_no"),
+      # (try_end),
+    # ]),
 
   #Refreshing village defenders
   #Clearing slot_village_player_can_not_steal_cattle flags
-   (24 * 3,
+   (0.5,
    [
-      (try_for_range, ":village_no", villages_begin, villages_end),
-      (neg|party_slot_eq, ":village_no", slot_village_state, svs_looted),
-	  (call_script, "script_refresh_village_defenders", ":village_no"),
-        (party_set_slot, ":village_no", slot_village_player_can_not_steal_cattle, 0),
-      (try_end),
+	(store_random_in_range, ":village_no", villages_begin, villages_end),
+	(neg|party_slot_eq, ":village_no", slot_village_state, svs_looted),
+	(call_script, "script_refresh_village_defenders", ":village_no"),
+	(party_set_slot, ":village_no", slot_village_player_can_not_steal_cattle, 0),
+# DEBUG
+	(str_store_party_name, s4, ":village_no"),	
+	(display_message, "@{s4} reinforced"),
+	
+      # (try_end),
     ]),
 
-  # Refresh number of cattle in villages
-  (24 * 7,
-   [
-     (try_for_range, ":village_no", centers_begin, centers_end),
-	  (neg|is_between, ":village_no", castles_begin, castles_end),
-      (party_get_slot, ":num_cattle", ":village_no", slot_center_head_cattle),
-      (party_get_slot, ":num_sheep", ":village_no", slot_center_head_sheep),
-      (party_get_slot, ":num_acres", ":village_no", slot_center_acres_pasture),
-	  (val_max, ":num_acres", 1),
-
-	  (store_mul, ":grazing_capacity", ":num_cattle", 400),
-	  (store_mul, ":sheep_addition", ":num_sheep", 200),
-	  (val_add, ":grazing_capacity", ":sheep_addition"),
-	  (val_div, ":grazing_capacity", ":num_acres"),
-	  (try_begin),
-		(eq, "$cheat_mode", 1),
-	    (assign, reg4, ":grazing_capacity"),
-		(str_store_party_name, s4, ":village_no"),
-	    #(display_message, "@{!}DEBUG -- Herd adjustment: {s4} at {reg4}% of grazing capacity"),
-	  (try_end),
-
-
-      (store_random_in_range, ":random_no", 0, 100),
-      (try_begin), #Disaster
-        (eq, ":random_no", 0),#1% chance of epidemic - should happen once every two years
-        (val_min, ":num_cattle", 10),
-
-        (try_begin),
-#          (eq, "$cheat_mode", 1),
-#          (str_store_party_name, s1, ":village_no"),
-#          (display_message, "@{!}Cattle in {s1} are exterminated due to famine."),
-           ##diplomacy start+ Add display message for the player's own fiefs
-		   #(store_distance_to_party_from_party, ":dist", "p_main_party", ":village_no"),
-		   #(this_or_next|lt, ":dist", 30),
-	          (gt, "$g_player_chamberlain", 0),
-		   (party_slot_eq, ":village_no", slot_town_lord, "trp_player"),
-		   (party_get_slot, reg4, ":village_no", slot_center_head_cattle),
-		   (val_sub, reg4, ":num_cattle"),
-		   (gt, reg4, 0),
-		   (str_store_party_name_link, s4, ":village_no"),
-		   (display_log_message, "@A livestock epidemic has killed {reg4} cattle in {s4}."),
-		   ##diplomacy end+
+    #villages weekly ON AVERAGE
+    (1, [
+        (store_random_in_range, ":village_no", villages_begin, villages_end),
+        
+        # Refresh merchant inventories
+        (call_script, "script_refresh_village_merchant_inventory", ":village_no"),
+        
+        # Refresh number of cattle in villages
+        (party_get_slot, ":num_cattle", ":village_no", slot_center_head_cattle),
+        (party_get_slot, ":num_sheep", ":village_no", slot_center_head_sheep),
+        (party_get_slot, ":num_acres", ":village_no", slot_center_acres_pasture),
+        (val_max, ":num_acres", 1),
+        (store_mul, ":grazing_capacity", ":num_cattle", 400),
+        (store_mul, ":sheep_addition", ":num_sheep", 200),
+        (val_add, ":grazing_capacity", ":sheep_addition"),
+        (val_div, ":grazing_capacity", ":num_acres"),
+        
+        (store_random_in_range, ":random_no", 0, 100),
+        (try_begin), #Disaster
+          (le, ":random_no", 5),#5% chance of epidemic - should happen once every two years It was more common in Dark Ages
+          (val_min, ":num_cattle", 10),
+          (val_min, ":num_sheep", 15),
+          (party_get_slot, reg4, ":village_no", slot_center_head_cattle),
+          (party_get_slot, reg5, ":village_no", slot_center_head_sheep),
+          (val_sub, reg4, ":num_cattle"),
+          (val_sub, reg5, ":num_sheep"),
+          (try_begin),
+            (lt, reg4, 0),
+            (assign, reg4, 0),
+          (try_end),
+          (try_begin),
+            (lt, reg5, 0),
+            (assign, reg5, 0),
+          (try_end),
+          (try_begin),
+            (gt, reg4, 0),
+            (eq, reg5, 0),
+            (party_slot_eq, ":village_no", slot_town_lord, "trp_player"),
+            (str_store_party_name_link, s4, ":village_no"),
+            (display_log_message, "@A livestock epidemic has killed {reg4} cattle in {s4}."),
+          (else_try),
+            (eq, reg4, 0),
+            (gt, reg5, 0),
+            (party_slot_eq, ":village_no", slot_town_lord, "trp_player"),
+            (str_store_party_name_link, s4, ":village_no"),
+            (display_log_message, "@A livestock epidemic has killed {reg5} sheep in {s4}."),
+          (else_try),
+            (gt, reg4, 0),
+            (gt, reg5, 0),
+            (party_slot_eq, ":village_no", slot_town_lord, "trp_player"),
+            (str_store_party_name_link, s4, ":village_no"),
+            (display_log_message, "@A livestock epidemic has killed {reg4} cattle and {reg5} sheep in {s4}."),
+          (try_end),
+        (else_try), #Overgrazing
+          (gt, ":grazing_capacity", 100),
+          
+          (val_mul, ":num_sheep", 90), #10% decrease at number of cattles
+          (val_div, ":num_sheep", 100),
+          
+          (val_mul, ":num_cattle", 90), #10% decrease at number of sheeps
+          (val_div, ":num_cattle", 100),
+          
+        (else_try), #superb grazing
+          (lt, ":grazing_capacity", 30),
+          
+          (val_mul, ":num_cattle", 120), #20% increase at number of cattles
+          (val_div, ":num_cattle", 100),
+          (val_add, ":num_cattle", 1),
+          
+          (val_mul, ":num_sheep", 120), #20% increase at number of sheeps
+          (val_div, ":num_sheep", 100),
+          (val_add, ":num_sheep", 1),
+          
+        (else_try), #very good grazing
+          (lt, ":grazing_capacity", 60),
+          
+          (val_mul, ":num_cattle", 110), #10% increase at number of cattles
+          (val_div, ":num_cattle", 100),
+          (val_add, ":num_cattle", 1),
+          
+          (val_mul, ":num_sheep", 110), #10% increase at number of sheeps
+          (val_div, ":num_sheep", 100),
+          (val_add, ":num_sheep", 1),
+          
+        (else_try), #good grazing
+          (lt, ":grazing_capacity", 100),
+          (lt, ":random_no", 50),
+          
+          (val_mul, ":num_cattle", 105), #5% increase at number of cattles
+          (val_div, ":num_cattle", 100),
+          (try_begin), #if very low number of cattles and there is good grazing then increase number of cattles also by one
+            (le, ":num_cattle", 20),
+            (val_add, ":num_cattle", 1),
+          (try_end),
+          
+          (val_mul, ":num_sheep", 105), #5% increase at number of sheeps
+          (val_div, ":num_sheep", 100),
+          (try_begin), #if very low number of sheeps and there is good grazing then increase number of sheeps also by one
+            (le, ":num_sheep", 20),
+            (val_add, ":num_sheep", 1),
+          (try_end),
         (try_end),
-
-      (else_try), #Overgrazing
-	    (gt, ":grazing_capacity", 100),
-
-         (val_mul, ":num_sheep", 90), #10% decrease at number of cattles
-         (val_div, ":num_sheep", 100),
-
-         (val_mul, ":num_cattle", 90), #10% decrease at number of sheeps
-         (val_div, ":num_cattle", 100),
-
-       (else_try), #superb grazing
-         (lt, ":grazing_capacity", 30),
-
-         (val_mul, ":num_cattle", 120), #20% increase at number of cattles
-         (val_div, ":num_cattle", 100),
-         (val_add, ":num_cattle", 1),
-
-         (val_mul, ":num_sheep", 120), #20% increase at number of sheeps
-         (val_div, ":num_sheep", 100),
-         (val_add, ":num_sheep", 1),
-
-       (else_try), #very good grazing
-         (lt, ":grazing_capacity", 60),
-
-         (val_mul, ":num_cattle", 110), #10% increase at number of cattles
-         (val_div, ":num_cattle", 100),
-		(val_add, ":num_cattle", 1),
-
-         (val_mul, ":num_sheep", 110), #10% increase at number of sheeps
-         (val_div, ":num_sheep", 100),
-		(val_add, ":num_sheep", 1),
-
-     (else_try), #good grazing
-	    (lt, ":grazing_capacity", 100),
-         (lt, ":random_no", 50),
-
-         (val_mul, ":num_cattle", 105), #5% increase at number of cattles
-         (val_div, ":num_cattle", 100),
-         (try_begin), #if very low number of cattles and there is good grazing then increase number of cattles also by one
-           (le, ":num_cattle", 20),
-			(val_add, ":num_cattle", 1),
-		(try_end),
-
-         (val_mul, ":num_sheep", 105), #5% increase at number of sheeps
-         (val_div, ":num_sheep", 100),
-         (try_begin), #if very low number of sheeps and there is good grazing then increase number of sheeps also by one
-           (le, ":num_sheep", 20),
-			(val_add, ":num_sheep", 1),
-		(try_end),
-
-
-     (try_end),
-
-     (party_set_slot, ":village_no", slot_center_head_cattle, ":num_cattle"),
-     (party_set_slot, ":village_no", slot_center_head_sheep, ":num_sheep"),
-    (try_end),
+        
+        (party_set_slot, ":village_no", slot_center_head_cattle, ":num_cattle"),
+        (party_set_slot, ":village_no", slot_center_head_sheep, ":num_sheep"),
     ]),
 
    #Accumulate taxes
@@ -2434,9 +2444,9 @@ simple_triggers = [
 ##    ]),
 
   # Spawn village farmer parties
-  (24,
+  (0.5,
    [
-       (try_for_range, ":village_no", villages_begin, villages_end),
+       (store_random_in_range, ":village_no", villages_begin, villages_end),
          (party_slot_eq, ":village_no", slot_village_state, svs_normal),
          (party_get_slot, ":farmer_party", ":village_no", slot_village_farmer_party),
          (this_or_next|eq, ":farmer_party", 0),
@@ -2447,7 +2457,7 @@ simple_triggers = [
          (party_set_slot, ":village_no", slot_village_farmer_party, reg0),
 #         (str_store_party_name, s1, ":village_no"),
 #         (display_message, "@Village farmers created at {s1}."),
-       (try_end),
+       # (try_end),
     ]),
 
 
@@ -6659,86 +6669,86 @@ simple_triggers = [
   ##diplomacy end
   
 # RaW Recruitment system, reinforcement parties (based on Zaitenko's script)
-   (24 * 10,
-   [
-                     (try_for_range, ":center", walled_centers_begin, walled_centers_end),
-                         (store_faction_of_party, ":faction", ":center"),
-                         (party_get_num_companions, ":garrison", ":center"),
-                         (assign, ":party_template", 0),
+   # (24 * 10,
+   # [
+                     # (try_for_range, ":center", walled_centers_begin, walled_centers_end),
+                         # (store_faction_of_party, ":faction", ":center"),
+                         # (party_get_num_companions, ":garrison", ":center"),
+                         # (assign, ":party_template", 0),
 						 
 						 
-                         (try_begin),
-                         (assign, ":limit", 1000),						 
-                             (party_slot_eq, ":center", slot_party_type, spt_town),
-                             (lt, ":garrison", ":limit"),            ## Under this number of troops will towns get reinforcements
-                             (assign, ":party_template", "pt_reinforcements"),
+                         # (try_begin),
+                         # (assign, ":limit", 1000),						 
+                             # (party_slot_eq, ":center", slot_party_type, spt_town),
+                             # (lt, ":garrison", ":limit"),            ## Under this number of troops will towns get reinforcements
+                             # (assign, ":party_template", "pt_reinforcements"),
 							 
-                             (store_character_level, ":level", "trp_player"), #increase limits a little bit as the game progresses.
-                             (store_add, ":level_factor", 80, ":level"),
-                             (val_mul, ":limit", ":level_factor"),
-                             (val_div, ":limit", 80),
-                             (assign, reg0, ":limit"),							 
+                             # (store_character_level, ":level", "trp_player"), #increase limits a little bit as the game progresses.
+                             # (store_add, ":level_factor", 80, ":level"),
+                             # (val_mul, ":limit", ":level_factor"),
+                             # (val_div, ":limit", 80),
+                             # (assign, reg0, ":limit"),							 
 							 
-                         (else_try),
+                         # (else_try),
 						 
-                         (assign, ":limit", 500),						 
-                             (party_slot_eq, ":center", slot_party_type, spt_castle),
-                             (lt, ":garrison", ":limit"),            ## Under this number of troops will castles get reinforcements
-                             (assign, ":party_template", "pt_reinforcements"),
+                         # (assign, ":limit", 500),						 
+                             # (party_slot_eq, ":center", slot_party_type, spt_castle),
+                             # (lt, ":garrison", ":limit"),            ## Under this number of troops will castles get reinforcements
+                             # (assign, ":party_template", "pt_reinforcements"),
 							 
-                             (store_character_level, ":level", "trp_player"), #increase limits a little bit as the game progresses.
-                             (store_add, ":level_factor", 80, ":level"),
-                             (val_mul, ":limit", ":level_factor"),
-                             (val_div, ":limit", 80),
-                             (assign, reg0, ":limit"),							 
-                         (try_end),
+                             # (store_character_level, ":level", "trp_player"), #increase limits a little bit as the game progresses.
+                             # (store_add, ":level_factor", 80, ":level"),
+                             # (val_mul, ":limit", ":level_factor"),
+                             # (val_div, ":limit", 80),
+                             # (assign, reg0, ":limit"),							 
+                         # (try_end),
 						 
-                         (try_begin),
-                             (gt, ":party_template", 0),
-                             (try_for_range, ":village", villages_begin, villages_end),
-                                 (try_begin),
-                                     (party_slot_eq, ":center", slot_party_type, spt_castle),  ## For Castles
-                                     (party_slot_eq, ":village", slot_village_bound_center, ":center"),
-                                     (party_slot_eq, ":village", slot_village_state, svs_normal), ## Not if the village is being raided or is looted
-                                     (party_get_num_companions, ":total_troops", ":village"),									 
-									 (gt, ":total_troops", 0),
-                                     (spawn_around_party, ":village", ":party_template"),
-                                     (set_spawn_radius, 1),									 
-                                     (assign, ":result", reg0),						 
-                                     (call_script, "script_party_add_party", ":result", ":village"),	
-		                             (party_clear, ":village"),	
-                                     (party_set_faction, ":result", ":faction"),
-                                     (party_set_slot, ":result", slot_party_type, spt_reinforcement_party),
-                                     (party_set_slot, ":result", slot_party_ai_object, ":center"),
-                                     (str_store_party_name, s14, ":village"),
-                                     (party_set_name, ":result", "@Reinforcements from {s14}"),
-                                     (party_set_ai_behavior,":result",ai_bhvr_travel_to_party),
-                                     (party_set_ai_object,":result", ":center"),
-                                     (party_set_flags, ":result", pf_default_behavior, 1),
+                         # (try_begin),
+                             # (gt, ":party_template", 0),
+                             # (try_for_range, ":village", villages_begin, villages_end),
+                                 # (try_begin),
+                                     # (party_slot_eq, ":center", slot_party_type, spt_castle),  ## For Castles
+                                     # (party_slot_eq, ":village", slot_village_bound_center, ":center"),
+                                     # (party_slot_eq, ":village", slot_village_state, svs_normal), ## Not if the village is being raided or is looted
+                                     # (party_get_num_companions, ":total_troops", ":village"),									 
+									 # (gt, ":total_troops", 0),
+                                     # (spawn_around_party, ":village", ":party_template"),
+                                     # (set_spawn_radius, 1),									 
+                                     # (assign, ":result", reg0),						 
+                                     # (call_script, "script_party_add_party", ":result", ":village"),	
+		                             # (party_clear, ":village"),	
+                                     # (party_set_faction, ":result", ":faction"),
+                                     # (party_set_slot, ":result", slot_party_type, spt_reinforcement_party),
+                                     # (party_set_slot, ":result", slot_party_ai_object, ":center"),
+                                     # (str_store_party_name, s14, ":village"),
+                                     # (party_set_name, ":result", "@Reinforcements from {s14}"),
+                                     # (party_set_ai_behavior,":result",ai_bhvr_travel_to_party),
+                                     # (party_set_ai_object,":result", ":center"),
+                                     # (party_set_flags, ":result", pf_default_behavior, 1),
 									 
-                                 (else_try),        
-                                     (party_slot_eq, ":center", slot_party_type, spt_town), ## For Towns
-                                     (party_slot_eq, ":village", slot_village_bound_center, ":center"),
-                                     (party_slot_eq, ":village", slot_village_state, svs_normal), ## Not if the village is being raided or is looted
-                                     (party_get_num_companions, ":total_troops", ":village"),									 
-									 (gt, ":total_troops", 0),
-                                     (spawn_around_party, ":village", ":party_template"),	
-                                     (set_spawn_radius, 1),									 
-                                     (assign, ":result", reg0),
-                                     (call_script, "script_party_add_party", ":result", ":village"),	
-		                             (party_clear, ":village"),	
-                                     (party_set_faction, ":result", ":faction"),
-                                     (party_set_slot, ":result", slot_party_type, spt_reinforcement_party),
-                                     (party_set_slot, ":result", slot_party_ai_object, ":center"),
-                                     (str_store_party_name, s14, ":village"),
-                                     (party_set_name, ":result", "@Reinforcements from {s14}"),
-                                     (party_set_ai_behavior,":result",ai_bhvr_travel_to_party),
-                                     (party_set_ai_object,":result", ":center"),
-                                     (party_set_flags, ":result", pf_default_behavior, 1),
-                                 (try_end),
-                               (try_end),								 
-                             (try_end),
-                         (try_end),]),
+                                 # (else_try),        
+                                     # (party_slot_eq, ":center", slot_party_type, spt_town), ## For Towns
+                                     # (party_slot_eq, ":village", slot_village_bound_center, ":center"),
+                                     # (party_slot_eq, ":village", slot_village_state, svs_normal), ## Not if the village is being raided or is looted
+                                     # (party_get_num_companions, ":total_troops", ":village"),									 
+									 # (gt, ":total_troops", 0),
+                                     # (spawn_around_party, ":village", ":party_template"),	
+                                     # (set_spawn_radius, 1),									 
+                                     # (assign, ":result", reg0),
+                                     # (call_script, "script_party_add_party", ":result", ":village"),	
+		                             # (party_clear, ":village"),	
+                                     # (party_set_faction, ":result", ":faction"),
+                                     # (party_set_slot, ":result", slot_party_type, spt_reinforcement_party),
+                                     # (party_set_slot, ":result", slot_party_ai_object, ":center"),
+                                     # (str_store_party_name, s14, ":village"),
+                                     # (party_set_name, ":result", "@Reinforcements from {s14}"),
+                                     # (party_set_ai_behavior,":result",ai_bhvr_travel_to_party),
+                                     # (party_set_ai_object,":result", ":center"),
+                                     # (party_set_flags, ":result", pf_default_behavior, 1),
+                                 # (try_end),
+                               # (try_end),								 
+                             # (try_end),
+                         # (try_end),]),
 					 
 					 
 (4,  #Every 4 game hours will the game check if there are any reinforcements in the centers.

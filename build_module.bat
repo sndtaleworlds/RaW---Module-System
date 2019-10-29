@@ -1,4 +1,7 @@
 @echo off
+:top
+cls
+
 python process_init.py
 python process_global_variables.py
 python process_strings.py
@@ -34,5 +37,5 @@ echo.
 echo ______________________________
 echo.
 echo Script processing has ended.
-echo Press any key to exit. . .
-pause>nul
+echo Press any key to restart. . .
+pause>nul && goto :top
