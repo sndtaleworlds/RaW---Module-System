@@ -1785,8 +1785,8 @@ simple_triggers = [
 	(call_script, "script_refresh_village_defenders", ":village_no"),
 	(party_set_slot, ":village_no", slot_village_player_can_not_steal_cattle, 0),
 # DEBUG
-	(str_store_party_name, s4, ":village_no"),	
-	(display_message, "@{s4} reinforced"),
+	# (str_store_party_name, s4, ":village_no"),	
+	# (display_message, "@{s4} reinforced"),
 	
       # (try_end),
     ]),
