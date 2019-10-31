@@ -950,16 +950,26 @@ troops = [
 ["trainer_5","Trainer","Trainer",tf_hero, scn_training_ground_ranged_melee_5|entry(6),reserved,  fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(2),wp(20),knows_common,0x0000000e77082000150049a34c42ec960000000000000e080000000000000000],
 
 # Ransom brokers.
-["ransom_broker_1","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
-["ransom_broker_2","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_red,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_1","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_samnite_shirt_1,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_2","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_etruscan_cloth_blue_1,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
 ["ransom_broker_3","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_blue,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
-["ransom_broker_4","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_worn,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_4","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_etruscan_cloth_white_2,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
 ["ransom_broker_5","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_green,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
-["ransom_broker_6","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_black,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
-["ransom_broker_7","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_red,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
-["ransom_broker_8","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_6","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_samnite_shirt_4,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_7","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_etruscan_cloth_red_3,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_8","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_iberian_tunic,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
 ["ransom_broker_9","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_orange,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
 ["ransom_broker_10","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_purple,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_11","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_12","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_red,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_13","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_roman_tunic_red,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_14","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_worn,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_15","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_samnite_shirt_8,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_16","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_black,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_17","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_worn_cape_green,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_18","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_19","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton_orange_cape_white,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
+["ransom_broker_20","Ransom_Broker","Ransom_Broker",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_roman_tunic,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
 
 # Tavern traveler.
 ["tavern_traveler_1","Traveller","Traveller",tf_hero|tf_randomize_face, 0, reserved, fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,merchant_face_1,merchant_face_2],
@@ -1000,7 +1010,7 @@ troops = [
 
  ["npc6", "Perkens Metiis", "Perkens Metiis", tf_hero|tf_unmoveable_in_party_window, no_scene, reserved, fac_commoners, [itm_a_etruscan_cloth_red_3,itm_b_samnite_sandals,itm_dagger], str_10|agi_12|int_10|cha_5|level(6), wp(105), knows_riding_2|knows_weapon_master_2|knows_power_strike_1|knows_athletics_3|knows_leadership_1|knows_spotting_3, 0x000000048f000389171c65e76d721b2d00000000001d3ae10000000000000000 ],
 
- ["npc7", "Theron", "Theron", tf_hero|tf_unmoveable_in_party_window, no_scene, reserved, fac_commoners, [itm_a_chiton_dark_blue_cape_white,itm_b_iphicratids,itm_cretan_bow,itm_arrows,itm_s_cretan_parma_1,itm_w_machaira], str_12|agi_14|int_10|cha_6|level(2), wp(80), knows_tracking_2|knows_athletics_2|knows_spotting_2|knows_pathfinding_2|knows_power_draw_2|knows_ironflesh_1, 0x00000004b90821461ae5d2691b266b3200000000001d581e0000000000000000 ],
+ ["npc7", "Theron", "Theron", tf_hero|tf_unmoveable_in_party_window, no_scene, reserved, fac_commoners, [itm_a_chiton_dark_blue_cape_white,itm_b_iphicratids,itm_cretan_bow,itm_arrows,itm_s_cretan_parma_1,itm_w_machaira], str_12|agi_14|int_10|cha_6|level(2), wp(80), knows_tracking_2|knows_athletics_2|knows_spotting_2|knows_pathfinding_2|knows_power_draw_3|knows_ironflesh_1, 0x00000004b90821461ae5d2691b266b3200000000001d581e0000000000000000 ],
 
  ["npc8", "Leonides", "Leonides", tf_hero|tf_unmoveable_in_party_window, no_scene, reserved, fac_commoners, [itm_straw_hat,itm_a_roman_padded_subarmalis_2,itm_b_iphicratids,itm_w_machaira,itm_w_slinge1,itm_w_sling_lead], str_11|agi_10|int_9|cha_10|level(7), wp(90), knows_weapon_master_2|knows_power_strike_2|knows_athletics_2|knows_leadership_2|knows_tactics_1|knows_engineer_2, 0x00000001f40411d20aa47668a5adc91e00000000001d36a30000000000000000 ],
 

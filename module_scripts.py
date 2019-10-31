@@ -35837,9 +35837,9 @@ scripts = [
 	
 	(try_begin),
 		(party_slot_eq, ":center", slot_party_type, spt_town), # Towns
-		(assign, ":limit", 1000),			 
+		(assign, ":limit", 800),			 
 	(else_try),
-		(assign, ":limit", 500),	# Castles						 				 
+		(assign, ":limit", 400),	# Castles						 				 
 	(try_end),		
 	
 	# Increase limit as game progresses
@@ -35847,12 +35847,12 @@ scripts = [
 	(store_add, ":level_factor", 80, ":level"),
 	(val_mul, ":limit", ":level_factor"),
 	(val_div, ":limit", 80),
-	(assign, reg0, ":limit"),				
-	(lt, ":garrison", ":limit"),            ## Under this number of troops will the center get reinforcements
-	(assign, ":party_template", "pt_reinforcements"),							 
+	(assign, reg0, ":limit"),										 
 	
 	(try_begin),
 		(party_slot_eq, ":village_no", slot_village_state, svs_normal), ## Not if the village is being raided or is looted
+		(lt, ":garrison", ":limit"),            ## Under this number of troops will the center get reinforcements
+		(assign, ":party_template", "pt_reinforcements"),			
 		(party_get_num_companions, ":total_troops", ":village_no"),									 
 		(gt, ":total_troops", 0),
 		(spawn_around_party, ":village_no", ":party_template"),
@@ -50203,7 +50203,7 @@ scripts = [
         (troop_set_slot, "trp_npc4", slot_troop_2ary_morality_type, tmt_honest),
         (troop_set_slot, "trp_npc4", slot_troop_2ary_morality_value, -1),
         (troop_set_slot, "trp_npc4", slot_troop_personalityclash_object, "trp_npc1"), #Abrupolis - Amyntas
-        (troop_set_slot, "trp_npc4", slot_troop_personalityclash2_object, "trp_npc7"), #Abrupolis - Erasmus
+        (troop_set_slot, "trp_npc4", slot_troop_personalityclash2_object, "trp_npc5"), #Abrupolis - Erasmus
         (troop_set_slot, "trp_npc4", slot_troop_personalitymatch_object, "trp_npc16"), #Abrupolis - Bolgios
         (troop_set_slot, "trp_npc4", slot_troop_home, "p_town_70"), #Philippoi
         (troop_set_slot, "trp_npc4", slot_troop_payment_request, 300),
