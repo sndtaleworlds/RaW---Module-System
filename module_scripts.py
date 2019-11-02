@@ -80136,6 +80136,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	(try_begin),
 		(agent_get_slot, ":value", ":agent_no", slot_agent_javelin_ammo),
 		(agent_get_ammo, ":javelin_ammo", ":agent_no", 1),
+		(ge, ":item", 0),
 		(item_get_type, ":type", ":item"), # Get type of the item
 		(eq, ":type", itp_type_thrown), # It's a jav			
 	
