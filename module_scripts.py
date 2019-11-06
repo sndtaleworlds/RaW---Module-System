@@ -851,12 +851,12 @@ scripts = [
 # We assume there are enough banners for all kingdom heroes.
 
       #faction banners
-      (faction_set_slot, "fac_kingdom_1", slot_faction_banner, "mesh_banner_kingdom_f"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_banner, "mesh_banner_kingdom_a"),
       (faction_set_slot, "fac_kingdom_2", slot_faction_banner, "mesh_banner_kingdom_b"),
       (faction_set_slot, "fac_kingdom_3", slot_faction_banner, "mesh_banner_kingdom_c"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_banner, "mesh_banner_kingdom_a"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_banner, "mesh_banner_kingdom_d"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_banner, "mesh_banner_kingdom_e"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_banner, "mesh_banner_kingdom_d"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_banner, "mesh_banner_kingdom_e"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_banner, "mesh_banner_kingdom_f"),
       (faction_set_slot, "fac_kingdom_7", slot_faction_banner, "mesh_banner_kingdom_g"),	  
       (faction_set_slot, "fac_kingdom_8", slot_faction_banner, "mesh_banner_kingdom_h"),
       (faction_set_slot, "fac_kingdom_9", slot_faction_banner, "mesh_banner_kingdom_i"),	  
@@ -880,124 +880,125 @@ scripts = [
         (neg|faction_slot_eq, ":kingdom_hero_faction", slot_faction_leader, ":kingdom_hero"),
         (try_begin),
           (eq, ":kingdom_hero_faction", "fac_kingdom_1"), #Romani
-      (troop_set_slot, "trp_knight_1_1", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_2", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_3", slot_troop_banner_scene_prop, "spr_banner_b"),	
-      (troop_set_slot, "trp_knight_1_4", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_5", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_6", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_7", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_8", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_9", slot_troop_banner_scene_prop, "spr_banner_b"),
-      (troop_set_slot, "trp_knight_1_10", slot_troop_banner_scene_prop, "spr_banner_b"),	
-      (troop_set_slot, "trp_knight_1_11", slot_troop_banner_scene_prop, "spr_banner_b"),	
-      (troop_set_slot, "trp_knight_1_12", slot_troop_banner_scene_prop, "spr_banner_b"),	
-      (troop_set_slot, "trp_knight_1_13", slot_troop_banner_scene_prop, "spr_banner_b"),		  
-      (troop_set_slot, "trp_knight_1_14", slot_troop_banner_scene_prop, "spr_banner_b"),		  
+      (troop_set_slot, "trp_knight_1_1", slot_troop_banner_scene_prop, "spr_banner_a03"), # Legio II
+      (troop_set_slot, "trp_knight_1_2", slot_troop_banner_scene_prop, "spr_banner_a04"), # Legio III
+      (troop_set_slot, "trp_knight_1_3", slot_troop_banner_scene_prop, "spr_banner_a05"), # Legio IV	  
+      (troop_set_slot, "trp_knight_1_4", slot_troop_banner_scene_prop, "spr_banner_a02"), # Legio I
+      (troop_set_slot, "trp_knight_1_5", slot_troop_banner_scene_prop, "spr_banner_a03"), # Legio II
+      (troop_set_slot, "trp_knight_1_6", slot_troop_banner_scene_prop, "spr_banner_a04"), # Legio III
+      (troop_set_slot, "trp_knight_1_7", slot_troop_banner_scene_prop, "spr_banner_a05"), # Legio IV
+	  
+      (troop_set_slot, "trp_knight_1_8", slot_troop_banner_scene_prop, "spr_banner_a06"),
+      (troop_set_slot, "trp_knight_1_9", slot_troop_banner_scene_prop, "spr_banner_a06"),
+      (troop_set_slot, "trp_knight_1_10", slot_troop_banner_scene_prop, "spr_banner_a07"),	
+      (troop_set_slot, "trp_knight_1_11", slot_troop_banner_scene_prop, "spr_banner_a07"),	
+      (troop_set_slot, "trp_knight_1_12", slot_troop_banner_scene_prop, "spr_banner_a06"),	
+      (troop_set_slot, "trp_knight_1_13", slot_troop_banner_scene_prop, "spr_banner_a06"),		  
+      (troop_set_slot, "trp_knight_1_14", slot_troop_banner_scene_prop, "spr_banner_a07"),		  
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_2"), #Koinon Hellenon
-      (troop_set_slot, "trp_knight_2_1", slot_troop_banner_scene_prop, "spr_banner_f15"), # Areus of Sparta, Laconian banner
-      (troop_set_slot, "trp_knight_2_2", slot_troop_banner_scene_prop, "spr_banner_f17"), 
-      (troop_set_slot, "trp_knight_2_3", slot_troop_banner_scene_prop, "spr_banner_f17"),	
-      (troop_set_slot, "trp_knight_2_4", slot_troop_banner_scene_prop, "spr_banner_f16"), # Damokles of Argos, Gorgon
-      (troop_set_slot, "trp_knight_2_5", slot_troop_banner_scene_prop, "spr_banner_f09"),
-      (troop_set_slot, "trp_knight_2_6", slot_troop_banner_scene_prop, "spr_banner_f14"), # Archon Antigonos Gonatas 	
-      (troop_set_slot, "trp_knight_2_7", slot_troop_banner_scene_prop, "spr_banner_f12"), # Perikles of Crete
-      (troop_set_slot, "trp_knight_2_8", slot_troop_banner_scene_prop, "spr_banner_f17"), # Themistocles of Corinth		
-      (troop_set_slot, "trp_knight_2_9", slot_troop_banner_scene_prop, "spr_banner_f18"),	
-      (troop_set_slot, "trp_knight_2_10", slot_troop_banner_scene_prop, "spr_banner_g02"),	
-      (troop_set_slot, "trp_knight_2_11", slot_troop_banner_scene_prop, "spr_banner_g02"),	
-      (troop_set_slot, "trp_knight_2_12", slot_troop_banner_scene_prop, "spr_banner_g02"),	
-      (troop_set_slot, "trp_knight_2_13", slot_troop_banner_scene_prop, "spr_banner_g02"),	
-      (troop_set_slot, "trp_knight_2_14", slot_troop_banner_scene_prop, "spr_banner_f15"),	# Spartan banner
-      (troop_set_slot, "trp_knight_2_15", slot_troop_banner_scene_prop, "spr_banner_f15"),	# Spartan banner
+      (troop_set_slot, "trp_knight_2_1", slot_troop_banner_scene_prop, "spr_banner_a18"), # Areus of Sparta, Laconian banner
+      (troop_set_slot, "trp_knight_2_2", slot_troop_banner_scene_prop, "spr_banner_a09"),  # Athens
+      (troop_set_slot, "trp_knight_2_3", slot_troop_banner_scene_prop, "spr_banner_a08"), # Argos
+      (troop_set_slot, "trp_knight_2_4", slot_troop_banner_scene_prop, "spr_banner_a12"), # Delphoi
+      (troop_set_slot, "trp_knight_2_5", slot_troop_banner_scene_prop, "spr_banner_a15"), # Megara
+      (troop_set_slot, "trp_knight_2_6", slot_troop_banner_scene_prop, "spr_banner_a20"), # Archon Antigonos Gonatas 	
+      (troop_set_slot, "trp_knight_2_7", slot_troop_banner_scene_prop, "spr_banner_a16"), # Messene
+      (troop_set_slot, "trp_knight_2_8", slot_troop_banner_scene_prop, "spr_banner_a11"), # Crete		
+      (troop_set_slot, "trp_knight_2_9", slot_troop_banner_scene_prop, "spr_banner_a11"), # Crete	
+      (troop_set_slot, "trp_knight_2_10", slot_troop_banner_scene_prop, "spr_banner_a17"),	# Rhodes
+      (troop_set_slot, "trp_knight_2_11", slot_troop_banner_scene_prop, "spr_banner_a13"),	# Elis
+      (troop_set_slot, "trp_knight_2_12", slot_troop_banner_scene_prop, "spr_banner_a14"),	# Megalopolis
+      (troop_set_slot, "trp_knight_2_13", slot_troop_banner_scene_prop, "spr_banner_a19"),	# Tegea
+      (troop_set_slot, "trp_knight_2_14", slot_troop_banner_scene_prop, "spr_banner_a18"),	# Spartan banner
+      (troop_set_slot, "trp_knight_2_15", slot_troop_banner_scene_prop, "spr_banner_a18"),	# Spartan banner
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_3"), #Gallia
-      (troop_set_slot, "trp_knight_3_1", slot_troop_banner_scene_prop, "spr_banner_r"),
-      (troop_set_slot, "trp_knight_3_2", slot_troop_banner_scene_prop, "spr_banner_s"),
-      (troop_set_slot, "trp_knight_3_3", slot_troop_banner_scene_prop, "spr_banner_t"),	
-      (troop_set_slot, "trp_knight_3_4", slot_troop_banner_scene_prop, "spr_banner_r"),
-      (troop_set_slot, "trp_knight_3_5", slot_troop_banner_scene_prop, "spr_banner_s"),
-      (troop_set_slot, "trp_knight_3_6", slot_troop_banner_scene_prop, "spr_banner_t"),
-      (troop_set_slot, "trp_knight_3_7", slot_troop_banner_scene_prop, "spr_banner_s"),
-      (troop_set_slot, "trp_knight_3_8", slot_troop_banner_scene_prop, "spr_banner_t"),		
-      (troop_set_slot, "trp_knight_3_9", slot_troop_banner_scene_prop, "spr_banner_r"),		
-      (troop_set_slot, "trp_knight_3_10", slot_troop_banner_scene_prop, "spr_banner_s"),			  
-      (troop_set_slot, "trp_knight_3_11", slot_troop_banner_scene_prop, "spr_banner_s"),			  
-      (troop_set_slot, "trp_knight_3_12", slot_troop_banner_scene_prop, "spr_banner_s"),			  
-      (troop_set_slot, "trp_knight_3_13", slot_troop_banner_scene_prop, "spr_banner_s"),			  
-      (troop_set_slot, "trp_knight_3_14", slot_troop_banner_scene_prop, "spr_banner_s"),			  
-      (troop_set_slot, "trp_knight_3_15", slot_troop_banner_scene_prop, "spr_banner_s"),			  
+      (troop_set_slot, "trp_knight_3_1", slot_troop_banner_scene_prop, "spr_banner_a21"),
+      (troop_set_slot, "trp_knight_3_2", slot_troop_banner_scene_prop, "spr_banner_b01"),
+      (troop_set_slot, "trp_knight_3_3", slot_troop_banner_scene_prop, "spr_banner_b02"),	
+      (troop_set_slot, "trp_knight_3_4", slot_troop_banner_scene_prop, "spr_banner_b03"),
+      (troop_set_slot, "trp_knight_3_5", slot_troop_banner_scene_prop, "spr_banner_b04"),
+      (troop_set_slot, "trp_knight_3_6", slot_troop_banner_scene_prop, "spr_banner_a21"),
+      (troop_set_slot, "trp_knight_3_7", slot_troop_banner_scene_prop, "spr_banner_b04"),
+      (troop_set_slot, "trp_knight_3_8", slot_troop_banner_scene_prop, "spr_banner_b03"),		
+      (troop_set_slot, "trp_knight_3_9", slot_troop_banner_scene_prop, "spr_banner_b02"),		
+      (troop_set_slot, "trp_knight_3_10", slot_troop_banner_scene_prop, "spr_banner_a21"),			  
+      (troop_set_slot, "trp_knight_3_11", slot_troop_banner_scene_prop, "spr_banner_b01"),			  
+      (troop_set_slot, "trp_knight_3_12", slot_troop_banner_scene_prop, "spr_banner_b02"),			  
+      (troop_set_slot, "trp_knight_3_13", slot_troop_banner_scene_prop, "spr_banner_a21"),			  
+      (troop_set_slot, "trp_knight_3_14", slot_troop_banner_scene_prop, "spr_banner_b03"),			  
+      (troop_set_slot, "trp_knight_3_15", slot_troop_banner_scene_prop, "spr_banner_b04"),			  
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_4"), #Makedonia
-      (troop_set_slot, "trp_knight_4_1", slot_troop_banner_scene_prop, "spr_banner_f20"),
-      (troop_set_slot, "trp_knight_4_2", slot_troop_banner_scene_prop, "spr_banner_f20"),
-      (troop_set_slot, "trp_knight_4_3", slot_troop_banner_scene_prop, "spr_banner_f20"),	
-      (troop_set_slot, "trp_knight_4_4", slot_troop_banner_scene_prop, "spr_banner_f20"),
-      (troop_set_slot, "trp_knight_4_5", slot_troop_banner_scene_prop, "spr_banner_f17"),
-      (troop_set_slot, "trp_knight_4_6", slot_troop_banner_scene_prop, "spr_banner_f17"),
-      (troop_set_slot, "trp_knight_4_7", slot_troop_banner_scene_prop, "spr_banner_f16"),
-      (troop_set_slot, "trp_knight_4_8", slot_troop_banner_scene_prop, "spr_banner_f16"),	
-      (troop_set_slot, "trp_knight_4_9", slot_troop_banner_scene_prop, "spr_banner_f16"),		
-      (troop_set_slot, "trp_knight_4_10", slot_troop_banner_scene_prop, "spr_banner_f16"),	
-      (troop_set_slot, "trp_knight_4_11", slot_troop_banner_scene_prop, "spr_banner_f16"),	
-      (troop_set_slot, "trp_knight_4_12", slot_troop_banner_scene_prop, "spr_banner_f16"),	
-      (troop_set_slot, "trp_knight_4_13", slot_troop_banner_scene_prop, "spr_banner_f16"),	
-      (troop_set_slot, "trp_knight_4_14", slot_troop_banner_scene_prop, "spr_banner_f16"),	
-      (troop_set_slot, "trp_knight_4_15", slot_troop_banner_scene_prop, "spr_banner_f16"),	
+      (troop_set_slot, "trp_knight_4_1", slot_troop_banner_scene_prop, "spr_banner_b05"), # Royal family
+      (troop_set_slot, "trp_knight_4_2", slot_troop_banner_scene_prop, "spr_banner_b05"), # Royal family
+      (troop_set_slot, "trp_knight_4_3", slot_troop_banner_scene_prop, "spr_banner_b05"), # Royal family	
+      (troop_set_slot, "trp_knight_4_4", slot_troop_banner_scene_prop, "spr_banner_b05"), # Royal family
+      (troop_set_slot, "trp_knight_4_5", slot_troop_banner_scene_prop, "spr_banner_b06"), # Herakleia 
+      (troop_set_slot, "trp_knight_4_6", slot_troop_banner_scene_prop, "spr_banner_b07"), # Chalkis
+      (troop_set_slot, "trp_knight_4_7", slot_troop_banner_scene_prop, "spr_banner_b11"), # Larissa K
+      (troop_set_slot, "trp_knight_4_8", slot_troop_banner_scene_prop, "spr_banner_b09"), # Larissa 	
+      (troop_set_slot, "trp_knight_4_9", slot_troop_banner_scene_prop, "spr_banner_b10"), # Pharsalos	
+      (troop_set_slot, "trp_knight_4_10", slot_troop_banner_scene_prop, "spr_banner_b08"),	
+      (troop_set_slot, "trp_knight_4_11", slot_troop_banner_scene_prop, "spr_banner_b07"),	
+      (troop_set_slot, "trp_knight_4_12", slot_troop_banner_scene_prop, "spr_banner_b06"),	
+      (troop_set_slot, "trp_knight_4_13", slot_troop_banner_scene_prop, "spr_banner_b08"),	
+      (troop_set_slot, "trp_knight_4_14", slot_troop_banner_scene_prop, "spr_banner_b07"),	
+      (troop_set_slot, "trp_knight_4_15", slot_troop_banner_scene_prop, "spr_banner_b08"),	
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_5"), #Samnium  
-      (troop_set_slot, "trp_knight_5_1", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_2", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_3", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_4", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_5", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_6", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_7", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_8", slot_troop_banner_scene_prop, "spr_banner_f04"),
-      (troop_set_slot, "trp_knight_5_9", slot_troop_banner_scene_prop, "spr_banner_f04"),	  
+      (troop_set_slot, "trp_knight_5_1", slot_troop_banner_scene_prop, "spr_banner_b12"),
+      (troop_set_slot, "trp_knight_5_2", slot_troop_banner_scene_prop, "spr_banner_b13"),
+      (troop_set_slot, "trp_knight_5_3", slot_troop_banner_scene_prop, "spr_banner_b14"),
+      (troop_set_slot, "trp_knight_5_4", slot_troop_banner_scene_prop, "spr_banner_b15"),
+      (troop_set_slot, "trp_knight_5_5", slot_troop_banner_scene_prop, "spr_banner_b16"),
+      (troop_set_slot, "trp_knight_5_6", slot_troop_banner_scene_prop, "spr_banner_b12"),
+      (troop_set_slot, "trp_knight_5_7", slot_troop_banner_scene_prop, "spr_banner_b13"),
+      (troop_set_slot, "trp_knight_5_8", slot_troop_banner_scene_prop, "spr_banner_b14"),
+      (troop_set_slot, "trp_knight_5_9", slot_troop_banner_scene_prop, "spr_banner_b15"),	  
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_6"), #Megale Hellas  	  
-      (troop_set_slot, "trp_knight_6_1", slot_troop_banner_scene_prop, "spr_banner_f19"), #   
-      (troop_set_slot, "trp_knight_6_2", slot_troop_banner_scene_prop, "spr_banner_f19"), # 
-      (troop_set_slot, "trp_knight_6_3", slot_troop_banner_scene_prop, "spr_banner_f19"), # 
-      (troop_set_slot, "trp_knight_6_4", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
-      (troop_set_slot, "trp_knight_6_5", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
-      (troop_set_slot, "trp_knight_6_6", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
-      (troop_set_slot, "trp_knight_6_7", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
-      (troop_set_slot, "trp_knight_6_8", slot_troop_banner_scene_prop, "spr_banner_f19"), # 	  
+      (troop_set_slot, "trp_knight_6_1", slot_troop_banner_scene_prop, "spr_banner_b18"), #   
+      (troop_set_slot, "trp_knight_6_2", slot_troop_banner_scene_prop, "spr_banner_b19"), # 
+      (troop_set_slot, "trp_knight_6_3", slot_troop_banner_scene_prop, "spr_banner_b20"), # 
+      (troop_set_slot, "trp_knight_6_4", slot_troop_banner_scene_prop, "spr_banner_b18"), # 	  
+      (troop_set_slot, "trp_knight_6_5", slot_troop_banner_scene_prop, "spr_banner_b19"), # 	  
+      (troop_set_slot, "trp_knight_6_6", slot_troop_banner_scene_prop, "spr_banner_b20"), # 	  
+      (troop_set_slot, "trp_knight_6_7", slot_troop_banner_scene_prop, "spr_banner_b19"), # 	  
+      (troop_set_slot, "trp_knight_6_8", slot_troop_banner_scene_prop, "spr_banner_b18"), # 	  
         (else_try),
-          (eq, ":kingdom_hero_faction", "fac_kingdom_7"), #Basileion Syracosion  	  
-      (troop_set_slot, "trp_knight_7_1", slot_troop_banner_scene_prop, "spr_banner_f13"), # 
-      (troop_set_slot, "trp_knight_7_2", slot_troop_banner_scene_prop, "spr_banner_f13"), # 
-      (troop_set_slot, "trp_knight_7_3", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	  
-      (troop_set_slot, "trp_knight_7_4", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	  
-      (troop_set_slot, "trp_knight_7_5", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
-      (troop_set_slot, "trp_knight_7_6", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
-      (troop_set_slot, "trp_knight_7_7", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
-      (troop_set_slot, "trp_knight_7_8", slot_troop_banner_scene_prop, "spr_banner_f13"), # 	
+          (eq, ":kingdom_hero_faction", "fac_kingdom_7"), #Basileion Syrakosion  	  
+      (troop_set_slot, "trp_knight_7_1", slot_troop_banner_scene_prop, "spr_banner_c01"), # 
+      (troop_set_slot, "trp_knight_7_2", slot_troop_banner_scene_prop, "spr_banner_c02"), # 
+      (troop_set_slot, "trp_knight_7_3", slot_troop_banner_scene_prop, "spr_banner_c03"), # 	  
+      (troop_set_slot, "trp_knight_7_4", slot_troop_banner_scene_prop, "spr_banner_c04"), # 	  
+      (troop_set_slot, "trp_knight_7_5", slot_troop_banner_scene_prop, "spr_banner_c03"), # 	
+      (troop_set_slot, "trp_knight_7_6", slot_troop_banner_scene_prop, "spr_banner_c02"), # 	
+      (troop_set_slot, "trp_knight_7_7", slot_troop_banner_scene_prop, "spr_banner_c01"), # 	
+      (troop_set_slot, "trp_knight_7_8", slot_troop_banner_scene_prop, "spr_banner_c03"), # 	
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_8"), #Epeiros  	  
-      (troop_set_slot, "trp_knight_8_1", slot_troop_banner_scene_prop, "spr_banner_di"), # 
-      (troop_set_slot, "trp_knight_8_2", slot_troop_banner_scene_prop, "spr_banner_dj"),
-      (troop_set_slot, "trp_knight_8_3", slot_troop_banner_scene_prop, "spr_banner_dk"),
-      (troop_set_slot, "trp_knight_8_4", slot_troop_banner_scene_prop, "spr_banner_dl"),
-      (troop_set_slot, "trp_knight_8_5", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
-      (troop_set_slot, "trp_knight_8_6", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
-      (troop_set_slot, "trp_knight_8_7", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
-      (troop_set_slot, "trp_knight_8_8", slot_troop_banner_scene_prop, "spr_banner_dl"),	 
+      (troop_set_slot, "trp_knight_8_1", slot_troop_banner_scene_prop, "spr_banner_c05"), # 
+      (troop_set_slot, "trp_knight_8_2", slot_troop_banner_scene_prop, "spr_banner_c06"),
+      (troop_set_slot, "trp_knight_8_3", slot_troop_banner_scene_prop, "spr_banner_c07"),
+      (troop_set_slot, "trp_knight_8_4", slot_troop_banner_scene_prop, "spr_banner_c08"),
+      (troop_set_slot, "trp_knight_8_5", slot_troop_banner_scene_prop, "spr_banner_c09"),	 
+      (troop_set_slot, "trp_knight_8_6", slot_troop_banner_scene_prop, "spr_banner_c08"),	 
+      (troop_set_slot, "trp_knight_8_7", slot_troop_banner_scene_prop, "spr_banner_c07"),	 
+      (troop_set_slot, "trp_knight_8_8", slot_troop_banner_scene_prop, "spr_banner_c06"),	 
         (else_try),
           (eq, ":kingdom_hero_faction", "fac_kingdom_9"), #Etruscans 	  
-      (troop_set_slot, "trp_knight_9_1", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_2", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_3", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_4", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_5", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_6", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_7", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_8", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_9", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
-      (troop_set_slot, "trp_knight_9_10", slot_troop_banner_scene_prop, "spr_banner_dm"), 	  
+      (troop_set_slot, "trp_knight_9_1", slot_troop_banner_scene_prop, "spr_banner_c10"), 	  
+      (troop_set_slot, "trp_knight_9_2", slot_troop_banner_scene_prop, "spr_banner_c11"), 	  
+      (troop_set_slot, "trp_knight_9_3", slot_troop_banner_scene_prop, "spr_banner_c12"), 	  
+      (troop_set_slot, "trp_knight_9_4", slot_troop_banner_scene_prop, "spr_banner_c13"), 	  
+      (troop_set_slot, "trp_knight_9_5", slot_troop_banner_scene_prop, "spr_banner_c14"), 	  
+      (troop_set_slot, "trp_knight_9_6", slot_troop_banner_scene_prop, "spr_banner_c15"), 	  
+      (troop_set_slot, "trp_knight_9_7", slot_troop_banner_scene_prop, "spr_banner_c16"), 	  
+      (troop_set_slot, "trp_knight_9_8", slot_troop_banner_scene_prop, "spr_banner_c15"), 	  
+      (troop_set_slot, "trp_knight_9_9", slot_troop_banner_scene_prop, "spr_banner_c14"), 	  
+      (troop_set_slot, "trp_knight_9_10", slot_troop_banner_scene_prop, "spr_banner_c13"), 	  
         (else_try),
           (assign, ":hero_offset", ":num_other_lords_assigned"),
           # (try_begin),

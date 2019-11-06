@@ -1783,10 +1783,10 @@ shields_end = "itm_shields_end"
 # Banner constants
 
 banner_meshes_begin = "mesh_banner_a01"
-banner_meshes_end_minus_one = "mesh_banner_f21"
+banner_meshes_end_minus_one = "mesh_banner_end"
 
 arms_meshes_begin = "mesh_arms_a01"
-arms_meshes_end_minus_one = "mesh_arms_f21"
+arms_meshes_end_minus_one = "mesh_arms_end"
 
 custom_banner_charges_begin = "mesh_custom_banner_charge_01"
 custom_banner_charges_end = "mesh_tableau_mesh_custom_banner"
@@ -1801,16 +1801,16 @@ custom_banner_flag_map_types_begin = "mesh_custom_map_banner_01"
 custom_banner_flag_map_types_end = custom_banner_flag_types_begin
 
 custom_banner_flag_scene_props_begin = "spr_custom_banner_01"
-custom_banner_flag_scene_props_end = "spr_banner_a"
+custom_banner_flag_scene_props_end = "spr_banner_a01"
 
 custom_banner_map_icons_begin = "icon_custom_banner_01"
-custom_banner_map_icons_end = "icon_banner_01"
+custom_banner_map_icons_end = "icon_map_flag_a01"
 
-banner_map_icons_begin = "icon_banner_01"
-banner_map_icons_end_minus_one = "icon_banner_136"
+banner_map_icons_begin = "icon_map_flag_a01"
+banner_map_icons_end_minus_one = "icon_banner_end"
 
-banner_scene_props_begin = "spr_banner_a"
-banner_scene_props_end_minus_one = "spr_banner_f21"
+banner_scene_props_begin = "spr_banner_a01"
+banner_scene_props_end_minus_one = "spr_banner_end"
 
 khergit_banners_begin_offset = 63
 khergit_banners_end_offset = 84
