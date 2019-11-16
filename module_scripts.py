@@ -12666,7 +12666,7 @@ scripts = [
         (val_add, ":join_cost", 5),
         (val_mul, ":join_cost", ":join_cost"),
         (val_add, ":join_cost", 40),
-        (val_div, ":join_cost", 10), # RaW reduced by half by dividing by twice (if that makes sense to you)	
+        (val_div, ":join_cost", 10), # RaW was 5
         (val_add, ":join_cost", 1),		
 		
 ## RaW Recruit Costs begin
@@ -26536,7 +26536,7 @@ scripts = [
         (neg|troop_is_hero, ":stack_troop"),
         (party_stack_get_size, ":stack_size",":enemy_party",":i_stack"),
         (store_character_level, ":level", ":stack_troop"),
-        (store_add, ":gain", ":level", 30),
+        (store_add, ":gain", ":level", 10),
         (val_mul, ":gain", ":gain"),
         (val_div, ":gain", 10),
         (store_mul, ":stack_gain", ":gain", ":stack_size"),
@@ -26560,7 +26560,7 @@ scripts = [
       (val_min, ":player_gold_gain", 60000), #eliminate negative results
       (store_random_in_range, ":r", 50, 100),
       (val_mul, ":player_gold_gain", ":r"),
-      (val_div, ":player_gold_gain", 50),
+      (val_div, ":player_gold_gain", 100),
       (val_div, ":player_gold_gain", ":num_player_party_shares"),
 
       #add gold now
@@ -47688,14 +47688,14 @@ scripts = [
 						(try_end),					  
 					  (party_set_slot, ":town_no", slot_center_mercenary_troop_type, ":troop_no"),
 					  (store_character_level, ":player_level", "trp_player"),
-					  (store_random_in_range, ":amount", 5, 50),
+					  (store_random_in_range, ":amount", 5, 30),
 					  (val_add, ":amount", ":player_level"),
 					  (party_set_slot, ":town_no", slot_center_mercenary_troop_amount, ":amount"),
 					(try_end),			
 				(else_try),					
       (store_random_in_range, ":troop_no", mercenary_troops_begin, mercenary_troops_end),
       (party_set_slot, ":town_no", slot_center_mercenary_troop_type, ":troop_no"),
-      (store_random_in_range, ":amount", 5, 50),
+      (store_random_in_range, ":amount", 5, 30),
 	  ##diplomacy start+
 	  #OPTIONAL CHANGE: The same way that lord party sizes increase as the player
 	  #progresses, also increase mercenary party sizes to maintain their relevance.
@@ -49465,7 +49465,7 @@ scripts = [
      (try_end),
      (try_begin),
        (store_num_parties_of_template, ":num_parties", "pt_desert_bandits"),
-       (lt,":num_parties",16), #was 14 at mount&blade, 18 in warband, 16 last decision
+       (lt,":num_parties",5), #was 14 at mount&blade, 18 in warband, 16 last decision
        (store_random,":spawn_point",num_desert_bandit_spawn_points),
        (val_add,":spawn_point","p_desert_bandit_spawn_point"),
        (set_spawn_radius, 25),
@@ -79806,7 +79806,527 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 
 # NEW RaW SCRIPTS BEGIN ###########################################################################
 
-	  
+# RaW Character Creation Scripts
+    ("start_as_noble", [
+	(try_begin),
+		(eq,"$background_answer_2",cb2_rome),
+		(call_script, "script_player_join_faction", "fac_kingdom_1"),
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,25),				
+		(troop_raise_proficiency, "trp_player",wpt_throwing,50),
+		
+		(store_random_in_range, ":random_helmet", "itm_h_rome_boetian_c", "itm_h_boiotian"),				
+		(troop_add_item, "trp_player",":random_helmet"),
+		(troop_add_item, "trp_player","itm_a_roman_subarmalis"),		
+		(troop_add_item, "trp_player","itm_greek_cavalry_knemis"),	
+		(store_random_in_range, ":random_sword", "itm_w_italian_xiphos_cav", "itm_w_pugio"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_hasta_short", "itm_w_italianxiphos"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_s_roman_parma_a_1", "itm_s_roman_parma_b_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard"),			
+		(troop_add_item, "trp_player",":random_horse"),	
+		
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_greece),
+		(call_script, "script_player_join_faction", "fac_kingdom_2"),	
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,75),		
+		
+		(store_random_in_range, ":random_helmet", "itm_h_hephaistion", "itm_a_decorated_greek_breastplate"),				
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_chiton_cape_white", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_doru_short"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_doru_short", "itm_greek_sema_athens"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_sp_greek_spartan_royal_hoplon", "itm_sp_s_syracusan_hoplon_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard"),			
+		(troop_add_item, "trp_player",":random_horse"),					
+		
+	(else_try),	
+		
+		(eq,"$background_answer_2",cb2_gallia),
+		(call_script, "script_player_join_faction", "fac_kingdom_3"),
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,50),		
+		(troop_raise_proficiency, "trp_player",wpt_throwing,25),
+		
+		(store_random_in_range, ":random_helmet", "itm_h_montefortino_8", "itm_h_berru"),				
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_celtic_tunic_long_cape_folded_stripes_red", "itm_a_celtic_glauberg_armor_white"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_celtic_pants_white", "itm_w_celtic_spear_2"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_celtic_axe_1", "itm_celtic_standard"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_celtic_spear_2", "itm_w_celtic_axe_1"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_s_celtic_round_shield_1", "itm_s_aspis_campanian_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_celtic_saddle_horse", "itm_samnitici_equus"),			
+		(troop_add_item, "trp_player",":random_horse"),	
+
+	(else_try),	
+
+		(eq,"$background_answer_2",cb2_makedon),
+		(call_script, "script_player_join_faction", "fac_kingdom_4"),
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,75),		
+		
+		(store_random_in_range, ":random_helmet", "itm_h_alexander", "itm_a_breastplate_mak"),				
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_chiton_cape_white", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_doru_short"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_doru_short", "itm_greek_sema_athens"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_sp_makedonian_hoplon_1", "itm_makedonian_argyraspides_hoplon"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard_armor"),			
+		(troop_add_item, "trp_player",":random_horse"),			
+		
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_samnium),
+		(call_script, "script_player_join_faction", "fac_kingdom_5"),	
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,25),		
+		(troop_raise_proficiency, "trp_player",wpt_throwing,50),	
+		
+		(store_random_in_range, ":random_helmet", "itm_samnite_attic", "itm_samnite_shirt_1"),				
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_samnite_shirt_1", "itm_samnite_disk_small_1"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_samnite_sandals", "itm_samnite_greaves"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_light_kopis_infantry", "itm_w_ptolemy"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_hasta_short", "itm_w_italianxiphos"),		
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_sp_s_aspis_samnite_1", "itm_s_aspis_samnite_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_samnitici_equus", "itm_roman_vex"),			
+		(troop_add_item, "trp_player",":random_horse"),	
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_megale_hellas),
+		(call_script, "script_player_join_faction", "fac_kingdom_6"),	
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,75),			
+		
+		(store_random_in_range, ":random_helmet", "itm_h_hephaistion", "itm_a_decorated_greek_breastplate"),				
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_chiton_cape_white", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_doru_short"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_doru_short", "itm_greek_sema_athens"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_sp_plain_hoplon_1", "itm_sp_s_spartan_hoplon_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard_armor"),			
+		(troop_add_item, "trp_player",":random_horse"),	
+		
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_basileion_syrakosion),
+		(call_script, "script_player_join_faction", "fac_kingdom_7"),	
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,75),			
+		
+		(store_random_in_range, ":random_helmet", "itm_h_hephaistion", "itm_a_decorated_greek_breastplate"),				
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_chiton_cape_white", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_doru_short"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_doru_short", "itm_greek_sema_athens"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_sp_s_syracusan_hoplon_1", "itm_sp_s_syracusan_hoplon_6"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard"),		
+		(troop_add_item, "trp_player",":random_horse"),		
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_epeiros),
+		(call_script, "script_player_join_faction", "fac_kingdom_8"),	
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,75),			
+		
+		(store_random_in_range, ":random_helmet", "itm_h_alexander", "itm_a_breastplate_mak"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_chiton_cape_white", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_doru_short"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_doru_short", "itm_greek_sema_athens"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_sp_s_epirus_hoplon_1", "itm_sp_s_aspis_samnite_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard_armor"),			
+		(troop_add_item, "trp_player",":random_horse"),	
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_etruria),
+		(call_script, "script_player_join_faction", "fac_kingdom_9"),	
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,25),		
+		(troop_raise_proficiency, "trp_player",wpt_throwing,50),			
+
+		(store_random_in_range, ":random_helmet", "itm_h_silenus_c", "itm_a_lino_breastplate"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_etrusco_cardio_blue_1", "itm_w_light_etruscan_kopis"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_samnite_sandals", "itm_samnite_greaves"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_light_etruscan_kopis", "itm_a_carthage_laminated_thorax"),			
+		(troop_add_item, "trp_player",":random_sword"),		 
+		(store_random_in_range, ":random_spear", "itm_sp_w_hasta_short", "itm_w_italianxiphos"),			
+		(troop_add_item, "trp_player",":random_spear"),			
+		(store_random_in_range, ":random_shield", "itm_s_aspis_etruscan_1", "itm_sp_makedonian_hoplon_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard_armor"),			
+		(troop_add_item, "trp_player",":random_horse"),			
+		
+	(try_end),
+	]),
+
+    ("start_as_warrior", [	
+	
+	(try_begin),
+	
+		(eq,"$background_answer_2",cb2_roman_princeps),
+
+		(troop_raise_attribute, "trp_player",ca_strength,4),		
+		(troop_raise_attribute, "trp_player",ca_agility,4),		
+		(troop_raise_attribute, "trp_player",ca_intelligence,2),
+		(troop_raise_attribute, "trp_player",ca_charisma,2),	
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_throwing,50),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",1),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 
+		(troop_raise_skill, "trp_player","skl_power_throw",2),	
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_shield",1),
+		(troop_raise_skill, "trp_player","skl_athletics",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_roman_hastatus", 10),
+		(party_add_members, "p_main_party", "trp_sp_roman_hastatus_2", 10),
+		(party_add_members, "p_main_party", "trp_sp_roman_veles", 20),
+		
+		(store_random_in_range, ":random_helmet", "itm_h_roman_montefortino_a", "itm_h_boiotian"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_roman_kardio_disk", "itm_a_roman_cloth_gladiator"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_roman_caligae", "itm_b_roman_greaves_gutter"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_italian_xiphos_new", "itm_w_espasa_2"),			
+		(troop_add_item, "trp_player",":random_sword"),		 		
+		(troop_add_item, "trp_player","itm_w_light_pila"),			
+		(store_random_in_range, ":random_shield", "itm_sp_princeps_scutum_1", "itm_sp_gallic_hexagonal_scutum_1"),			
+		(troop_add_item, "trp_player",":random_shield"),			
+
+	(else_try),
+		
+		(eq,"$background_answer_2",cb2_greek_hoplite),
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,50),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",2),
+		(troop_raise_skill, "trp_player","skl_power_strike",2),	 	
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_shield",1),
+		(troop_raise_skill, "trp_player","skl_athletics",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_greek_ekdromos", 10),
+		(party_add_members, "p_main_party", "trp_sp_greek_hoplites", 10),
+		(party_add_members, "p_main_party", "trp_sp_greek_peltast", 20),	
+		
+		(store_random_in_range, ":random_helmet", "itm_h_boiotian_greek", "itm_greek_pylos_horn"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_linothorax", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_kopis_officer"),			
+		(troop_add_item, "trp_player",":random_sword"),		 		
+		(store_random_in_range, ":random_spear", "itm_sp_w_doru_short", "itm_greek_sema_athens"),			
+		(troop_add_item, "trp_player",":random_spear"),		 		
+		(store_random_in_range, ":random_shield", "itm_sp_greek_spartan_royal_hoplon", "itm_sp_s_epirus_hoplon_1"),			
+		(troop_add_item, "trp_player",":random_shield"),			
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_cretan_archer),	
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,25),
+		(troop_raise_proficiency, "trp_player",wpt_archery,75),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",1),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 	
+		(troop_raise_skill, "trp_player","skl_power_draw",3),	 	
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_athletics",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_cretan_levy_hoplite", 10),
+		(party_add_members, "p_main_party", "trp_sp_cretan_hoplite", 10),
+		(party_add_members, "p_main_party", "trp_sp_cretan_toxotes", 20),		
+
+		(store_random_in_range, ":random_helmet", "itm_h_boiotian_greek", "itm_greek_pylos_horn"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_linothorax", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_kopis_officer"),			
+		(troop_add_item, "trp_player",":random_sword"),		 				
+		(troop_add_item, "trp_player","itm_cretan_bow"),		 		
+		(store_random_in_range, ":random_shield", "itm_s_cretan_parma_1", "itm_s_celtic_round_shield_1"),			
+		(troop_add_item, "trp_player",":random_shield"),		
+		(troop_add_item, "trp_player","itm_arrows"),				
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_celtic_gaisatos),
+	
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,25),
+		(troop_raise_proficiency, "trp_player",wpt_throwing,75),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",1),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 	
+		(troop_raise_skill, "trp_player","skl_power_throw",2),	 	
+		(troop_raise_skill, "trp_player","skl_shield",1),		
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_athletics",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_celtic_kingetos", 10),
+		(party_add_members, "p_main_party", "trp_sp_celtic_batoros", 10),
+		(party_add_members, "p_main_party", "trp_sp_celtic_gaisatos", 20),	
+
+		(store_random_in_range, ":random_helmet", "itm_h_coolus", "itm_h_falcon_geo"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_celtic_woad", "itm_a_celtic_tunic_long_stripes_red"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_celtic_pants_white", "itm_w_celtic_spear_2"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_celtic_axe_1", "itm_w_celtic_longsword_heavy"),			
+		(troop_add_item, "trp_player",":random_sword"),		 				
+		(troop_add_item, "trp_player","itm_w_celtic_javelin_7pack"),		 		
+		(store_random_in_range, ":random_shield", "itm_s_celtic_round_shield_1", "itm_s_celtic_round_shield_gothic_1"),			
+		(troop_add_item, "trp_player",":random_shield"),			
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_macedonian_phalangite),
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,25),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,75),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",3),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 	 	
+		(troop_raise_skill, "trp_player","skl_shield",2),		
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_athletics",1),					
+		
+		(party_add_members, "p_main_party", "trp_sp_makedonian_sarissaphoros", 10),
+		(party_add_members, "p_main_party", "trp_sp_makedonian_deuteros", 10),
+		(party_add_members, "p_main_party", "trp_sp_makedonian_akontistes", 20),	
+		
+		(store_random_in_range, ":random_helmet", "itm_h_phrygian", "itm_h_phrygian_mask_c_2"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_linothorax", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_kopis_officer"),			
+		(troop_add_item, "trp_player",":random_sword"),		 				
+		(troop_add_item, "trp_player","itm_w_macedonian_sarissa_steel"),		 		
+		(store_random_in_range, ":random_shield", "itm_sp_s_parma_mak_plain_1", "itm_sp_s_parma_epirus_1"),			
+		(troop_add_item, "trp_player",":random_shield"),			
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_thessalian_horseman),
+	
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,25),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,75),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",2),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 	 	
+		(troop_raise_skill, "trp_player","skl_shield",1),		
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_riding",3),					
+		
+		(party_add_members, "p_main_party", "trp_sp_thessalian_xystophoros", 10),
+		(party_add_members, "p_main_party", "trp_sp_thessalian_hippeis", 20),		
+		
+		(store_random_in_range, ":random_helmet", "itm_h_boeo_phrygian", "itm_greek_pylos"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_exomis_cape", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_kopis_officer"),			
+		(troop_add_item, "trp_player",":random_sword"),		 				
+		(troop_add_item, "trp_player","itm_w_xyston_short"),		 		
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard_armor"),			
+		(troop_add_item, "trp_player",":random_horse"),			
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_samnite_pedu),
+	
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,50),
+		(troop_raise_proficiency, "trp_player",wpt_throwing,50),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",1),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 	 	
+		(troop_raise_skill, "trp_player","skl_power_throw",2),	 	 	
+		(troop_raise_skill, "trp_player","skl_shield",1),		
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_athletics",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_samnite_hastatus_2", 10),
+		(party_add_members, "p_main_party", "trp_sp_samnite_pedites", 10),
+		(party_add_members, "p_main_party", "trp_sp_samnite_ensiferi", 20),		
+		
+		(store_random_in_range, ":random_helmet", "itm_samnite_attic", "itm_h6_samno_attic"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_samnite_shirt_1", "itm_samnite_musculata_1"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_samnite_sandals", "itm_samnite_double_greaves"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_kopis_officer"),			
+		(troop_add_item, "trp_player",":random_sword"),		 				
+		(troop_add_item, "trp_player","itm_w_light_pila"),		 		
+		(store_random_in_range, ":random_shield", "itm_s_aspis_samnite_1", "itm_s_aspis_etruscan_1"),			
+		(troop_add_item, "trp_player",":random_shield"),			
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_tarantine_hippakontistes),
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,40),
+		(troop_raise_proficiency, "trp_player",wpt_throwing,60),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",1),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 	 	
+		(troop_raise_skill, "trp_player","skl_power_throw",2),	 	 			
+		(troop_raise_skill, "trp_player","skl_horse_archery",2),
+		(troop_raise_skill, "trp_player","skl_riding",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_tarentine_levy_hoplite", 10),
+		(party_add_members, "p_main_party", "trp_sp_tarentine_hoplite", 10),
+		(party_add_members, "p_main_party", "trp_sp_tarentine_hippakontistes", 20),		
+
+		(store_random_in_range, ":random_helmet", "itm_h_boiotian_greek", "itm_greek_pylos_horn"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_exomis_cape", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_kopis_officer"),			
+		(troop_add_item, "trp_player",":random_sword"),		 				
+		(troop_add_item, "trp_player","itm_javelin"),		 		
+		(store_random_in_range, ":random_shield", "itm_sp_mak_parma_1", "itm_sp_mak_parma_4"),			
+		(troop_add_item, "trp_player",":random_shield"),	
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard_armor"),			
+		(troop_add_item, "trp_player",":random_horse"),			
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_illyrian_raider),
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,60),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,40),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",2),
+		(troop_raise_skill, "trp_player","skl_power_strike",2),	 	 	
+		(troop_raise_skill, "trp_player","skl_shield",1),	
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),	
+		(troop_raise_skill, "trp_player","skl_athletics",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_illyrian_peltast", 10),
+		(party_add_members, "p_main_party", "trp_sp_illyrian_paraktios", 10),
+		(party_add_members, "p_main_party", "trp_sp_illyrian_doryphoros", 20),			
+
+		(store_random_in_range, ":random_helmet", "itm_h_illyrian_t2_1", "itm_h_illyrian_t4_1"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_linothorax", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_machaira", "itm_w_kopis_officer"),			
+		(troop_add_item, "trp_player",":random_sword"),		 				
+		(store_random_in_range, ":random_spear", "itm_sp_w_doru_short", "itm_greek_sema_athens"),			
+		(troop_add_item, "trp_player",":random_spear"),		 		
+		(store_random_in_range, ":random_shield", "itm_sp_plain_hoplon_1", "itm_sp_s_spartan_hoplon_1"),			
+		(troop_add_item, "trp_player",":random_shield"),	
+	
+
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_etruscan_luvcatru),
+
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,20),
+		(troop_raise_proficiency, "trp_player",wpt_two_handed_weapon,80),			
+
+		(troop_raise_skill, "trp_player","skl_ironflesh",3),
+		(troop_raise_skill, "trp_player","skl_power_strike",2),	 	 	
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),	
+		(troop_raise_skill, "trp_player","skl_athletics",2),					
+		
+		(party_add_members, "p_main_party", "trp_sp_etruscan_luvcatru", 10),
+		(party_add_members, "p_main_party", "trp_sp_etruscan_uphale_vipa", 10),
+		(party_add_members, "p_main_party", "trp_sp_etruscan_venzile", 20),		
+
+		(store_random_in_range, ":random_helmet", "itm_h_etrusco_thracian_t3", "itm_a_lino_breastplate"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_etrusco_cardio_blue_1", "itm_w_light_etruscan_kopis"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_sword", "itm_w_light_etruscan_kopis", "itm_a_carthage_laminated_thorax"),			
+		(troop_add_item, "trp_player",":random_sword"),		 						
+		(troop_add_item, "trp_player","itm_w_etruscan_axe"),		 				
+	
+	(try_end),
+	
+	]),	  
+	
+	
+	
 # Wolfstar	
 # ("agent_equip_sync_multiplayer",
    # [(store_script_param, ":player_agent", 1),

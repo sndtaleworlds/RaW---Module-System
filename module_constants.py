@@ -1094,19 +1094,27 @@ cb2_rome = 1
 cb2_gallia = 2
 cb2_greece = 3
 cb2_makedon = 4
-cb2_hoplite = 5
-cb2_arjos = 6
-cb2_phalangite = 7
-cb2_doctor = 8
-cb2_farmer = 9
-cb2_merchant = 10
-cb2_cretan_archer = 11
-cb2_roman_hastatus = 12
-cb2_samnium = 13
-cb2_megale_hellas = 14
-cb2_basileion_syrakosion = 15
-cb2_epeiros = 16
-cb2_etruria = 17
+cb2_samnium = 5
+cb2_megale_hellas = 6
+cb2_basileion_syrakosion = 7
+cb2_epeiros = 8
+cb2_etruria = 9
+
+cb2_doctor = 10
+cb2_farmer = 11
+cb2_merchant = 12
+
+cb2_roman_princeps = 13
+cb2_greek_hoplite = 14
+cb2_cretan_archer = 15
+cb2_celtic_gaisatos = 16
+cb2_macedonian_phalangite = 17
+cb2_thessalian_horseman = 18
+cb2_samnite_pedu = 19
+cb2_tarantine_hippakontistes = 20
+cb2_illyrian_raider = 21
+cb2_etruscan_luvcatru= 22
+
 
 cb3_castle = 1
 cb3_village = 2

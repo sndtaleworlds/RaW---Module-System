@@ -916,7 +916,7 @@ troops = [
 ["Constable_Hareck","Constable Hareck","Constable Hareck",tf_hero, scn_zendar_center|entry(5),reserved,  fac_commoners,[itm_a_exomis,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,0x00000000000c41c001fb15234eb6dd3f],
 
 # Ryan BEGIN
-["Ramun_the_slave_trader","Ramun, the slave trader","Ramun, the slave trader",tf_hero, no_scene,reserved, fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,0x0000000fd5105592385281c55b8e44eb00000000001d9b220000000000000000],
+["Ramun_the_slave_trader","Ramunus, the slave trader","Ramunus, the slave trader",tf_hero, no_scene,reserved, fac_commoners,[itm_a_chiton,itm_b_iphicratids],def_attrib|level(5),wp(20),knows_common,0x0000000fd5105592385281c55b8e44eb00000000001d9b220000000000000000],
 
 ["guide","Quick Jimmy","Quick Jimmy",tf_hero, no_scene,0,  fac_commoners,[itm_a_exomis_black,itm_b_iphicratids],def_attrib|level(2),wp(20),knows_inventory_management_10, 0x00000000000c318301f24e38a36e38e3],
 # Ryan END

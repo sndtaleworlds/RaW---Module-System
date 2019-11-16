@@ -8788,7 +8788,7 @@ presentations = [
         (try_begin),
           (eq, ":object", "$g_presentation_obj_banner_selection_1"),
           (val_add, "$g_presentation_page_no", 1),
-          (val_mod, "$g_presentation_page_no", 8),
+          (val_mod, "$g_presentation_page_no", 4), # RaW: Was 8
           (start_presentation, "prsnt_banner_selection"),
         (else_try),
           (store_sub, ":selected_banner", ":object", "$g_presentation_banner_start"),

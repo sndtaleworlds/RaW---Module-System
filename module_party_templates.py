@@ -38,7 +38,7 @@ party_templates = [
 ("cattle_herd","Cattle Herd",icon_cattle|carries_goods(10),0,fac_neutral,merchant_personality,[(trp_cattle,80,120)]),
 
 # Ryan BEGIN
-("looters","Eleutheroi",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_looter,30,200)]),
+("looters","Eleutheroi",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_looter,4,200)]),
 # Ryan END
 ("manhunters","Manhunters",icon_gray_knight,0,fac_manhunters,soldier_personality,[(trp_manhunter,20,120)]),
 ##  ("peasant","Peasant",icon_peasant,0,fac_commoners,merchant_personality,[(trp_farmer,1,6),(trp_peasant_woman,0,7)]),
@@ -50,13 +50,13 @@ party_templates = [
 ("taiga_bandits","Apulian Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sp_apulian_eques,16,60)]),
 ("forest_bandits","Thracian Raiders",icon_axeman|carries_goods(2),0,fac_forest_bandits,bandit_personality,[(trp_sp_thracian_warrior,4,30),(trp_sp_thraikos_peltastes,4,30),(trp_sp_thracian_falxman,2,20),(trp_sp_thracian_noble_falxman,1,10)]),
 ("sea_raiders","Illyrian Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sea_raider,20,80),(trp_illyrian_toxotes,5,20),(trp_illyrian_akontistes,5,30),(trp_illyrian_hoplite,5,30)]),
-("mountain_bandits","Transalpine Gauls",icon_axeman|carries_goods(2),0,fac_mountain_bandits,bandit_personality,[(trp_sp_celtic_atectos,20,60),(trp_sp_celtic_batoros,20,60),(trp_sp_celtic_gaisatos,15,20),(trp_sp_celtic_saitoros,4,30)]),
+("mountain_bandits","Transalpine Gauls",icon_axeman|carries_goods(2),0,fac_mountain_bandits,bandit_personality,[(trp_sp_celtic_atectos,10,60),(trp_sp_celtic_batoros,10,60),(trp_sp_celtic_gaisatos,5,20),(trp_sp_celtic_saitoros,4,30)]),
 
 ("deserters","Deserters",icon_vaegir_knight|carries_goods(3),0,fac_deserters,bandit_personality,[]),
 
 ("merchant_caravan","Merchant Caravan",icon_gray_knight|carries_goods(20)|pf_auto_remove_in_town|pf_quest_party,0,fac_commoners,escorted_merchant_personality,[(trp_caravan_master,1,1)]),
-("troublesome_bandits","Troublesome Bandits",icon_axeman|carries_goods(9)|pf_quest_party,0,fac_outlaws,bandit_personality,[(trp_bandit,14,55)]),
-("bandits_awaiting_ransom","Bandits Awaiting Ransom",icon_axeman|carries_goods(9)|pf_auto_remove_in_town|pf_quest_party,0,fac_neutral,bandit_personality,[(trp_bandit,24,58),(trp_kidnapped_girl,1,1,pmf_is_prisoner)]),
+("troublesome_bandits","Troublesome Bandits",icon_axeman|carries_goods(9)|pf_quest_party,0,fac_outlaws,bandit_personality,[(trp_bandit,12,55)]),
+("bandits_awaiting_ransom","Bandits Awaiting Ransom",icon_axeman|carries_goods(9)|pf_auto_remove_in_town|pf_quest_party,0,fac_neutral,bandit_personality,[(trp_bandit,12,58),(trp_kidnapped_girl,1,1,pmf_is_prisoner)]),
 ("kidnapped_girl","Kidnapped Girl",icon_woman|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_kidnapped_girl,1,1)]),
 
 ("village_farmers","Village Farmers",icon_peasant|pf_civilian,0,fac_innocents,merchant_personality,[(trp_farmer,5,10),(trp_peasant_woman,3,8)]),
