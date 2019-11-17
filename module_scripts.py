@@ -80325,7 +80325,107 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 	
 	]),	  
 	
+    ("start_as_commoner", [	
+	(try_begin),
 	
+		(eq,"$background_answer_2",cb2_merchant),
+		
+		(troop_raise_attribute, "trp_player",ca_strength,2),		
+		(troop_raise_attribute, "trp_player",ca_agility,2),		
+		(troop_raise_attribute, "trp_player",ca_intelligence,4),
+		(troop_raise_attribute, "trp_player",ca_charisma,4),			
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,20),
+		
+		(troop_raise_skill, "trp_player","skl_trade",3),
+		(troop_raise_skill, "trp_player","skl_persuasion",3),
+		(troop_raise_skill, "trp_player","skl_athletics",1),			
+		(troop_raise_skill, "trp_player","skl_riding",2),			
+		(troop_raise_skill, "trp_player","skl_foraging",1),			
+		(troop_raise_skill, "trp_player","skl_pathfinding",1),					
+		(troop_raise_skill, "trp_player","skl_inventory_management",2),					
+		
+		(store_random_in_range, ":random_helmet", "itm_straw_hat", "itm_wooden_stick"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_chiton_cape_white", "itm_b_iphicratids"),				
+		(troop_add_item, "trp_player",":random_armor"),
+		(store_random_in_range, ":random_footwear", "itm_b_iphicratids", "itm_greek_proknemis"),				
+		(troop_add_item, "trp_player",":random_footwear"),	
+		(store_random_in_range, ":random_good", "itm_spice", "itm_smoked_fish"),			
+		(troop_add_item, "trp_player",":random_good"),	
+		(store_random_in_range, ":random_good_2", "itm_spice", "itm_smoked_fish"),			
+		(troop_add_item, "trp_player",":random_good_2"),			
+		(store_random_in_range, ":random_food", "itm_smoked_fish", "itm_siege_supply"),			
+		(troop_add_item, "trp_player",":random_food"),			
+		(troop_add_item, "trp_player","itm_dagger"),	
+		(store_random_in_range, ":random_horse", "itm_saddle_horse", "itm_mak_horse_leopard_armor"),			
+		(troop_add_item, "trp_player",":random_horse"),			
+	
+		
+	(else_try),
+	
+		(eq,"$background_answer_2",cb2_farmer),	
+		
+		(troop_raise_attribute, "trp_player",ca_strength,5),		
+		(troop_raise_attribute, "trp_player",ca_agility,3),		
+		(troop_raise_attribute, "trp_player",ca_intelligence,1),
+		(troop_raise_attribute, "trp_player",ca_charisma,3),			
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,20),
+		(troop_raise_proficiency, "trp_player",wpt_polearm,20),
+		(troop_raise_proficiency, "trp_player",wpt_throwing,20),
+		
+		(troop_raise_skill, "trp_player","skl_ironflesh",1),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),
+		(troop_raise_skill, "trp_player","skl_athletics",2),			
+		(troop_raise_skill, "trp_player","skl_riding",1),			
+		(troop_raise_skill, "trp_player","skl_foraging",2),			
+		(troop_raise_skill, "trp_player","skl_pathfinding",2),			
+		(troop_raise_skill, "trp_player","skl_leadership",1),		
+
+		(store_random_in_range, ":random_helmet", "itm_straw_hat", "itm_wooden_stick"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_exomis", "itm_a_exomis_cape"),				
+		(troop_add_item, "trp_player",":random_armor"),				
+		(troop_add_item, "trp_player","itm_b_iphicratids"),			
+		(store_random_in_range, ":random_food", "itm_smoked_fish", "itm_siege_supply"),			
+		(troop_add_item, "trp_player",":random_food"),	
+		(store_random_in_range, ":random_food_2", "itm_smoked_fish", "itm_siege_supply"),			
+		(troop_add_item, "trp_player",":random_food_2"),			
+		(store_random_in_range, ":random_weapon", "itm_wooden_stick", "itm_scythe"),		
+		(troop_add_item, "trp_player",":random_weapon"),				
+		
+	(else_try),
+
+		(eq,"$background_answer_2",cb2_doctor),		
+		
+		(troop_raise_attribute, "trp_player",ca_strength,1),		
+		(troop_raise_attribute, "trp_player",ca_agility,3),		
+		(troop_raise_attribute, "trp_player",ca_intelligence,5),
+		(troop_raise_attribute, "trp_player",ca_charisma,3),			
+		
+		(troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,30),
+		
+		(troop_raise_skill, "trp_player","skl_surgery",2),
+		(troop_raise_skill, "trp_player","skl_first_aid",2),
+		(troop_raise_skill, "trp_player","skl_athletics",1),			
+		(troop_raise_skill, "trp_player","skl_riding",1),			
+		(troop_raise_skill, "trp_player","skl_wound_treatment",2),			
+		(troop_raise_skill, "trp_player","skl_persuasion",1),			
+		(troop_raise_skill, "trp_player","skl_inventory_management",1),		
+
+		(store_random_in_range, ":random_helmet", "itm_straw_hat", "itm_wooden_stick"),					
+		(troop_add_item, "trp_player",":random_helmet"),
+		(store_random_in_range, ":random_armor", "itm_a_roman_tunic", "itm_a_roman_cloth_gladiator"),				
+		(troop_add_item, "trp_player",":random_armor"),				
+		(troop_add_item, "trp_player","itm_b_iphicratids"),			
+		(store_random_in_range, ":random_food", "itm_smoked_fish", "itm_siege_supply"),			
+		(troop_add_item, "trp_player",":random_food"),			
+		(troop_add_item, "trp_player","itm_w_pugio"),			
+		
+		
+	(try_end),	
+	]),	  	
 	
 # Wolfstar	
 # ("agent_equip_sync_multiplayer",

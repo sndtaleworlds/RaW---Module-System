@@ -1916,150 +1916,86 @@ game_menus = [
 	],
     [
       ("begin_adventuring",[],"Become an adventurer and ride to your destiny.",[
-           (set_show_messages, 0),
+	(set_show_messages, 0),
 		   
-           (try_begin),
-             (eq,"$character_gender",0),
-             (troop_raise_attribute, "trp_player",ca_strength,1),
-             (troop_raise_attribute, "trp_player",ca_charisma,1),
-           (else_try),
-             (troop_raise_attribute, "trp_player",ca_agility,1),
-             (troop_raise_attribute, "trp_player",ca_intelligence,1),
-           (try_end),
-		   
-      (try_begin),
-	(eq,"$background_type",cb_noble),
-	(call_script, "script_change_player_honor", 10),
-	(add_xp_to_troop, 10000, "trp_player"),
-	
-	(troop_raise_attribute, "trp_player",ca_strength,2),		
-	(troop_raise_attribute, "trp_player",ca_agility,2),		
-	(troop_raise_attribute, "trp_player",ca_intelligence,4),
-	(troop_raise_attribute, "trp_player",ca_charisma,4),	
-	
-	(troop_raise_skill, "trp_player","skl_shield",1),		
-	(troop_raise_skill, "trp_player","skl_foraging",1),	
-	(troop_raise_skill, "trp_player","skl_tactics",2),		
-	(troop_raise_skill, "trp_player","skl_prisoner_management",1),
-	(troop_raise_skill, "trp_player","skl_leadership",3),	
-	(troop_raise_skill, "trp_player","skl_ironflesh",1),
-	(troop_raise_skill, "trp_player","skl_power_strike",1),	 
-	(troop_raise_skill, "trp_player","skl_power_throw",1),	
-	(troop_raise_skill, "trp_player","skl_weapon_master",1),
-	(troop_raise_skill, "trp_player","skl_shield",1),
-	(troop_raise_skill, "trp_player","skl_athletics",1),		
-	(troop_raise_skill, "trp_player","skl_riding",1),	
+	(try_begin),
+		(eq,"$character_gender",0),
+		(troop_raise_attribute, "trp_player",ca_strength,1),
+		(troop_raise_attribute, "trp_player",ca_charisma,1),
+	(else_try),
+		(troop_raise_attribute, "trp_player",ca_agility,1),
+		(troop_raise_attribute, "trp_player",ca_intelligence,1),
+	(try_end),
 
-	(assign, "$player_has_homage" ,1),
-	(assign, "$g_player_banner_granted", 1),
-	(assign, "$g_invite_faction", 0),
-	(assign, "$g_invite_faction_lord", 0),
-	(assign, "$g_invite_offered_center", 0),		
-	
-	(call_script, "script_start_as_noble"),	
-	(troop_add_item, "trp_player","itm_military_supplies",0),	
+	(try_begin),
+		(eq,"$background_type",cb_noble),
+		(call_script, "script_change_player_honor", 10),
+		(add_xp_to_troop, 10000, "trp_player"),
+
+		(troop_raise_attribute, "trp_player",ca_strength,2),		
+		(troop_raise_attribute, "trp_player",ca_agility,2),		
+		(troop_raise_attribute, "trp_player",ca_intelligence,4),
+		(troop_raise_attribute, "trp_player",ca_charisma,4),	
+
+		(troop_raise_skill, "trp_player","skl_shield",1),		
+		(troop_raise_skill, "trp_player","skl_foraging",1),	
+		(troop_raise_skill, "trp_player","skl_tactics",2),		
+		(troop_raise_skill, "trp_player","skl_prisoner_management",1),
+		(troop_raise_skill, "trp_player","skl_leadership",3),	
+		(troop_raise_skill, "trp_player","skl_ironflesh",1),
+		(troop_raise_skill, "trp_player","skl_power_strike",1),	 
+		(troop_raise_skill, "trp_player","skl_power_throw",1),	
+		(troop_raise_skill, "trp_player","skl_weapon_master",1),
+		(troop_raise_skill, "trp_player","skl_shield",1),
+		(troop_raise_skill, "trp_player","skl_athletics",1),		
+		(troop_raise_skill, "trp_player","skl_riding",1),	
+
+		(assign, "$player_has_homage" ,1),
+		(assign, "$g_player_banner_granted", 1),
+		(assign, "$g_invite_faction", 0),
+		(assign, "$g_invite_faction_lord", 0),
+		(assign, "$g_invite_offered_center", 0),		
+
+		(call_script, "script_start_as_noble"),	
+		(troop_add_item, "trp_player","itm_military_supplies",0),	
+
+	(else_try),	
+
+		(eq,"$background_type",cb_warrior),
+		(call_script, "script_change_player_honor", 5),
+		(troop_raise_skill, "trp_player","skl_shield",1),	
+		(add_xp_to_troop, 2200, "trp_player"),			
+		(store_random_in_range, ":random_food", "itm_smoked_fish", "itm_siege_supply"),			
+		(troop_add_item, "trp_player",":random_food"),			
+
+		(troop_raise_skill, "trp_player","skl_shield",1),		
+		(troop_raise_skill, "trp_player","skl_foraging",1),	
+		(troop_raise_skill, "trp_player","skl_tactics",1),		
+		(troop_raise_skill, "trp_player","skl_prisoner_management",1),
+		(troop_raise_skill, "trp_player","skl_leadership",1),	
+
+		(call_script, "script_start_as_warrior"),
+
+	(else_try),	
+
+		(eq,"$background_type",cb_commoner),
+		(call_script, "script_change_player_honor", 1),
+		(troop_raise_skill, "trp_player","skl_shield",1),		
+		(call_script, "script_start_as_commoner"),		
 		
-      (else_try),	
+	(try_end),			
 
-	(eq,"$background_type",cb_warrior),
-	(call_script, "script_change_player_honor", 5),
-	(troop_raise_skill, "trp_player","skl_shield",1),	
-	(add_xp_to_troop, 2200, "trp_player"),			
-	(store_random_in_range, ":random_food", "itm_smoked_fish", "itm_siege_supply"),			
-	(troop_add_item, "trp_player",":random_food"),			
-
-	(troop_raise_skill, "trp_player","skl_shield",1),		
-	(troop_raise_skill, "trp_player","skl_foraging",1),	
-	(troop_raise_skill, "trp_player","skl_tactics",1),		
-	(troop_raise_skill, "trp_player","skl_prisoner_management",1),
-	(troop_raise_skill, "trp_player","skl_leadership",1),	
-	
-	(call_script, "script_start_as_warrior"),
-	
-      (else_try),	
-
-        (eq,"$background_type",cb_commoner),
-        (call_script, "script_change_player_honor", 1),
-        (troop_raise_skill, "trp_player","skl_shield",1),		
-      (try_end),			
-		
-		
-      (try_begin),
-	  
-        (eq,"$background_answer_2",cb2_merchant),
-        (troop_raise_attribute, "trp_player",ca_intelligence,6),
-        (troop_raise_attribute, "trp_player",ca_charisma,4),
-        (troop_raise_skill, "trp_player","skl_riding",1),
-        (troop_raise_skill, "trp_player","skl_leadership",1),
-        (troop_raise_skill, "trp_player","skl_trade",5),
-        (troop_raise_skill, "trp_player","skl_inventory_management",2),
-        (troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,20),
-        (troop_set_slot, "trp_player", slot_troop_renown, 20),		
-        (troop_add_item, "trp_player","itm_smoked_fish",0),	
-        (troop_add_item, "trp_player","itm_w_pugio"),	
-        (troop_add_item, "trp_player","itm_a_celtic_tunic_long_cape_folded_bordered_red"),		
-        (troop_add_item, "trp_player","itm_b_celtic_pants_red"),		
-        (troop_add_item, "trp_player","itm_saddle_horse"),				
-      (else_try),		
-
-        (eq,"$background_answer_2",cb2_farmer),
-        (troop_raise_attribute, "trp_player",ca_strength,1),
-        (troop_raise_attribute, "trp_player",ca_intelligence,1),
-
-        (troop_raise_skill, "trp_player","skl_weapon_master",1),
-        (troop_raise_skill, "trp_player","skl_engineer",1),
-        (troop_raise_skill, "trp_player","skl_trade",1),
-
-        (troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,20),
-
-
-        (troop_add_item, "trp_player","itm_b_iphicratids",imod_ragged),
-        (troop_add_item, "trp_player","itm_a_exomis",0),
-
-        (troop_add_item, "trp_player","itm_sickle", imod_balanced),
-
-
-        (troop_add_item, "trp_player","itm_tools",0),
-        (troop_add_item, "trp_player","itm_saddle_horse",0),
-        (troop_add_item, "trp_player","itm_smoked_fish",0),
-    (else_try),
-        (eq,"$background_answer_2",cb2_doctor),
-        (troop_raise_attribute, "trp_player",ca_strength,1),
-        (troop_raise_attribute, "trp_player",ca_intelligence,1),
-
-        (troop_raise_skill, "trp_player","skl_weapon_master",1),
-        (troop_raise_skill, "trp_player","skl_engineer",1),
-        (troop_raise_skill, "trp_player","skl_trade",1),
-        (troop_raise_skill, "trp_player","skl_first_aid",3),		
-        (troop_raise_skill, "trp_player","skl_surgery",3),			
-        (troop_raise_skill, "trp_player","skl_wound_treatment",3),	
-		
-        (troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,20),
-
-
-        (troop_add_item, "trp_player","itm_b_iphicratids",imod_ragged),
-        (troop_add_item, "trp_player","itm_a_exomis_black",0),
-
-        (troop_add_item, "trp_player","itm_dagger", imod_balanced),
-
-
-        (troop_add_item, "trp_player","itm_tools",0),
-        (troop_add_item, "trp_player","itm_saddle_horse",0),
-        (troop_add_item, "trp_player","itm_smoked_fish",0),	
-      (try_end),		
-
-
-           (try_begin),
-             (eq, "$background_type", cb_noble),
-             (jump_to_menu, "mnu_auto_return"),
-#normal_banner_begin
-             (start_presentation, "prsnt_banner_selection"),
-#custom_banner_begin
-#             (start_presentation, "prsnt_custom_banner"),
-           (else_try),
-             (change_screen_return, 0),
-           (try_end),
-           (set_show_messages, 1),
+	(try_begin),
+		(eq, "$background_type", cb_noble),
+		(jump_to_menu, "mnu_auto_return"),
+		#normal_banner_begin
+		(start_presentation, "prsnt_banner_selection"),
+		#custom_banner_begin
+		#             (start_presentation, "prsnt_custom_banner"),
+	(else_try),
+		(change_screen_return, 0),
+	(try_end),
+		(set_show_messages, 1),
         ]),
       ("go_back_dot",[],"Go back.",[
 		(store_troop_gold, ":gold", "trp_player"),

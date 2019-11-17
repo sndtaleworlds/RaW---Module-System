@@ -385,8 +385,6 @@ items = [
 
 ["invisible_glove","Invisible Glove",[("invisible_glove_L",0)],	itp_type_hand_armor|itp_civilian,0,0,weight(1),0],
 ##new##
-# ["linen_tunic", "Linen Tunic", [("shirt_a",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs|itp_civilian, 0, 60, weight(1)|abundance(100)|head_armor(0)|body_armor(12)|leg_armor(8)|difficulty(0), imodbits_cloth, [], [fac_kingdom_3] ],
-
 ["w_slinge1", "Sling", [("slinge",0)], itp_type_crossbow|itp_primary|itp_can_knock_down |itp_crush_through|itp_cant_reload_on_horseback  ,itcf_shoot_crossbow|itcf_carry_dagger_front_right , 0, weight(3)|spd_rtng(20)| shoot_speed(40) | thrust_damage(35,blunt)|max_ammo(1),imodbits_crossbow],
 ["w_slinge_stone", "Sling Stone", [("Bullet2",0),("Bullet2",ixmesh_flying_ammo),("stone_bag",ixmesh_carry),("stone_bag",ixmesh_carry|imodbit_large_bag)], itp_type_bolts, itcf_carry_quiver_right_vertical, 0, weight(2.25)|weapon_length(1)|max_ammo(25)|thrust_damage(15,blunt), imodbits_missile ],
 ["w_sling_bullet", "Sling Bullet", [("bullet",0),("bullet",ixmesh_flying_ammo),("stone_bag", ixmesh_carry),("stone_bag", ixmesh_carry|imodbit_large_bag)], itp_type_bolts, itcf_carry_quiver_right_vertical, 0,weight(2.25)|weapon_length(1)|thrust_damage(10,pierce)|max_ammo(20),imodbits_missile],
