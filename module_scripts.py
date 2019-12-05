@@ -35185,17 +35185,21 @@ scripts = [
       (assign, ":party_name_str", "str_no_string"),
 		
 # RaW
-      # (try_begin),
-        # (eq, ":faction_no", "fac_player_supporters_faction"),
-          # (is_between, "$g_player_culture", npc_kingdoms_begin, npc_kingdoms_end),
-          # (assign, ":faction_no", "$g_player_culture"),
-      # (try_end),	
-# RaW end		
+      (faction_get_slot, ":culture", ":faction_no", slot_faction_culture),	  
+      (try_begin),
+        (eq, ":faction_no", "fac_player_supporters_faction"),
+          (is_between, "$g_player_culture", npc_kingdoms_begin, npc_kingdoms_end),
+          (assign, ":culture", "$g_player_culture"),
+      (else_try),	
+          (assign, ":culture", ":faction_no"),	  
+      (try_end),	
+	
 
-      (faction_get_slot, ":reinforcements_a", ":faction_no", slot_faction_reinforcements_a),
-      (faction_get_slot, ":reinforcements_b", ":faction_no", slot_faction_reinforcements_b),
-      (faction_get_slot, ":reinforcements_c", ":faction_no", slot_faction_reinforcements_c),
-      (faction_get_slot, ":reinforcements_officer", ":faction_no", slot_faction_officers_template),
+      (faction_get_slot, ":reinforcements_a", ":culture", slot_faction_reinforcements_a),
+      (faction_get_slot, ":reinforcements_b", ":culture", slot_faction_reinforcements_b),
+      (faction_get_slot, ":reinforcements_c", ":culture", slot_faction_reinforcements_c),
+      (faction_get_slot, ":reinforcements_officer", ":culture", slot_faction_officers_template),
+# RaW end	
 
       (try_begin),
         (eq, ":party_type", spt_forager),
@@ -35268,9 +35272,11 @@ scripts = [
 ##          (party_add_template, ":result", ":reinforcements_b"),
 ##        (else_try),
           (eq, ":party_type", spt_kingdom_caravan),
-          (try_begin),
+          (try_begin),	# RaW Edit
             (eq, ":faction_no", "fac_player_supporters_faction"),
-            (party_get_slot, ":reinforcement_faction", ":spawn_center", slot_center_original_faction),
+          (is_between, "$g_player_culture", npc_kingdoms_begin, npc_kingdoms_end),
+          (assign, ":reinforcement_faction", "$g_player_culture"),			
+            # (party_get_slot, ":reinforcement_faction", ":spawn_center", slot_center_original_faction),
             (faction_get_slot, ":reinforcements_b", ":reinforcement_faction", slot_faction_reinforcements_b),
             (faction_get_slot, ":reinforcements_c", ":reinforcement_faction", slot_faction_reinforcements_c),			
           (try_end),
@@ -47597,10 +47603,10 @@ scripts = [
 								(assign, ":troop_no", "trp_sp_samnite_hastatus_3"),								
 						(else_try),
 								(eq, ":random_merc", 5),						
-								(assign, ":troop_no", "trp_sp_samnite_hastatus_2"),								
+								(assign, ":troop_no", "trp_sp_apulian_eques"),								
 						(else_try),
 								(eq, ":random_merc", 6),						
-								(assign, ":troop_no", "trp_sp_samnite_ensiferi"),								
+								(assign, ":troop_no", "trp_sp_apulian_ensifer"),								
 							(try_end),	
 						(else_try),
 							(eq, ":center_culture", "fac_culture_7"),						
@@ -50298,13 +50304,13 @@ scripts = [
 		(troop_set_slot, "trp_npc9", slot_lord_reputation_type, lrep_martial), #
 
 
-        (troop_set_slot, "trp_npc10", slot_troop_morality_type, tmt_humanitarian), #bunduk
+        (troop_set_slot, "trp_npc10", slot_troop_morality_type, tmt_humanitarian), #Thalès ho Dodona
         (troop_set_slot, "trp_npc10", slot_troop_morality_value, 2),
         (troop_set_slot, "trp_npc10", slot_troop_2ary_morality_type, tmt_egalitarian),
         (troop_set_slot, "trp_npc10", slot_troop_2ary_morality_value, 1),
-        (troop_set_slot, "trp_npc10", slot_troop_personalityclash_object, "trp_npc4"), #bunduk vs rolf
-        (troop_set_slot, "trp_npc10", slot_troop_personalityclash2_object, "trp_npc14"), #bunduk vs lazalet
-        (troop_set_slot, "trp_npc10", slot_troop_personalitymatch_object, "trp_npc11"),  #bunduk likes katrin
+        (troop_set_slot, "trp_npc10", slot_troop_personalityclash_object, "trp_npc4"), #Thalès ho Dodona - 
+        (troop_set_slot, "trp_npc10", slot_troop_personalityclash2_object, "trp_npc14"), #Thalès ho Dodona -
+        (troop_set_slot, "trp_npc10", slot_troop_personalitymatch_object, "trp_npc11"),  #Thalès ho Dodona -
         # (troop_set_slot, "trp_npc10", slot_troop_home, "p_castle_28"), #Grunwalder Castle
         (troop_set_slot, "trp_npc10", slot_troop_payment_request, 200),
 		(troop_set_slot, "trp_npc10", slot_troop_kingsupport_argument, argument_ruler),
@@ -80510,6 +80516,7 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 		(this_or_next|eq, ":id", "trp_sp_samnite_hastatus_3"),	
 		(this_or_next|eq, ":id", "trp_sp_samnite_linteati"),		
 		(this_or_next|eq, ":id", "trp_sp_campanian_ensiferi"),			
+		(this_or_next|eq, ":id", "trp_sp_apulian_ensifer"),			
 		(this_or_next|eq, ":id", "trp_sp_roman_hastatus"),	
 		(this_or_next|eq, ":id", "trp_sp_roman_hastatus_2"),		
 		(this_or_next|eq, ":id", "trp_sp_legio_1_hastatus"),	
@@ -80575,6 +80582,26 @@ Born at {s43}^Contact in {s44} of the {s45}.^\
 			(agent_equip_item, ":agent_no", "itm_sp_samnite_scutum_4"),		   
 		(try_end),		
 	(try_end),		
+	
+	(try_begin),					
+		(eq, ":id", "trp_sp_campanian_ensiferi"),			
+		(agent_get_item_slot,":item_needed",":agent_no",5),		
+		(try_begin),
+			(this_or_next|eq, ":item_needed", "itm_samnite_shirt_5"),
+			(this_or_next|eq, ":item_needed", "itm_a_samnite_kardio_5"),	
+			(this_or_next|eq, ":item_needed", "itm_a_samnite_kardio_full_5"),		
+			(this_or_next|eq, ":item_needed", "itm_samnite_musculata_small_5"),	 	   
+			(eq, ":item_needed", "itm_samnite_disk_small_5"),	  
+			(agent_equip_item, ":agent_no", "itm_sp_samnite_scutum_5"),	
+		(else_try),	
+			(this_or_next|eq, ":item_needed", "itm_samnite_shirt_6"),
+			(this_or_next|eq, ":item_needed", "itm_a_samnite_kardio_6"),	
+			(this_or_next|eq, ":item_needed", "itm_a_samnite_kardio_full_6"),	
+			(this_or_next|eq, ":item_needed", "itm_samnite_musculata_small_6"),	 	   
+			(eq, ":item_needed", "itm_samnite_disk_small_6"),	 
+			(agent_equip_item, ":agent_no", "itm_sp_samnite_scutum_6"),		   
+		(try_end),		
+	(try_end),			
 	 
 	(try_begin),					
 		(this_or_next|eq, ":id", "trp_sp_samnite_hastatus"),

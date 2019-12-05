@@ -33,7 +33,7 @@ party_templates = [
 # Party templates before this point are hard-wired into the game and should not be changed.
 ####################################################################################################################
 ##  ("old_garrison","Old Garrison",icon_vaegir_knight,0,fac_neutral,merchant_personality,[]),
-("village_defenders","Village Defenders",icon_peasant,0,fac_commoners,merchant_personality,[(trp_farmer,5,10),(trp_peasant_woman,0,4)]),
+("village_defenders","Village Defenders",icon_peasant,0,fac_commoners,merchant_personality,[(trp_farmer,5,20),(trp_peasant_woman,0,8)]),
 
 ("cattle_herd","Cattle Herd",icon_cattle|carries_goods(10),0,fac_neutral,merchant_personality,[(trp_cattle,80,120)]),
 
@@ -47,7 +47,7 @@ party_templates = [
 ("steppe_bandits","Sikel Rebels",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sp_sykeloi_hoplites,12,80)]),
 ("desert_bandits","Cretan Pirates",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sp_cretan_toxotes,10,30),(trp_sp_cretan_akontistes,10,30),(trp_sp_cretan_levy_hoplite,15,40),(trp_sp_cretan_hoplite,10,20),(trp_sp_cretan_hoplite_elite,5,10)]),
 # RaW
-("taiga_bandits","Apulian Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sp_apulian_eques,16,60)]),
+("taiga_bandits","Apulian Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sp_apulian_eques,4,40),(trp_sp_apulian_ensifer,8,80)]),
 ("forest_bandits","Thracian Raiders",icon_axeman|carries_goods(2),0,fac_forest_bandits,bandit_personality,[(trp_sp_thracian_warrior,4,30),(trp_sp_thraikos_peltastes,4,30),(trp_sp_thracian_falxman,2,20),(trp_sp_thracian_noble_falxman,1,10)]),
 ("sea_raiders","Illyrian Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_sea_raider,20,80),(trp_illyrian_toxotes,5,20),(trp_illyrian_akontistes,5,30),(trp_illyrian_hoplite,5,30)]),
 ("mountain_bandits","Transalpine Gauls",icon_axeman|carries_goods(2),0,fac_mountain_bandits,bandit_personality,[(trp_sp_celtic_atectos,10,60),(trp_sp_celtic_batoros,10,60),(trp_sp_celtic_gaisatos,5,20),(trp_sp_celtic_saitoros,4,30)]),
