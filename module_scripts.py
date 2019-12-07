@@ -474,49 +474,8 @@ scripts = [
 	  #right now, just doing a test for grain produced in the swadian heartland
 
 
-	  # fill_village_bound_centers
-    #pass 1: Give one village to each castle
-      (try_for_range, ":cur_center", castles_begin, castles_end),
-        (assign, ":min_dist", 999999),
-        (assign, ":min_dist_village", -1),
-        (try_for_range, ":cur_village", villages_begin, villages_end),
-          (neg|party_slot_ge, ":cur_village", slot_village_bound_center, 1), #skip villages which are already bound.
-          (store_distance_to_party_from_party, ":cur_dist", ":cur_village", ":cur_center"),
-          (lt, ":cur_dist", ":min_dist"),
-          (assign, ":min_dist", ":cur_dist"),
-          (assign, ":min_dist_village", ":cur_village"),
-        (try_end),	  
-        (party_set_slot, ":min_dist_village", slot_village_bound_center, ":cur_center"),
-        (store_faction_of_party, ":town_faction", ":cur_center"),
-        (call_script, "script_give_center_to_faction_aux", ":min_dist_village", ":town_faction"), 
-      (try_end),
 
-
-    #pass 2: Give other villages to closest town.
-      (try_for_range, ":cur_village", villages_begin, villages_end),
-        (neg|party_slot_ge, ":cur_village", slot_village_bound_center, 1), #skip villages which are already bound.
-        (assign, ":min_dist", 999999),
-        (assign, ":min_dist_town", -1),
-        (try_for_range, ":cur_town", towns_begin, towns_end),
-          (store_distance_to_party_from_party, ":cur_dist", ":cur_village", ":cur_town"),
-          (lt, ":cur_dist", ":min_dist"),
-          (assign, ":min_dist", ":cur_dist"),
-          (assign, ":min_dist_town", ":cur_town"),
-        (try_end),
-        (party_set_slot, ":cur_village", slot_village_bound_center, ":min_dist_town"),
-        (store_faction_of_party, ":town_faction", ":min_dist_town"),
-        (call_script, "script_give_center_to_faction_aux", ":cur_village", ":town_faction"),
-# Raw Fix incorrect village assignment 
-      # (call_script, "script_give_center_to_faction_aux", "p_village_48", "fac_kingdom_6"),
-      # (call_script, "script_give_center_to_faction_aux", "p_village_57", "fac_kingdom_6"),	
-      # (call_script, "script_give_center_to_faction_aux", "p_village_131", "fac_kingdom_2"),	  	  	
-      # (party_set_slot, "p_village_1", slot_village_bound_center, "p_town_1"),	
-      # (party_set_slot, "p_village_4", slot_village_bound_center, "p_town_1"),	
-      # (party_set_slot, "p_village_7", slot_village_bound_center, "p_town_1"),	
-      # (party_set_slot, "p_village_48", slot_village_bound_center, "p_town_20"),	
-      # (party_set_slot, "p_village_57", slot_village_bound_center, "p_town_20"),		
-      # (party_set_slot, "p_village_25", slot_village_bound_center, "p_castle_2"),		  
-      # (party_set_slot, "p_village_131", slot_village_bound_center, "p_town_51"),		  
+# Raw Fix incorrect village assignment 	  
 # Roma
       (party_set_slot, "p_village_1", slot_village_bound_center, "p_town_1"),	# Roma ->  Gabii	  
       (party_set_slot, "p_village_4", slot_village_bound_center, "p_town_1"),	# Roma ->  Aricia	  
@@ -529,7 +488,6 @@ scripts = [
       (party_set_slot, "p_village_11", slot_village_bound_center, "p_castle_3"),	# Interamna_Lirenas_Castra ->  Fregellae	 
       (party_set_slot, "p_village_9", slot_village_bound_center, "p_town_4"),	# Antium ->  Astura	  
       (party_set_slot, "p_village_10", slot_village_bound_center, "p_town_4"),	# Antium ->  Circeii	  
-      # (party_set_slot, "p_village_8", slot_village_bound_center, "p_town_4"),	# Antium ->  Ardea	  
       (party_set_slot, "p_village_13", slot_village_bound_center, "p_town_5"),	# Capua ->  Cales	  
       (party_set_slot, "p_village_14", slot_village_bound_center, "p_town_5"),	# Capua ->  Fregellae	  
       (party_set_slot, "p_village_24", slot_village_bound_center, "p_town_5"),	# Capua ->  Atella	  
@@ -687,26 +645,38 @@ scripts = [
       (party_set_slot, "p_village_181", slot_village_bound_center, "p_town_65"),	# Pella ->  Gortynia	  	 
       (party_set_slot, "p_village_182", slot_village_bound_center, "p_town_65"),	# Pella ->  Berroia	  	 
       (party_set_slot, "p_village_190", slot_village_bound_center, "p_town_65"),	# Pella ->  Aigeai
+	  
       (party_set_slot, "p_village_185", slot_village_bound_center, "p_town_66"),	# Thessaloníke ->  Therme	  	 
       (party_set_slot, "p_village_186", slot_village_bound_center, "p_town_66"),	# Thessaloníke ->  Olynthos	  	 
-      (party_set_slot, "p_village_187", slot_village_bound_center, "p_town_66"),	# Thessaloníke ->  Akanthos	  	
-      (party_set_slot, "p_village_188", slot_village_bound_center, "p_town_67"),	# Édessa ->  Arnisa	  	 
+      (party_set_slot, "p_village_187", slot_village_bound_center, "p_town_66"),	# Thessaloníke ->  Akanthos	  
+	  
+      (party_set_slot, "p_village_188", slot_village_bound_center, "p_town_67"),	# Édessa ->  Europos	  	 
       (party_set_slot, "p_village_189", slot_village_bound_center, "p_town_67"),	# Édessa ->  Euboia	  	 
-      (party_set_slot, "p_village_188", slot_village_bound_center, "p_town_69"),	# Amphípolis ->  Arnisa	  	 
-      (party_set_slot, "p_village_189", slot_village_bound_center, "p_town_69"),	# Amphípolis ->  Euboia	   
+	  
+      (party_set_slot, "p_village_183", slot_village_bound_center, "p_town_68"),	# Díon ->  Methone	  	 
+      (party_set_slot, "p_village_184", slot_village_bound_center, "p_town_68"),	# Díon ->  Pydna	 	
+	  
+      (party_set_slot, "p_village_191", slot_village_bound_center, "p_town_69"),	# Amphípolis ->  Arethousa	  	 
+      (party_set_slot, "p_village_192", slot_village_bound_center, "p_town_69"),	# Amphípolis ->  Myrkinos	   
+	  
       (party_set_slot, "p_village_193", slot_village_bound_center, "p_town_70"),	# Philippoi ->  Neapolis	  	 
       (party_set_slot, "p_village_194", slot_village_bound_center, "p_town_70"),	# Philippoi ->  Thasos	  
+	  
       (party_set_slot, "p_village_195", slot_village_bound_center, "p_town_71"),	# Herakleia_Lynkestis ->  Stuberra	  	 
       (party_set_slot, "p_village_196", slot_village_bound_center, "p_town_71"),	# Herakleia_Lynkestis ->  Lychnidos
+	  
       (party_set_slot, "p_village_206", slot_village_bound_center, "p_town_72"),	# Chalkis ->  Eretria	  	 
       (party_set_slot, "p_village_207", slot_village_bound_center, "p_town_72"),	# Chalkis ->  Amarynthos	  	 
       (party_set_slot, "p_village_208", slot_village_bound_center, "p_town_72"),	# Chalkis ->  Karystos	  	
+	  
       (party_set_slot, "p_village_200", slot_village_bound_center, "p_town_73"),	# Larissa_Kremaste ->  Krannon	  	 
       (party_set_slot, "p_village_201", slot_village_bound_center, "p_town_73"),	# Larissa_Kremaste ->  Skotoussa	  	 
-      (party_set_slot, "p_village_205", slot_village_bound_center, "p_town_73"),	# Larissa_Kremaste ->  Histiai	  	
+      (party_set_slot, "p_village_205", slot_village_bound_center, "p_town_73"),	# Larissa_Kremaste ->  Histiai	  
+	  
       (party_set_slot, "p_village_202", slot_village_bound_center, "p_town_74"),	# Phársalos ->  Kieron	  	 
       (party_set_slot, "p_village_203", slot_village_bound_center, "p_town_74"),	# Phársalos ->  Lamia	  	 
       (party_set_slot, "p_village_204", slot_village_bound_center, "p_town_74"),	# Phársalos ->  Herakleia	  
+	  
       (party_set_slot, "p_village_197", slot_village_bound_center, "p_town_75"),	# Larissa ->  Gonnoi	  	 
       (party_set_slot, "p_village_198", slot_village_bound_center, "p_town_75"),	# Larissa ->  Argoussa	  	 
       (party_set_slot, "p_village_199", slot_village_bound_center, "p_town_75"),	# Larissa ->  Atrax	
@@ -728,6 +698,40 @@ scripts = [
       (party_set_slot, "p_village_223", slot_village_bound_center, "p_town_80"),	# Apollonia ->  Amantia	
       (party_set_slot, "p_village_224", slot_village_bound_center, "p_town_80"),	# Apollonia ->  Dimalion		  
 # End	 		
+
+
+	  # fill_village_bound_centers
+    #pass 1: Give one village to each castle
+      (try_for_range, ":cur_center", castles_begin, castles_end),
+        (assign, ":min_dist", 999999),
+        (assign, ":min_dist_village", -1),
+        (try_for_range, ":cur_village", villages_begin, villages_end),
+          (neg|party_slot_ge, ":cur_village", slot_village_bound_center, 1), #skip villages which are already bound.
+          (store_distance_to_party_from_party, ":cur_dist", ":cur_village", ":cur_center"),
+          (lt, ":cur_dist", ":min_dist"),
+          (assign, ":min_dist", ":cur_dist"),
+          (assign, ":min_dist_village", ":cur_village"),
+        (try_end),	  
+        (party_set_slot, ":min_dist_village", slot_village_bound_center, ":cur_center"),
+        (store_faction_of_party, ":town_faction", ":cur_center"),
+        (call_script, "script_give_center_to_faction_aux", ":min_dist_village", ":town_faction"), 
+      (try_end),
+
+
+    #pass 2: Give other villages to closest town.
+      (try_for_range, ":cur_village", villages_begin, villages_end),
+        (neg|party_slot_ge, ":cur_village", slot_village_bound_center, 1), #skip villages which are already bound.
+        (assign, ":min_dist", 999999),
+        (assign, ":min_dist_town", -1),
+        (try_for_range, ":cur_town", towns_begin, towns_end),
+          (store_distance_to_party_from_party, ":cur_dist", ":cur_village", ":cur_town"),
+          (lt, ":cur_dist", ":min_dist"),
+          (assign, ":min_dist", ":cur_dist"),
+          (assign, ":min_dist_town", ":cur_town"),
+        (try_end),
+        (party_set_slot, ":cur_village", slot_village_bound_center, ":min_dist_town"),
+        (store_faction_of_party, ":town_faction", ":min_dist_town"),
+        (call_script, "script_give_center_to_faction_aux", ":cur_village", ":town_faction"),
       (try_end),	  
 
 
