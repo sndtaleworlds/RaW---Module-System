@@ -1027,7 +1027,7 @@ troops = [
 
 ["npc14","Bolgios","Bolgios",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_b_celtic_pants_white,itm_a_celtic_tunic_long_cape_folded_tartan_red,itm_w_celtic_longsword_2],str_9|agi_8|int_11|cha_8|level(5),wp(100),knows_warrior_npc|knows_trainer_4|knows_weapon_master_3|knows_leadership_2|knows_power_strike_1,0x00000001a410259144d5d1d6eb55e96a00000000001db0db0000000000000000],
 
-["npc15","Timaeus","Timaeus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton,itm_b_roman_caligae, itm_w_pugio],str_9|agi_9|int_12|cha_8|level(7),wp(80),knows_merchant_npc|knows_tactics_1|knows_engineer_2|knows_trade_3|knows_persuasion_3|knows_first_aid_1|knows_wound_treatment_1,0x0000000f2e1021862b4b9123594eab5300000000001d55360000000000000000],
+["npc15","Timaeos","Timaeos",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton,itm_b_roman_caligae, itm_w_pugio],str_9|agi_9|int_12|cha_8|level(7),wp(80),knows_merchant_npc|knows_tactics_1|knows_engineer_2|knows_trade_3|knows_persuasion_3|knows_first_aid_1|knows_wound_treatment_1,0x0000000f2e1021862b4b9123594eab5300000000001d55360000000000000000],
 
 ["npc16","Antaeos","Antaeos",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton_black,itm_b_iphicratids, itm_dagger],str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|knows_power_throw_3|knows_athletics_2|knows_power_strike_1,0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
 #NPC system changes end
