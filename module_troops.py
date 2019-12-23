@@ -1029,7 +1029,7 @@ troops = [
 
 ["npc15","Timaeus","Timaeus",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton,itm_b_roman_caligae, itm_w_pugio],str_9|agi_9|int_12|cha_8|level(7),wp(80),knows_merchant_npc|knows_tactics_1|knows_engineer_2|knows_trade_3|knows_persuasion_3|knows_first_aid_1|knows_wound_treatment_1,0x0000000f2e1021862b4b9123594eab5300000000001d55360000000000000000],
 
-["npc16","Klethi","Klethi",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_female_peasant_dress_green,itm_b_iphicratids, itm_dagger],str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|knows_power_throw_3|knows_athletics_2|knows_power_strike_1,0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
+["npc16","Antaeos","Antaeos",tf_hero|tf_unmoveable_in_party_window, 0, reserved,  fac_commoners,[itm_a_chiton_black,itm_b_iphicratids, itm_dagger],str_7|agi_11|int_8|cha_7|level(2),wp(80),knows_tracker_npc|knows_power_throw_3|knows_athletics_2|knows_power_strike_1,0x00000000000c100739ce9c805d2f381300000000001cc7ad0000000000000000],
 #NPC system changes end
 
 
