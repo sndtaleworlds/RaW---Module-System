@@ -3470,14 +3470,26 @@ mission_templates = [
         (call_script, "script_change_banners_and_chest"),
         (call_script, "script_initialize_tavern_variables"),
 	  ]),
+      
+      (ti_after_mission_start, 0, 0,	
+      [ # DAC Seek: Hide the spawning npcs for a split second
+            (mission_cam_set_screen_color, 0xFF736252), #roughly the colour of the menu bg
+            (mission_cam_animate_to_screen_color, 0x00736252, 1500),
+      ], []),	      
 
-      (ti_inventory_key_pressed, 0, 0, 
-      [
-        (set_trigger_result,1)
+      (ti_inventory_key_pressed, 0, 0,
+      [ #SB : disable inventory while attacked in taverns
+        (try_begin),
+          (this_or_next|eq, "$g_main_attacker_agent", 0),
+          (neq, "$talk_context", tc_tavern_talk),
+          (set_trigger_result, 1),
+        (else_try),
+          (display_message, "@Dispatch your opponents first!"),
+        (try_end),
       ], []),
       
       #tavern - belligerent drunk leaving/fading out
-      (1, 0, 0, 
+      (1, 0, 0,
       [
         (gt, "$g_belligerent_drunk_leaving", 0),
         (entry_point_get_position, pos0, 0),
@@ -3489,39 +3501,41 @@ mission_templates = [
         (agent_fade_out, "$g_belligerent_drunk_leaving"),
         (assign, "$g_belligerent_drunk_leaving", 0),
       ]),
-      
-      (ti_tab_pressed, 0, 0, 
+
+      (ti_tab_pressed, 0, 0,
       [
         (try_begin),
           (eq, "$g_main_attacker_agent", 0),
           (set_trigger_result, 1),
-        (try_end),  
+        (else_try),
+          (display_message, "str_cannot_leave_now"), #SB : message
+        (try_end),
       ], []),
 
 	  #tavern brawl triggers - drunk
-      (2, 0, 0, 
+      (2, 0, 0,
       [
 	    (neg|conversation_screen_is_active),
 
 		(eq, "$talk_context", tc_tavern_talk),
-		
-		(neg|troop_slot_eq, "trp_hired_assassin", slot_troop_cur_center, "$g_encountered_party"),		
-		(troop_slot_eq, "trp_belligerent_drunk", slot_troop_cur_center, "$g_encountered_party"),		
-		(eq, "$drunks_dont_pick_fights", 0),		
-	  ], 
-	  [	  
+
+		(neg|troop_slot_eq, "trp_hired_assassin", slot_troop_cur_center, "$g_encountered_party"),
+		(troop_slot_eq, "trp_belligerent_drunk", slot_troop_cur_center, "$g_encountered_party"),
+		(eq, "$drunks_dont_pick_fights", 0),
+	  ],
+	  [
 	    (try_begin),
 	      (eq, "$g_start_belligerent_drunk_fight", 0),
 	      (assign, "$g_start_belligerent_drunk_fight", 1),
-	      
+
 	      (try_for_agents, ":cur_agent"),
 	        (agent_get_troop_id, ":cur_agent_troop", ":cur_agent"),
 	        (eq, ":cur_agent_troop", "trp_belligerent_drunk"),
 	        (assign, "$g_belligerent_drunk", ":cur_agent"),
 	      (try_end),
 	    (else_try),
-	      (eq, "$g_start_belligerent_drunk_fight", 1),	 
-	           
+	      (eq, "$g_start_belligerent_drunk_fight", 1),
+
 	      (agent_is_active, "$g_belligerent_drunk"),
 	      (agent_is_alive, "$g_belligerent_drunk"),
 	      (get_player_agent_no, ":player_agent"),
@@ -3540,30 +3554,30 @@ mission_templates = [
 	      (store_random_in_range, ":random_value", 0, 200),
 	      (store_add, ":400_plus_random_200", 400, ":random_value"),
 	      (le, ":dist", ":400_plus_random_200"),
-	      
+
  		  (call_script, "script_activate_tavern_attackers"),
   		  (start_mission_conversation, "trp_belligerent_drunk"),
   		  (assign, "$g_start_belligerent_drunk_fight", 2),
-	    (try_end),  
+	    (try_end),
 	  ]),
-	  	  
+
 	  #tavern brawl triggers - assassin
       (2, 0, 0, [
 	    (neg|conversation_screen_is_active),
 		(eq, "$talk_context", tc_tavern_talk),
-		(troop_slot_eq, "trp_hired_assassin", slot_troop_cur_center, "$g_encountered_party"),		
-	  ], 
+		(troop_slot_eq, "trp_hired_assassin", slot_troop_cur_center, "$g_encountered_party"),
+	  ],
 	  [
 	    (try_begin),
 	      (eq, "$g_start_hired_assassin_fight", 0),
 	      (assign, "$g_start_hired_assassin_fight", 1),
-	      
+
 	      (try_for_agents, ":cur_agent"),
 	        (agent_get_troop_id, ":cur_agent_troop", ":cur_agent"),
 	        (eq, ":cur_agent_troop", "trp_hired_assassin"),
 	        (assign, "$g_hired_assassin", ":cur_agent"),
-	      (try_end),	      
-	    (else_try),  
+	      (try_end),
+	    (else_try),
 	      (eq, "$g_start_hired_assassin_fight", 1),
 
 	      (agent_is_active, "$g_hired_assassin"),
@@ -3587,46 +3601,46 @@ mission_templates = [
 
 		  (call_script, "script_activate_tavern_attackers"),
 		  (assign, "$g_start_hired_assassin_fight", 2),
-		(try_end),  
+		(try_end),
 	  ]),
-	  	  
+
 	  #Aftermath talks
-      (3, 0, ti_once, 
+      (3, 0, ti_once,
       [
 	    (neg|conversation_screen_is_active),
 		(eq, "$talk_context", tc_tavern_talk),
 		(gt, "$g_main_attacker_agent", 0),
-				
+
 		(this_or_next|neg|agent_is_alive, "$g_main_attacker_agent"),
 		(agent_is_wounded, "$g_main_attacker_agent"),
       ],
       [
         (mission_enable_talk),
-      
+
 		(try_for_agents, ":agent"),
 		  (agent_is_alive, ":agent"),
 		  (agent_get_position, pos4, ":agent"),
 		  (agent_set_scripted_destination, ":agent", pos4),
 		(try_end),
-		
+
 		(party_get_slot, ":tavernkeeper", "$g_encountered_party", slot_town_tavernkeeper),
-		(start_mission_conversation, ":tavernkeeper"),	 
+		(start_mission_conversation, ":tavernkeeper"),
 	  ]),
 
-	  
+
 	  #Aftermath talks
-      (3, 0, ti_once, 
+      (3, 0, ti_once,
       [
 	    (neg|conversation_screen_is_active),
 		(eq, "$talk_context", tc_tavern_talk),
 		(gt, "$g_main_attacker_agent", 0),
-		(main_hero_fallen),		
+		(main_hero_fallen),
       ],
       [
 	  (jump_to_menu, "mnu_lost_tavern_duel"),
 	  (finish_mission,0)
-	  
-	  ]),	  
+
+	  ]),  
 	  
 	  
 	  #No shooting in the tavern
@@ -3640,9 +3654,18 @@ mission_templates = [
 		(agent_is_alive, ":player_agent"),
 		
 		(agent_get_wielded_item, ":wielded_item", ":player_agent", 0),
+		(gt, ":wielded_item", 0),
+		(item_get_type, ":type", ":wielded_item"),
+		(this_or_next|is_between, ":type", itp_type_bow, itp_type_goods),
+		(is_between, ":type", itp_type_pistol, itp_type_bullets),
 		# (is_between, ":wielded_item", "itm_darts", "itm_torch"),
-		(neq, ":wielded_item", "itm_javelin_melee"),
+		# (neq, ":wielded_item", "itm_javelin_melee"),
 		# (neq, ":wielded_item", "itm_throwing_spear_melee"),
+		# (neq, ":wielded_item", "itm_jarid_melee"),
+		# (neq, ":wielded_item", "itm_light_throwing_axes_melee"),
+		# (neq, ":wielded_item", "itm_throwing_axes_melee"),
+		# (neq, ":wielded_item", "itm_heavy_throwing_axes_melee"),
+        #SB : also add these conditions
       ], 
       [
 		(party_get_slot, ":tavernkeeper", "$g_encountered_party", slot_town_tavernkeeper),
@@ -3664,18 +3687,36 @@ mission_templates = [
 		##diplomacy stop+
 	  ]),
 	  	  	  
-	  #Check for weapon in hand of attacker, also, everyone gets out of the way
-      (1, 0, 0, 
+      #SB : drunks are totally effective fighters
+      (3, 0, 0,
       [
-		(gt, "$g_main_attacker_agent", 0),	
+       (eq, "$talk_context", tc_tavern_talk),
+       (ge, "$g_start_belligerent_drunk_fight", 1),
+       (gt, "$g_main_attacker_agent", 0),
+       (agent_is_alive, "$g_main_attacker_agent"),
+       # (eq, "$g_belligerent_drunk_leaving", 0), #don't stumble while leaving
+       (store_random_in_range, ":random_no", 0, 3),
+       (eq, ":random_no", 0),
+       ],
+      [
+      # (store_random_in_range, ":anim", "anim_strike_chest_front_stop", "anim_cheer"),
+      (store_random_in_range, ":anim", "anim_strike3_head_left", "anim_fall_face_hold"),
+      (agent_set_animation, "$g_main_attacker_agent", ":anim"),
+      (store_random_in_range, ":progress", 0, 100),
+      (agent_set_animation_progress, "$g_main_attacker_agent", ":progress"),
+      ]),
+      #Check for weapon in hand of attacker, also, everyone gets out of the way
+      (1, 0, 0,
+      [
+        (gt, "$g_main_attacker_agent", 0),
       ],
       [
         (agent_get_wielded_item, ":wielded_item", "$g_main_attacker_agent", 0),
-        (val_max, "$g_attacker_drawn_weapon", ":wielded_item"),               
-        
+        (val_max, "$g_attacker_drawn_weapon", ":wielded_item"),
+
         (call_script, "script_neutral_behavior_in_fight"),
-      ]),	  			
-      ] + tavern_triggers_new,
+      ]),
+    ],
   ),
 
 # This template is used in party encounters and such.

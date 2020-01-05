@@ -786,7 +786,7 @@ strings = [
   ("npc13_intro", "Hic... Hey there barm.. barmaid. How 'bout another pint? Make it two! Service is too slow for me *hic* here."),
   ("npc14_intro", "You don't look that impressive, I bet 10 gold that I can take you down in a fight."),
   ("npc15_intro", "Greetings traveller, my name is Timaeos and I am a historian. With the wars breaking all too often I've been stuck here for some days, would you be perhaps heading out?"),
-  ("npc16_intro", "Hello there. From the look of you, I'd say you're expecting to get into some fights in the near future. Are you by any chance looking for some help?"),
+  ("npc16_intro", "Came here to kick a man while he's down?"),
 
   ("npc1_intro_response_1", "Sure. I will humour you, old man."),
   ("npc2_intro_response_1", "I'm afraid I don't have the slightest idea of who you are."),
@@ -803,7 +803,7 @@ strings = [
   ("npc13_intro_response_1", "You got the wrong person."),
   ("npc14_intro_response_1", "You better have 10 gold then."),
   ("npc15_intro_response_1", "Why would a historian be interested in a traveller like myself?"),
-  ("npc16_intro_response_1", "I could be. What's your story?"),
+  ("npc16_intro_response_1", "I have no idea of who you are. What's your story?"),
 
   ("npc1_intro_response_2", "No. Go bother someone else."),
   ("npc2_intro_response_2", "I fail to see anything mighty about you."),
@@ -820,7 +820,7 @@ strings = [
   ("npc13_intro_response_2", "Sod off, drunkard."),
   ("npc14_intro_response_2", "Sorry, not looking for trouble."),
   ("npc15_intro_response_2", "Yes but not with you."),
-  ("npc16_intro_response_2", "Mind your own business, lass."),
+  ("npc16_intro_response_2", "Not really but I might as well now that I'm here."),
 
 #backstory intro
   ("npc1_backstory_a", "Well, {lad/lass}, I have more than 30 years of campaigning so I could tell you stories for days..."),
@@ -838,7 +838,7 @@ strings = [
   ("npc13_backstory_a", "Watchu mean? This isn't *hic* a tarven.. a tavnern.. a tavern? If not *hic* direct me to the most nearest tavern so I may quench my thirst."),
   ("npc14_backstory_a", "Haha, that's what I like to hear. All those wimps in this tavern are too cowardly to even dare look in my direction. Makes it hard to even order a drink."),
   ("npc15_backstory_a", "Well {sir/madame}, I used to work in the palaces of Hellenic Basileios but my last venture did not end well."),
-  ("npc16_backstory_a", "Well, {sir/madame}, as long as I can remember I've had a weakness for pretty things, and it's gotten me into trouble, you see."),
+  ("npc16_backstory_a", "Hhm. Maybe that's for the best but I reckon a {man/woman} like you might see it for what it is unlike the common folk. Might as well tell you."),
 
 #backstory main body
   ("npc1_backstory_b", "The first time I fought was in the battle of Chairóneia and I was but a young lad desperate to earn my place amongst the heroes of legend. The taxeis I served in was placed on the right flank under the command of Basileus Philip himself. I was glad for it as it meant facing the Athenians rather than the Thebans who, at the time, still boasted a fearsome reputation. It seemed like the battle could go either way until we were ordered to retreat. Which was, of course, not a real retreat at all. It was bait for the less experienced Athenian army. They pursued us, breaking their ranks which proved to be fatal mistake... [...]"),
@@ -856,7 +856,7 @@ strings = [
   ("npc13_backstory_b", "The drinking keeps the evil eye and the horrors of war away. So if we're going to be doing some fightin' I need me some drinkin'"),
   ("npc14_backstory_b", "Now that I have a real {man/woman} in my company we may share a drink and have a fight later who knows."),
   ("npc15_backstory_b", "My last employer Agathoclès of Syracuse caught some of my papers describing his rule and he wasn't content with it, he ensured that my credibility would be brought to question, a terrible thing for a historian and poet such as myself! I overall did not enjoy my time there, he even forced me to listen to his horrible poems, a butchery of our noble language!"),
-  ("npc16_backstory_b", "I grew up in Malayurg castle as a bonded servant, working alongside my mother in the kitchens. I would amuse myself by hunting mice through the pantries and sculleries. I was so good at it that I put the castle cats out of a job, and eventually the lord realized that I might also be employed to track down bigger game, on certain errands of a type perhaps better left unsaid. Needless to say, I found a number of opportunities to avail myself of trinkets that had formerly belonged to my lord's enemies. So I was able to buy myself out of bondage, and find hire as a free agent. My last job was {s19}in {s20}."),
+  ("npc16_backstory_b", "I used to be a minor noble living on the island of Zakynthos, there's not much to life there but the peasants always failed to see how ripe for prosperity the island is. They only lived for immediate gratification and were contended by just making it to the next day."),
 
 #backstory recruit pitch
   ("npc1_backstory_c", "[...] Like I said, Tyre was probably the worst siege I had the displeasure of fighting but eventually we turned it around, actually all it took was... [...] While at Hydaspes the battle almost had a turn for the worst but we pulled through. The losses were still considerable and most of the veterans agreed that it was enough fighting for a lifetime and begged Alexander to return home. What followed... [...] Ipsos was the final blow to my military career, serving under Antigonos seemed like my best option at the time but look where it got me, a homeless veteran whose only riches are his stories."),
@@ -874,7 +874,7 @@ strings = [
   ("npc13_backstory_c", "*Hic* Come on now, don't keep staring at me.. Let's get some drinks and find some wenches my friend!"),
   ("npc14_backstory_c", "Name's Bolgios by the way, you ought to know the name of the one that defeats you. What's your name?"),
   ("npc15_backstory_c", "Now as I said I'm stuck here waiting for the next caravan or war party that could accept another member so I can visit a bit more of our world and take notes and you seem able enough, would you take me with you?"),
-  ("npc16_backstory_c", "Unfortunately, my last employer's wife had a lovely amulet, of a kind I simply could not resist. She doesn't know it's missing, yet, but she might soon. So tell me, are you looking for helpers?"),
+  ("npc16_backstory_c", "I won't bore you with the details but being from a noble family it wasn't too hard to climb the social ladder and strike a good seat in the council of the local oligarchy. I exposed a scandal involving some of the other members and they were expelled from the island, another member had an accident and all those empty seats were replaced by close friends or people I had control over."),
 
 
 ### use these if there is a short period of time between the last meeting
@@ -893,7 +893,7 @@ strings = [
   ("npc13_backstory_later", "How'd you like this tavern? Booze is alright but damn those girls are ugly and got a beard thicker than mine!"),
   ("npc14_backstory_later", "Still looking for a fight worthy of a mighty Gaul."),
   ("npc15_backstory_later", "I've been in the company of merchants and the like, but I don't get to see much. Perhaps you'd want to reconsider my offer?"),
-  ("npc16_backstory_later", "I do the odd job from time to time. But there's naught like steady employment, and a regular run of corpses to loot."),
+  ("npc16_backstory_later", "Nothing much, just looking for new opportunities wherever they might be."),
 
 
   ("npc1_backstory_response_1", "Fascinating. I certainly can see the value in an experienced warrior such as yourself."),
@@ -911,7 +911,7 @@ strings = [
   ("npc13_backstory_response_1", "There's plenty of drinks and fighting at my camp if you wish."),
   ("npc14_backstory_response_1", "I'm {playername}. I might have use for you if you can fight as well as you say."),
   ("npc15_backstory_response_1", "Interesting, but life on the road is dangerous. What skills other than writing do you have?"),
-  ("npc16_backstory_response_1", "I might be. What can you do?"),
+  ("npc16_backstory_response_1", "So you seized power for yourself?"),
 
   ("npc1_backstory_response_2", "Shut. Up. One more word and I swear I cut off both your tongue and my ears just to make sure."),
   ("npc2_backstory_response_2", "One can only wonder how you managed to stay alive."),
@@ -928,7 +928,7 @@ strings = [
   ("npc13_backstory_response_2", "No, sorry. Nothing I can do for you."),
   ("npc14_backstory_response_2", "I don't think so."),
   ("npc15_backstory_response_2", "I can't afford to nurse a scribe in my party."),
-  ("npc16_backstory_response_2", "Sorry, lass. You sound like you might be trouble."),
+  ("npc16_backstory_response_2", "I really don't care."),
 
   ("npc1_signup", "{Lad/Lass}, I am glad that someone finally recognized my worth. Not since my first promotion following the battle of Issus have I been so happy, as I told you, that day was a bloody day but I did omit one detail you see... [...] and you see, this is why you should never fart on a fireplace, poor lad... What were you saying?"),
   ("npc2_signup", "I hope it is something more dignifying than what I used to do. 'Stenis, a noble died and they want you to fight during the funeral ceremony' 'Stenis, today is a celebration to the god of war, we have plenty of slaves and criminals for you to fight'... Stenis this and Stenis that. I wouldn't wait around until someone stronger showed up to take my place so I ran. If this happens again I will exact revenge before running."),
@@ -945,7 +945,7 @@ strings = [
   ("npc13_signup", "Are you saying that for *hic* real or you're just trying to seduce me? That's a joke haha, don't get funny ideas!"),
   ("npc14_signup", "I once killed three men with a swing of my sword! Then I took it out of its scabbard."),
   ("npc15_signup", "I have good knowledge of rhetoric allowing me to convince people and trade at a better price, I also collected some knowledge out of books in disciplines such as physics and a bit of medicine."),
-  ("npc16_signup", "Well, {sir/madame}, let me tell you. I may not know how to read and write, but I know the quickest way to a man's heart is between his fourth and fifth rib, if you understand me. "),
+  ("npc16_signup", "I needed that power to make some much needed changed that would benefit the island as a whole. Like I said, the peasantry doesn't know any better and if they had their way we would stay an island devoid of prospects other than fishing and receiving nobles looking to own luxurious villas on the island."),
 
   ("npc1_signup_2", "Oh yes, enlisting my services. I'm not as strong or agile as I used to, but I can assure you that I can make it up with years of expertise and training. I can help you manage logistics and training. Speaking of which, did I ever tell you what our Lochagos used to do as training? What was his name again? Phrygios? Phylos? Doesn't matter, we would carry sacks of sand with our equipment on, one day poor Pausanias' sand was replaced with rocks and it took him so long to notice… [...]"),
   ("npc2_signup_2", "Don't make me fight for someone's entertainment and we have a deal. I am a free man and I intend to keep it that way."),
@@ -962,7 +962,7 @@ strings = [
   ("npc13_signup_2", "You'll see that I'm a pretty great fighter when sober and *hic* twice better drunk! Now where is that camp of yours, I'm thirsty!"),
   ("npc14_signup_2", "Now if you're offering fights, I'm all for it. I need to add some severed heads to my saddle but I need to get a horse first. And a saddle."),
   ("npc15_signup_2", "I can also ensure your actions will be recorded, making you a part of history. A chance most men never had."),
-  ("npc16_signup_2", "I can throw knives, in addition to stabbing with them, and I'm slippery as quicksilver. You'll find me useful in a fight, I'll warrant."),
+  ("npc16_signup_2", "We could have been a power to rival Athens, so I had the peasants build a new trading fleet and some warships to dissuade pirates from bothering us. I convinced them that the fruit of their hardships shall yield tenfold. Wouldn't you know it, as soon as the fleet is built we strike a storm at sea and it sunk. Peasants wanted to offer me as a sacrifice to Poseidon saying I had offended him with my ungratefulness towards his providence to the island. I managed to convince them otherwise but I was still exiled."),
 
 
   ("npc1_signup_response_1", "You told that one already... You're hired old man, save some stories for the campfire."),
@@ -980,7 +980,7 @@ strings = [
   ("npc13_signup_response_1", "Follow me when I leave the tavern. I'll remind you before leaving."),
   ("npc14_signup_response_1", "Good. That's what I like to hear."),
   ("npc15_signup_response_1", "I accept your proposition but be aware that the roads are dangerous so you might be exposed, you would be better carrying a weapon at all times."),
-  ("npc16_signup_response_1", "It sounds like you can do the job. I will hire you."),
+  ("npc16_signup_response_1", "Are you looking for work then?"),
 
 #11
   ("npc1_signup_response_2", "I can't take it anymore, I'd rather go deaf that listen to more of your stories."),
@@ -998,7 +998,7 @@ strings = [
   ("npc13_signup_response_2", "Actually, that's a terrible idea."),
   ("npc14_signup_response_2", "You sound like trouble to me."),
   ("npc15_signup_response_2", "A lucrative proposition, but I'm afraid I don't have need of a scribe"),
-  ("npc16_signup_response_2", "To be honest, I'd prefer someone who was a little less tempted to larceny."),
+  ("npc16_signup_response_2", "That's too bad."),
 
   ("npc1_payment", "Right. Right... But trust me, I haven't told the best ones so far. Mostly because I forgot but it'll come back to me, rest assured! In the meantime, could you lend me {reg3} gold? I'm afraid I've collected a bit of a debt here in the tavern. And huh... the brothel too."),
   ("npc2_payment", "{!}."),
@@ -1015,7 +1015,7 @@ strings = [
   ("npc13_payment", "Right on my friend! *hic* As a toast don't you mind paying the next round 'o drinks and for employment you could pay my tab here. It's {reg3} gold I think. Do you think that you could cover those for me, as a gesture of friendship?"),
   ("npc14_payment", "I wasn't joking about the horse and the saddle, could you lend me {reg3} gold?"),
   ("npc15_payment", "You won't regret taking me aboard {sir/madame}. Unfortunately I have ran out of scrolls and ink, so if you could lend me {reg3} gold?"),
-  ("npc16_payment", "Now, that's good news, captain. So, how about paying me a little something to seal off our agreement? A mere {reg3} would be enough. Please don't take this the wrong way, but I've had some bad luck with employers in the past. "),
+  ("npc16_payment", "I'm not much of a warrior but I did learn a bit on how to build from the people I hired to build a new harbour and fleet for the island, I'm in if you can pay me {reg3} gold. Never accept a job without a contract."),
 
   ("npc1_payment_response", "Very well, here's {reg3} gold. Now, fall in with the rest."),
   ("npc2_payment_response", "{!}."),
@@ -1049,7 +1049,7 @@ strings = [
   ("npc13_morality_speech", "There's not much fun in {s21} I say, now my next drink will taste bitter."),
   ("npc14_morality_speech", "I do not care to {s21}. No one with a reputation for cowardice will be properly feared by his men."),
   ("npc15_morality_speech", "{Sir/Madame} -- just so you know my opinion, any commander with sense will not let his company {s21}.I hope you don't mind me speaking so bluntly."),
-  ("npc16_morality_speech", "Captain. I don't like to {s21}. So many throats left uncut, and so many purses left unexplored..."),
+  ("npc16_morality_speech", "Captain. I don't like to {s21}. You should get rid of your enemies lest they can enact revenge on you."),
 
 
   ("npc1_2ary_morality_speech", "I understand that we made the choice to {s21}. However, it fills my heart with grief and it does not make for a good story."),
@@ -1190,7 +1190,7 @@ strings = [
   ("npc13_retirement_speech", "Drinking with you isn't as fun as it used to be which is a sign that I must depart soon. You may still pay me a drink if we cross paths again."),
   ("npc14_retirement_speech", "The fights are getting too tame for me and I grow bored. I'll be adventuring somewhere else for a while."),
   ("npc15_retirement_speech", "I appreciate that you took me on, but I'm not altogether happy about how things have worked out. I'm going to head off elsewhere -- maybe go home, maybe find another job, I haven't quite decided yet."),
-  ("npc16_retirement_speech", "I've had good times in this company, and I've found myself a pretty trinket or two on the battlefield, but right now it isn't working out. I'm leaving you to go offer my talents to someone else."),
+  ("npc16_retirement_speech", "Turns out I'm not one to receive orders, I'd rather give them. I'm off to create my own company, I think there's room for two in this world. Farewell companion."),
 
   ("npc1_rehire_speech", "Hey {lad/lass}! Remember me? Well my plans for retirement for some reason did not work out and I've been missing the military life. Like that time when I got lost after the battle of Issus. You're in for quite the story! [...] I got back right in time for the siege of Tyre only to get knocked out by a rock! Anyway, do you still have a spare tent for me?"),
   ("npc2_rehire_speech", "Captain! Good to see you. You could say that I was perhaps not ready to settle in, home wasn't as I remembered it. Anyway, our paths cross again which must certainly mean we're not done with our work yet. What do you say?"),
@@ -1207,7 +1207,7 @@ strings = [
   ("npc13_rehire_speech", "*Hic* Buddy! Here to pay me another round? Wait forget that, the drinks are terrible here and the women are so fat I get tired when trying to grope them! Perhaps we could have a drink at your camp and keep it going for a few days, see where it takes us?"),
   ("npc14_rehire_speech", "Truth be told you're not a terrible fighter and I somewhat miss our adventures. Not to say I didn't have fun on my own, I punched a man so hard his eye popped out hah. I'll tell you some more back at the camp."),
   ("npc15_rehire_speech", "Why hello, {playername}. I can't say I'm entirely displeased to see you. You see, I took on another contract before I left, and sure enough, when it came time to collect the pay, the noble had nothing but talk and excuses and petty little complaints about my handiwork. I can't say I was always happy in your company, but at least I put gold directly into my purse after every battle. You still offering work?"),
-  ("npc16_rehire_speech", "Captain! They say that you've done well for yourself since we last met. I'll come out and admit that I cursed your name when we parted ways, but thinking back on it you weren't all that bad. All these lords, they're glad enough to send me on little side errands, but they don't much care to have me in their main battle-line. Apparently I spook the men. I've heard it muttered that I'm a witch, or that I eat men's hearts after killing them, or other rot. Not that I mind stabbing a man while he's asleep, but it's a lot more gratifying when he's awake and kicking. So I thought I'd try to find you again, see if you'll take me on."),
+  ("npc16_rehire_speech", "Well, we meet again {playername}. I'm starting to believe I might be cursed by the peasants of Zakynthos, I hired a few men to do some caravan escort contract and shortly after we were ambushed by an overwhelming force of bandits. I've managed to stay alive but that was the end of my company. I think my fortune lies by your side, will you take me back?"),
 
 #local color strings
   ("npc1_home_intro", "You smell that? Smells just like home. By that I mean the stench of horse shit. You see, before enlisting I was but a mere stable boy. You might think this is a boring life... That's not far from the truth but still, I had some adventures there too. Like that time a drunk Thessalian noble rode his horse backwards and screamed about someone stealing its head!"),
@@ -1225,7 +1225,7 @@ strings = [
   ("npc13_home_intro", "Athenai heh? Bunch of drunken sailors and corrupt politicians, if we're going there I know a few places where we can avoid both."),
   ("npc14_home_intro", "We're closing in to Ravenna, great city of the Senones. Used to be great city of the Umbrians who took it from the Etruscans who had taken it from the Greeks I think."),
   ("npc15_home_intro", "Just over the plateau is the city of Syrakousai, it was a colony founded by the Corinthians. It has a very long and interesting history and I came here to write it down."),
-  ("npc16_home_intro", "Aye, captain, do you see those? Those are hare tracks in the snow. We must be getting near to my birthplace."),
+  ("npc16_home_intro", "Ah the smell of rotten fish, the deserted marketplaces, the flea infested harbour. Zakynthos hasn't changed in my absence."),
 
 
   ("npc1_home_description", "At the time, Philip's army was passing by to resupply before heading south to face the Greeks. The drunkard dropped his purse and I took it as a sign from the gods. I used his gold and the little that I had saved for myself to purchase enough equipment to make myself eligible for military service."),
@@ -1243,7 +1243,7 @@ strings = [
   ("npc13_home_description", "It's hard to think nowadays that this one city stood amongst the most powerful of all Greece but it's been decaying ever since. Sure its fleet is still strong but their army can't fight for shit."),
   ("npc14_home_description", "Well, it's ours now and we intend to keep it that way. My grandfather and my kinsmen settled in this area and it is rightfully ours by conquest, some of the nearby tribes took issue to that which led to some wars which saw us as the victors."),
   ("npc15_home_description", "It had its fair share of enlightened tyrants, Hiero and Dionysos, Dionysos the first was a bruttish warmonger but his son named after him was a decent ruler unlike his father. You've no doubt heard of the heroic Timoleon? The Corinthian hero that saved the city? I'll tell you all about him!"),
-  ("npc16_home_description", "The snows in these valleys don't melt until late in the year, and the land is hard to plough. You can grow a bit of barley, but not much else. But there's wealth here in the woods: deer, rabbit and lynx, meat and furs, and the mountains have iron, and traders would ship enough saltfish up the river from the coast to keep the people fed for the winter."),
+  ("npc16_home_description", "I still can't believe they are happy with their lot in life, despite my failure it was still an attempt to something more and instead of taking that spark they just pissed on it."),
 
   ("npc1_home_description_2", "They weren't too picky about it. They were looking to bolster their numbers as they expected a rather large Greek opposition. I would be assigned mostly menial work, got to shovel the stables and take care of horses again and once it came to battle I was positioned at the back so I wouldn't get in the way of more experienced soldiers. The rest I think I told you already, unless you care to hear those stories again?"),
   ("npc2_home_description_2", "Things were good for a while until they decided to raise taxes on all trade and most of the common folk couldn't afford much of anything. This of course upset the tribes and was a contributing factor to the recent wars. To add to that is their treatment of prisoners, I think they seek Rome's approval through our humiliation. Some wicked payback for the Caudine forks."),
@@ -1260,7 +1260,7 @@ strings = [
   ("npc13_home_description_2", "Every year fewer men take the ephebic oath to defend the city and in times of war they need to call on mercenaries to fill their ranks until the day they outnumber the Athenians. Even I can see it's a lost cause, one day the mercenaries will get greedy and take over the city."),
   ("npc14_home_description_2", "Rome decided to meddle with our affairs and my ancestors sacked their great city. They let us be for now but I don't think this will last long, they are known for holding a grudge."),
   ("npc15_home_description_2", "But now we must focus on the present and its current rulers, Agathoclès and his brother Àntandros, they are the ones that give tyrants a bad reputation. Unlimited power under wicked men lead to terrible things, I used to frequent their court but even I could not stay silent about their rule despite their reputation of killing dissenters. I could not keep quiet after Agathoclès tortured and killed the population of Segesta, their own allies! If it weren't for some friends in their court they would no doubt have me killed."),
-  ("npc16_home_description_2", "Still, it was a thin living, and there were always too many mouths around to feed. The Vaegir king and the Khergit khan don't make life any easier for us, squeezing for tax money the villages they control, and raiding for plunder the villages they don't. Of course, I can't say I wouldn't do the same if I had a castle and an army all of my own. The mighty do whatever they can, and the humble do whatever they must."),
+  ("npc16_home_description_2", "We shall eternally be but a footnote to history, just another Greek island among so many others."),
 
   ("npc1_home_recap", "Ah, so you do want to hear again about my time in {s21}. Back when I was just a stable boy [...]"),
   ("npc2_home_recap", "I was born into the Hirpini tribe, up the mountains of Samnium. We're fierce yet still a civilized bunch."),
@@ -1277,7 +1277,7 @@ strings = [
   ("npc13_home_recap", "The once so great Athens, den of thieves and liars."),
   ("npc14_home_recap", "I am a Senone from Ravenna, my father is a chieftain there and I intend to succeed him."),
   ("npc15_home_recap", "I lived most of my life in Syrakousai, I intend to go back there one day, once their despotic rulers are dead."),
-  ("npc16_home_recap", "Why, captain, I was born in Uslum village, but my mother lost her land to a scheming relative and had to put herself in bond to a nearby lord."),
+  ("npc16_home_recap", "I'm from the wretched island of Zakynthos."),
 
   ("npc1_honorific", "{lad/lass}"), #Borcha
   ("npc2_honorific", "captain"), #marnid
@@ -1311,7 +1311,7 @@ strings = [
   ("npc13_kingsupport_1", "Ya think you can take on the lot? They will come after you hard but I think it's a good time as any to strike. Everyone is busy fighting each other all the time that you could carve up a nice piece of land for yourself if you know where, and when to strike."), #nizar
   ("npc14_kingsupport_1", "All the talk of princes and kings one would think they were chosen by the gods but the truth is simple, they were but common men that took what other would not give them. I think you have the strenght to do the same yourself."), #lezalit
   ("npc15_kingsupport_1", "Well, you pay your men on time, when you can, generally speaking. That's the best qualification for kingship there is, in my book. You show some respect for the rights of others and don't go around to commit atrocities.."), #artimenner
-  ("npc16_kingsupport_1", "Why not, captain? I'm sure you'd make a fine {king/queen} -- and of course I'd hope you remember the little people like myself who did you a pretty turn on your scramble to the throne."), #klethi
+  ("npc16_kingsupport_1", "You think you got what it takes? I reckon you might but be wary that others will stand in your way and you must show them no weakness nor pity. I learned it the hard way but you don't have to make the same mistakes, heed my counsel and this time things will go our way."), #klethi
 
 
   ("npc1_kingsupport_2", "Certainly, I know a few veterans who are still alive and their support, together with mine, may carry some weight in your favour. If you can prove your strength and wisdom towards, or against, the established powers the people will certainly rally behind you."), #Borcha
@@ -1329,7 +1329,7 @@ strings = [
   ("npc13_kingsupport_2", "I say, no one will mind if you take down and kill a few corrupt politicians on the way. When you're done maybe you could let yours truly to open his own tavern."), #nizar
   ("npc14_kingsupport_2", "I am a prince myself but as my father said, if I am to succeed him, I have to prove myself first. The same can be said for you, prove yourself to the people you wish to rule and the kingdoms that would stand in your way."), #lazalit
   ("npc15_kingsupport_2", "I would. People might say that you don't have royal blood in your veins. But as far as I've seen, royal blood makes you a skinflint. Kings and nobles will take out loans or commission building projects without half a thought to how they're ever going to pay back all those commoners who expect to eat after an honest day's work. If you ask me, an honest tongue makes a {man/woman} a {king/queen}, not a fancy pedigree."), #artimenner
-  ("npc16_kingsupport_2", "Of course, my {lord/lady}. And what's more, I figure a girl like me could do you a bit of a service raising support with the lords of this land. I may have only had a small part in their schemes and intrigues over the years, but I think I know what they want. And given what I know of their secrets, they'd not want to be denying me admission to their halls, now would they?"), #klethi
+  ("npc16_kingsupport_2", "The council in Zakynthos might have been small and rather uninportant in the grand scheme but I got to be an envoy to other cities, I think you might find my help and knowledge invaluable."), #klethi
 
   ("npc1_kingsupport_2a", "Please go on..."), #Borcha
   ("npc2_kingsupport_2a", "Please continue..."), #marnid
@@ -1380,7 +1380,7 @@ strings = [
   ("npc13_kingsupport_3", "Let's make a deal with the mercenaries, they will strike eventually but they might as well have someone competent at the front. I could go to Athenai and check the mood in the taverns, for your sake obviously."), #nizar
   ("npc14_kingsupport_3", "Give me leave for a few weeks, and I will let all the worthy men of this land know that you are the one to unite the tribes, but all the other kingdoms too. It is time for a new warlord to unite us against a common foe."), #lazalit
   ("npc15_kingsupport_3", "I'm glad you think so. Here's what I suggest. I know men in the courts here, men like me, who've been shafted and shaken down until they can take no more. Here's what I'll tell them -- you're honest. You respect the philosophers and the thinkers. You'll pay your debts. You won't beggar your subjects."), #artimenner
-  ("npc16_kingsupport_3", "Give me leave for a few weeks, and I'll do a little tour of my former employers' castles. I'll sing them a pretty song about what you'll do as {king/queen}, about all the ancient freedoms you'll restore -- let them rob their tenants and tax the merchants and fight their wars and spend themselves silly without a thought to tomorrow, as a noble ought! What do you say to that, captain?"), #klethi
+  ("npc16_kingsupport_3", "Give me leave for a few weeks, and I'll pay visit to a few towns and their concils. I'll wisper in their ears the coming of someone that seeks to upset the current balance and will destroy those in his path so that they have the choice to follow or stand in your way."), #klethi
 
   ("npc1_kingsupport_objection", "{Lad/Lass} this man will make a fool of you. No one, not even his kind, would take him seriously and most will outright deny him entrance in most towns. I urge you to reconsider as it would reflect badly on your reputation."), #Borcha
   ("npc2_kingsupport_objection", "Captain, this man is not the solution but part of the problem. He thinks he's better than the common man and knows nothing of his struggle. He will bring further divide in an already divided world and this is what breaks nations."), #marnid
@@ -1415,7 +1415,7 @@ strings = [
   ("npc13_intel_mission", "As I said {s17} is a good place to start, quite a few upset people looking for guidance. I'll start with the taverns, you can sense the mood of the populace in them and it's a great place for gossip. Might get some information about {s18} while I'm there."), #nizar
   ("npc14_intel_mission", "As I said, I'm a prince of {s17}. My word has weight there and I might convince them to support your cause, I think they might inform us about what is going on in {s18}. I am willing to do this, if you can spare me. If they don't stand with us, then we will earn their support by force if necessary, then they will respect us."), #lazalit
   ("npc15_intel_mission", "Captain. As you may know, I have for some time harbored a wish to return to {s17}, and write down its history and expose its current ruler. As it happens, one of my former colleagues is able to sneak me in and arrage a meeting in secrecy with noble families. I'm certain they will share some details about what is happening in {s18}, if that is of interest to you."), #artimenner
-  ("npc16_intel_mission", "Oy, Captain! I had a mind to pay a visit to my old haunts at {s17}. Let's just say that the lord and lady of the place had commissioned a certain service from me, and had been a bit lax about payment. However, a certain sparkly bauble in the lady's possession will fit the bill nicely. I see no need to trouble them by letting them know about my visit, but I could have a wee chat with my old friend the castle steward, who'll be letting me into the place, about goings-on in the {s18}."), #klethi
+  ("npc16_intel_mission", "For my own curiosity as to who was in charge, I felt the need to return to {s17}. Let's say the populace despises him more than they ever did me, I might incite a rebellion just for my own entertainment and maybe I can get a few words on about {s18}."), #klethi
 
 
   ("npc1_fief_acceptance", "{Lad/Lass}, you want me to hold {s17} in your name? I am humbled, honoured and most of all grateful. I swear I will make the most of it and not let idleness get hold of me nor power corrupt me like it did to Alexander's successors."), #Borcha
@@ -1433,7 +1433,7 @@ strings = [
   ("npc13_fief_acceptance", "Splendid! {s17} seems like a good place, I'll go get acquainted to the locals, show them who's leading them and that I'm one of the people too. I hope their tavern is well stocked."), #nizar
   ("npc14_fief_acceptance", "{s17} was earned by rightful conquest and having fought by your side I am worthy of this prize. Now the prince becomes your warlord."), #lazalit
   ("npc15_fief_acceptance", "Well, {sir/my lady}, that's a gracious act, and marks you as the kind of monarch who can save this sorry land from the incompetence of the current batch. I suspect a lot of the noble lords around here will think that a commoner like me isn't fit to manage anything. Well, when they see what I do with it, and what revenues I can bring in, they'll change their tune!"), #artimenner
-  ("npc16_fief_acceptance", "Oh, that's most generous of you, {sire/my lady}. I've been in and out of many a great hall or manor -- not always with the master's permission, I should add -- but I never thought I'd own one myself. Let me think... When I collect my first year's rents, what baubles shall I buy myself?"), #klethi
+  ("npc16_fief_acceptance", "Most generous of you, I think this is a chance to correct the mistakes of the past. Maybe I wasn't fit to rule on my own but together we may yet achieve greatness."), #klethi
 
   ("npc1_woman_to_woman", "{!}."), #Borcha
   ("npc2_woman_to_woman", "{!}."), #marnid
@@ -1467,7 +1467,7 @@ strings = [
   ("npc13_turn_against", "Hey buddy, sorry we have to fight each other like that but let me say, when I capture you we can still have a few drinks until someone pays your ransom or we're at peace again. Now let's do the fightin'"), #nizar
   ("npc14_turn_against", "We finally have our promised fight {playername}! Today will be a grand day and a tale sung by the bards for ages to come, let the gods pick their champion! I vow not to cut your head and steal your soul for I wish to enjoy your company in the afterlife, I hope you would do the same for me if I were to fall in battle."), #lazalit
   ("npc15_turn_against", "Ah... I have not been looking forward to this day. I just want to say that in my sight, if you'd kept your faith in me, things would never have come to this. But no doubt you see it differently."), #artimenner
-  ("npc16_turn_against", "Hello, Captain! So, I guess we're enemies! One small word of warning if we end up fighting each other -- once the rage of battle hits me, I can't always account for my actions. Just know that whatever I do, it's not personal. Maybe if we both walk away from this, we can meet once more as friends?"), #klethi
+  ("npc16_turn_against", "Like I say, let no enemy stand in your way, even if they are old friends. Let's get over this so one of us gets to resume his destiny."), #klethi
 
 #NPC companion changes end
 
