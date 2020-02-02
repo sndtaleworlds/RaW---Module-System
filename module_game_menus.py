@@ -1929,7 +1929,9 @@ game_menus = [
 	(try_begin),
 		(eq,"$background_type",cb_noble),
 		(call_script, "script_change_player_honor", 10),
-		(add_xp_to_troop, 10000, "trp_player"),
+        
+        (get_level_boundary, ":xp_required_for_levelling", 12),
+        (add_xp_to_troop, ":xp_required_for_levelling", "trp_player"),
 
 		(troop_raise_attribute, "trp_player",ca_strength,2),		
 		(troop_raise_attribute, "trp_player",ca_agility,2),		
@@ -1963,7 +1965,8 @@ game_menus = [
 		(eq,"$background_type",cb_warrior),
 		(call_script, "script_change_player_honor", 5),
 		(troop_raise_skill, "trp_player","skl_shield",1),	
-		(add_xp_to_troop, 2200, "trp_player"),			
+        (get_level_boundary, ":xp_required_for_levelling", 8),
+        (add_xp_to_troop, ":xp_required_for_levelling", "trp_player"),		
 		(store_random_in_range, ":random_food", "itm_smoked_fish", "itm_siege_supply"),			
 		(troop_add_item, "trp_player",":random_food"),			
 

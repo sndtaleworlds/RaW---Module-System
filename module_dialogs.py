@@ -25995,31 +25995,31 @@ You are free, {playername}.", "lord_ask_leave_service_end",
 ##                                                                     (call_script, "script_finish_quest", "qst_capture_messenger", 100)]],
 ##
 ##
-  [anyone|plyr,"lord_active_mission_2", [#(troop_slot_eq, "$g_talk_troop", slot_troop_is_prisoner, 0),
-										 (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0),
-                                         (store_partner_quest,":lords_quest"),
-                                         (eq,":lords_quest","qst_raise_troops"),
-                                         (quest_get_slot, ":quest_target_troop", ":lords_quest", slot_quest_target_troop),
-                                         (quest_get_slot, ":quest_target_amount", ":lords_quest", slot_quest_target_amount),
-                                         (party_count_companions_of_type, ":num_companions", "p_main_party", ":quest_target_troop"),
-                                         (ge, ":num_companions", ":quest_target_amount"),
-                                         (assign, reg1, ":quest_target_amount"),
-                                         (str_store_troop_name_plural, s13, ":quest_target_troop")],
-   "Indeed. I have raised {reg1} {s13}. You can take them.", "lord_raise_troops_thank",[(quest_get_slot, ":quest_target_troop", "qst_raise_troops", slot_quest_target_troop),
-                                                                                         (quest_get_slot, ":quest_target_amount", "qst_raise_troops", slot_quest_target_amount),
-                                                                                         (call_script,"script_change_player_relation_with_troop","$g_talk_troop", 3),
-                                                                                         (party_remove_members, "p_main_party", ":quest_target_troop", ":quest_target_amount"),
-                                                                                         (call_script, "script_end_quest", "qst_raise_troops"),
-                                                                                         (troop_get_slot, ":cur_lords_party", "$g_talk_troop", slot_troop_leaded_party),
-                                                                                         (gt, ":cur_lords_party", 0),
-                                                                                         (party_add_members, ":cur_lords_party", ":quest_target_troop", ":quest_target_amount"),
-                                                                                         ]],
+  # [anyone|plyr,"lord_active_mission_2", [#(troop_slot_eq, "$g_talk_troop", slot_troop_is_prisoner, 0),
+										 # (neg|troop_slot_ge, "$g_talk_troop", slot_troop_prisoner_of_party, 0),
+                                         # (store_partner_quest,":lords_quest"),
+                                         # (eq,":lords_quest","qst_raise_troops"),
+                                         # (quest_get_slot, ":quest_target_troop", ":lords_quest", slot_quest_target_troop),
+                                         # (quest_get_slot, ":quest_target_amount", ":lords_quest", slot_quest_target_amount),
+                                         # (party_count_companions_of_type, ":num_companions", "p_main_party", ":quest_target_troop"),
+                                         # (ge, ":num_companions", ":quest_target_amount"),
+                                         # (assign, reg1, ":quest_target_amount"),
+                                         # (str_store_troop_name_plural, s13, ":quest_target_troop")],
+   # "Indeed. I have raised {reg1} {s13}. You can take them.", "lord_raise_troops_thank",[(quest_get_slot, ":quest_target_troop", "qst_raise_troops", slot_quest_target_troop),
+                                                                                         # (quest_get_slot, ":quest_target_amount", "qst_raise_troops", slot_quest_target_amount),
+                                                                                         # (call_script,"script_change_player_relation_with_troop","$g_talk_troop", 3),
+                                                                                         # (party_remove_members, "p_main_party", ":quest_target_troop", ":quest_target_amount"),
+                                                                                         # (call_script, "script_end_quest", "qst_raise_troops"),
+                                                                                         # (troop_get_slot, ":cur_lords_party", "$g_talk_troop", slot_troop_leaded_party),
+                                                                                         # (gt, ":cur_lords_party", 0),
+                                                                                         # (party_add_members, ":cur_lords_party", ":quest_target_troop", ":quest_target_amount"),
+                                                                                         # ]],
 
-  [anyone,"lord_raise_troops_thank", [],
-   "These men may well turn the tide in my plans, {playername}. I am confident you've trained them well. My thanks and my compliments to you.", "lord_raise_troops_thank_2",[]],
+  # [anyone,"lord_raise_troops_thank", [],
+   # "These men may well turn the tide in my plans, {playername}. I am confident you've trained them well. My thanks and my compliments to you.", "lord_raise_troops_thank_2",[]],
 
-  [anyone|plyr,"lord_raise_troops_thank_2", [],
-   "Well, the lads are at your command now, sir. I am sure you will take good care of them.", "lord_pretalk",[]],
+  # [anyone|plyr,"lord_raise_troops_thank_2", [],
+   # "Well, the lads are at your command now, sir. I am sure you will take good care of them.", "lord_pretalk",[]],
 
 
   [anyone|plyr,"lord_active_mission_2", [#(troop_slot_eq, "$g_talk_troop", slot_troop_is_prisoner, 0),
@@ -26802,7 +26802,7 @@ Hand over my {reg19} denars, if you please, and end our business together.", "lo
   (eq, "$player_has_homage" ,1),
   (neq, "$random_quest_no", "qst_rescue_prisoner"),
   (neq, "$random_quest_no", "qst_destroy_bandit_lair"),
-  (neq, "$random_quest_no", "qst_raise_troops"),
+  # (neq, "$random_quest_no", "qst_raise_troops"),
   (neq, "$random_quest_no", "qst_escort_lady"),
   (neq, "$random_quest_no", "qst_lend_companion"),
   (neq, "$random_quest_no", "qst_capture_enemy_hero"),
@@ -27419,55 +27419,55 @@ I'd like nothing better than to go out there and teach them a lesson,\
    [(troop_set_slot, "$g_talk_troop", slot_troop_does_not_give_quest, 1)]],
 
 # Raise troops
-  [anyone,"lord_tell_mission", [(eq,"$random_quest_no","qst_raise_troops"),
-  ##diplomacy start+ Change "sword" to another weapon if appropriate, and likewise for "men"
-  (try_begin),
-     (call_script, "script_cf_dplmc_faction_has_bias_against_gender", "$g_encountered_party_faction", 0),
-	 (assign, reg0, 1),
-  (else_try),
-     (assign, reg0, 0),
-  (try_end),
-  ],
-   "No lord should have to admit this, {playername}, but I was inspecting my soldiers the other day and there are {reg0?{reg65?women:soldiers}:{reg65?soldiers:men}} here who don't know which end of a sword to hold. {s43} You are a warrior of renown, {playername}. Will you train some troops for me? I would be grateful to you.", "lord_tell_mission_raise_troops",[
- ##diplomacy end+
- 	(call_script, "script_lord_comment_to_s43", "$g_talk_troop", "str_troop_train_request_default"),
+  # [anyone,"lord_tell_mission", [(eq,"$random_quest_no","qst_raise_troops"),
+  #diplomacy start+ Change "sword" to another weapon if appropriate, and likewise for "men"
+  # (try_begin),
+     # (call_script, "script_cf_dplmc_faction_has_bias_against_gender", "$g_encountered_party_faction", 0),
+	 # (assign, reg0, 1),
+  # (else_try),
+     # (assign, reg0, 0),
+  # (try_end),
+  # ],
+   # "No lord should have to admit this, {playername}, but I was inspecting my soldiers the other day and there are {reg0?{reg65?women:soldiers}:{reg65?soldiers:men}} here who don't know which end of a sword to hold. {s43} You are a warrior of renown, {playername}. Will you train some troops for me? I would be grateful to you.", "lord_tell_mission_raise_troops",[
+ #diplomacy end+
+ 	# (call_script, "script_lord_comment_to_s43", "$g_talk_troop", "str_troop_train_request_default"),
 
-     ]],
+     # ]],
 
-  [anyone|plyr,"lord_tell_mission_raise_troops", [], "How many men do you need?", "lord_tell_mission_raise_troops_2",[]],
+  # [anyone|plyr,"lord_tell_mission_raise_troops", [], "How many men do you need?", "lord_tell_mission_raise_troops_2",[]],
 
-  [anyone,"lord_tell_mission_raise_troops_2", [], "If you can raise {reg1} {s14} and bring them to me, that will probably be enough.", "lord_mission_raise_troops_told",
-   [
-     (quest_get_slot, ":quest_target_troop", "$random_quest_no", slot_quest_target_troop),
-     (quest_get_slot, reg1, "$random_quest_no", slot_quest_target_amount),
-     (str_store_troop_name_link,s9,"$g_talk_troop"),
-     (str_store_troop_name_plural,s14,":quest_target_troop"),
-     (setup_quest_text,"$random_quest_no"),
-	 ##diplomacy start+ fix pronoun
-	 #"him" changed to "{reg0?her:him}"
-     (str_store_string, s2, "@{s9} asked you to raise {reg1} {s14} and bring them to {reg65?her:him}."),
-	 ##diplomcay end+
-   ]],
+  # [anyone,"lord_tell_mission_raise_troops_2", [], "If you can raise {reg1} {s14} and bring them to me, that will probably be enough.", "lord_mission_raise_troops_told",
+   # [
+     # (quest_get_slot, ":quest_target_troop", "$random_quest_no", slot_quest_target_troop),
+     # (quest_get_slot, reg1, "$random_quest_no", slot_quest_target_amount),
+     # (str_store_troop_name_link,s9,"$g_talk_troop"),
+     # (str_store_troop_name_plural,s14,":quest_target_troop"),
+     # (setup_quest_text,"$random_quest_no"),
+	 #diplomacy start+ fix pronoun
+	 ##"him" changed to "{reg0?her:him}"
+     # (str_store_string, s2, "@{s9} asked you to raise {reg1} {s14} and bring them to {reg65?her:him}."),
+	 #diplomcay end+
+   # ]],
 
-  [anyone|plyr,"lord_mission_raise_troops_told", [(quest_get_slot, reg1, "$random_quest_no", slot_quest_target_amount)],
-   "Of course, {s65}. Give me {reg1} fresh recruits and I'll train them to be {s14}.", "lord_mission_raise_troops_accepted",[]],
-  [anyone|plyr,"lord_mission_raise_troops_told", [], "I am too busy these days to train anyone.", "lord_mission_raise_troops_rejected",[]],
+  # [anyone|plyr,"lord_mission_raise_troops_told", [(quest_get_slot, reg1, "$random_quest_no", slot_quest_target_amount)],
+   # "Of course, {s65}. Give me {reg1} fresh recruits and I'll train them to be {s14}.", "lord_mission_raise_troops_accepted",[]],
+  # [anyone|plyr,"lord_mission_raise_troops_told", [], "I am too busy these days to train anyone.", "lord_mission_raise_troops_rejected",[]],
 
-  [anyone,"lord_mission_raise_troops_accepted", [], "You've taken a weight off my shoulders, {playername}.\
- I shall tell my sergeants to send you the recruits and attach them to your command.\
- Also, I'll advance you some money to help with expenses. Here, this purse should do it.\
- Thank you for your help.", "close_window",
-   [(call_script, "script_start_quest", "$random_quest_no", "$g_talk_troop"),
-    (call_script, "script_troop_add_gold", "trp_player", 100),
-    (quest_get_slot, ":recruit_troop", "$random_quest_no", slot_quest_object_troop),
-    (quest_get_slot, ":num_recruits", "$random_quest_no", slot_quest_target_amount),
-    (party_add_members, "p_main_party", ":recruit_troop", ":num_recruits"),
-    (call_script, "script_change_player_relation_with_troop","$g_talk_troop",1),
-    (assign, "$g_leave_encounter",1),
-   ]],
+  # [anyone,"lord_mission_raise_troops_accepted", [], "You've taken a weight off my shoulders, {playername}.\
+ # I shall tell my sergeants to send you the recruits and attach them to your command.\
+ # Also, I'll advance you some money to help with expenses. Here, this purse should do it.\
+ # Thank you for your help.", "close_window",
+   # [(call_script, "script_start_quest", "$random_quest_no", "$g_talk_troop"),
+    # (call_script, "script_troop_add_gold", "trp_player", 100),
+    # (quest_get_slot, ":recruit_troop", "$random_quest_no", slot_quest_object_troop),
+    # (quest_get_slot, ":num_recruits", "$random_quest_no", slot_quest_target_amount),
+    # (party_add_members, "p_main_party", ":recruit_troop", ":num_recruits"),
+    # (call_script, "script_change_player_relation_with_troop","$g_talk_troop",1),
+    # (assign, "$g_leave_encounter",1),
+   # ]],
 
-  [anyone,"lord_mission_raise_troops_rejected", [], "Oh, of course. I had expected as much. Well, good luck to you then.", "lord_pretalk",
-   [(troop_set_slot, "$g_talk_troop", slot_troop_does_not_give_quest, 1)]],
+  # [anyone,"lord_mission_raise_troops_rejected", [], "Oh, of course. I had expected as much. Well, good luck to you then.", "lord_pretalk",
+   # [(troop_set_slot, "$g_talk_troop", slot_troop_does_not_give_quest, 1)]],
 
 
 #Collect Taxes

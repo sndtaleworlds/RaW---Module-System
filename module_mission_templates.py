@@ -4367,7 +4367,7 @@ mission_templates = [
   (
     "back_alley_revolt",mtf_battle_mode,charge,
     "You lead your men to battle.",
-    [(0,mtef_team_0|mtef_use_exact_number,af_override_horse|af_override_weapons|af_override_head,aif_start_alarmed,4,[itm_quarter_staff]),
+    [(0,mtef_team_0|mtef_use_exact_number,af_override_horse|af_override_weapons|af_override_head,aif_start_alarmed,4,[itm_club]),
      (3,mtef_visitor_source|mtef_team_1,af_override_horse,aif_start_alarmed,1,[]),
      ],
     [
