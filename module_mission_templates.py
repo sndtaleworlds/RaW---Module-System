@@ -3716,7 +3716,7 @@ mission_templates = [
 
         (call_script, "script_neutral_behavior_in_fight"),
       ]),
-    ],
+    ]+tavern_triggers_new,
   ),
 
 # This template is used in party encounters and such.
