@@ -48987,6 +48987,23 @@ scripts = [
 ##       (cur_item_set_tableau_material, ":tableau_no", ":banner_troop"),
 ##     ]),
 
+  #raw_legs_fix_tableau
+  # INPUT: troop_no
+  # OUTPUT: none
+  ("raw_legs_fix_tableau", [
+        (store_script_param, ":troop_no", 1),
+        (cur_tableau_clear_override_items),
+        (troop_get_inventory_slot, ":armor", ":troop_no", ek_body),
+        (troop_get_inventory_slot, ":footwear", ":troop_no", ek_foot),
+
+        (try_begin),
+            (gt, ":armor", itm_no_item),
+            (eq, ":footwear", -1),
+            (cur_tableau_set_override_flags, af_override_foot),
+            (cur_tableau_add_override_item, "itm_legs"),
+        (try_end),
+  ]),
+
   #script_add_troop_to_cur_tableau
   # INPUT: troop_no
   # OUTPUT: none
@@ -49059,15 +49076,17 @@ scripts = [
          (position_transform_position_to_parent, pos3, pos5, pos1),
          (cur_tableau_add_mesh, ":banner_mesh", pos3, 400, 0),
        (try_end),
-       (cur_tableau_add_troop, ":troop_no", pos2, ":animation" , 0),
+       
+        (call_script, "script_manage_legs_in_cur_tableau", ":troop_no"),
+        (cur_tableau_add_troop, ":troop_no", pos2, ":animation" , 0),
 
-       (cur_tableau_set_camera_position, pos5),
+        (cur_tableau_set_camera_position, pos5),
 
-       (copy_position, pos8, pos5),
-       (position_rotate_x, pos8, -90), #y axis aligned with camera now. z is up
-       (position_rotate_z, pos8, 30),
-       (position_rotate_x, pos8, -60),
-       (cur_tableau_add_sun_light, pos8, 175,150,125),
+        (copy_position, pos8, pos5),
+        (position_rotate_x, pos8, -90), #y axis aligned with camera now. z is up
+        (position_rotate_z, pos8, 30),
+        (position_rotate_x, pos8, -60),
+        (cur_tableau_add_sun_light, pos8, 175,150,125),
      ]),
 
   #script_add_troop_to_cur_tableau_for_character
@@ -49105,6 +49124,8 @@ scripts = [
        (position_rotate_x, pos5, ":camera_pitch"),
        (position_move_z, pos5, ":camera_distance", 0),
        (position_move_x, pos5, 5, 0),
+       
+      (call_script, "script_manage_legs_in_cur_tableau", ":troop_no"),
 
        (try_begin),
          (troop_is_hero, ":troop_no"),
@@ -49161,6 +49182,8 @@ scripts = [
        (position_rotate_x, pos5, ":camera_pitch"),
        (position_move_z, pos5, ":camera_distance", 0),
        (position_move_x, pos5, 5, 0),
+       
+      (call_script, "script_manage_legs_in_cur_tableau", ":troop_no"),
 
        (try_begin),
          (troop_is_hero, ":troop_no"),
@@ -49225,6 +49248,8 @@ scripts = [
          (position_rotate_y, pos2, -15),
          (cur_tableau_add_mesh, ":profile_banner", pos2, 0, 0),
        (try_end),
+       
+      (call_script, "script_manage_legs_in_cur_tableau", ":troop_no"),
 
        (init_position, pos2),
        (try_begin),
@@ -49395,6 +49420,8 @@ scripts = [
        (position_rotate_x, pos5, ":camera_pitch"),
        (position_move_z, pos5, ":camera_distance", 0),
        (position_move_x, pos5, 5, 0),
+       
+      (call_script, "script_manage_legs_in_cur_tableau", ":troop_no"),
 
        (try_begin),
          (troop_is_hero, ":troop_no"),
