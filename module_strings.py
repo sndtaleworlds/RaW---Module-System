@@ -2484,26 +2484,22 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("multi_scene_9", "[S] Rival Farmlands"), # Afternoon
   ("multi_scene_10", "[S] Tavern"), # Night
   ("multi_scene_11", "[S] Odeon"),
+  ("multi_scene_12", "[M] Via Appia"),
   
-   ("multi_scene_12", "[M] Via Appia"),
-  ("multi_scene_13", "Random Plains (Large)"),
-  ("multi_scene_14", "Random Steppe (Medium)"),
-  ("multi_scene_15", "Random Steppe (Large)"),
-  
-  ("multi_scene_16", "Aiane"),
-  ("multi_scene_17", "Brunwud Castle"), #Castle 4
-  ("multi_scene_18", "Battle on Ice"),
-  ("multi_scene_19", "Mahdaar Castle"), #Castle 5
-  ("multi_scene_20", "Jameyyed Castle"), #Castle 6
-  ("multi_scene_21", "Small Roman Town"),
-  ("multi_scene_22", "Phocian Walls"),
-  ("multi_scene_23", "Gallic Mounds"),
-  ("multi_scene_24", "Desert Town"),
+  ("multi_scene_13", "[???] Old Scene"),
+  ("multi_scene_14", "[???] Old Scene"),
+  ("multi_scene_15", "[???] Old Scene"),
+  ("multi_scene_16", "[???] Old Scene"),
+  ("multi_scene_17", "[???] Old Scene"), #Castle 4
+  ("multi_scene_18", "[???] Old Scene"),
+  ("multi_scene_19", "[???] Old Scene"), #Castle 5
+  ("multi_scene_20", "[???] Old Scene"), #Castle 6
+  ("multi_scene_21", "[???] Old Scene"),
  # RaW
-  ("multi_scene_25", "Temple Ambush"),  
-  ("multi_scene_26", "Bazaar"),   
-  ("multi_scene_27", "Frozen Steppes"),   
-  ("multi_scene_28", "The Island"),   
+  ("multi_scene_22", "[M] Medium Plains"),  
+  ("multi_scene_23", "[L] Large Plains"),   
+  ("multi_scene_24", "[M] Medium Steppe"),   
+  ("multi_scene_25", "[L] Large Steppe"),   
   ("multi_scene_29", "River Delta"),   
   ("multi_scene_30", "Eastern Town"),   
   ("multi_scene_31", "The Road"), 
@@ -2522,10 +2518,11 @@ We apologize sincerely if you contributed your suggestions and feedback but were
   ("multi_scene_44", "Lugdunum"),
   ("multi_scene_45", "Lugdunum's Outskirts"),
   ("multi_scene_46", "Roman Villa"),  
-  ("multi_scene_48", "Port of Ostia"),   
-  ("multi_scene_49", "Gallic Oppidum"),     
   ("multi_scene_47", "Random Snow Forest (Medium)"),  
-  ("multi_scene_48", "Random Forest (Medium)"),    
+  ("multi_scene_48", "[M] Medium Plains"),   
+  ("multi_scene_49", "[L] Large Plains"),     
+  ("multi_scene_50", "[M] Medium Steppe"),    
+  ("multi_scene_51", "[L] Large Steppe"),    
   ("multi_custom_adimi_tool_scene_1", "Custom Scene 1"),
   ("multi_custom_adimi_tool_scene_2", "Custom Scene 2"),
   ("multi_custom_adimi_tool_scene_3", "Custom Scene 3"),

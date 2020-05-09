@@ -588,9 +588,9 @@ adimi_tool_fade_out_stay_horses = [
         ]),
 		]	 
 
-adimi_tool_all_gamemodes = [adimi_tool_server_message,adimi_tool_mute_loop, adimi_tool_crash_server_trigger, adimi_tool_spawn_agent_trigger,adimi_tool_pickup_food, adimi_tool_rainfall_snow_trigger, adimi_tool_rainfall_rain_trigger,adimi_tool_replace_scene_items_after, adimi_tool_drowning,adimi_tool_welcome_message, adimi_tool_exit_trigger, adimi_tool_wall_of_death, adimi_tool_class_limit,adimi_tool_dev_mode, adimi_tool_admin_chats]
+adimi_tool_all_gamemodes = [adimi_tool_server_message,adimi_tool_mute_loop, adimi_tool_crash_server_trigger, adimi_tool_spawn_agent_trigger,adimi_tool_pickup_food, adimi_tool_rainfall_snow_trigger, adimi_tool_rainfall_rain_trigger,adimi_tool_replace_scene_items_after, adimi_tool_drowning,adimi_tool_welcome_message, adimi_tool_exit_trigger, adimi_tool_wall_of_death, adimi_tool_class_limit,adimi_tool_dev_mode]
 adimi_tool_all_gamemodes += adimi_tool_fade_out_stay_horses
-adimi_tool_duel_mode_triggers = [adimi_tool_duel_triggers,adimi_tool_mute_loop,adimi_tool_replace_scene_items_after,adimi_tool_server_message ,adimi_tool_crash_server_trigger, adimi_tool_spawn_agent_trigger,adimi_tool_pickup_food, adimi_tool_rainfall_snow_trigger, adimi_tool_rainfall_rain_trigger, adimi_tool_drowning,adimi_tool_welcome_message, adimi_tool_exit_trigger, adimi_tool_class_limit,adimi_tool_dev_mode, adimi_tool_admin_chats]
+adimi_tool_duel_mode_triggers = [adimi_tool_duel_triggers,adimi_tool_mute_loop,adimi_tool_replace_scene_items_after,adimi_tool_server_message ,adimi_tool_crash_server_trigger, adimi_tool_spawn_agent_trigger,adimi_tool_pickup_food, adimi_tool_rainfall_snow_trigger, adimi_tool_rainfall_rain_trigger, adimi_tool_drowning,adimi_tool_welcome_message, adimi_tool_exit_trigger, adimi_tool_class_limit,adimi_tool_dev_mode]
 adimi_tool_duel_mode_triggers += adimi_tool_fade_out_stay_horses
 adimi_tool_anti_teamkill_triggers = [adimi_tool_anti_tk_triggers]
 
@@ -2051,11 +2051,11 @@ raw_triggers = [
 	# common_random_multiplayer_day_time_server,
 	raw_banner_taunt,
 	dplmc_horse_speed,
-	raw_skirmisher_javelin,
-	raw_skirmisher_javelin_2,
-	raw_skirmisher_javelin_3,
-	raw_skirmisher_javelin_4,
-	raw_skirmisher_javelin_5,	
+	# raw_skirmisher_javelin,
+	# raw_skirmisher_javelin_2,
+	# raw_skirmisher_javelin_3,
+	# raw_skirmisher_javelin_4,
+	# raw_skirmisher_javelin_5,	
 	raw_cornu,
   ]	
   
