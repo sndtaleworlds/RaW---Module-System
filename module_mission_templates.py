@@ -2050,7 +2050,7 @@ raw_triggers = [
 	# common_random_multiplayer_weather_server,
 	# common_random_multiplayer_day_time_server,
 	raw_banner_taunt,
-	dplmc_horse_speed,
+	# dplmc_horse_speed,
 	# raw_skirmisher_javelin,
 	# raw_skirmisher_javelin_2,
 	# raw_skirmisher_javelin_3,
